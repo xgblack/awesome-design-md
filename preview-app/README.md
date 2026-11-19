@@ -1,6 +1,6 @@
 # Design Atlas
 
-`awesome-design-md` 的独立规范浏览应用。使用 Vue 3、TypeScript 和 **Vite 8**，延续 A「浅色图库工作台」设计。无需后端或账号。
+`awesome-design-md` 的独立规范浏览应用。使用 Vue 3、TypeScript 和 **Vite+ 1.7（内含 Vite 8）**，延续 A「浅色图库工作台」设计。无需后端或账号。
 
 ## 本轮范围
 
@@ -15,27 +15,34 @@
 
 ## 运行
 
-Node.js 20.19+ 或 22.12+（推荐当前维护版本）。在本目录执行：
+需要全局 `vp` 命令，以及满足 `^22.18.0 || ^24.11.0 || >=26.0.0` 的 Node.js；本机使用 Node.js 26。项目本地的 Vite+ 已固定版本，全局 CLI 会调用本地工具链，不要求升级全局 `vp`。
+
+从仓库根目录进入应用，安装依赖并启动：
 
 ```sh
-npm ci
-npm run dev
+cd preview-app
+vp install
+vp dev
 ```
 
-开发服务默认只监听本机。端口被其他项目占用时，例如：
+开发服务默认只监听本机。指定端口时，例如（该端口已有服务则先停止原服务）：
 
 ```sh
-npm run dev -- --port 5178 --strictPort
+vp dev --port 5178 --strictPort
 ```
 
 生产构建与预览：
 
 ```sh
-npm run build
-npm run preview
+vp run build
+vp preview
 ```
 
-部署 `dist/` 到任意静态托管服务。资源采用相对路径、路由采用 Hash，无需服务端路由回退，支持子目录部署。请完整上传 Markdown 和字体资源；不要只上传 `index.html`。从仓库根目录执行可使用 `npm --prefix preview-app run build`。
+`vp run build` 会先执行 Vue 类型检查，再调用 Vite+ 内置 `vp build`。直接执行 `vp build` 只进行打包；不能将它当作 Vue 模板类型检查。`vp run typecheck` 可单独检查 Vue 脚本与模板。
+
+部署 `dist/` 到任意静态托管服务。资源采用相对路径、路由采用 Hash，无需服务端路由回退，支持子目录部署。请完整上传 Markdown 和字体资源；不要只上传 `index.html`。从仓库根目录执行可使用 `vp -C preview-app run build`。
+
+依赖安装仍由 Vite+ 调用项目声明的 npm 管理，保留 `package-lock.json` 作为唯一锁文件；可用 `vp install --frozen-lockfile` 按锁文件安装。原有 `npm run dev/build/preview` 等脚本仍兼容，但默认使用上述 `vp` 入口。
 
 ## 原规范与补充资料
 
@@ -47,18 +54,22 @@ npm run preview
 
 Markdown 阅读关闭原始 HTML 执行，不加载文档引用的远程图片，仅显示图片文字；外链仅允许 HTTP(S)，在新标签打开并隔离来源。源码、复制和下载仍保留完整原文（包括元数据）。
 
-上游新增 / 修改规范后重新构建；开发服务会重新扫描。删除或重命名的旧详情链接会明确显示未找到，不自动映射到另一个风格。`npm run check:catalog` 会提示新增待整理项和失去原文关联的补充资料。
+上游新增 / 修改规范后重新构建；开发服务会重新扫描。删除或重命名的旧详情链接会明确显示未找到，不自动映射到另一个风格。`vp run check:catalog` 会提示新增待整理项和失去原文关联的补充资料。
 
 ## 验证
 
 ```sh
-npm run typecheck
-npm test
-npm run check:catalog
-npm run build
+vp check
+vp test
+vp run check:catalog
+vp run build
 ```
 
-自动测试覆盖目录完整性、异常头部、新增 / 修改 / 重命名文档、筛选逻辑、URL、收藏失败、原文获取失败、剪贴板失败及 Markdown 注入边界。浏览器检查另覆盖交互、下载和响应式布局；模拟手机视口不等于真机测试。
+`vp check` 使用 Vite+ 内置 Oxfmt、Oxlint 和 TypeScript 类型检查。Vue SFC 的完整脚本及模板类型检查仍由 `vue-tsc` 执行，并纳入 `vp run build`，不以框架 shim 或普通 TypeScript 检查代替。格式和 lint 配置集中在 `vite.config.ts`，不设置额外 Git hooks。
+
+`vp test` 使用 Vite+ 内置 Vitest，默认运行一次；持续监听使用 `vp test watch`。现有 17 项自动测试覆盖目录完整性、异常头部、新增 / 修改 / 重命名文档、筛选逻辑、URL、收藏失败、原文获取失败、剪贴板失败及 Markdown 注入边界。目录检查脚本通过 Vite+ 的 `vpx` 运行，不再依赖独立 `tsx`。
+
+浏览器检查另覆盖交互、下载和响应式布局；模拟手机视口不等于真机测试。
 
 ## 素材与后续扩展
 

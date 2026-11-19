@@ -691,9 +691,7 @@ onBeforeUnmount(() => {
       <div class="dialog-heading">
         <div>
           <span class="eyebrow">UP TO THREE DIRECTIONS</span>
-          <h2 id="candidate-title">
-            选择对照候选 <small>{{ candidates.length }} / 3</small>
-          </h2>
+          <h2 id="candidate-title">选择对照候选 <small>{{ candidates.length }} / 3</small></h2>
         </div>
         <button class="icon-button" aria-label="关闭候选选择" @click="candidateDialog?.close()">
           <Icon name="close" />
@@ -719,9 +717,7 @@ onBeforeUnmount(() => {
           @click="toggleCompare(style.id)"
         >
           <span class="candidate-initial">{{ style.name.slice(0, 1) }}</span
-          ><span
-            ><strong>{{ style.name }}</strong
-            ><small>{{ style.summary }}</small></span
+          ><span><strong>{{ style.name }}</strong><small>{{ style.summary }}</small></span
           ><Icon :name="route.compare.includes(style.id) ? 'check' : 'plus'" :size="18" />
         </button>
         <p v-if="!candidateOptions.length" class="dialog-no-results">

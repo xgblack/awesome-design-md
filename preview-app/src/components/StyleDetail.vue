@@ -183,9 +183,7 @@ async function getSource(action: 'copy' | 'download') {
         </div>
         <template v-else>
           <div class="source-toolbar">
-            <span
-              ><Icon name="doc" :size="16" /><span>{{ style.id }}/DESIGN.md</span></span
-            >
+            <span><Icon name="doc" :size="16" /><span>{{ style.id }}/DESIGN.md</span></span>
             <div>
               <button
                 class="small-button"

@@ -1,12 +1,18 @@
 import { fileURLToPath } from 'node:url'
-import { defineConfig } from 'vite'
+import { defineConfig, lazyPlugins, type Plugin } from 'vite-plus'
 import vue from '@vitejs/plugin-vue'
 import { buildCatalog } from './scripts/catalog.ts'
 
 const sourceRoot = fileURLToPath(new URL('../design-md', import.meta.url))
 export default defineConfig({
+  fmt: { printWidth: 100, semi: false, singleQuote: true },
+  lint: {
+    jsPlugins: [{ name: 'vite-plus', specifier: 'vite-plus/oxlint-plugin' }],
+    rules: { 'vite-plus/prefer-vite-plus-imports': 'error' },
+    options: { typeAware: true, typeCheck: true },
+  },
   base: './',
-  plugins: [
+  plugins: lazyPlugins(async () => [
     vue(),
     {
       name: 'design-document-catalog',
@@ -28,8 +34,9 @@ export default defineConfig({
           server.ws.send({ type: 'full-reload' })
         })
       },
-    },
-  ],
-  server: { fs: { allow: [fileURLToPath(new URL('..', import.meta.url))] } },
+    } satisfies Plugin,
+  ]),
+  server: { host: '127.0.0.1', fs: { allow: [fileURLToPath(new URL('..', import.meta.url))] } },
+  preview: { host: '127.0.0.1' },
   build: { assetsInlineLimit: 0 },
 })

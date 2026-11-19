@@ -1,4 +1,4 @@
-import { test } from 'node:test'
+import { test } from 'vite-plus/test'
 import assert from 'node:assert/strict'
 import { parseRoute, routeHref } from '../src/lib/route.ts'
 import { emptyFilters } from '../src/lib/catalog.ts'

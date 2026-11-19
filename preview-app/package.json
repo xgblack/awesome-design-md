@@ -1,18 +1,16 @@
 {
   "name": "design-atlas-preview",
-  "private": true,
   "version": "0.1.0",
+  "private": true,
   "type": "module",
-  "engines": {
-    "node": "^20.19.0 || >=22.12.0"
-  },
   "scripts": {
-    "dev": "vite --host 127.0.0.1",
-    "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview --host 127.0.0.1",
+    "dev": "vp dev",
+    "build": "vp run typecheck && vp build",
+    "preview": "vp preview",
     "typecheck": "vue-tsc --noEmit",
-    "test": "tsx --test tests/*.test.ts",
-    "check:catalog": "tsx scripts/check-catalog.ts"
+    "check": "vp check",
+    "test": "vp test",
+    "check:catalog": "vpx scripts/check-catalog.ts"
   },
   "dependencies": {
     "@fontsource-variable/inter": "^5.2.8",
@@ -24,10 +22,18 @@
     "@types/markdown-it": "^14.1.2",
     "@types/node": "^24.0.0",
     "@vitejs/plugin-vue": "^6.0.11",
-    "tsx": "^4.21.0",
     "typescript": "~5.9.3",
-    "vite": "~8.3.8",
+    "vite": "npm:@voidzero-dev/vite-plus-core@8.3.8000",
+    "vite-plus": "1.7.0",
     "vue-tsc": "^3.3.14",
     "yaml": "^2.9.1"
-  }
+  },
+  "overrides": {
+    "vite": "npm:@voidzero-dev/vite-plus-core@8.3.8000",
+    "vitest": "5.1.0"
+  },
+  "engines": {
+    "node": "^22.18.0 || ^24.11.0 || >=26.0.0"
+  },
+  "packageManager": "npm@11.20.0"
 }
