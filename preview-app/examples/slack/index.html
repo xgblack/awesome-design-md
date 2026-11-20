@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Commonroom · 让项目在频道里前进 · 独立设计语言本地演示" />
+    <title>Commonroom · 让项目在频道里前进</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="#top"><span>✳</span> commonroom</a>
+      <nav><a href="#demo">团队频道</a><a href="#flow">项目协同</a></nav>
+      <a class="pill" href="#demo">看看大家在聊什么 ↗</a>
+    </header>
+    <main id="top">
+      <section class="hero">
+        <div>
+          <p>WHERE THE TEAM MOVES WORK FORWARD</p>
+          <h1>让团队的工作，<br />在同一个频道前进。</h1>
+          <p>从产品讨论，到最后一次发布检查。<br />让设计、工程和发布，都有清晰的上下文。</p>
+          <a href="#demo" class="pill">探索团队频道</a>
+        </div>
+        <section id="demo" class="demo">
+          <div class="demo-bar"><span>Commonroom / 产品团队</span><small>LOCAL DEMO</small></div>
+          <div class="topics">
+            <button data-kind="garden" aria-pressed="true"># 工程交付</button
+            ><button data-kind="film" aria-pressed="false"># 设计评审</button
+            ><button data-kind="repair" aria-pressed="false"># 发布准备</button>
+          </div>
+          <div class="chat">
+            <h2 id="topic-title"></h2>
+            <div class="chat-message">
+              <span class="avatar">林</span>
+              <div>
+                <strong>林夏 <small>10:24 · 演示</small></strong>
+                <p id="message"></p>
+              </div>
+            </div>
+            <div class="chat-message">
+              <span class="avatar green">周</span>
+              <div>
+                <strong>周安 <small>10:28 · 演示</small></strong>
+                <p id="answer"></p>
+              </div>
+            </div>
+            <div id="replies"></div>
+            <form id="reply-form">
+              <label for="reply">添加本地团队回复</label
+              ><textarea
+                id="reply"
+                maxlength="200"
+                rows="2"
+                placeholder="给这条项目讨论补充一个回复…"
+              ></textarea>
+              <p id="error" role="alert"></p>
+              <div><span>不会发送给别人</span><button type="submit">加入草稿 ↑</button></div>
+            </form>
+            <button id="undo" hidden>撤销最后一条草稿</button>
+          </div>
+        </section>
+      </section>
+      <section class="flow" id="flow">
+        <div>
+          <span>ONE PLACE. EVERY PART.</span>
+          <h2 id="activity-name">重要的细节，<br />不必在消息里失联。</h2>
+          <p id="activity-copy">让工程决定、相关文档与后续动作留在同一个频道。</p>
+        </div>
+        <ol>
+          <li>
+            <b>01</b>
+            <div>
+              <h3>集合想法</h3>
+              <p>让需求、意见和决定都有可以追溯的线程。</p>
+            </div>
+          </li>
+          <li>
+            <b>02</b>
+            <div>
+              <h3>准备细节</h3>
+              <p>让每个人知道，哪些决定需要自己跟进。</p>
+            </div>
+          </li>
+          <li>
+            <b>03</b>
+            <div>
+              <h3>留下回顾</h3>
+              <p>发布之后，留下一次迭代的上下文。</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+      <section class="closing">
+        <h2>Good things<br />happen together.</h2>
+        <a href="#demo" class="pill light">回到话题 ↑</a>
+      </section>
+    </main>
+    <footer><strong>commonroom /</strong><span>本地团队频道演示 · 非真实消息服务</span></footer>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

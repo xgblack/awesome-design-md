@@ -1,0 +1,32 @@
+import { test, expect } from '@playwright/test'
+test('nike: 路面过滤', async ({ page }) => {
+  await page.goto('examples/nike/index.html')
+  await page.locator('[data-surface=trail]').click()
+  await expect(page.locator('[data-surface-product]:visible')).toHaveCount(1)
+  await expect(page.locator('#surface-status')).toContainText('1 款')
+})
+test('nike: 尺码必选与训练包去重', async ({ page }) => {
+  await page.goto('examples/nike/index.html')
+  await page.locator('.choose').first().click()
+  await page.locator('#add-kit').click()
+  await expect(page.locator('#shoe-status')).toContainText('先选择尺码')
+  await page.locator('#size').selectOption('40')
+  await page.locator('#add-kit').click()
+  await page.locator('#add-kit').click()
+  await expect(page.locator('#shoe-status')).toContainText('不重复')
+  await expect(page.locator('#kit-count')).toHaveText('1')
+})
+
+test('nike: 独立鞋款详情和逐项移除', async ({ page }) => {
+  await page.goto('examples/nike/index.html')
+  await page.locator('button.choose[data-shoe="Trail Note"]').click()
+  await expect(page.locator('#shoe-image')).toHaveAttribute('src', /trail-note/)
+  await expect(page.locator('#shoe-description')).toContainText('深齿外底')
+  await page.locator('#size').selectOption('40')
+  await page.locator('#add-kit').click()
+  await page.keyboard.press('Escape')
+  await page.locator('#kit-open').click()
+  await page.locator('#kit-items button').click()
+  await expect(page.locator('#kit-count')).toHaveText('0')
+  await expect(page.locator('#kit-items')).toContainText('还是空的')
+})

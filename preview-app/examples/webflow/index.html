@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Structure · 从想法，到网站 · 独立设计语言本地演示" />
+    <title>Structure · 从想法，到网站</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#top" class="brand">structure<span>↗</span></a>
+      <nav><a href="#editor">可视化工坊</a><a href="#collections">网站能力</a></nav>
+      <a href="#editor" class="button">Start creating</a>
+    </header>
+    <main id="top">
+      <section class="hero">
+        <span>TURN A CLEAR IDEA INTO A REAL WEBSITE</span>
+        <h1>Your vision.<br />A real website.</h1>
+        <p>
+          用内容、结构与交互，搭建一个属于你的网站。<br />在真正的网页画布里，调整每一处清晰的表达。
+        </p>
+      </section>
+      <section class="editor" id="editor">
+        <div class="editor-top">
+          <span>STRUCTURE / VISUAL WEBSITE BUILDER</span>
+          <div>
+            <button data-device="desktop" aria-pressed="true">桌面</button
+            ><button data-device="mobile" aria-pressed="false">手机</button
+            ><button id="undo" disabled>撤销</button>
+          </div>
+        </div>
+        <div class="editor-body">
+          <aside class="layers">
+            <span>NAVIGATOR</span>
+            <p>⌑ Website</p>
+            <small>↳ Navigation</small><small>↳ Hero section</small><small>↳ Projects grid</small
+            ><small>↳ Footer</small>
+          </aside>
+          <div class="stage">
+            <article id="website" class="website split">
+              <div class="web-nav">
+                <strong id="web-brand">Fieldwork</strong><span>Work　Studio　Contact</span>
+              </div>
+              <div class="web-hero">
+                <div>
+                  <small id="web-eyebrow">INDEPENDENT DIGITAL STUDIO</small>
+                  <h2 id="web-title">Interfaces for better days.</h2>
+                  <p id="web-copy">为有想法的团队，创造更清晰的数字产品。</p>
+                  <a class="web-link" href="#web-projects">Explore selected work ↗</a>
+                </div>
+                <div class="web-object" aria-hidden="true"><i></i><i></i></div>
+              </div>
+              <div class="web-projects" id="web-projects"></div>
+              <div class="web-footer">
+                <strong id="web-foot-name">Fieldwork / 2026</strong
+                ><span>ORIGINAL LOCAL WEBSITE</span>
+              </div>
+            </article>
+          </div>
+          <form class="properties" id="properties">
+            <span>PROPERTIES</span
+            ><label
+              >网站模板<select id="template">
+                <option value="studio">工作室 / Portfolio</option>
+                <option value="journal">独立刊物 / Journal</option>
+              </select></label
+            ><label
+              >网站首屏标题<input
+                id="title"
+                value="Interfaces for better days."
+                maxlength="70" /></label
+            ><label
+              >布局<select id="layout">
+                <option value="split">Split / 图文分栏</option>
+                <option value="centered">Centered / 居中标题</option>
+              </select></label
+            ><label
+              >主题<select id="color">
+                <option value="lime">青柠 / Black ink</option>
+                <option value="pink">浅粉 / Plum ink</option>
+                <option value="blue">亮蓝 / White ink</option>
+              </select></label
+            >
+            <p id="error" role="status"></p>
+            <button type="button" id="export" class="button">下载独立网站 HTML ↓</button
+            ><small>包括导航、首屏、项目和页尾的真实静态网页；无外部脚本，不托管发布。</small>
+          </form>
+        </div>
+      </section>
+      <section class="collections" id="collections">
+        <div class="category violet">
+          <span>01 / DESIGN</span>
+          <h2>Give an idea<br />a place to live.</h2>
+          <div class="squares" aria-hidden="true"></div>
+        </div>
+        <div class="category peach">
+          <span>02 / BUILD</span>
+          <h2>Bring people<br />into the picture.</h2>
+          <div class="circles" aria-hidden="true"></div>
+        </div>
+        <div class="category blue">
+          <span>03 / REFINE</span>
+          <h2>A small change.<br />A new perspective.</h2>
+          <p>在网站画布里切换布局与主题。编辑内容，核对手机结构，再导出独立网页。</p>
+        </div>
+      </section>
+      <section class="closing">
+        <h2>The next good thing<br />starts with making.</h2>
+        <a class="button light" href="#editor">Back to the studio ↗</a>
+      </section>
+    </main>
+    <footer>
+      <strong>structure /</strong><span>原创网站构建演示 · 不访问托管、不保存输入</span>
+    </footer>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+{
+  "title": "AUREL Atelier / An exercise in restraint",
+  "description": "探索原创高性能 GT 的外观、座舱材质与工艺；概念规格，无采购或性能实测。",
+  "status": "ready",
+  "features": {
+    "moods": ["luxury", "cinematic"],
+    "tones": ["dark"],
+    "temperature": ["neutral"],
+    "chroma": ["mono"],
+    "accentHues": ["neutral"],
+    "backgrounds": ["solid"],
+    "layouts": ["chapters"],
+    "density": ["airy"],
+    "typography": ["sans", "serif", "mono", "condensed"],
+    "headingScale": ["display"],
+    "headingWeight": ["regular"],
+    "geometry": ["pill", "square"],
+    "layering": ["lines"],
+    "visualMedia": ["render"],
+    "motion": ["feedback"],
+    "scenarios": ["product"]
+  },
+  "interactions": ["configure"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "原创虚构品牌与概念产品，非官方页面；操作仅在当前页面内存生效，不提交真实业务。",
+    "本地 Saira Condensed 400 / Cormorant Garamond / JetBrains Mono 替代三款商业字形。",
+    "全新原创 GT 车身、机械轮毂与座舱材质渲染；旧天文钟素材保留但不再被使用。"
+  ],
+  "references": [
+    {
+      "source": "DESIGN.md L207–220、249–293",
+      "reason": "奢华汽车主体；全黑、白色400宽字距大写、衬线正文与等宽控件三字族。"
+    },
+    {
+      "source": "DESIGN.md L346–370",
+      "reason": "描边胶囊行动、120px章间留白；产品光影仅在原创渲染内部，不以UI渐变/金色或阴影装饰。"
+    }
+  ],
+  "assets": [
+    {
+      "file": "assets/aurel-argent.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/aurel-noir.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/aurel-ivory.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/cabin.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    }
+  ]
+}

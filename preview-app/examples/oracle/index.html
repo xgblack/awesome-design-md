@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Nacre · 企业数据平台 · 独立设计语言本地演示" />
+    <title>Nacre · 企业数据平台</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#top" class="brand">NACRE</a>
+      <nav><a href="#materials">资料中心</a><a href="#approach">服务思路</a></nav>
+      <span>Enterprise archive / Concept</span>
+    </header>
+    <div class="subnav">
+      <a href="#top">企业数据平台</a><a href="#materials">技术材料</a
+      ><a href="#approach">接入方式</a>
+    </div>
+    <main id="top">
+      <section class="hero">
+        <span>Enterprise data platform / Product overview</span>
+        <h1>让企业数据，<br />支撑每一次决策。</h1>
+        <i></i>
+        <p>连接业务记录、分析负载与治理策略。<br />用一致的数据架构，支撑事务与分析的不同需要。</p>
+        <a class="button" href="#materials">探索技术材料 ↗</a>
+      </section>
+      <section class="approach" id="approach">
+        <div class="tabs">
+          <button data-mode="connect" aria-pressed="true">业务数据接入</button
+          ><button data-mode="search" aria-pressed="false">分析与查询</button>
+        </div>
+        <div class="approach-grid">
+          <div>
+            <h2 id="approach-title"></h2>
+            <p id="approach-copy"></p>
+            <ul id="approach-steps"></ul>
+          </div>
+          <div class="archive-illustration">
+            <div class="shelves">
+              <i>01 / TRANSACTIONS</i><i>02 / ANALYTICS</i><i>03 / GOVERNANCE</i>
+            </div>
+            <span>→</span>
+            <div class="index-box">
+              <strong id="diagram-title">统一资料索引</strong>
+              <p>关系 / 字段 / 来源</p>
+            </div>
+            <small>原创架构示意 · 非实际系统运行状态</small>
+          </div>
+        </div>
+      </section>
+      <section class="materials" id="materials">
+        <div>
+          <span>Resources / Technical library</span>
+          <h2>从一份材料，<br />理解一个系统。</h2>
+          <p>资料中心解释企业数据平台的接入、治理与查询概念，不连接真实数据库。</p>
+        </div>
+        <label class="search"
+          >查找技术材料<input id="query" placeholder="例如：字段、来源、检索"
+        /></label>
+        <div id="documents"></div>
+        <p id="empty" hidden>
+          没有匹配的材料，搜索条件已保留。<button id="clear">清空关键词</button>
+        </p>
+      </section>
+      <section class="teal">
+        <h2>重要的业务数据，<br />值得一个清晰的未来。</h2>
+        <a href="#materials">回到资料中心 ↗</a>
+      </section>
+    </main>
+    <footer>
+      <strong>NACRE /</strong>
+      <p>独立设计语言示例 · 无真实数据库、云资源或企业服务</p>
+    </footer>
+    <dialog id="document">
+      <span>Technical brief / 本地资料</span>
+      <h2 id="doc-title"></h2>
+      <p id="doc-copy"></p>
+      <button id="close">关闭材料</button>
+    </dialog>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

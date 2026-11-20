@@ -1,0 +1,83 @@
+{
+  "title": "Vista · 抬头，遇见更多",
+  "description": "原创智能眼镜产品展厅，切镜框/镜片与视角，校验佩戴组件并形成本地配置摘要。",
+  "status": "ready",
+  "features": {
+    "moods": ["minimal", "cinematic"],
+    "tones": ["light"],
+    "layouts": ["split"],
+    "density": ["balanced"],
+    "headingScale": ["regular"],
+    "headingWeight": ["medium"],
+    "geometry": ["pill", "rounded", "small-radius"],
+    "visualMedia": ["render", "photo", "ui"],
+    "accentHues": ["blue", "neutral"],
+    "temperature": ["neutral"],
+    "chroma": ["mono"],
+    "backgrounds": ["solid"],
+    "layering": ["solid"],
+    "scenarios": ["product", "commerce"],
+    "typography": ["sans"],
+    "motion": ["feedback"]
+  },
+  "interactions": ["configure", "media"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "原创智能眼镜以 SVG 绘制镜框/镜片/镜腿/传感器光影后本地栅格为 WebP；八张独立图覆盖双色与两种镜片，附可编辑SVG源。",
+    "Optimistic 专有字体用本地 Inter 300/500 替代，白底/大媒体角/钴蓝配置动作保留。森林摄影来源见共享 sources.json。",
+    "语境复核：原规范为智能眼镜/Quest硬件；已替换相机为八张原创眼镜渲染，旧相机资产保留但不引用。"
+  ],
+  "references": [
+    {
+      "source": "DESIGN.md L353–363、400–445、597–612、623–636、655–666",
+      "reason": "58/42画廊/固定配置栏 → 生活方式通栏摄影 → 无边框功能卡/规格/FAQ。白底、32/40px摄影卡；黑色营销胶囊与配置区钴蓝分工；300编辑标题对500展示字、圆形色样、8px选项。"
+    }
+  ],
+  "assets": [
+    {
+      "file": "assets/glasses-graphite-clear.webp",
+      "source": "本项目原创 SVG 硬件概念图光影渲染；同名 SVG 为可编辑源",
+      "license": "本项目原创"
+    },
+    {
+      "file": "assets/glasses-graphite-detail.webp",
+      "source": "本项目原创 SVG 硬件概念图光影渲染；同名 SVG 为可编辑源",
+      "license": "本项目原创"
+    },
+    {
+      "file": "assets/glasses-graphite-side.webp",
+      "source": "本项目原创 SVG 硬件概念图光影渲染；同名 SVG 为可编辑源",
+      "license": "本项目原创"
+    },
+    {
+      "file": "assets/glasses-graphite-sun.webp",
+      "source": "本项目原创 SVG 硬件概念图光影渲染；同名 SVG 为可编辑源",
+      "license": "本项目原创"
+    },
+    {
+      "file": "assets/glasses-sand-clear.webp",
+      "source": "本项目原创 SVG 硬件概念图光影渲染；同名 SVG 为可编辑源",
+      "license": "本项目原创"
+    },
+    {
+      "file": "assets/glasses-sand-detail.webp",
+      "source": "本项目原创 SVG 硬件概念图光影渲染；同名 SVG 为可编辑源",
+      "license": "本项目原创"
+    },
+    {
+      "file": "assets/glasses-sand-side.webp",
+      "source": "本项目原创 SVG 硬件概念图光影渲染；同名 SVG 为可编辑源",
+      "license": "本项目原创"
+    },
+    {
+      "file": "assets/glasses-sand-sun.webp",
+      "source": "本项目原创 SVG 硬件概念图光影渲染；同名 SVG 为可编辑源",
+      "license": "本项目原创"
+    },
+    {
+      "file": "../_shared/photos/forest.webp",
+      "source": "共享 sources.json",
+      "license": "Unsplash License"
+    }
+  ]
+}

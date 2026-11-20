@@ -1,14 +1,16 @@
 <script setup lang="ts">
-import { computed, onBeforeUnmount, ref, watch } from 'vue'
+import { onBeforeUnmount, ref, watch } from 'vue'
 import Icon from './Icon.vue'
-import { labelFor } from '../data/facets.ts'
+import ExamplePreview from './ExamplePreview.vue'
+import { labelFor, facetTitles, visualKeys } from '../data/facets.ts'
 import { documentUrl } from '../documents.ts'
-import { copyText, fetchDocument, renderDocument } from '../lib/documents.ts'
+import { copyText, fetchDocument } from '../lib/documents.ts'
 import type { StyleEntry } from '../types.ts'
 const props = defineProps<{
   style: StyleEntry
   tab: 'preview' | 'spec'
   mode: 'read' | 'raw'
+  viewport: 'desktop' | 'mobile'
   favorite: boolean
   selected: boolean
   backHref: string
@@ -18,6 +20,7 @@ const emit = defineEmits<{
   compare: [id: string]
   tab: [tab: 'preview' | 'spec']
   mode: [mode: 'read' | 'raw']
+  viewport: [viewport: 'desktop' | 'mobile']
 }>()
 const source = ref<string | null>(null)
 const loading = ref(false)
@@ -27,7 +30,7 @@ const actionFailed = ref(false)
 const busyAction = ref('')
 const controller = new AbortController()
 let pending: Promise<string | undefined> | undefined
-const rendered = computed(() => renderDocument(source.value ?? ''))
+const rendered = ref({ frontmatter: '', body: '' })
 
 function load(): Promise<string | undefined> {
   if (source.value !== null) return Promise.resolve(source.value)
@@ -38,7 +41,10 @@ function load(): Promise<string | undefined> {
     try {
       const url = documentUrl(props.style.id)
       if (!url) throw new Error('当前构建未包含这份规范，请更新构建资源。')
-      source.value = await fetchDocument(url, controller.signal)
+      const text = await fetchDocument(url, controller.signal)
+      const { renderDocument } = await import('../lib/markdown.ts')
+      rendered.value = renderDocument(text)
+      source.value = text
       return source.value
     } catch (error) {
       if (!controller.signal.aborted)
@@ -117,7 +123,7 @@ async function getSource(action: 'copy' | 'download') {
           @click="emit('compare', style.id)"
         >
           <Icon :name="selected ? 'check' : 'compare'" :size="17" />{{
-            selected ? '已加入对照' : '加入规范对照'
+            selected ? '已加入对照' : '加入风格对照'
           }}
         </button>
       </div>
@@ -140,13 +146,24 @@ async function getSource(action: 'copy' | 'download') {
               设计规范
             </button>
           </div>
-          <div
-            v-if="tab === 'preview'"
-            class="device-controls"
-            title="示例待制作，暂不支持视口切换"
-          >
-            <button disabled><Icon name="desktop" :size="17" /><span>桌面</span></button
-            ><button disabled><Icon name="phone" :size="17" /><span>手机</span></button>
+          <div v-if="tab === 'preview'" class="device-controls" aria-label="页面视口">
+            <button
+              :disabled="style.preview !== 'ready'"
+              aria-label="桌面"
+              :aria-pressed="viewport === 'desktop'"
+              :class="{ active: viewport === 'desktop' }"
+              @click="emit('viewport', 'desktop')"
+            >
+              <Icon name="desktop" :size="17" /><span>桌面</span></button
+            ><button
+              :disabled="style.preview !== 'ready'"
+              aria-label="手机"
+              :aria-pressed="viewport === 'mobile'"
+              :class="{ active: viewport === 'mobile' }"
+              @click="emit('viewport', 'mobile')"
+            >
+              <Icon name="phone" :size="17" /><span>手机</span>
+            </button>
           </div>
           <div v-else class="segmented reader-switch" aria-label="规范显示方式">
             <button
@@ -172,10 +189,16 @@ async function getSource(action: 'copy' | 'download') {
         >
           {{ actionMessage }}
         </p>
-        <div v-if="tab === 'preview'" class="pending-preview">
+        <ExamplePreview
+          v-if="tab === 'preview' && style.preview === 'ready'"
+          :style="style"
+          :viewport="viewport"
+        />
+        <div v-else-if="tab === 'preview'" class="pending-preview">
           <div class="pending-preview-icon"><Icon name="doc" :size="32" /></div>
           <span class="eyebrow">A DIRECTION, NOT A SCREENSHOT</span>
           <h2>规范已收录，示例待制作</h2>
+          <p v-if="style.exampleError" role="alert">示例关联异常：{{ style.exampleError }}</p>
           <p>还没有可以展示的真实页面。<br />先从原始规范，了解 {{ style.name }} 的设计语言。</p>
           <button class="button primary" @click="emit('tab', 'spec')">
             阅读设计规范<Icon name="arrow" :size="17" /></button
@@ -239,7 +262,11 @@ async function getSource(action: 'copy' | 'download') {
         <section>
           <div class="rail-label">
             <h2>风格特征</h2>
-            <span class="pending-label"><span class="status-dot" />示例待制作</span>
+            <span class="pending-label" :class="{ 'ready-label': style.preview === 'ready' }"
+              ><span class="status-dot" />{{
+                style.preview === 'ready' ? '已有示例' : '待制作'
+              }}</span
+            >
           </div>
           <div class="tag-list">
             <span v-for="mood in style.moods" :key="mood" class="tag">{{
@@ -276,10 +303,85 @@ async function getSource(action: 'copy' | 'download') {
             </div>
             <div>
               <dt>预览状态</dt>
-              <dd>尚未制作</dd>
+              <dd>{{ style.preview === 'ready' ? '已有真实示例' : '尚未验收' }}</dd>
             </div>
           </dl>
           <p class="rail-note">场景与标签为人工整理的参考建议，不表示对应页面已实现。</p>
+        </section>
+        <section class="feature-provenance">
+          <h2>为什么这样标？</h2>
+          <p class="rail-note">分类由本项目整理，不是上游原生标签。未知轴不自动补值。</p>
+          <details>
+            <summary>规范参考特征与依据</summary>
+            <dl class="feature-values">
+              <template v-for="key in visualKeys" :key="key"
+                ><div v-if="style.referenceFeatures[key]?.length">
+                  <dt>{{ facetTitles[key] }}</dt>
+                  <dd>
+                    {{
+                      style.referenceFeatures[key]?.map((value) => labelFor(key, value)).join(' / ')
+                    }}
+                  </dd>
+                </div></template
+              >
+            </dl>
+            <p
+              v-for="(evidence, index) in style.referenceEvidence"
+              :key="index"
+              class="evidence-note"
+            >
+              <strong>{{ evidence.kind === 'explicit' ? '原文明确规定' : '本地归纳' }}</strong> ·
+              {{ evidence.source }}<br />{{ evidence.reason }}
+            </p>
+            <button class="text-button" @click="emit('tab', 'spec')">在原始规范中核对 →</button>
+          </details>
+          <details v-if="style.example">
+            <summary>示例实况、取舍与素材</summary>
+            <h3>{{ style.example.title }}</h3>
+            <p>{{ style.example.description }}</p>
+            <dl class="feature-values">
+              <template v-for="key in visualKeys" :key="key"
+                ><div v-if="style.example.features[key]?.length">
+                  <dt>{{ facetTitles[key] }}</dt>
+                  <dd>
+                    {{
+                      style.example.features[key]?.map((value) => labelFor(key, value)).join(' / ')
+                    }}
+                  </dd>
+                </div></template
+              >
+            </dl>
+            <p class="rail-note">
+              已有交互：{{
+                style.preview === 'ready'
+                  ? style.example.interactions
+                      .map((value) => labelFor('interactions', value))
+                      .join(' / ')
+                  : '尚未完成验收'
+              }}<br />已验证视口：{{
+                style.example.viewports.map((value) => labelFor('viewports', value)).join(' / ') ||
+                '待验证'
+              }}
+            </p>
+            <p
+              v-for="(evidence, index) in style.example.references"
+              :key="index"
+              class="evidence-note"
+            >
+              <strong>示例观察 / 实现取舍</strong> · {{ evidence.source }}<br />{{
+                evidence.reason
+              }}
+            </p>
+            <ul class="example-notes">
+              <li v-for="note in style.example.notes" :key="note">{{ note }}</li>
+            </ul>
+            <details v-if="style.example.assets.length">
+              <summary>本地素材来源（{{ style.example.assets.length }}）</summary>
+              <p class="asset-note" v-for="asset in style.example.assets" :key="asset.file">
+                <code>{{ asset.file }}</code><br />{{ asset.source }}<br />{{ asset.license }}
+              </p>
+            </details>
+          </details>
         </section>
         <section>
           <h2>原始规范</h2>
@@ -300,7 +402,7 @@ async function getSource(action: 'copy' | 'download') {
           </div>
         </section>
         <p class="rail-disclaimer">
-          本项目是独立的设计语言索引，非品牌官方页面。未来的示例仅是一种参考实现，不保证其他生成结果完全相同。
+          本项目是独立的设计语言索引，非品牌官方页面。示例是原创场景的参考实现，不是品牌官网复刻，不保证其他生成结果完全相同。
         </p>
       </aside>
     </div>

@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NEBULA / 独立试玩节 · 独立风格示例</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#">nebula <span>✦</span></a>
+      <nav><a href="#games">发现游戏</a><a href="#schedule">我的试玩</a></nav>
+      <span>ORIGINAL WORLDS / 2026</span>
+    </header>
+    <main>
+      <section class="feature">
+        <img
+          src="./assets/tidal-world.svg"
+          alt="原创游戏潮汐邮差主视觉，潮汐群岛、灯塔、木桥与黄色雨衣送信人"
+        />
+        <div>
+          <p>NEBULA PLAY FESTIVAL</p>
+          <h1>一个新世界，<br />从好奇心开始。</h1>
+          <p>发现三款原创游戏概念，为自己安排一个有想象力的夜晚。</p>
+          <a href="#games">探索作品</a>
+        </div>
+      </section>
+      <section class="gameplay">
+        <p>NEW PLACES. NEW POSSIBILITIES.</p>
+        <h2>不必走得很远，<br />也能去到从未去过的地方。</h2>
+        <p>
+          一位送信的人，一片会回应的果园，一座重新接通的中继站。<br />这些都是原创游戏世界，不提供真实游戏下载。
+        </p>
+      </section>
+      <section id="games">
+        <div class="games-head">
+          <h2>找到你的下一段旅程。</h2>
+          <div class="filters">
+            <button data-genre="all" aria-pressed="true">全部玩法</button
+            ><button data-genre="explore">探索</button><button data-genre="puzzle">解谜</button>
+          </div>
+        </div>
+        <div class="game-grid">
+          <article data-genre-game="explore">
+            <img src="./assets/tidal-world.svg" alt="潮汐邮差原创封面" />
+            <h3>潮汐邮差</h3>
+            <p>在潮汐群岛之间，送达那些迟到的问候。</p>
+            <span>20:00 / 30分钟 / 探索</span><button data-session="0">加入试玩清单</button>
+          </article>
+          <article data-genre-game="puzzle">
+            <img src="./assets/orchard-world.svg" alt="回声果园原创封面" />
+            <h3>回声果园</h3>
+            <p>听见果树的回应，找到隐藏的路径。</p>
+            <span>20:00 / 30分钟 / 解谜</span><button data-session="1">加入试玩清单</button>
+          </article>
+          <article data-genre-game="explore">
+            <img src="./assets/relay-world.svg" alt="最后中继站原创封面" />
+            <h3>最后中继站</h3>
+            <p>在安静的太空站，把信号重新连起来。</p>
+            <span>21:00 / 30分钟 / 探索</span><button data-session="2">加入试玩清单</button>
+          </article>
+        </div>
+        <p id="genre-status" role="status">3 款原创游戏概念</p>
+      </section>
+      <section id="schedule">
+        <div>
+          <p>YOUR EVENING, YOUR WAY.</p>
+          <h2>为好奇心，<br />留一点时间。</h2>
+          <p>固定演示时间，无真实售票、占位或下载。</p>
+        </div>
+        <div>
+          <h3>本次试玩清单</h3>
+          <div id="sessions">还没有选择作品。</div>
+          <p id="session-status" role="status">同一时间只能选择一个场次。</p>
+          <button id="clear-sessions">清空清单</button>
+        </div>
+      </section>
+      <section class="blue">
+        <h2>Ready for<br />somewhere new?</h2>
+        <a href="#games">回到作品轨道 ↑</a>
+      </section>
+    </main>
+    <footer>NEBULA / 独立设计示例 · 原创游戏美术与虚构节目，无真实游戏服务。</footer>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

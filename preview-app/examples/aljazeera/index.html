@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>城市观察 / City Observer · 独立风格示例</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a class="masthead" href="#"><i></i>城市观察<span>CITY OBSERVER</span></a
+      ><span>2026.11.19 / 虚构专题回放</span><button id="all-topics">全部议题</button>
+    </header>
+    <nav>
+      <button data-issue="all" aria-pressed="true">首页</button
+      ><button data-issue="river">河岸修复</button><button data-issue="community">社区参与</button
+      ><button data-issue="design">城市设计</button>
+    </nav>
+    <main>
+      <div class="breaking">
+        <b>专题档案</b><span>一条河，如何重新回到人们的日常？</span><span>非实时报道</span>
+      </div>
+      <section class="lead-grid">
+        <article class="lead-story" data-issue-story="river">
+          <img src="../_shared/photos/city.webp" alt="城市街景参考摄影" />
+          <p class="eyebrow">河岸修复 / 原创虚构报道</p>
+          <h1>当城市把河岸，<br />重新交还给行人。</h1>
+          <p>
+            一段曾经难以抵达的水边，成为开放日的起点。我们用一个虚构专题，讨论公共空间如何被重新看见。
+          </p>
+          <span>编辑部 / 原创虚构报道</span><button id="read-report">阅读完整主报道 →</button>
+        </article>
+        <aside>
+          <article data-issue-story="community">
+            <p class="eyebrow">社区参与</p>
+            <h2>从清理一段步道开始，邻里协作有了新的尺度</h2>
+            <p>开放日手记：人们带来的不只是工具，还有对日常环境的想象。</p>
+          </article>
+          <article data-issue-story="design">
+            <p class="eyebrow">城市设计</p>
+            <h2>长椅应当面向哪里？</h2>
+            <p>一张草图背后，是关于停留、照料与可达性的讨论。</p>
+          </article>
+        </aside>
+        <section class="popular">
+          <h2>编辑选读</h2>
+          <p><b>01</b> 一条步道连接的，不只是两座桥。</p>
+          <p><b>02</b> 把照明留给需要被看见的地方。</p>
+          <p><b>03</b> 开放日之后，维护从哪里开始？</p>
+        </section>
+      </section>
+      <p id="issue-status" role="status">显示全部 3 篇专题稿件</p>
+      <section class="full-report" id="full-report" hidden>
+        <button id="close-report">收起主报道 ↑</button>
+        <p class="eyebrow">城市观察 / 原创虚构主报道</p>
+        <h2>当城市把河岸，重新交还给行人。</h2>
+        <p class="report-byline">林澈 / 演示编辑部 / 2026年11月19日</p>
+        <div class="report-prose">
+          <p>
+            开放日的集合点不在新铺好的广场上，而在桥下的一段缓坡旁。来到这里的人带着不同的问题：轮椅能不能绕过桥墩，傍晚的灯是否照到路面，孩子停下来观察水边植物时，有没有一个不会挡住通行的位置。这个原创虚构场景，把“开放”从一个落成日期变成了可被讨论的日常细节。
+          </p>
+          <h3>抵达水边，先经过一条路。</h3>
+          <p>
+            过去，人们常把河岸画成地图边缘的一条蓝线。真正走到现场，路线却由围栏、台阶、机动车道和入口指示共同组成。一段新步道如果只在内部连贯，却没有让周边居民容易找到入口，它仍然可能离生活很远。参与者在图纸上标注的第一批位置，因此并不是景观节点，而是他们每天真正经过的路口。
+          </p>
+          <p>
+            坡道与长椅也不只是附属设施。坡度决定谁可以独立进入，座椅的方向决定停留时看见什么，树荫与照明则把空间的使用时间拉长。我们把这些问题放在同一张图里，不是为了给出一套适用于所有河岸的答案，而是提醒设计从具体的人和路径开始。
+          </p>
+          <h3>一场开放日，不能替代长期使用。</h3>
+          <p>
+            下午，临时长桌上摆满了草图。有的人想保留安静的阅读角，有的人希望推车可以顺畅交会。意见并不总是相同，但把差异留下，比急着达成一张整齐的效果图更重要。一个公共空间的价值，往往在不同需要能够被彼此看见时才开始显现。
+          </p>
+          <p>
+            开放之后的问题更普通，也更持久：垃圾由谁处理，地面出现松动时去哪里反馈，夜间照明失效后谁来维护。把这些责任说清楚，与把第一条步道修好一样，是设计的一部分。本文不对应真实项目，也不提供工程安全或无障碍合规结论；所有街区、人物与事件均为原创虚构，城市摄影仅作主题参考。
+          </p>
+          <blockquote>公共空间不只在图纸上。它存在于下一次抵达、停留和照料之中。</blockquote>
+        </div>
+        <button id="close-report-bottom">回到专题与时间线</button>
+      </section>
+      <section class="replay">
+        <div>
+          <p class="eyebrow">开放日时间线</p>
+          <h2>回到这一天，<br />一步一步看。</h2>
+          <p>固定档案按顺序展开，不是直播或实时新闻。</p>
+          <button id="next-update">展开下一条更新</button><button id="restart">从头回放</button>
+          <p id="replay-status" role="status">0 / 4 条更新已展开</p>
+        </div>
+        <ol id="updates"></ol>
+      </section>
+      <section class="essay">
+        <p class="eyebrow">编者按</p>
+        <h2>公共空间，不只在图纸上。</h2>
+        <p>
+          这里的街区、人物与事件均为原创虚构。我们借助真实城市摄影作为视觉参考，探索信息密集的新闻界面如何让议题、时间与人物关系保持清晰。
+        </p>
+      </section>
+    </main>
+    <footer>CITY OBSERVER / 独立编辑式设计示例 · 非实际新闻机构</footer>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

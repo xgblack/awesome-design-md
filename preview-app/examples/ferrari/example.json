@@ -1,0 +1,62 @@
+{
+  "title": "VELOCE / Driven by feeling",
+  "description": "原创双门性能跑车展厅与珍藏车款档案；选择车漆和筛选概念车款，不购买、不预约。",
+  "status": "ready",
+  "features": {
+    "moods": ["cinematic", "luxury"],
+    "tones": ["mixed"],
+    "temperature": ["warm", "contrast"],
+    "chroma": ["vivid"],
+    "accentHues": ["red"],
+    "backgrounds": ["solid"],
+    "layouts": ["chapters", "directory"],
+    "density": ["airy"],
+    "typography": ["sans"],
+    "headingScale": ["display"],
+    "headingWeight": ["medium"],
+    "geometry": ["square"],
+    "layering": ["lines"],
+    "visualMedia": ["render"],
+    "motion": ["feedback"],
+    "scenarios": ["product"]
+  },
+  "interactions": ["filter", "configure"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "原创虚构品牌与概念产品，非官方页面；操作仅在当前页面内存生效，不提交真实业务。",
+    "Inter 500为本地替代；无原厂品牌标记、车图或实际动力承诺。",
+    "三涂装沿用同一原创车身研究，不把涂装计为三种独立硬件结构。"
+  ],
+  "references": [
+    {
+      "source": "DESIGN.md L274–289、335–356",
+      "reason": "汽车、细节与赛道是主体；近黑181818/红色方CTA/500字重与宽字距小标。"
+    },
+    {
+      "source": "DESIGN.md L430–446",
+      "reason": "满幅影像首章与白色珍藏车款目录，内容为原创汽车概念，不再用电影节替代行业。"
+    }
+  ],
+  "assets": [
+    {
+      "file": "assets/veloce-rosso.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/veloce-bianco.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/veloce-graphite.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/engine.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    }
+  ]
+}

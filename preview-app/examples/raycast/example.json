@@ -1,0 +1,37 @@
+{
+  "title": "Spark / Developer command workspace",
+  "description": "开发者命令与扩展工作台：搜索与键盘选择实际本地文本/颜色工具，启停扩展改变命令集；Esc关闭归焦。",
+  "status": "ready",
+  "features": {
+    "moods": ["tech", "minimal"],
+    "tones": ["dark"],
+    "temperature": ["neutral"],
+    "chroma": ["mono"],
+    "accentHues": ["neutral"],
+    "backgrounds": ["solid", "texture"],
+    "layouts": ["split", "workspace"],
+    "density": ["balanced"],
+    "typography": ["sans", "mono"],
+    "headingScale": ["regular"],
+    "headingWeight": ["bold"],
+    "geometry": ["small-radius"],
+    "layering": ["solid", "shadow"],
+    "visualMedia": ["ui", "geometry", "type"],
+    "motion": ["feedback"],
+    "scenarios": ["product", "tool"]
+  },
+  "interactions": ["filter", "configure", "form"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "保留近黑四级表面、单次红斜纹、实体键帽与真实命令面板，marketing-is-product而非泛效率工具官网。",
+    "命令只操作用户主动输入的页面文字，不读剪贴板、不注册全局快捷键，也不执行系统命令。",
+    "字体取舍：显示 \"Inter Variable\", sans-serif；正文 \"Inter Variable\", sans-serif。使用本地开放字体/系统字体替代品牌商业字体；标题筛选标签按实际桌面渲染归类。"
+  ],
+  "references": [
+    {
+      "source": "原规范 L332–345、388–453、565–574、610–618、636–650",
+      "reason": "仅一次红斜纹开场 → 真正可用命令面板 → 扩展轨道/操作例子。`#07080a`及四级暗面、白 CTA、1px灰边、Inter `ss03`特性与实体键帽；彩色只给扩展图标。"
+    }
+  ],
+  "assets": []
+}

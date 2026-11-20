@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Spark / Developer command workspace</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#">◈ spark</a>
+      <nav>
+        <a href="#extensions">Extensions</a><a href="#how">How it works</a
+        ><button id="open-header">Open workspace <kbd>↵</kbd></button>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <div>
+          <span class="eyebrow">LESS SEARCHING. MORE DOING.</span>
+          <h1>A small command.<br />A little momentum.</h1>
+          <p>
+            文字转换、颜色检查，放在一块轻巧的面板里。<br />不注册系统快捷键，也不读取你的剪贴板。
+          </p>
+          <button id="open" class="white">Open the command panel <kbd>↵</kbd></button>
+        </div>
+        <div class="red-stage">
+          <div class="keycap">⌘</div>
+          <span>FOCUS, IN A SINGLE PLACE.</span>
+        </div>
+      </section>
+      <section class="extensions" id="extensions">
+        <div>
+          <span class="eyebrow">YOUR WORKSPACE, YOUR TOOLS.</span>
+          <h2>Keep what you use.</h2>
+          <p>启停扩展会立即更新面板命令。所有工具仅在浏览器内执行。</p>
+        </div>
+        <div class="extension-grid">
+          <label class="extension"
+            ><span class="icon text-icon">Aa</span>
+            <div>
+              <b>Text utilities</b>
+              <p>大写转换 · 去重行</p>
+            </div>
+            <input id="text-extension" type="checkbox" checked aria-label="启用文字工具" /></label
+          ><label class="extension"
+            ><span class="icon color-icon">◈</span>
+            <div>
+              <b>Color inspector</b>
+              <p>HEX → RGB</p>
+            </div>
+            <input id="color-extension" type="checkbox" checked aria-label="启用颜色工具"
+          /></label>
+        </div>
+        <p id="extension-status" role="status">2 个扩展已启用。</p>
+      </section>
+      <section class="how" id="how">
+        <span class="eyebrow">A WORKSPACE THAT STAYS ON THIS PAGE.</span>
+        <h2>Find a command.<br />Make it useful.</h2>
+        <div>
+          <article>
+            <kbd>↑ ↓</kbd>
+            <h3>Move through results.</h3>
+            <p>在面板搜索框内，用方向键选择命令，再按 Enter。页面之外的快捷键不受影响。</p>
+          </article>
+          <article>
+            <kbd>Esc</kbd>
+            <h3>Return with focus.</h3>
+            <p>关闭后焦点回到打开按钮。文本不落地保存，不自动读取剪贴板。</p>
+          </article>
+        </div>
+      </section>
+    </main>
+    <dialog id="palette" aria-labelledby="palette-title">
+      <div class="palette-head">
+        <h2 id="palette-title">Spark command panel</h2>
+        <button id="close" aria-label="关闭命令面板">Esc</button>
+      </div>
+      <label class="search"
+        ><span>⌕</span
+        ><input
+          id="search"
+          type="search"
+          placeholder="Search commands…"
+          aria-label="搜索命令"
+          autocomplete="off"
+      /></label>
+      <div id="commands" role="listbox" aria-label="可用命令"></div>
+      <div class="tool">
+        <label for="input" id="input-label">要转换的文字</label
+        ><textarea id="input" spellcheck="false" placeholder="Type something useful…">
+a small idea</textarea
+        ><button id="execute">Run selected command ↗</button>
+        <pre id="result" role="status">Choose a command, then run it.</pre>
+      </div>
+      <div class="palette-foot"><span>↑↓ to select · ↵ to open</span><span>LOCAL ONLY</span></div>
+    </dialog>
+    <footer>◈ spark / <span>Raycast DESIGN.md · 独立本地命令工具</span></footer>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+{
+  "title": "Roam Ledger · 多币种费用换算",
+  "description": "固定汇率、费用拆分与旅行支出换算，仍属于跨境资金/汇率管理；没有真实汇款。",
+  "status": "ready",
+  "features": {
+    "moods": ["warm", "playful"],
+    "tones": ["mixed"],
+    "layouts": ["split"],
+    "density": ["balanced"],
+    "headingScale": ["display"],
+    "headingWeight": ["bold"],
+    "geometry": ["rounded"],
+    "visualMedia": ["type", "ui"],
+    "accentHues": ["green"],
+    "temperature": ["warm"],
+    "chroma": ["muted"],
+    "backgrounds": ["solid"],
+    "layering": ["solid"],
+    "scenarios": ["calculator"],
+    "typography": ["sans"],
+    "motion": ["feedback"]
+  },
+  "interactions": ["form", "configure"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "专有字体以本地 Inter Variable 替代，保留字重、字阶、空间与组件规则；中文为系统字体回退。",
+    "交互为原创本地演示，不发出业务请求，不保存个人输入。",
+    "语境复核：保留已贴原产品类别的核心页面，复核理由：固定汇率、费用拆分与旅行支出换算，仍属于跨境资金/汇率管理；没有真实汇款。"
+  ],
+  "references": [
+    {
+      "source": "DESIGN.md L292–306、341–413、429–493、532–544",
+      "reason": "鼠尾草底左超重短句/右大白换算器 → 透明费率费用拆分 → 目的地预算 → 黑底绿字收束。`#e8ebe6`/`#9fe870`、900展示/常规工具字、24px卡钮/12px输入；白卡靠填色非影。"
+    }
+  ],
+  "assets": []
+}

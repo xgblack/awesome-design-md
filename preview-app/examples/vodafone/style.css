@@ -1,0 +1,642 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+}
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+button,
+a,
+input,
+select,
+textarea {
+  touch-action: manipulation;
+}
+button,
+a {
+  cursor: pointer;
+}
+button {
+  color: inherit;
+  min-height: 44px;
+}
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+a {
+  color: inherit;
+}
+img,
+video,
+svg {
+  max-width: 100%;
+}
+img {
+  display: block;
+}
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--focus, #84a9d0);
+  outline-offset: 4px;
+}
+fieldset {
+  min-width: 0;
+}
+dialog {
+  max-width: calc(100% - 32px);
+  max-height: 90dvh;
+  overflow: auto;
+}
+dialog::backdrop {
+  background: #000b;
+}
+[hidden] {
+  display: none !important;
+}
+.demo-note {
+  font-size: 12px;
+  line-height: 1.7;
+  opacity: 0.72;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+:root {
+  --red: #e60000;
+  --ink: #171717;
+  --muted: #666;
+  --line: #dedede;
+  --focus: #d60000;
+}
+body {
+  font:
+    14px Inter Variable,
+    sans-serif;
+  background: white;
+  color: var(--ink);
+}
+header {
+  height: 90px;
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  background: #111;
+  color: white;
+}
+header > a {
+  text-decoration: none;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+header > a > span {
+  color: #e60000;
+  font-size: 43px;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+nav {
+  display: flex;
+  gap: 30px;
+}
+nav a {
+  font-size: 11px;
+  text-decoration: none;
+}
+header > span {
+  font-size: 9px;
+  letter-spacing: 1px;
+  color: #aaa;
+}
+.hero {
+  height: 800px;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: #222;
+  color: white;
+}
+.hero > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 65% 32%;
+  z-index: -2;
+  filter: brightness(0.63);
+}
+.hero > div {
+  position: relative;
+  z-index: 1;
+  margin: 90px 6% 0;
+  max-width: 650px;
+}
+.hero p {
+  font-size: 10px;
+  letter-spacing: 1.4px;
+}
+h1 {
+  font-size: 105px;
+  line-height: 0.99;
+  font-weight: 700;
+  letter-spacing: -4px;
+  margin: 35px 0;
+}
+.hero a {
+  display: inline-block;
+  background: white;
+  color: black;
+  text-decoration: none;
+  padding: 17px 24px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  margin-top: 5px;
+}
+.arc {
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  right: -100px;
+  bottom: -70px;
+  border: 80px solid var(--red);
+  border-radius: 50%;
+  border-left-color: transparent;
+  transform: rotate(-20deg);
+  z-index: -1;
+}
+.statement {
+  padding: 100px 10%;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 12%;
+  align-items: center;
+}
+h2 {
+  font-size: 51px;
+  font-weight: 300;
+  line-height: 1.16;
+  letter-spacing: -1.6px;
+  margin: 0;
+}
+.statement p {
+  font-size: 20px;
+  line-height: 1.8;
+  color: #666;
+  font-weight: 300;
+}
+.services {
+  padding: 70px 6% 90px;
+  background: #f4f4f4;
+}
+.services-top {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+  align-items: center;
+  gap: 7%;
+}
+.services-top > div > p:first-child,
+.points > div > p:first-child {
+  font-size: 9px;
+  letter-spacing: 1.4px;
+}
+.services-top h2 {
+  margin: 30px 0;
+}
+.services-top > div > p:last-child {
+  line-height: 1.9;
+  font-size: 14px;
+  color: #666;
+  max-width: 390px;
+}
+.services-top > img {
+  width: 100%;
+  height: 470px;
+  object-fit: contain;
+}
+.service-options {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 50px;
+  gap: 22px;
+}
+.service-options > button {
+  text-align: left;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 27px 22px;
+  display: grid;
+  gap: 16px;
+}
+.service-options span {
+  font-size: 9px;
+  letter-spacing: 1px;
+  color: #777;
+}
+.service-options b {
+  font-size: 22px;
+  font-weight: 400;
+}
+.service-options small {
+  font-size: 11px;
+  line-height: 1.8;
+  color: #777;
+}
+.service-options [aria-pressed='true'] {
+  border: 2px solid var(--red);
+  padding: 26px 21px;
+}
+.plan-result {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: 4% 10%;
+  background: white;
+  padding: 45px;
+  margin-top: 25px;
+  border-radius: 6px;
+}
+.plan-result > div > p:first-child {
+  font-size: 8px;
+  letter-spacing: 1px;
+  color: #777;
+}
+.plan-result h3 {
+  font-size: 31px;
+  font-weight: 300;
+  letter-spacing: -0.5px;
+  margin: 20px 0;
+}
+.plan-result > div > p:last-child {
+  font-size: 13px;
+  line-height: 1.9;
+  color: #666;
+}
+.plan-result dl {
+  margin: 0;
+  font-size: 12px;
+}
+.plan-result dl > div {
+  border-bottom: 1px solid #ddd;
+  padding: 18px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.plan-result dt {
+  color: #777;
+}
+.plan-result dd {
+  margin: 0;
+  text-align: right;
+}
+.plan-result .demo-note {
+  grid-column: 1/-1;
+  font-size: 10px;
+  color: #777;
+  margin: 15px 0 0;
+}
+.points {
+  background: #a60000;
+  color: white;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 12%;
+  padding: 85px 9%;
+  align-items: center;
+}
+.points h2 {
+  font-size: 44px;
+  margin: 30px 0;
+}
+.points label {
+  display: block;
+  font-size: 11px;
+  margin: 35px 0 12px;
+}
+.points select {
+  background: white;
+  color: #222;
+  padding: 14px;
+  width: 100%;
+  max-width: 350px;
+  border: 0;
+  border-radius: 6px;
+  font-size: 12px;
+}
+.points .demo-note {
+  font-size: 9px;
+}
+#point-result {
+  border-top: 1px solid #ffffff66;
+  border-bottom: 1px solid #ffffff66;
+  padding: 35px 0;
+}
+#point-result h3 {
+  font-size: 25px;
+  font-weight: 300;
+  line-height: 1.4;
+  margin: 0 0 25px;
+}
+#point-result p {
+  font-size: 12px;
+  line-height: 1.9;
+  color: #f0d6d6;
+}
+.story-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 90px 6% 50px;
+}
+.story-head h2 {
+  font-size: 46px;
+}
+.story-head > div {
+  display: flex;
+  gap: 10px;
+}
+.story-head button {
+  background: white;
+  border: 1px solid #bbb;
+  border-radius: 99px;
+  padding: 11px 19px;
+  font-size: 11px;
+}
+.story-head [aria-pressed='true'] {
+  background: var(--red);
+  color: white;
+  border-color: var(--red);
+}
+.stories {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+  padding: 0 6%;
+}
+.stories > article {
+  min-width: 0;
+}
+.stories img {
+  height: 420px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+}
+.stories h3 {
+  font-size: 29px;
+  font-weight: 300;
+  line-height: 1.35;
+  letter-spacing: -0.7px;
+  margin: 25px 0;
+}
+.stories p {
+  font-size: 11px;
+  color: #888;
+}
+.stories button {
+  border: 0;
+  background: none;
+  text-decoration: underline;
+  padding: 15px 0;
+  font-size: 11px;
+}
+#story-status {
+  font-size: 10px;
+  color: #777;
+  padding: 20px 6% 70px;
+}
+footer {
+  background: #151515;
+  color: #ddd;
+  padding: 55px 6%;
+  font-size: 10px;
+  letter-spacing: 0.5px;
+}
+footer p {
+  font-size: 10px;
+  line-height: 2;
+  letter-spacing: 0;
+  max-width: 760px;
+  color: #999;
+  margin-top: 22px;
+}
+dialog {
+  background: white;
+  color: #222;
+  border: 0;
+  padding: 35px;
+  width: 650px;
+  border-radius: 6px;
+}
+dialog > button {
+  float: right;
+  border: 0;
+  background: none;
+  font-size: 11px;
+}
+dialog > p:first-of-type {
+  clear: both;
+  padding-top: 25px;
+  font-size: 9px;
+  color: #999;
+}
+dialog h2 {
+  font-size: 35px;
+  margin: 28px 0;
+}
+#person-text {
+  font-size: 14px;
+  line-height: 2;
+  color: #666;
+}
+dialog .demo-note {
+  font-size: 10px;
+  color: #888;
+}
+@media (max-width: 650px) {
+  header {
+    height: 75px;
+    padding: 0 24px;
+    gap: 15px;
+  }
+  header > a {
+    font-size: 21px;
+  }
+  header > a > span {
+    font-size: 32px;
+  }
+  header > span {
+    display: none;
+  }
+  nav {
+    gap: 15px;
+  }
+  nav a {
+    font-size: 9px;
+  }
+  nav a:nth-child(2) {
+    display: none;
+  }
+  .hero {
+    height: 760px;
+  }
+  .hero > img {
+    object-position: 62% center;
+  }
+  .hero > div {
+    margin: 70px 24px 0;
+  }
+  h1 {
+    font-size: 73px;
+    letter-spacing: -2px;
+    margin: 35px 0;
+  }
+  .hero p {
+    font-size: 8px;
+    max-width: 230px;
+    line-height: 1.8;
+  }
+  .hero a {
+    font-size: 11px;
+    padding: 16px 19px;
+  }
+  .arc {
+    width: 340px;
+    height: 340px;
+    border-width: 60px;
+    right: -125px;
+    bottom: -80px;
+  }
+  .statement {
+    grid-template-columns: 1fr;
+    padding: 60px 24px;
+    gap: 25px;
+  }
+  h2 {
+    font-size: 38px;
+  }
+  .statement p {
+    font-size: 17px;
+  }
+  .services {
+    padding: 45px 24px 60px;
+  }
+  .services-top {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .services-top h2 {
+    font-size: 36px;
+  }
+  .services-top > div > p:last-child {
+    font-size: 13px;
+  }
+  .services-top > img {
+    height: 330px;
+  }
+  .service-options {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 20px;
+  }
+  .service-options > button {
+    padding: 22px;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .service-options [aria-pressed='true'] {
+    padding: 21px;
+  }
+  .service-options b {
+    font-size: 21px;
+  }
+  .plan-result {
+    grid-template-columns: 1fr;
+    padding: 25px 20px;
+    gap: 20px;
+  }
+  .plan-result h3 {
+    font-size: 28px;
+  }
+  .plan-result dl {
+    font-size: 11px;
+  }
+  .points {
+    grid-template-columns: 1fr;
+    padding: 60px 24px;
+    gap: 30px;
+  }
+  .points h2 {
+    font-size: 35px;
+  }
+  .points select {
+    max-width: none;
+  }
+  #point-result h3 {
+    font-size: 23px;
+  }
+  .story-head {
+    display: block;
+    padding: 60px 24px 35px;
+  }
+  .story-head h2 {
+    font-size: 35px;
+  }
+  .story-head > div {
+    margin-top: 30px;
+    gap: 7px;
+  }
+  .story-head button {
+    font-size: 10px;
+    padding: 10px 14px;
+  }
+  .stories {
+    grid-template-columns: 1fr;
+    padding: 0 24px;
+    gap: 35px;
+  }
+  .stories img {
+    height: 400px;
+  }
+  .stories h3 {
+    font-size: 26px;
+  }
+  #story-status {
+    padding: 20px 24px 50px;
+  }
+  footer {
+    padding: 40px 24px;
+    font-size: 9px;
+  }
+  dialog {
+    padding: 25px;
+  }
+  dialog h2 {
+    font-size: 29px;
+  }
+}

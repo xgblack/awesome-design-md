@@ -1,0 +1,37 @@
+{
+  "title": "AtlasOps / Infrastructure platform library",
+  "description": "基础设施平台产品学习库：在基础设施、身份与网络产品间切换，按难度查资料并展开原创教程；不连接云资源。",
+  "status": "ready",
+  "features": {
+    "moods": ["tech"],
+    "tones": ["dark"],
+    "temperature": ["neutral"],
+    "chroma": ["mono"],
+    "accentHues": ["purple", "yellow", "cyan"],
+    "backgrounds": ["solid"],
+    "layouts": ["split", "directory"],
+    "density": ["balanced"],
+    "typography": ["sans"],
+    "headingScale": ["display"],
+    "headingWeight": ["bold"],
+    "geometry": ["small-radius"],
+    "layering": ["solid"],
+    "visualMedia": ["geometry", "ui"],
+    "motion": ["feedback"],
+    "scenarios": ["product", "docs", "directory"]
+  },
+  "interactions": ["filter", "configure"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "保留原规范的多产品组合，不统一成单一SaaS：黑色基础设施首屏、等距体块、紫/黄/青产品身份与资源目录。",
+    "Terrain、Keeper、Weave为虚构产品；教程为原创固定教学材料，不执行配置、鉴权或申请真实资源。",
+    "字体取舍：显示 \"Inter Variable\", sans-serif；正文 \"Inter Variable\", sans-serif。使用本地开放字体/系统字体替代品牌商业字体；标题筛选标签按实际桌面渲染归类。"
+  ],
+  "references": [
+    {
+      "source": "原规范 L275–281、339–357、449–458、511–527",
+      "reason": "黑大标题/单产品体块 → 活动产品身份卡 → 炭灰能力行/资源缩略/黑页脚。500正文/600–700标题、白8px CTA、透明灰细线/亮度阶；紫黄青各是产品身份，营销不全等宽。"
+    }
+  ],
+  "assets": []
+}

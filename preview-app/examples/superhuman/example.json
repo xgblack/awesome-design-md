@@ -1,0 +1,43 @@
+{
+  "title": "Orbit · 留给重要邮件的空间",
+  "description": "分拣本地样本邮件，归档/撤回并写下各邮件独立回复草稿；不读写真实邮箱。",
+  "status": "ready",
+  "features": {
+    "moods": ["cinematic", "minimal"],
+    "tones": ["mixed"],
+    "layouts": ["split", "workspace", "editorial"],
+    "density": ["airy"],
+    "headingScale": ["display"],
+    "headingWeight": ["medium"],
+    "geometry": ["pill", "small-radius"],
+    "visualMedia": ["photo", "ui"],
+    "accentHues": ["purple"],
+    "temperature": ["cool"],
+    "chroma": ["muted"],
+    "backgrounds": ["solid", "image"],
+    "layering": ["solid"],
+    "scenarios": ["product", "tool"],
+    "typography": ["sans"],
+    "motion": ["feedback"]
+  },
+  "interactions": ["filter", "edit"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "Super Sans 专有字体使用本地 Inter Variable 460/540 替代；hero 淡紫胶囊与正文矩形分工保留。",
+    "肖像来自本地共享摄影池；图片作者与原始来源见 _shared/photos/sources.json，许可见 LICENSE.md。计时使用 performance.now() 实际经过时间。",
+    "语境复核：从计时器改为原规范快邮件产品语境；保留靛蓝肖像、白正文三拍与深青绿结尾。"
+  ],
+  "references": [
+    {
+      "source": "DESIGN.md L214–231、260–333、337–364、387–413、431–439",
+      "reason": "靛蓝天空/半幅侧望肖像/单行动 → 白底Focus、Review、Plan叙事行 → 深青绿结尾。`#1b1938`/白/`#0e3030`三拍、460/540变量字重/0.96展示行高、暖灰正文；hero淡紫胶囊、正文及结尾8px矩形。"
+    }
+  ],
+  "assets": [
+    {
+      "file": "../_shared/photos/portrait.webp",
+      "source": "见共享 photos/sources.json 对应条目",
+      "license": "Unsplash License，见共享 LICENSE.md"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+import { test, expect } from '@playwright/test'
+test('knowledge tool fixture exposes grounded output', async ({ page }) => {
+  await page.goto('examples/composio/index.html')
+  await page.selectOption('#recipe', 'checklist')
+  await page.click('#next')
+  await page.click('#next')
+  await page.click('#next')
+  await expect(page.locator('#result')).toContainText('runbook-03')
+  await expect(page.locator('#trace')).toContainText('knowledge.read')
+})
+test('scope denial stops workflow until reset', async ({ page }) => {
+  await page.goto('examples/composio/index.html')
+  await page.check('#inject')
+  await page.click('#next')
+  await page.click('#next')
+  await expect(page.locator('#state')).toHaveText('DENIED')
+  await expect(page.locator('#result')).toContainText('未发送工具调用')
+  await page.uncheck('#inject')
+  await page.click('#reset')
+  await expect(page.locator('#progress')).toHaveText('0 / 3')
+})

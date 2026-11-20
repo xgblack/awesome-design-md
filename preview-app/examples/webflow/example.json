@@ -1,0 +1,37 @@
+{
+  "title": "Structure · 从想法，到网站",
+  "description": "在真实网页画布中编辑网站模板、首屏、布局/主题与设备预览，安全导出独立网站 HTML。",
+  "status": "ready",
+  "features": {
+    "moods": ["tech", "playful"],
+    "tones": ["mixed"],
+    "layouts": ["centered", "workspace"],
+    "density": ["balanced"],
+    "headingScale": ["display"],
+    "headingWeight": ["bold"],
+    "geometry": ["square", "small-radius"],
+    "visualMedia": ["ui", "geometry"],
+    "accentHues": ["neutral"],
+    "temperature": ["neutral"],
+    "chroma": ["vivid"],
+    "backgrounds": ["solid"],
+    "layering": ["solid"],
+    "scenarios": ["product", "tool"],
+    "typography": ["sans"],
+    "motion": ["feedback"]
+  },
+  "interactions": ["edit", "configure"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "WF Visual Sans 专有字体采用本地 Inter Variable，上限600；分类整板/近黑动作与4px控件按规范处理。",
+    "真实DOM网站预览包含导航、首屏、项目与页尾；独立HTML导出对标题转义，不含脚本/外部资源，不提供托管发布。",
+    "语境复核：从海报编辑改为可视化网站开发，导出包含导航/首屏/项目/页尾；不托管或执行输入。"
+  ],
+  "references": [
+    {
+      "source": "DESIGN.md L319–333、367–453、455–537、576–588",
+      "reason": "白80px标题/真实可改16:9预览 → 跨列紫粉蓝橙绿分类板 → 黑作品间奏。近黑行动、600字重上限、15px大写宽眉、4px按钮/8px框，精选作品才微层影。"
+    }
+  ],
+  "assets": []
+}

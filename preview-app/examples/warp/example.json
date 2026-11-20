@@ -1,0 +1,37 @@
+{
+  "title": "Workbench / Agentic terminal workspace",
+  "description": "Agentic Terminal排障工作区：用预置开发指引追问端口/配置问题，再在白名单终端核对，逐步提示与重置；不执行宿主shell。",
+  "status": "ready",
+  "features": {
+    "moods": ["minimal", "tech", "warm"],
+    "tones": ["dark"],
+    "temperature": ["warm"],
+    "chroma": ["mono"],
+    "accentHues": ["neutral"],
+    "backgrounds": ["solid"],
+    "layouts": ["split", "workspace"],
+    "density": ["balanced"],
+    "typography": ["sans", "mono"],
+    "headingScale": ["display"],
+    "headingWeight": ["regular"],
+    "geometry": ["square", "small-radius"],
+    "layering": ["lines"],
+    "visualMedia": ["ui", "code"],
+    "motion": ["feedback"],
+    "scenarios": ["product", "tool"]
+  },
+  "interactions": ["form", "edit", "configure"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "保留暖棕黑、64px静字、Agent指引/终端双面板、3–4px控件与个人观察笔记，避免无依据霓虹。",
+    "自然语言入口仅匹配两个固定任务，不调用Agent；终端仅解析白名单字符串，不读写真实文件或网络。",
+    "字体取舍：显示 \"Inter Variable\", sans-serif；正文 \"Inter Variable\", sans-serif。使用本地开放字体/系统字体替代品牌商业字体；标题筛选标签按实际桌面渲染归类。"
+  ],
+  "references": [
+    {
+      "source": "原规范 L278–292、315–386、398–475、514–526",
+      "reason": "暖棕黑64px安静标题 → 指导/终端双面板 → 个人笔记/行式练习/平台命令索引。`#2b2622`/`#f7f5f0`、Inter400/DM Mono、3px钮/4px终端、暖细线，无品牌彩渐变。"
+    }
+  ],
+  "assets": []
+}

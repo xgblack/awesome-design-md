@@ -1,0 +1,28 @@
+import { test, expect } from '@playwright/test'
+test.beforeEach(async ({ page }) => {
+  await page.goto('examples/hp/index.html')
+})
+test('三问答全才给器材组合，结果图随印制任务改变', async ({ page }) => {
+  await page.getByRole('button', { name: '查看推荐组合' }).click()
+  await expect(page.locator('#recommendation')).toContainText('回答完整')
+  await expect(page.locator('#print-kind')).toBeFocused()
+  await expect(page.locator('#print-kind')).toHaveAttribute('aria-invalid', 'true')
+  await page.locator('#print-kind').selectOption('photo')
+  await page.locator('#volume').selectOption('large')
+  await page.locator('#binding').selectOption('yes')
+  await page.getByRole('button', { name: '查看推荐组合' }).click()
+  await expect(page.locator('#recommendation')).toContainText('骑马钉')
+  await expect(page.locator('#recommended-device')).toHaveAttribute('src', /photo-printer/)
+  await page.locator('#print-kind').selectOption('text')
+  await page.getByRole('button', { name: '查看推荐组合' }).click()
+  await expect(page.locator('#recommended-device')).toHaveAttribute('src', /document-printer/)
+  await expect(page.locator('#recommendation')).toContainText('100gsm')
+})
+test('帮助分支可返回且不暗示实际执行维修', async ({ page }) => {
+  await page.locator('#problem').selectOption('jam')
+  await expect(page.locator('#diagnosis')).toContainText('不强拉')
+  await expect(page.locator('#diagnosis')).toContainText('不是维修指令')
+  await page.locator('#back').click()
+  await expect(page.locator('#problem')).toHaveValue('')
+  await expect(page.locator('#diagnosis')).toContainText('已返回')
+})

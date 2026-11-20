@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Enterprise Grid · 企业混合云研究站 · 独立设计语言本地演示" />
+    <title>Enterprise Grid · 企业混合云研究站</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="utility">
+      <span>独立企业混合云研究站 / 演示</span><a href="#resources">跳到研究资料 ↓</a>
+    </div>
+    <header>
+      <a class="brand" href="#top">Enterprise Grid</a>
+      <nav><a href="#resources">研究资源</a><a href="#method">研究方法</a></nav>
+      <a class="nav-action" href="#resources">组装阅读包 ↗</a>
+    </header>
+    <main id="top">
+      <section class="hero">
+        <div>
+          <span>Build for the next era of business</span>
+          <h1>把企业的数据，<br />连接到新的可能。</h1>
+          <p>从混合云、AI与数据治理开始，<br />为下一次技术决策，找到清晰的起点。</p>
+          <a class="blue" href="#resources">查找研究资料 <b>↘</b></a>
+        </div>
+        <svg viewBox="0 0 480 380" role="img" aria-label="原创混合云数据架构几何插画">
+          <defs>
+            <pattern id="dots" width="12" height="12" patternUnits="userSpaceOnUse">
+              <circle cx="2" cy="2" r="1" fill="#a2a9b0" />
+            </pattern>
+          </defs>
+          <rect x="10" y="10" width="460" height="360" fill="url(#dots)" />
+          <path
+            d="M25 300h425M75 300V190h85v110m35 0V70h100v230m30 0V140h75v160"
+            fill="#e0e4e8"
+            stroke="#525861"
+          />
+          <rect x="195" y="70" width="100" height="80" fill="#0f62fe" />
+          <path
+            d="M75 190l85 110M325 140l75 160M25 300L245 50l205 250"
+            fill="none"
+            stroke="#0f62fe"
+            stroke-width="2"
+          />
+          <circle cx="245" cy="50" r="7" fill="#0f62fe" />
+          <circle cx="75" cy="190" r="7" fill="#0f62fe" />
+          <circle cx="400" cy="140" r="7" fill="#0f62fe" />
+          <text x="25" y="350" font-family="sans-serif" font-size="11" fill="#525861">
+            BUILD / CONNECT / MODERNIZE
+          </text>
+        </svg>
+      </section>
+      <section class="resources" id="resources">
+        <div class="section-heading">
+          <h2>为你的下一步，找到技术资源。</h2>
+          <label
+            >研究主题<select id="topic">
+              <option value="all">所有主题</option>
+              <option value="space">企业AI</option>
+              <option value="mobility">混合云</option>
+              <option value="environment">数据治理</option>
+            </select></label
+          >
+        </div>
+        <div id="resources-grid" class="resource-grid"></div>
+        <div class="bundle">
+          <div>
+            <small>你的阅读包</small>
+            <p id="selected" role="status">尚未选择资料</p>
+          </div>
+          <button class="blue" id="download" disabled>下载 Markdown 阅读包 ↓</button>
+        </div>
+      </section>
+      <section class="method" id="method">
+        <div>
+          <span>Understand the context</span>
+          <h2>技术需要语境。<br />决策需要依据。</h2>
+        </div>
+        <div>
+          <article>
+            <h3>从定义开始</h3>
+            <p>确认资料的范围、单位和观察时间。相似的标题，不一定在回答同一个问题。</p>
+          </article>
+          <article>
+            <h3>保留可核对的出处</h3>
+            <p>阅读包包含资料标题、主题与摘要。所有内容都是本项目原创的固定演示材料。</p>
+          </article>
+        </div>
+      </section>
+      <section class="blue-band">
+        <h2>让更好的技术，<br />成就下一步业务创新。</h2>
+        <a href="#resources">回到研究资源 ↗</a>
+      </section>
+    </main>
+    <footer>
+      <strong>Enterprise Grid</strong>
+      <p>独立设计语言参考 · 无真实云资源创建或外部企业服务</p>
+    </footer>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

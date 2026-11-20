@@ -1,0 +1,37 @@
+{
+  "title": "Enterprise Grid · 企业云与AI资源",
+  "description": "按企业AI、混合云和数据治理筛选技术资料，组装本地阅读包。",
+  "status": "ready",
+  "features": {
+    "moods": ["minimal", "tech"],
+    "tones": ["light"],
+    "layouts": ["split", "editorial"],
+    "density": ["balanced"],
+    "headingScale": ["display"],
+    "headingWeight": ["light"],
+    "geometry": ["square"],
+    "visualMedia": ["geometry", "type"],
+    "accentHues": ["blue"],
+    "temperature": ["cool"],
+    "chroma": ["mono"],
+    "backgrounds": ["solid"],
+    "layering": ["lines"],
+    "scenarios": ["docs", "content"],
+    "typography": ["sans"],
+    "motion": ["feedback"]
+  },
+  "interactions": ["filter", "form"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "本地 IBM Plex Sans Variable（SIL OFL）保留300展示/400正文。全方角、细线、蓝色动作和句式眉题按规范处理。",
+    "SVG 为原创城市研究几何图示，未使用真实公共数据。导出的Markdown含当前选择的实际标题、主题与摘要。",
+    "语境复核：从公共数据研究改为企业技术资源营销，主题、摘要、图示语义与导出内容均改为混合云/AI/治理；Carbon轻字重方正结构保留。"
+  ],
+  "references": [
+    {
+      "source": "DESIGN.md L273–280、326–382、455–467",
+      "reason": "灰工具条/48px导航 → 轻标题和平面图 → 16列体系下四列资源/能力行 → 蓝结尾/炭黑页脚。Plex Sans300展示/400正文、微正字距、`#0f62fe`、全方角/细线/下划线输入。"
+    }
+  ],
+  "assets": []
+}

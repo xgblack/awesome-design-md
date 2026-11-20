@@ -1,6 +1,6 @@
-import { emptyFilters, isFacetValue } from './catalog.ts'
+import { emptyFilters } from './catalog.ts'
+import { isFacetValue, multiKeys, singleKeys } from '../data/facets.ts'
 import type { AtlasRoute, Filters } from '../types.ts'
-
 export function parseRoute(hash: string, validIds: string[]): AtlasRoute {
   const [path, query = ''] = hash.replace(/^#/, '').split('?')
   const params = new URLSearchParams(query)
@@ -9,6 +9,8 @@ export function parseRoute(hash: string, validIds: string[]): AtlasRoute {
     id: '',
     tab: 'preview',
     mode: 'read',
+    viewport: 'desktop',
+    compareMode: 'pages',
     filters: emptyFilters(),
     compare: [],
     notices: [],
@@ -30,7 +32,7 @@ export function parseRoute(hash: string, validIds: string[]): AtlasRoute {
   const q = params.get('q') ?? ''
   route.filters.q = q.slice(0, 200)
   if (q.length > 200) invalid()
-  for (const key of ['moods', 'tones', 'scenarios', 'colors'] as const) {
+  for (const key of multiKeys) {
     const requested = [
       ...new Set(
         params
@@ -42,7 +44,7 @@ export function parseRoute(hash: string, validIds: string[]): AtlasRoute {
     route.filters[key] = requested.filter((value) => isFacetValue(key, value))
     if (requested.length !== route.filters[key].length) invalid()
   }
-  for (const key of ['density', 'category'] as const) {
+  for (const key of singleKeys) {
     const value = params.get(key)
     if (value && isFacetValue(key, value)) route.filters[key] = value
     else if (value) invalid()
@@ -50,6 +52,7 @@ export function parseRoute(hash: string, validIds: string[]): AtlasRoute {
   for (const [key, values] of [
     ['status', ['all', 'ready', 'pending']],
     ['sort', ['featured', 'az', 'za']],
+    ['basis', ['reference', 'example']],
   ] as const) {
     const value = params.get(key)
     if (value && (values as readonly string[]).includes(value))
@@ -59,6 +62,8 @@ export function parseRoute(hash: string, validIds: string[]): AtlasRoute {
   for (const [key, values] of [
     ['tab', ['preview', 'spec']],
     ['mode', ['read', 'raw']],
+    ['viewport', ['desktop', 'mobile']],
+    ['compareMode', ['pages', 'notes']],
   ] as const) {
     const value = params.get(key)
     if (value && (values as readonly string[]).includes(value))
@@ -79,26 +84,26 @@ export function parseRoute(hash: string, validIds: string[]): AtlasRoute {
   if (ids.length > 3) route.notices.push('一次最多对照 3 份规范，已保留前 3 份有效候选。')
   const known = [
     'q',
-    'moods',
-    'tones',
-    'scenarios',
-    'colors',
-    'density',
-    'category',
+    'basis',
+    ...multiKeys,
+    ...singleKeys,
     'status',
     'sort',
     'compare',
     'tab',
     'mode',
+    'viewport',
+    'compareMode',
   ]
   if ([...params.keys()].some((key) => !known.includes(key))) invalid()
+  if (route.filters.colors.length)
+    route.notices.push('此链接保留旧版色彩条件：同组为“或”。可移除后使用独立配色维度。')
   return route
 }
-
 export function routeHref(route: AtlasRoute, update: Partial<AtlasRoute> = {}): string {
-  const next = { ...route, ...update }
-  const params = new URLSearchParams()
-  const defaults = emptyFilters()
+  const next = { ...route, ...update },
+    params = new URLSearchParams(),
+    defaults = emptyFilters()
   for (const key of Object.keys(defaults) as (keyof Filters)[]) {
     const value = next.filters[key]
     if (Array.isArray(value)) {
@@ -110,6 +115,8 @@ export function routeHref(route: AtlasRoute, update: Partial<AtlasRoute> = {}): 
     if (next.tab !== 'preview') params.set('tab', next.tab)
     if (next.mode !== 'read') params.set('mode', next.mode)
   }
+  if (next.viewport !== 'desktop') params.set('viewport', next.viewport)
+  if (next.compareMode !== 'pages') params.set('compareMode', next.compareMode)
   const path = next.page === 'style' ? `/style/${encodeURIComponent(next.id)}` : `/${next.page}`
   return `#${path}${params.size ? `?${params}` : ''}`
 }

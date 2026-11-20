@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="夜班编辑部 · 好故事，不打烊 · 独立设计语言本地演示" />
+    <title>夜班编辑部 · 好故事，不打烊</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="#top"><b>N</b> Night Desk</a>
+      <nav><a href="#desk">编辑部</a><a href="#archive">资料库</a></nav>
+      <a class="primary" href="#desk">打开编辑部 ↗</a>
+    </header>
+    <main id="top">
+      <section class="hero">
+        <div>
+          <span>FOR THE STORIES STILL TAKING SHAPE</span>
+          <h1>Meet the<br />night desk.</h1>
+          <p>有人记录，有人打磨。<br />让每一个好故事，都能准时抵达。</p>
+          <a class="primary" href="#desk">查看出版计划</a>
+        </div>
+        <svg viewBox="0 0 500 420" aria-label="原创夜班编辑桌插画" role="img">
+          <path
+            d="M25 330h450M100 160v170M410 170v160M65 225h370"
+            stroke="#a5b4e8"
+            stroke-width="2"
+            fill="none"
+          />
+          <rect
+            x="150"
+            y="120"
+            width="190"
+            height="125"
+            rx="8"
+            fill="#f9db5b"
+            transform="rotate(-7 245 180)"
+          />
+          <rect x="165" y="130" width="155" height="100" fill="#18244d" />
+          <path d="M185 155h100m-100 20h70m-70 20h105" stroke="#e2ddf0" stroke-width="5" />
+          <circle cx="105" cy="95" r="42" fill="#f9a8cd" />
+          <path
+            d="M83 95q22 25 44-5M85 80l5 3m26-5l5 3"
+            stroke="#18244d"
+            stroke-width="4"
+            fill="none"
+          />
+          <path d="M70 142l-24 75 90 15 20-72" fill="#b8e5cc" />
+          <path d="M360 110l34 80-52 30" fill="none" stroke="#a594fa" stroke-width="24" />
+          <circle cx="360" cy="80" r="25" fill="#fac9a9" />
+          <circle cx="385" cy="290" r="17" fill="#a594fa" />
+          <circle cx="355" cy="327" r="8" fill="#f9db5b" />
+          <path d="M420 55l10 25 25 8-25 10-10 25-10-25-25-10 25-8z" fill="#a594fa" />
+        </svg>
+      </section>
+      <section class="desk" id="desk">
+        <div class="desk-toolbar">
+          <div>
+            <span>Night Desk / 工作区</span>
+            <h2>本周出版计划</h2>
+          </div>
+          <div class="view-tabs">
+            <button id="board" aria-pressed="true">看板</button
+            ><button id="calendar" aria-pressed="false">日历</button>
+          </div>
+          <label
+            >稿件筛选<select id="filter">
+              <option value="all">全部稿件</option>
+              <option value="draft">撰写中</option>
+              <option value="review">待审阅</option>
+              <option value="done">可出版</option>
+            </select></label
+          >
+        </div>
+        <div id="articles"></div>
+        <p id="empty" hidden>这个阶段还没有稿件。<button id="add">添加示例稿件</button></p>
+        <span class="desk-foot">数据与日期均为固定演示；没有在线团队协作或远程保存。</span>
+      </section>
+      <section class="yellow">
+        <strong>Good stories take a village.</strong><span>给每一个细节，留一个位置。</span>
+      </section>
+      <section class="archive" id="archive">
+        <h2>灵感有出处，<br />故事有来处。</h2>
+        <div>
+          <article class="peach">
+            <small>RESEARCH / 01</small>
+            <h3>一座城市的散步路线</h3>
+            <p>声音、街角、早餐店。把观察放回生活的现场。</p>
+            <span>采访笔记 · 固定资料片段</span>
+          </article>
+          <article class="mint">
+            <small>STYLE GUIDE / 02</small>
+            <h3>把复杂，写得简单。</h3>
+            <p>先找到一个具体的人，再为他写清楚一件具体的事。</p>
+            <span>编辑手册 · 原创文案</span>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <strong>Night Desk /</strong>
+      <p>虚构编辑部 · 独立设计语言参考 · 输入不持久保存</p>
+    </footer>
+    <dialog id="editor">
+      <form id="edit-form">
+        <p>稿件属性 / 本地草稿</p>
+        <h2 id="edit-title"></h2>
+        <label
+          >出版阶段<select id="stage">
+            <option value="draft">撰写中</option>
+            <option value="review">待审阅</option>
+            <option value="done">可出版</option>
+          </select></label
+        ><label>出版日期<input type="date" id="date" min="2026-11-23" max="2026-12-31" /></label>
+        <p id="error" role="alert"></p>
+        <button type="submit" class="primary">保存修改</button
+        ><button type="button" id="cancel">取消</button>
+      </form>
+    </dialog>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

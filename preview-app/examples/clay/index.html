@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Moss · 让客户研究，自然生长 · 独立设计语言本地演示" />
+    <title>Moss · 让客户研究，自然生长</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="#top">moss<span>✳</span></a>
+      <nav><a href="#workshop">研究工坊</a><a href="#together">连接资料</a></nav>
+      <a class="button" href="#workshop">开始研究 ↗</a>
+    </header>
+    <main id="top">
+      <section class="hero">
+        <span>THOUGHTFUL RESEARCH. ROOM TO GROW.</span>
+        <h1>Good things<br />grow together.</h1>
+        <p>把散落的资料，连接成完整的认识。<br />从理想客户，到下一次有意义的联系。</p>
+        <a class="button" href="#workshop">开始搭建</a
+        ><img
+          src="./assets/clay-landscape.webp"
+          alt="原创黏土风山谷：柔软的山丘、松树、花朵与聚在一起的小人"
+        />
+      </section>
+      <section id="workshop" class="pink">
+        <div>
+          <small>01 / FIND YOUR NEXT GOOD FIT</small>
+          <h2>好客户，<br />从理解开始。</h2>
+          <p>把理想客户画像变成可以核对的条件。下面是六家虚构公司的本地研究样本。</p>
+          <label
+            >行业<select id="industry">
+              <option value="all">所有行业</option>
+              <option value="software">软件与服务</option>
+              <option value="commerce">消费与电商</option>
+              <option value="studio">设计工作室</option>
+            </select></label
+          >
+          <label
+            >团队规模<select id="size">
+              <option value="all">不限规模</option>
+              <option value="small">1–30 人</option>
+              <option value="growth">31–100 人</option>
+            </select></label
+          >
+          <fieldset class="field-choices">
+            <legend>这次需要补全什么？</legend>
+            <label><input type="checkbox" name="field" value="contact" checked />业务联系人</label
+            ><label><input type="checkbox" name="field" value="tool" checked />使用工具</label
+            ><label><input type="checkbox" name="field" value="signal" />近期需求信号</label>
+          </fieldset>
+          <button id="enrich">从本地资料库补全 ↗</button>
+          <p id="error" role="status"></p>
+        </div>
+        <div class="planner">
+          <div class="planner-head">
+            <strong>MOSS / RESEARCH TABLE</strong><span id="count">6 家企业</span>
+          </div>
+          <div class="data-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th>公司 / 规模</th>
+                  <th>行业</th>
+                  <th>研究资料</th>
+                </tr>
+              </thead>
+              <tbody id="companies"></tbody>
+            </table>
+          </div>
+          <p class="source-note">只查询本地固定资料。不检索网络、不生成联系人。</p>
+          <button id="download" disabled>下载补全结果 CSV ↓</button>
+        </div>
+      </section>
+      <section class="teal" id="together">
+        <div class="clay-flower" aria-hidden="true"><i></i><span>m</span></div>
+        <div>
+          <small>02 / EVERY DETAIL CONNECTS</small>
+          <h2>每条线索，<br />都有它的上下文。</h2>
+          <p>公司规模、团队工具、眼下的需求。比起一长串名字，我们更在意为什么这家公司适合你。</p>
+        </div>
+      </section>
+      <section class="cards">
+        <article>
+          <small>BEFORE</small>
+          <h3>先有清晰条件，<br />再开始寻找。</h3>
+          <p>用行业与团队规模，圈定这一次想理解的客户，而不是追求更多无关记录。</p>
+        </article>
+        <article>
+          <small>AFTER</small>
+          <h3>资料有出处，<br />未知也要说明。</h3>
+          <p>本地资料未收录的字段会明确标出，不把空缺包装成自动生成的答案。</p>
+        </article>
+      </section>
+      <section class="closing">
+        <h2>A little care.<br />A lot of possibility.</h2>
+        <a class="button" href="#workshop">回到研究工坊 ↑</a>
+      </section>
+    </main>
+    <footer>
+      <strong>moss /</strong><span>本地 GTM 研究演示 · 非官方 · 不发消息、不保存输入</span>
+    </footer>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

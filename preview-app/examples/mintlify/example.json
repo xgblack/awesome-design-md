@@ -1,0 +1,37 @@
+{
+  "title": "Nimbus / Developer documentation platform",
+  "description": "开发者文档：阅读虚构传感器SDK手册，本地搜索章节、切换请求语言并复制代码；不发送设备请求。",
+  "status": "ready",
+  "features": {
+    "moods": ["minimal", "tech"],
+    "tones": ["light"],
+    "temperature": ["neutral"],
+    "chroma": ["muted"],
+    "accentHues": ["green"],
+    "backgrounds": ["gradient", "solid"],
+    "layouts": ["workspace"],
+    "density": ["dense"],
+    "typography": ["sans", "mono"],
+    "headingScale": ["regular"],
+    "headingWeight": ["bold"],
+    "geometry": ["pill", "small-radius"],
+    "layering": ["lines"],
+    "visualMedia": ["code", "type", "ui"],
+    "motion": ["feedback"],
+    "scenarios": ["docs"]
+  },
+  "interactions": ["filter", "configure"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "保留天空蓝到奶油介绍带、左目录/正文/右TOC、薄荷当前项与暖橙提示，文档是本站核心任务而非泛产品营销页。",
+    "Nimbus设备、令牌与响应为原创教学fixture；不要求粘贴密钥，不将缺失读数显示为虚构零值。",
+    "字体取舍：显示 \"Inter Variable\", sans-serif；正文 \"Inter Variable\", sans-serif。使用本地开放字体/系统字体替代品牌商业字体；标题筛选标签按实际桌面渲染归类。"
+  ],
+  "references": [
+    {
+      "source": "原规范 L455–466、510–515、557–565、722–767、821–834",
+      "reason": "小幅天空蓝到奶油介绍带 → 真正的左目录/正文/右 TOC 三栏文档 → 暖橙作者提示。Inter/Geist Mono、薄荷活动项/确认、黑胶囊、12px产品框；云朵与精密代码密度形成反差。"
+    }
+  ],
+  "assets": []
+}

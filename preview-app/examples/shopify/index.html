@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kiln & Thread / Made by hand. Built to last. · 独立风格示例</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#">KILN & THREAD</a>
+      <nav><a href="#business">THE BUSINESS</a><a href="#store">THE STORE</a></nav>
+      <span>A MAKER'S BUSINESS</span>
+    </header>
+    <main>
+      <section class="hero">
+        <div>
+          <p>MADE BY HAND. BUILT TO LAST.</p>
+          <h1>A little less<br />perfect.<br />A lot more<br />your own.</h1>
+          <p class="hero-deck">
+            从一双手的工作室，到自己的在线小店。<br />让生意，也保留创作者的样子。
+          </p>
+          <a href="#business">从工坊，到更多日常 ↗</a>
+        </div>
+        <figure>
+          <img
+            src="../_shared/photos/craft.webp"
+            alt="许可拉坯工艺摄影，作为虚构手作商家案例情境参考"
+          />
+          <figcaption>独立商家经营案例 · 工艺摄影为参考，非该虚构商家实拍。</figcaption>
+        </figure>
+      </section>
+      <section class="business" id="business">
+        <div class="business-heading">
+          <p>01 / THE WORK BEHIND THE WORK</p>
+          <h2>Making is the beginning.<br />Not the whole story.</h2>
+          <p>
+            把一件器物做好，也把上架、库存与履约理顺。<br />每一步，都应该为下一次创作腾出时间。
+          </p>
+        </div>
+        <div class="stage-tabs" aria-label="商家经营阶段">
+          <button data-stage="make" aria-pressed="true">01 / 制作</button
+          ><button data-stage="publish" aria-pressed="false">02 / 上架</button
+          ><button data-stage="fulfil" aria-pressed="false">03 / 履约</button>
+        </div>
+        <div class="stage" id="stage-make">
+          <img src="../_shared/photos/craft.webp" alt="拉坯工艺情境参考" />
+          <div>
+            <span>THE STUDIO / BATCH 004</span>
+            <h3>Keep your hands<br />on the work.</h3>
+            <p>
+              一批作品从成形到出窑，需要的是专注。商品信息与库存放在同一个地方，今天做了什么、还有多少，每次打开都能看清楚。
+            </p>
+            <dl>
+              <div>
+                <dt>本次概念批次</dt>
+                <dd>浅口碗 / 12件</dd>
+              </div>
+              <div>
+                <dt>待整理</dt>
+                <dd>照片、釉色与上架文案</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+        <div class="merchant-panel" id="stage-publish" hidden>
+          <aside>
+            <b>K&T / ADMIN</b><span>商品</span><span>库存</span><span>订单草稿</span
+            ><small>LOCAL DEMO</small>
+          </aside>
+          <div>
+            <div class="panel-top">
+              <div>
+                <span>YOUR BUSINESS, AT A GLANCE</span>
+                <h3>商品与库存</h3>
+              </div>
+              <span>只在当前页面</span>
+            </div>
+            <table>
+              <caption>
+                点击编辑，更新下方小店的上架状态与库存
+              </caption>
+              <thead>
+                <tr>
+                  <th>商品</th>
+                  <th>状态</th>
+                  <th>概念库存</th>
+                  <th>编辑</th>
+                </tr>
+              </thead>
+              <tbody id="inventory-rows"></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="fulfil-panel" id="stage-fulfil" hidden>
+          <div>
+            <span>ORDER DRAFT / 004</span>
+            <h3>A good ending,<br />for a new beginning.</h3>
+            <p>一只清晨杯。一次认真打包。以固定订单草稿理解履约过程，不创建真实订单或寄送。</p>
+            <ol>
+              <li>商品：Morning cup × 1</li>
+              <li>状态：等待本地打包演示</li>
+              <li>目的地：未采集地址，不实际发货</li>
+            </ol>
+          </div>
+          <form id="pack-form">
+            <h4>打包检查</h4>
+            <label><input type="checkbox" id="pack-check" />确认器物与清单一致</label
+            ><label><input type="checkbox" id="wrap-check" />已放置缓冲保护与说明卡</label
+            ><button type="submit">完成本地履约步骤</button>
+            <p id="pack-status" role="status">两项完成后，可标记这份固定草稿。</p>
+          </form>
+        </div>
+        <p id="stage-note" class="stage-note" role="status">
+          制作，是商家的起点。切换到上架，试着整理一件作品的信息。
+        </p>
+      </section>
+      <section class="quote">
+        <p>“The business should feel<br />like the things we make.”</p>
+        <span>ORIGINAL MERCHANT STORY / KILN & THREAD</span>
+      </section>
+      <section id="store" class="store">
+        <div class="store-head">
+          <div>
+            <p>02 / A SMALL STORE, OF YOUR OWN.</p>
+            <h2>Objects with<br />a little life in them.</h2>
+          </div>
+          <label
+            >系列<select id="series">
+              <option value="all">全部器物</option>
+              <option value="table">餐桌</option>
+              <option value="ritual">日常</option>
+            </select></label
+          >
+        </div>
+        <div class="objects" id="objects"></div>
+        <p id="filter-note" role="status"></p>
+      </section>
+      <section class="end">
+        <h2>Make room<br />for the next idea.</h2>
+        <p>
+          让每一件作品有自己的展示，也让经营不必从头开始。此页是一份商家经营演示：编辑商品、记录库存、走一次履约草稿。
+        </p>
+        <a href="#business">回到商家工作台 ↑</a>
+      </section>
+    </main>
+    <footer>
+      KILN & THREAD / ORIGINAL MERCHANT COMMERCE STUDY
+      <p>没有真实商家账号、支付、订单接口或寄送；所有变更刷新后清空。</p>
+    </footer>
+    <dialog id="editor">
+      <button type="button" id="edit-close">CLOSE ×</button>
+      <p>LOCAL PRODUCT EDITOR</p>
+      <h2>Give it a place.</h2>
+      <form id="product-form" novalidate>
+        <label for="product-title">商品名称</label><input id="product-title" maxlength="32" /><label
+          for="product-stock"
+          >概念库存（0–50整数）</label
+        ><input id="product-stock" type="number" min="0" max="50" step="1" /><label
+          class="publish-toggle"
+          ><input type="checkbox" id="product-published" />在本次小店中上架</label
+        ><button type="submit">保存商品草稿</button>
+        <p id="edit-status" role="status">仅当前页面内存，未更新真实商店。</p>
+      </form>
+    </dialog>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

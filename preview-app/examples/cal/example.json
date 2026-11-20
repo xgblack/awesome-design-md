@@ -1,0 +1,37 @@
+{
+  "title": "Studio Hours · 日程预约产品演示",
+  "description": "真实时区换算、日期/时段选择与预约草稿，直接对应日历/预约软件的核心任务。",
+  "status": "ready",
+  "features": {
+    "moods": ["minimal"],
+    "tones": ["light"],
+    "layouts": ["split"],
+    "density": ["balanced"],
+    "headingScale": ["display"],
+    "headingWeight": ["bold"],
+    "geometry": ["small-radius", "rounded"],
+    "visualMedia": ["ui"],
+    "accentHues": ["neutral"],
+    "temperature": ["neutral"],
+    "chroma": ["mono"],
+    "backgrounds": ["solid"],
+    "layering": ["lines"],
+    "scenarios": ["product", "tool"],
+    "typography": ["sans"],
+    "motion": ["feedback"]
+  },
+  "interactions": ["schedule", "form"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "专有字体以本地 Inter Variable 替代，保留字重、字阶、空间与组件规则；中文为系统字体回退。",
+    "交互为原创本地演示，不发出业务请求，不保存个人输入。",
+    "语境复核：保留已贴原产品类别的核心页面，复核理由：真实时区换算、日期/时段选择与预约草稿，直接对应日历/预约软件的核心任务。"
+  ],
+  "references": [
+    {
+      "source": "DESIGN.md L285–293、327–358、434–448、541",
+      "reason": "白首屏7/5文案/真实日历 → 灰流程/白日程片段/轻团队说明 → 黑页脚。64px/600紧字、黑8px CTA、灰12px内容卡/16px大框、分段选择器。"
+    }
+  ],
+  "assets": []
+}

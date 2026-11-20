@@ -1,0 +1,53 @@
+{
+  "title": "Roundtable · 企业支付连接",
+  "description": "围绕商户、旅行平台与企业采购，组合受理、验证、结算和对账的本地支付能力路径。",
+  "status": "ready",
+  "features": {
+    "moods": ["warm", "cinematic"],
+    "tones": ["mixed"],
+    "layouts": ["editorial", "chapters"],
+    "density": ["airy"],
+    "headingScale": ["display"],
+    "headingWeight": ["medium"],
+    "geometry": ["pill", "rounded"],
+    "visualMedia": ["photo", "ui"],
+    "accentHues": ["neutral"],
+    "temperature": ["warm"],
+    "chroma": ["mono"],
+    "backgrounds": ["solid", "image"],
+    "layering": ["solid"],
+    "scenarios": ["product", "tool"],
+    "typography": ["sans"],
+    "motion": ["feedback"]
+  },
+  "interactions": ["configure"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "MarkForMC 专有字体使用本地 Manrope Variable 450/500 替代；保留白胶囊导航、卫星箭头、圆肖像与暖黑结尾。",
+    "共享 Unsplash 照片仅用于独立商户/创作者的氛围表达，姓名与故事均为虚构，不暗示肖像人物参与、使用或背书。来源见共享 sources.json。",
+    "语境复核：从艺术季改为企业支付网络与商户服务语境，圆肖像与轨道/水印保留；不真实支付。"
+  ],
+  "references": [
+    {
+      "source": "DESIGN.md L5–19、57–88、146–175、211–217、239–260",
+      "reason": "白色悬浮胶囊导航/40px体育场式影像 → 非对称人物圆像与水印标题/橙色细轨道 → 暗暖黑信息区。石膏奶油 `#F3F0EE`、圆/椭圆、大弧度；白色卫星箭头，500/450轻中标题/正文，黑色正文 CTA。"
+    }
+  ],
+  "assets": [
+    {
+      "file": "../_shared/photos/portrait-woman.webp",
+      "source": "共享 sources.json",
+      "license": "Unsplash License"
+    },
+    {
+      "file": "../_shared/photos/craft.webp",
+      "source": "共享 sources.json",
+      "license": "Unsplash License"
+    },
+    {
+      "file": "../_shared/photos/interior.webp",
+      "source": "共享 sources.json",
+      "license": "Unsplash License"
+    }
+  ]
+}

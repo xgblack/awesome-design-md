@@ -1,0 +1,43 @@
+{
+  "title": "Northfield / Enterprise knowledge AI",
+  "description": "企业知识检索工作台：按工程/人事语料域与关键词查找固定材料，展开证据核对来源；不调用模型。",
+  "status": "ready",
+  "features": {
+    "moods": ["minimal", "editorial"],
+    "tones": ["mixed"],
+    "temperature": ["neutral"],
+    "chroma": ["muted"],
+    "accentHues": ["neutral", "green"],
+    "backgrounds": ["solid"],
+    "layouts": ["split", "directory"],
+    "density": ["airy"],
+    "typography": ["sans"],
+    "headingScale": ["display"],
+    "headingWeight": ["regular"],
+    "geometry": ["pill", "rounded"],
+    "layering": ["solid", "lines"],
+    "visualMedia": ["photo", "geometry", "ui"],
+    "motion": ["feedback"],
+    "scenarios": ["content", "tool"]
+  },
+  "interactions": ["filter", "configure"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "重构场馆资料为工程与人事企业知识语境，保留白色96px声明、宽产品检索面/窄建筑材质照片、深绿能力带与行式来源。",
+    "四份语料为本项目原创fixture；仅关键词匹配，不宣称真实语义搜索、RAG模型生成或企业连接。",
+    "字体取舍：显示 \"Space Grotesk Variable\", \"Inter Variable\", sans-serif；正文 \"Space Grotesk Variable\", \"Inter Variable\", sans-serif。使用本地开放字体/系统字体替代品牌商业字体；标题筛选标签按实际桌面渲染归类。"
+  ],
+  "references": [
+    {
+      "source": "原规范 L203–210、254–274、334–390",
+      "reason": "96px常规紧声明 → 宽检索/窄质感摄影双卡 → 留白信任带/深绿能力带 → 日期/主题文献行。白/`#003c33`、黑胶囊、22px主媒体角；珊瑚仅分类，线分隔不全包卡。"
+    }
+  ],
+  "assets": [
+    {
+      "file": "../_shared/photos/architecture.webp",
+      "source": "公共素材池 sources.json",
+      "license": "Unsplash License"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "title": "GridWorks / Edge Resources",
+  "description": "「GridWorks 边缘计算资源库」——筛选演示套件并比较技术规格。",
+  "status": "ready",
+  "features": {
+    "moods": ["tech"],
+    "tones": ["mixed"],
+    "temperature": ["neutral"],
+    "chroma": ["mono"],
+    "accentHues": ["green"],
+    "backgrounds": ["solid"],
+    "layouts": ["split", "editorial"],
+    "density": ["balanced"],
+    "typography": ["sans"],
+    "headingScale": ["regular"],
+    "headingWeight": ["bold"],
+    "geometry": ["square", "small-radius"],
+    "layering": ["lines"],
+    "visualMedia": ["render", "ui"],
+    "motion": ["feedback"],
+    "scenarios": ["directory", "product"]
+  },
+  "interactions": ["filter", "configure"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "本项目独立虚构演示，非品牌官方页面；业务操作仅在当前页面内存中生效。",
+    "Inter Variable 为本地可分发替代，不含品牌专有字体。",
+    "新增独立PCB/机箱渲染：可见铜色走线、内存封装、立体散热鳍片、GPIO和接口；不是中央文字方块。",
+    "补足接口、部署边界与按字段双套比较/逐项移除，未添加虚构跑分。"
+  ],
+  "references": [
+    {
+      "source": "L309–339、366–415、610–622",
+      "reason": "不是荧光绿暗色 dashboard，白色技术正文占足份量。"
+    }
+  ],
+  "assets": [
+    {
+      "file": "assets/edge-board.svg",
+      "source": "本项目原创矢量产品/场景插画",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/edge-eight-v2.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/field-four-v2.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/studio-twelve-v2.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    }
+  ]
+}

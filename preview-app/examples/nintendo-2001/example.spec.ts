@@ -1,0 +1,26 @@
+import { test, expect } from '@playwright/test'
+test.beforeEach(async ({ page }) => {
+  await page.goto('examples/nintendo-2001/index.html')
+})
+test('原创封面与三轴筛选，零结果可恢复', async ({ page }) => {
+  await expect(page.locator('.cover img')).toHaveCount(3)
+  await page.locator('#platform').selectOption('pocket')
+  await expect(page.locator('#find-status')).toHaveText('2 个原创游戏档案')
+  await page.locator('#genre').selectOption('story')
+  await expect(page.locator('[data-title]:visible')).toHaveCount(1)
+  await page.locator('#query').fill('月光')
+  await expect(page.locator('#find-status')).toContainText('没有匹配')
+  await page.locator('#reset-games').click()
+  await expect(page.locator('[data-title]:visible')).toHaveCount(3)
+})
+test('本机单票必选且可撤回，不冒充社区统计', async ({ page }) => {
+  await page.getByRole('button', { name: 'SUBMIT →' }).click()
+  await expect(page.locator('#vote-status')).toContainText('请先选择')
+  await page.locator('input[value=明信片]').check()
+  await page.getByRole('button', { name: 'SUBMIT →' }).click()
+  await expect(page.locator('#vote-status')).toContainText('明信片')
+  await expect(page.locator('input[value=明信片]')).toBeDisabled()
+  await page.locator('#undo').click()
+  await expect(page.locator('#vote-status')).toContainText('已撤回')
+  await expect(page.locator('input[value=明信片]')).not.toBeChecked()
+})

@@ -1,0 +1,37 @@
+{
+  "title": "Ledgerlane · 票务支付结算沙盘",
+  "description": "票款、费用、退款与事件payload形成同一账本，直接对应支付基础设施；不收真实款。",
+  "status": "ready",
+  "features": {
+    "moods": ["tech", "editorial"],
+    "tones": ["mixed"],
+    "layouts": ["split", "timeline"],
+    "density": ["balanced"],
+    "headingScale": ["regular"],
+    "headingWeight": ["light"],
+    "geometry": ["pill", "small-radius"],
+    "visualMedia": ["ui", "code"],
+    "accentHues": ["purple"],
+    "temperature": ["cool"],
+    "chroma": ["muted"],
+    "backgrounds": ["gradient", "solid"],
+    "layering": ["shadow"],
+    "scenarios": ["product", "calculator"],
+    "typography": ["sans", "mono"],
+    "motion": ["feedback"]
+  },
+  "interactions": ["form", "replay"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "专有字体以本地 Inter Variable 替代，保留字重、字阶、空间与组件规则；中文为系统字体回退。",
+    "交互为原创本地演示，不发出业务请求，不保存个人输入。",
+    "语境复核：保留已贴原产品类别的核心页面，复核理由：票款、费用、退款与事件payload形成同一账本，直接对应支付基础设施；不收真实款。"
+  ],
+  "references": [
+    {
+      "source": "DESIGN.md L246–261、295–358、404–429、470–477",
+      "reason": "首屏上1/3有机mesh/56px轻标题/票务账本代码三层 → 白流程/奶油案例/海军代码章。`#533afd`唯一行动、`#0d253d`深字非纯黑、300显示字/tnum金额、短胶囊/细线/微冷影。"
+    }
+  ],
+  "assets": []
+}

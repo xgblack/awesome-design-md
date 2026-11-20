@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Polar E / 城市电动出行 · 独立风格示例</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <b>POLAR <span>E</span></b>
+      <nav>
+        <a href="#models">车型</a><a href="#configure">配置你的 Polar</a
+        ><a href="#design">电动日常</a>
+      </nav>
+      <span>THE EVERYDAY, ELECTRIC.</span>
+    </header>
+    <main>
+      <section class="hero">
+        <div>
+          <p>THE NEW POLAR E</p>
+          <h1>把出发，<br />变成日常的期待。</h1>
+          <p>为城市里每一种节奏，找到合适的空间。</p>
+          <a href="#models">探索车型</a>
+        </div>
+        <img src="./assets/tour-silver-18.webp" alt="Polar E Tour 原创长车身五座电动车概念图" />
+      </section>
+      <section id="models">
+        <p class="eyebrow">FIND YOUR POLAR</p>
+        <h2>刚好，适合你的生活。</h2>
+        <div class="filters">
+          <label
+            >续航需求<select id="range">
+              <option value="0">不限</option>
+              <option value="450">450 km以上</option>
+              <option value="600">600 km以上</option>
+            </select></label
+          ><label
+            >座位数<select id="seats">
+              <option value="0">不限</option>
+              <option value="5">5座</option>
+              <option value="7">7座</option>
+            </select></label
+          ><button id="reset-models">重置</button>
+        </div>
+        <div class="models">
+          <article data-range="420" data-seats="5">
+            <img
+              class="model-render"
+              src="./assets/city-silver-18.webp"
+              alt="Polar E City 独立车身概念图"
+            />
+            <h3>Polar E City</h3>
+            <p>紧凑五座 / 420 km概念续航</p>
+            <a data-configure-model="city" href="#configure">开始配置 →</a>
+          </article>
+          <article data-range="560" data-seats="5">
+            <img
+              class="model-render"
+              src="./assets/tour-blue-18.webp"
+              alt="Polar E Tour 独立车身概念图"
+            />
+            <h3>Polar E Tour</h3>
+            <p>宽适五座 / 560 km概念续航</p>
+            <a data-configure-model="tour" href="#configure">开始配置 →</a>
+          </article>
+          <article data-range="480" data-seats="7">
+            <img
+              class="model-render"
+              src="./assets/space-silver-18.webp"
+              alt="Polar E Space 独立车身概念图"
+            />
+            <h3>Polar E Space</h3>
+            <p>灵活七座 / 480 km概念续航</p>
+            <a data-configure-model="space" href="#configure">开始配置 →</a>
+          </article>
+        </div>
+        <p id="model-status" role="status">3 款概念车型，非实际测试数据。</p>
+      </section>
+      <section id="configure" class="configure">
+        <div>
+          <p>CREATE YOUR OWN</p>
+          <h2>每一处选择，<br />都更像你。</h2>
+          <img
+            id="configured-car"
+            src="./assets/tour-silver-18.webp"
+            alt="Polar E Tour 海雾银与18英寸轮毂原创概念图"
+          />
+        </div>
+        <form>
+          <label
+            >概念车型<select id="model">
+              <option value="city">Polar E City / 紧凑五座</option>
+              <option value="tour" selected>Polar E Tour / 宽适五座</option>
+              <option value="space">Polar E Space / 灵活七座</option>
+            </select></label
+          >
+          <label
+            >车身颜色<select id="paint">
+              <option value="silver">海雾银</option>
+              <option value="blue">深湾蓝</option>
+            </select></label
+          ><label
+            >轮毂<select id="wheels">
+              <option value="18">18英寸轻量</option>
+              <option value="20">20英寸运动</option>
+            </select></label
+          >
+          <p id="configuration" role="status">海雾银 · 18英寸轻量 · 560 km概念续航</p>
+          <p class="demo-note">20英寸轮毂不可与深湾蓝概念套件组合。规格仅为本地演示，不下单。</p>
+        </form>
+      </section>
+      <section id="design" class="design">
+        <img src="../_shared/photos/architecture.webp" alt="现代建筑摄影作为城市空间参考" />
+        <div>
+          <h2>留出空间，<br />给生活本来的样子。</h2>
+          <p>原创概念车型与许可环境摄影，探索清晰、方正与克制的蓝色行动。</p>
+        </div>
+      </section>
+    </main>
+    <footer>
+      POLAR E / INDEPENDENT DESIGN EXPLORATION<br />虚构车型、固定参数；不提供车辆销售、续航保证或经销商服务。
+    </footer>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+{
+  "title": "PocketArcade 2001",
+  "description": "原创像素游戏世界、三张独立封面与横向掌机，平台/类型/关键词筛选及可撤回本机单票。",
+  "status": "ready",
+  "features": {
+    "moods": ["retro", "playful"],
+    "tones": ["light"],
+    "temperature": ["cool"],
+    "chroma": ["vivid"],
+    "accentHues": ["orange", "yellow"],
+    "backgrounds": ["grid"],
+    "layouts": ["editorial", "directory"],
+    "density": ["dense"],
+    "typography": ["sans"],
+    "headingScale": ["compact"],
+    "headingWeight": ["bold"],
+    "geometry": ["cut", "square"],
+    "layering": ["hard"],
+    "visualMedia": ["pixel", "render"],
+    "motion": ["feedback"],
+    "scenarios": ["directory", "content"]
+  },
+  "interactions": ["filter", "form"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "Arial 系统小字、长春花金属机器面板与硬边斜面保留；像素角色、月夜/港口/树屋封面、掌机均为本项目原创SVG并栅格为WebP。",
+    "不使用真实游戏IP或官方字体；手机重排是当代适配，不称为2001年实测。"
+  ],
+  "references": [
+    {
+      "source": "L348–419、428–455、555–583",
+      "reason": "不是现代通红扁平 Nintendo 页；手机重排明确为现代演绎。"
+    }
+  ],
+  "assets": [
+    {
+      "file": "assets/courier-guide.webp",
+      "source": "本项目原创 SVG 场景/产品形体；同名SVG为可编辑源，本地栅格为WebP",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/harbor-cover.webp",
+      "source": "本项目原创 SVG 场景/产品形体；同名SVG为可编辑源，本地栅格为WebP",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/harbor-world.webp",
+      "source": "本项目原创 SVG 场景/产品形体；同名SVG为可编辑源，本地栅格为WebP",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/moon-cover.webp",
+      "source": "本项目原创 SVG 场景/产品形体；同名SVG为可编辑源，本地栅格为WebP",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/moon-world.webp",
+      "source": "本项目原创 SVG 场景/产品形体；同名SVG为可编辑源，本地栅格为WebP",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/pocket-console.webp",
+      "source": "本项目原创 SVG 场景/产品形体；同名SVG为可编辑源，本地栅格为WebP",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/tree-cover.webp",
+      "source": "本项目原创 SVG 场景/产品形体；同名SVG为可编辑源，本地栅格为WebP",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/tree-world.webp",
+      "source": "本项目原创 SVG 场景/产品形体；同名SVG为可编辑源，本地栅格为WebP",
+      "license": "本项目原创，可随示例分发"
+    }
+  ]
+}

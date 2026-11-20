@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AtlasOps / Infrastructure platform library</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#">▱ AtlasOps</a>
+      <nav>
+        <a href="#library">Library</a><a href="#principles">Principles</a><span>LEARNING / 01</span>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <div>
+          <span class="eyebrow">SYSTEMS, UNDERSTOOD.</span>
+          <h1>Infrastructure.<br />One good idea<br />at a time.</h1>
+          <p>
+            先理解工具的职责，再组合成系统。<br />基础设施、身份与网络产品，在同一个平台学习库中。
+          </p>
+          <a href="#library" class="white">Explore the library ↗</a>
+        </div>
+        <div class="blocks" aria-label="原创等距基础设施体块">
+          <div class="cube c1"><i></i></div>
+          <div class="cube c2"><i></i></div>
+          <div class="cube c3"><i></i></div>
+          <span>THREE DOMAINS / ONE PRACTICE</span>
+        </div>
+      </section>
+      <section id="library">
+        <div class="product-tabs">
+          <button data-product="terrain" aria-pressed="true">
+            Terrain <span>Infrastructure</span></button
+          ><button data-product="vault">Keeper <span>Identity</span></button
+          ><button data-product="mesh">Weave <span>Networking</span></button>
+        </div>
+        <div class="identity">
+          <span id="product-symbol">▱</span>
+          <div>
+            <span class="eyebrow" id="category">INFRASTRUCTURE AS CODE</span>
+            <h2 id="product-title">Build a reproducible foundation.</h2>
+            <p id="product-copy">声明你需要的资源，把变更变成可审阅的计划。</p>
+          </div>
+        </div>
+        <div class="library-tools">
+          <h3>Resources</h3>
+          <label
+            >难度
+            <select id="level">
+              <option value="all">全部</option>
+              <option value="intro">入门</option>
+              <option value="advanced">进阶</option>
+            </select></label
+          >
+        </div>
+        <div id="resources"></div>
+        <p id="empty" hidden>这个产品暂时没有该难度资料。选择“全部”继续阅读。</p>
+        <div id="reading" hidden tabindex="-1">
+          <button id="close">关闭阅读 ×</button>
+          <h3 id="read-title"></h3>
+          <p id="read-body"></p>
+        </div>
+      </section>
+      <section id="principles" class="principles">
+        <span class="eyebrow">KEEP THE BOUNDARIES CLEAR</span>
+        <h2>Not more tools.<br />Better understanding.</h2>
+        <div>
+          <h3>Start with intent.</h3>
+          <p>配置不是目的。先问资源、身份和网络各自承担什么职责，再决定连接方式。</p>
+        </div>
+        <div>
+          <h3>Make the plan readable.</h3>
+          <p>这里的资料是原创教学文本，不连接云平台，也不会申请任何基础设施。</p>
+        </div>
+      </section>
+    </main>
+    <footer>AtlasOps / <span>Independent local library · HashiCorp design study</span></footer>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

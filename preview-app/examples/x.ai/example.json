@@ -1,0 +1,37 @@
+{
+  "title": "Boundary / Frontier AI research bulletin",
+  "description": "前沿AI研究与模型评估公告室：按课题/年份读原创固定公告，对照评估协议草稿的段落增删；不冒充论文或模型发布。",
+  "status": "ready",
+  "features": {
+    "moods": ["minimal", "tech"],
+    "tones": ["dark"],
+    "temperature": ["neutral"],
+    "chroma": ["mono"],
+    "accentHues": ["neutral"],
+    "backgrounds": ["solid"],
+    "layouts": ["directory", "split"],
+    "density": ["airy"],
+    "typography": ["sans", "mono"],
+    "headingScale": ["display"],
+    "headingWeight": ["regular"],
+    "geometry": ["pill", "small-radius"],
+    "layering": ["lines", "solid"],
+    "visualMedia": ["type", "geometry"],
+    "motion": ["feedback"],
+    "scenarios": ["product", "content"]
+  },
+  "interactions": ["filter", "configure"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "保留近黑96px常规大空场、Mono节标、双列公告、细线版本目录与透明白胶囊；不加泛用AI球或聊天框。",
+    "所有公告是本项目原创虚构研究说明；不声称真实模型能力、实验结果、品牌发布或当前性能。",
+    "字体取舍：显示 \"Inter Variable\", sans-serif；正文 \"Inter Variable\", sans-serif。使用本地开放字体/系统字体替代品牌商业字体；标题筛选标签按实际桌面渲染归类。"
+  ],
+  "references": [
+    {
+      "source": "原规范 L242–255、285–352、365–414、453–465",
+      "reason": "近黑大空场/96px常规宣言/单档案入口 → Mono节标/双列公告/细线版本目录。`#0a0a0a`、400负字距、Mono大写正字距、25%白边胶囊/极少实白、8px暗卡，无影渐变。"
+    }
+  ],
+  "assets": []
+}

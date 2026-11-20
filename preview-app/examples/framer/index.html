@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Nightshift · Websites after hours · 独立设计语言本地演示" />
+    <title>Nightshift · Websites after hours</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="#top">nightshift®</a>
+      <nav><a href="#gallery">Selected work</a><a href="#studio">The studio</a></nav>
+      <a class="pill" href="#studio">Build a website ↗</a>
+    </header>
+    <main id="top">
+      <section class="hero">
+        <div class="small">INDEPENDENT WEBSITE BUILDER & DESIGN STUDIO / VOL. 08</div>
+        <h1>Good things<br />happen after dark.</h1>
+        <p>为设计师与独立团队，创造值得被记住的网站。</p>
+      </section>
+      <section class="gallery" id="gallery">
+        <div class="filter">
+          <span>Selected websites, 2026</span>
+          <div>
+            <button data-filter="all" aria-pressed="true">All</button
+            ><button data-filter="type" aria-pressed="false">Editorial</button
+            ><button data-filter="form" aria-pressed="false">Interactive</button>
+          </div>
+        </div>
+        <div class="posters">
+          <button class="poster peach web-study" data-work="type" data-title="OFF HOURS">
+            <span class="study-browser">◉ ◉ ◉ <i>OFFHOURS.STUDIO</i></span
+            ><span class="study-nav">OFF HOURS® <i>Work　About　↗</i></span
+            ><strong>Independent.<br />After hours.</strong
+            ><span class="study-copy">Design &amp; digital craft for the culturally curious.</span
+            ><span class="study-grid"
+              ><i>FORM<br />STUDY 01</i><i>OBJECT<br />STUDY 02</i></span
+            ><span class="study-foot">SELECTED WORK / 2026 <i>VIEW WEBSITE ↗</i></span></button
+          ><button class="poster purple web-study" data-work="form" data-title="OTHER SIDE">
+            <span class="study-browser">◉ ◉ ◉ <i>OTHERSIDE.EXHIBITION</i></span
+            ><span class="study-nav">other side <i>Exhibition　Info</i></span
+            ><span class="study-orb" aria-hidden="true"></span
+            ><strong>Past the<br />ordinary.</strong
+            ><span class="study-foot"
+              >DIGITAL EXHIBITION / OPEN EDITION <i>EXPLORE ↗</i></span
+            ></button
+          ><button class="poster white web-study" data-work="type" data-title="STILL HERE">
+            <span class="study-browser">◉ ◉ ◉ <i>STILLHERE.JOURNAL</i></span
+            ><span class="study-nav">STILL HERE <i>Stories　Archive</i></span
+            ><strong>Notes on<br />noticing.</strong
+            ><span class="study-story"
+              ><i>01 / DESIGN &amp; EVERYDAY LIFE</i><b>The beauty of<br />the in-between.</b
+              ><small>AN INDEPENDENT JOURNAL</small></span
+            ><span class="study-foot">VOL. 08 / 2026 <i>READ STORIES ↗</i></span></button
+          ><button class="poster orange web-study" data-work="form" data-title="NEW FREQUENCY">
+            <span class="study-browser">◉ ◉ ◉ <i>NEWFREQUENCY.RECORDS</i></span
+            ><span class="study-nav">NEW FREQUENCY <i>Releases　Artists</i></span
+            ><strong>Sound.<br />No limits.</strong
+            ><span class="study-records"
+              ><i>NF<br />001</i><i>NF<br />002</i><i>NF<br />003</i></span
+            ><span class="study-foot">INDEPENDENT MUSIC LABEL <i>DISCOVER ↗</i></span>
+          </button>
+        </div>
+      </section>
+      <section class="studio" id="studio">
+        <div class="studio-intro">
+          <p>FROM A BLANK CANVAS TO YOUR NEXT WEBSITE.</p>
+          <h2>A real site.<br />Your own direction.</h2>
+          <span>编辑作品集的首屏、布局与项目顺序。预览是一份真实DOM网站，不是一张海报。</span>
+        </div>
+        <div class="editor">
+          <div class="browser-bar">
+            ◉ ◉ ◉ <span>NIGHTSHIFT.PORTFOLIO / LOCAL WEBSITE PREVIEW</span>
+          </div>
+          <div class="site-editor-layout">
+            <div class="site-preview" id="live">
+              <div class="site-nav">
+                <b id="site-brand">Lin Studio</b><span>Work　About　Contact</span>
+              </div>
+              <div class="site-hero editorial" id="site-hero">
+                <div>
+                  <small>INDEPENDENT DESIGN &amp; DIGITAL CRAFT</small>
+                  <h3 id="site-title">Design for<br />what comes next.</h3>
+                  <p id="site-copy">为有想法的团队，创造清晰、有个性的数字体验。</p>
+                  <a href="#site-work">Explore selected work ↗</a>
+                </div>
+                <div class="site-art" aria-hidden="true"><i></i><i></i></div>
+              </div>
+              <div id="site-work"><div class="site-projects" id="site-projects"></div></div>
+              <div class="site-foot">
+                Lin Studio / Selected work 2026 <span>OPEN FOR COLLABORATION</span>
+              </div>
+            </div>
+            <form id="site-controls">
+              <label>网站名称<input id="site-name" value="Lin Studio" maxlength="30" /></label
+              ><label
+                >网站首屏标题<textarea id="title" rows="3" maxlength="70">
+Design for what comes next.</textarea></label
+              ><label
+                >页面布局<select id="layout">
+                  <option value="editorial">Editorial / 图文分栏</option>
+                  <option value="statement">Statement / 大字宣言</option>
+                </select></label
+              ><label
+                >作品排序<select id="project-order">
+                  <option value="recent">最近项目优先</option>
+                  <option value="name">项目名称 A–Z</option>
+                </select></label
+              >
+              <p id="hint" role="status"></p>
+              <button id="reset" type="button">Reset website</button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="closing">
+        <span>ALWAYS A WORK IN PROGRESS.</span>
+        <h2>Make something<br />worth staying up for.</h2>
+        <a href="#studio" class="pill">Back to the canvas ↑</a>
+      </section>
+    </main>
+    <footer>
+      <span>nightshift® — Independent concept</span><span>本地网站构建演示 / 不保存输入</span>
+    </footer>
+    <dialog id="work">
+      <small>SELECTED WORK / OPEN EDITION</small>
+      <h2 id="work-title"></h2>
+      <p>
+        每个作品是虚构网站的设计研究。编辑器可调整首屏内容与页面布局，并展示同一组项目在不同排列下的真实DOM结构。
+      </p>
+      <button id="close">Close study</button>
+    </dialog>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,390 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+}
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+button,
+a,
+input,
+select,
+textarea {
+  touch-action: manipulation;
+}
+button {
+  cursor: pointer;
+}
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+a {
+  color: inherit;
+}
+img,
+svg,
+video {
+  max-width: 100%;
+}
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid #7b96d3;
+  outline-offset: 4px;
+}
+pre {
+  overflow: auto;
+}
+p {
+  line-height: 1.65;
+}
+dialog {
+  max-width: calc(100% - 32px);
+}
+[hidden] {
+  display: none !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:root {
+  --bg: #faf9f5;
+  --ink: #29251f;
+  --muted: #716a61;
+  --line: #dfd9cf;
+  --coral: #cc785c;
+  --paper: #efe9de;
+}
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Source Sans 3 Variable', 'Inter Variable', sans-serif;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 6%;
+  border-bottom: 1px solid var(--line);
+}
+header > a {
+  font-size: 25px;
+  text-decoration: none;
+  font-weight: 600;
+}
+header > a span {
+  font:
+    13px Georgia,
+    serif;
+  color: var(--muted);
+  margin-left: 9px;
+}
+nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  font-size: 12px;
+}
+nav a {
+  text-decoration: none;
+}
+.dark-button {
+  background: var(--ink);
+  color: var(--bg);
+  padding: 12px 18px;
+  border-radius: 8px;
+}
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 7%;
+  align-items: center;
+  padding: 75px 7% 85px;
+  min-height: 600px;
+}
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: 1.3px;
+  color: var(--muted);
+}
+h1 {
+  font:
+    400 72px/0.98 'Cormorant Garamond Variable',
+    Georgia,
+    serif;
+  letter-spacing: -2.5px;
+  margin: 28px 0;
+}
+.hero p {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.9;
+}
+.coral {
+  background: var(--coral);
+  color: #271a13;
+  border: 1px solid #b5654a;
+  border-radius: 8px;
+  padding: 13px 20px;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 15px;
+}
+.sun {
+  width: 370px;
+  max-width: 100%;
+  transform: rotate(-7deg);
+}
+.desk {
+  margin: 0 6%;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--paper);
+}
+.desk-head {
+  padding: 18px 25px;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  font-size: 10px;
+  color: var(--muted);
+}
+select {
+  background: #faf9f5;
+  border: 1px solid #bfb5a8;
+  border-radius: 6px;
+  padding: 9px 12px;
+  color: var(--ink);
+  font-size: 11px;
+  margin-left: 8px;
+}
+.reading-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.summary {
+  padding: 30px 35px 35px;
+  min-width: 0;
+  border-right: 1px solid #d7cfc1;
+}
+.tabs {
+  display: flex;
+  gap: 7px;
+  margin-bottom: 40px;
+}
+.tabs button {
+  border: 1px solid #beb5a7;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--muted);
+  padding: 8px 18px;
+  font-size: 12px;
+}
+.tabs button[aria-pressed='true'] {
+  background: var(--ink);
+  color: var(--bg);
+  border-color: var(--ink);
+}
+h2 {
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+.summary > p {
+  font-size: 15px;
+  line-height: 1.9;
+  color: #534c42;
+  min-height: 85px;
+}
+#citations {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+#citations button {
+  background: #faf9f5;
+  border: 1px solid #bfb5a8;
+  padding: 7px 11px;
+  border-radius: 5px;
+  color: var(--ink);
+  font-size: 11px;
+}
+.summary .small {
+  font-size: 10px;
+  line-height: 1.7;
+  color: var(--muted);
+  min-height: 0;
+  margin-top: 25px;
+}
+.source {
+  padding: 35px;
+  background: #f7f4ed;
+  min-width: 0;
+}
+h3 {
+  font-size: 21px;
+  font-weight: 500;
+  margin: 25px 0;
+}
+#source-text p {
+  font-family: Georgia, 'Source Sans 3 Variable', serif;
+  font-size: 14px;
+  line-height: 2.05;
+  padding: 10px 0;
+  color: #5e5548;
+}
+#source-text p.highlight {
+  background: #f1d9b6;
+  outline: 8px solid #f1d9b6;
+  border-radius: 2px;
+}
+.thought {
+  padding: 105px 8%;
+}
+.thought h2 {
+  font:
+    400 67px/1 'Cormorant Garamond Variable',
+    Georgia,
+    serif;
+  letter-spacing: -1.5px;
+}
+.thought > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12%;
+  max-width: 930px;
+}
+.thought p {
+  font-size: 14px;
+  color: var(--muted);
+}
+.closing {
+  padding: 60px 8% 75px;
+  background: var(--coral);
+  color: #291f18;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.closing h2 {
+  font:
+    400 61px/1 'Cormorant Garamond Variable',
+    Georgia,
+    serif;
+  letter-spacing: -1.5px;
+}
+.closing a {
+  font-size: 12px;
+  text-underline-offset: 7px;
+}
+footer {
+  background: var(--ink);
+  color: #ddd7cc;
+  padding: 28px 6%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+}
+@media (max-width: 650px) {
+  header {
+    padding: 22px 6%;
+  }
+  header > a span {
+    display: none;
+  }
+  nav a:not(.dark-button) {
+    display: none;
+  }
+  nav {
+    gap: 0;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 50px 7%;
+    gap: 20px;
+    min-height: 0;
+  }
+  h1 {
+    font-size: 54px;
+    letter-spacing: -1.8px;
+  }
+  .hero p {
+    font-size: 13px;
+  }
+  .sun {
+    width: 220px;
+    margin: 0 auto;
+    display: block;
+  }
+  .desk {
+    margin: 0 4%;
+  }
+  .desk-head {
+    padding: 16px;
+    flex-wrap: wrap;
+    font-size: 9px;
+  }
+  .reading-grid {
+    grid-template-columns: 1fr;
+  }
+  .summary,
+  .source {
+    padding: 25px;
+    border: 0;
+  }
+  .tabs {
+    margin-bottom: 27px;
+  }
+  .summary h2 {
+    font-size: 30px;
+  }
+  .source {
+    border-top: 1px solid var(--line);
+  }
+  .thought {
+    padding: 65px 7%;
+  }
+  .thought h2 {
+    font-size: 47px;
+  }
+  .thought > div {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .closing {
+    padding: 40px 7% 55px;
+    display: block;
+  }
+  .closing h2 {
+    font-size: 48px;
+  }
+  footer {
+    font-size: 9px;
+    gap: 20px;
+    line-height: 1.8;
+  }
+}

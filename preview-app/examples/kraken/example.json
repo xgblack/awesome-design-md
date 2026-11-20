@@ -1,0 +1,37 @@
+{
+  "title": "Aster Market · 数字资产研究目录",
+  "description": "筛选固定样本市场资料，比较两项资产的用途、供给模型与风险说明；不交易。",
+  "status": "ready",
+  "features": {
+    "moods": ["minimal"],
+    "tones": ["light"],
+    "layouts": ["directory"],
+    "density": ["balanced"],
+    "headingScale": ["regular"],
+    "headingWeight": ["bold"],
+    "geometry": ["small-radius"],
+    "visualMedia": ["type", "geometry"],
+    "accentHues": ["purple"],
+    "temperature": ["cool"],
+    "chroma": ["mono"],
+    "backgrounds": ["solid"],
+    "layering": ["lines"],
+    "scenarios": ["directory", "tool"],
+    "typography": ["sans"],
+    "motion": ["feedback"]
+  },
+  "interactions": ["filter", "configure"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "专有字体以本地 Inter Variable 替代，保留字重、字阶、空间与组件规则；中文为系统字体回退。",
+    "交互为原创本地演示，不发出业务请求，不保存个人输入。",
+    "语境复核：从艺术收藏改为数字资产市场资料；保留白底紫色、48px粗标题、12px控件。"
+  ],
+  "references": [
+    {
+      "source": "DESIGN.md L5–38、88–113、125",
+      "reason": "白底标题/紫色行动 → 可筛观察表与选中摘要 → 系列介绍与规则学习。白画布、`#7132f5`、`#101114`；48px负字距粗标题、12px按钮、冷蓝灰细分隔与极轻阴影。"
+    }
+  ],
+  "assets": []
+}

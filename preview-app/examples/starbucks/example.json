@@ -1,0 +1,47 @@
+{
+  "title": "Moss & Mug",
+  "description": "选择杯型、奶基和浓缩份数，查看对应陶杯，并在本地试配盘增加、逐杯修改或移除；无真实订单。",
+  "status": "ready",
+  "features": {
+    "moods": ["warm"],
+    "tones": ["mixed"],
+    "temperature": ["warm"],
+    "chroma": ["muted"],
+    "accentHues": ["green"],
+    "backgrounds": ["solid"],
+    "layouts": ["split", "chapters"],
+    "density": ["balanced"],
+    "typography": ["sans"],
+    "headingScale": ["regular"],
+    "headingWeight": ["bold"],
+    "geometry": ["pill", "rounded"],
+    "layering": ["solid"],
+    "visualMedia": ["render", "illustration"],
+    "motion": ["feedback"],
+    "scenarios": ["commerce", "calculator"]
+  },
+  "interactions": ["configure", "form", "edit"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "40/60饮品与配置、多级绿角色、奶油底和50px胶囊行动；本地 Inter 替代品牌专有无衬线，不混用 Rewards 金色与衬线。",
+    "中杯宽陶杯与大杯高陶杯为两张独立原创结构渲染，奶基/份数只改变概念摘要；配方不是实际营养、过敏原或饮用建议。"
+  ],
+  "references": [
+    {
+      "source": "L3–64、119–128、183–191、273–393、500–521",
+      "reason": "多级绿不合一，不乱加金/Rewards衬线，字级按明确像素体系避免rem换算冲突。"
+    }
+  ],
+  "assets": [
+    {
+      "file": "assets/cup-small.svg",
+      "source": "本项目原创陶杯、拉花与材质渲染",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/cup-large.svg",
+      "source": "本项目原创陶杯、拉花与材质渲染",
+      "license": "本项目原创，可随示例分发"
+    }
+  ]
+}

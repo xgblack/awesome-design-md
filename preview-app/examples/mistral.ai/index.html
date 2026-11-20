@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Frontier / Open model platform</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#">frontier<span>▤</span></a>
+      <nav><a href="#samples">Models</a><a href="#recipe">Recipes</a><span>EST. 2026</span></nav>
+    </header>
+    <main>
+      <section class="hero">
+        <div>
+          <span class="eyebrow">OPEN MODELS. YOUR FRONTIER.</span>
+          <h1>Intelligence.<br />Wide open.</h1>
+          <p>
+            从开放模型开始，构建自己的下一种可能。<br />一套可阅读、可核对的模型与 API 平台演示。
+          </p>
+          <a class="black" href="#samples">Explore the models ↗</a>
+        </div>
+        <figure>
+          <img src="../_shared/photos/mountain.webp" alt="夕光中的山峰与层叠地形" />
+          <figcaption>AN OPEN HORIZON / MODEL PLATFORM STUDY</figcaption>
+        </figure>
+      </section>
+      <section class="samples" id="samples">
+        <div>
+          <span class="eyebrow">01 / A MODEL FOR YOUR NEXT IDEA</span>
+          <h2>Not every task<br />asks the same of a model.</h2>
+        </div>
+        <div class="filter">
+          <label for="terrain">模型能力</label
+          ><select id="terrain">
+            <option value="all">全部能力</option>
+            <option value="text">文本</option>
+            <option value="code">代码</option>
+            <option value="vision">视觉（暂无样本）</option>
+          </select>
+        </div>
+        <div id="records"></div>
+        <p id="empty" hidden role="status">
+          暂未收录视觉模型样本。保留当前筛选，不会用无关模型补齐。
+        </p>
+      </section>
+      <section class="recipe" id="recipe">
+        <div>
+          <span class="eyebrow">02 / MAKE THE METHOD READABLE</span>
+          <h2>One API.<br />Room to build.</h2>
+          <p>选择模型，查看同一请求的两种调用示意。<br />固定响应样本，不在本页请求或运行模型。</p>
+          <label class="model-label" for="model">当前模型</label
+          ><select id="model">
+            <option value="small">Frontier Small</option>
+            <option value="code">Frontier Code</option>
+            <option value="large">Frontier Large</option>
+          </select>
+          <div class="langs">
+            <button data-lang="python" aria-pressed="true">Python</button
+            ><button data-lang="js">cURL</button>
+          </div>
+        </div>
+        <div class="code-window">
+          <div><span>chat.completions / local fixture</span><button id="copy">复制 ↗</button></div>
+          <pre id="code"></pre>
+          <p id="copied" role="status">示例代码不在本页执行。</p>
+          <div class="response-label">PRESET RESPONSE / 非在线生成</div>
+          <pre id="response"></pre>
+        </div>
+      </section>
+      <section class="field-notes">
+        <span class="eyebrow">A NOTE ON OPEN POSSIBILITIES</span>
+        <h2>Choose the model.<br />Keep the context.</h2>
+        <p>
+          三个 Frontier 模型为虚构平台样本，描述与上下文长度仅用于教学。请求地址使用 .example
+          域名，不可真实调用，不代表 Mistral 模型、性能或费率。
+        </p>
+        <a href="#samples" class="orange">回到模型目录 ↑</a>
+      </section>
+      <div class="sunset" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+    </main>
+    <footer>frontier / <span>Mistral DESIGN.md · 独立开放模型平台示例</span></footer>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

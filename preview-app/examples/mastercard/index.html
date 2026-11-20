@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Roundtable · 企业支付连接 · 独立设计语言本地演示" />
+    <title>Roundtable · 企业支付连接</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#top" class="brand">roundtable<span> / BUSINESS CONNECTIONS</span></a>
+      <nav><a href="#stories">商户的故事</a><a href="#experiences">支付解决方案</a></nav>
+      <a href="#experiences" class="nav-action">构建连接 ↗</a>
+    </header>
+    <main id="top">
+      <section class="hero">
+        <img src="../_shared/photos/interior.webp" alt="共享工作空间里的经营场景" />
+        <div>
+          <span>A WORLD OF BUSINESS, BETTER CONNECTED.</span>
+          <h1>让每一次连接，<br />都带来新可能。</h1>
+          <p>面向商户、平台与企业的支付能力演示</p>
+          <a class="satellite" href="#stories" aria-label="探索商户人物故事">↘</a>
+        </div>
+      </section>
+      <section class="stories" id="stories">
+        <span class="watermark" aria-hidden="true">connections</span>
+        <div class="story-text">
+          <small>THE PEOPLE BEHIND EVERY BUSINESS</small>
+          <h2>因为一个人，<br />让一门生意向前。</h2>
+          <p>从一间工作室到跨境业务。了解小团队如何把收款、验证与结算连在一起。</p>
+        </div>
+        <button class="portrait" data-story="lin">
+          <img src="../_shared/photos/portrait-woman.webp" alt="虚构品牌主理人的肖像" /><span
+            >林夏 / 从工作室到线上商店 <i>↗</i></span
+          ></button
+        ><button class="portrait craft" data-story="yuan">
+          <img src="../_shared/photos/craft.webp" alt="陶艺工作者在拉坯台前塑造泥土" /><span
+            >袁舟 / 让订单与交付相连 <i>↗</i></span
+          >
+        </button>
+      </section>
+      <section class="experiences" id="experiences">
+        <div class="exp-heading">
+          <small>CONNECT EVERY PART OF THE PAYMENT</small>
+          <h2>从一次付款，<br />到一个完整的连接。</h2>
+          <p>根据业务场景，了解支付网络的不同环节。虚构服务模型，不处理真实款项。</p>
+        </div>
+        <label class="business-label"
+          >你的业务场景<select id="business">
+            <option value="shop">线上品牌商户</option>
+            <option value="travel">旅行服务平台</option>
+            <option value="procurement">企业采购团队</option>
+          </select></label
+        >
+        <div class="experience-list" id="list"></div>
+        <aside class="itinerary">
+          <div>
+            <span>支付能力路径 / 本地规划</span>
+            <p id="itinerary"></p>
+            <p id="requirements"></p>
+          </div>
+          <button id="make-summary">核对能力路径 ↗</button>
+        </aside>
+        <p id="notice" role="status"></p>
+        <p id="solution-summary" class="solution-summary" hidden></p>
+      </section>
+      <section class="closing">
+        <p>OPPORTUNITY, IN EVERY CONNECTION.</p>
+        <h2>让业务向前，<br />不止于一次付款。</h2>
+        <a href="#experiences">回到解决方案 ↑</a>
+      </section>
+    </main>
+    <footer>
+      <strong>roundtable /</strong><span>独立设计语言示例 · 非 Mastercard 官方页面</span>
+    </footer>
+    <dialog id="story">
+      <small>BUSINESS / ORIGINAL DEMO STORY</small>
+      <h2 id="story-title"></h2>
+      <p id="story-copy"></p>
+      <button id="close">回到商户故事</button>
+    </dialog>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

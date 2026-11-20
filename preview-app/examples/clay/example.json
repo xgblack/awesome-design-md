@@ -1,0 +1,43 @@
+{
+  "title": "Moss · GTM 研究工坊",
+  "description": "筛选理想客户并从固定本地资料补全企业线索，核对缺失字段并下载 CSV。",
+  "status": "ready",
+  "features": {
+    "moods": ["warm", "playful"],
+    "tones": ["mixed"],
+    "layouts": ["centered", "split", "workspace"],
+    "density": ["balanced"],
+    "headingScale": ["display"],
+    "headingWeight": ["medium"],
+    "geometry": ["small-radius", "rounded"],
+    "visualMedia": ["render", "ui"],
+    "accentHues": ["pink", "purple", "orange"],
+    "temperature": ["warm"],
+    "chroma": ["vivid"],
+    "backgrounds": ["solid"],
+    "layering": ["solid"],
+    "scenarios": ["product", "tool"],
+    "typography": ["sans"],
+    "motion": ["feedback"]
+  },
+  "interactions": ["filter", "configure"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "原创三维黏土场景以椭球建模、解析光线求交、哑光光照与软阴影离线渲染成 WebP；可编辑场景与渲染器见 assets/generate-scene.py。不使用外部模型或图像。",
+    "Plain Black 专有字体用本地 Manrope Variable 500 替代；保留奶油底、彩色整板、暖页脚。",
+    "语境复核：改为原规范的 GTM 数据编排/客户研究语境，非真实CRM/远程AI。"
+  ],
+  "references": [
+    {
+      "source": "DESIGN.md L304–312、350–377、446–480",
+      "reason": "暖奶油巨大圆润字/黏土山景 → 粉/深青/薰衣草/桃/赭章节分别承载客户研究、资料关联与补全 → 奶油山景结尾。`#fffaf0`、72px/500、黑12px CTA/24px彩板；哑光3D是核心。"
+    }
+  ],
+  "assets": [
+    {
+      "file": "assets/clay-landscape.webp",
+      "source": "本项目原创三维场景；解析光线求交与哑光软阴影离线渲染",
+      "license": "本项目原创"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "title": "Tern Imaging / More perspective. Less to carry.",
+  "description": "无人机、稳定器与麦克风器材展厅；按拍摄任务选器材与组合，无购买、飞行或实测承诺。",
+  "status": "ready",
+  "features": {
+    "moods": ["minimal", "tech"],
+    "tones": ["mixed"],
+    "temperature": ["cool"],
+    "chroma": ["muted"],
+    "accentHues": ["blue"],
+    "backgrounds": ["solid"],
+    "layouts": ["chapters", "split"],
+    "density": ["airy"],
+    "typography": ["sans"],
+    "headingScale": ["regular"],
+    "headingWeight": ["bold"],
+    "geometry": ["pill", "square", "small-radius"],
+    "layering": ["lines"],
+    "visualMedia": ["render", "photo"],
+    "motion": ["feedback"],
+    "scenarios": ["product"]
+  },
+  "interactions": ["configure"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "原创虚构品牌与概念产品，非官方页面；操作仅在当前页面内存生效，不提交真实业务。",
+    "本地Source Sans 3替代未安装的Open Sans，保留600/400字重与紧字距；海岸仅为许可情境参考，非设备实拍。",
+    "全新四旋翼/云台镜头/手持稳定器/无线麦克风为独立原创产品渲染。"
+  ],
+  "references": [
+    {
+      "source": "DESIGN.md L521–556、743–759",
+      "reason": "明亮产品展厅、无人机旗舰、稳定器/麦克风方产品砖、蓝色胶囊行动和小号橙色等级标。"
+    },
+    {
+      "source": "DESIGN.md L787–791",
+      "reason": "任务比较与盒内组合采用浅灰真实器材渲染，不让海岸生活摄影代替硬件。"
+    }
+  ],
+  "assets": [
+    {
+      "file": "assets/tern-air.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/tern-pocket.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/tern-mic.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "../_shared/photos/ocean.webp",
+      "source": "共享 photos/sources.json；海岸参考场景",
+      "license": "Unsplash License"
+    }
+  ]
+}

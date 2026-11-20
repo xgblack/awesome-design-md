@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Local Loom / Local model tools</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#">local loom</a>
+      <nav><a href="#try">模型</a><a href="#usage">本地运行</a><a href="#faq">常见问题</a></nav>
+    </header>
+    <main>
+      <section class="hello">
+        <svg class="goose" viewBox="0 0 160 160" role="img" aria-label="原创线描小鹅">
+          <path
+            d="M45 122c-20-8-21-29-5-40 12-8 31-1 38-10 7-10-5-27 1-43 6-17 25-18 32-3 5 13-2 26 0 40 4 23 25 37 16 56-10 23-65 20-82 0Z"
+            fill="white"
+            stroke="currentColor"
+            stroke-width="3"
+          />
+          <path
+            d="m109 35 20 6-18 6M48 107c12 19 37 15 45 3M63 142l-9 8m42-8 9 8"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="3"
+            stroke-linecap="round"
+          />
+          <circle cx="99" cy="31" r="2.5" />
+        </svg>
+        <h1>Little models.<br />Right at home.</h1>
+        <p>在自己的设备上，留出一个思考的地方。<br />本地模型工具的独立界面演示。</p>
+        <div class="install">
+          <code id="command">local-loom run loom-text</code
+          ><button id="copy-command" aria-label="复制示意命令">复制</button>
+        </div>
+        <a class="black" href="#try">Explore a model ↘</a>
+        <p class="caption">虚构模型与示意命令，不提供安装或真实推理。</p>
+      </section>
+      <section class="try" id="try">
+        <div>
+          <h2>Find a model.<br />Keep your context.</h2>
+          <p>
+            先从任务选择一个合适的模型。这里的容量、配置和响应都是教学用固定样例，不对应真实模型性能。
+          </p>
+          <label for="model">本地模型</label
+          ><select id="model">
+            <option value="text">Loom Text · 文本 · 演示 1.2 GB</option>
+            <option value="code">Loom Code · 代码 · 演示 2.4 GB</option>
+            <option value="vision">Loom Vision · 图像描述 · 演示 3.1 GB</option>
+          </select>
+          <p id="model-note"></p>
+          <label for="sample">任务配方</label
+          ><select id="sample">
+            <option value="summary">团队会议摘要</option>
+            <option value="explain">解释一段函数</option>
+            <option value="describe">阅读图像说明</option>
+          </select>
+        </div>
+        <div class="terminal">
+          <div class="traffic"><i></i><i></i><i></i><span>local-loom / fixture console</span></div>
+          <label for="input">请求内容</label><textarea id="input" maxlength="500"></textarea
+          ><button id="run" class="black">查看预置响应 ↗</button>
+          <div class="output-label">
+            <span>MODEL RESPONSE / FIXTURE</span><span id="count">等待请求</span>
+          </div>
+          <pre id="output">选择任务配方，然后查看与该请求关联的固定响应。</pre>
+          <button id="copy-result" class="black" disabled>复制响应</button>
+          <p id="feedback" role="status"></p>
+        </div>
+      </section>
+      <section id="usage" class="usage">
+        <h2>Local by intention.</h2>
+        <p>
+          模型目录、运行命令和响应放在同一条路径上。本页不下载模型，不在浏览器中推理，也不会执行复制的命令。请求只存在当前页面中。
+        </p>
+        <p>
+          选择与任务相符的模型后可查看预置输出。未知请求不会伪装成 AI
+          回答；复制不可用时可手动选取文字。
+        </p>
+      </section>
+      <section id="faq">
+        <h2>Good questions.</h2>
+        <h3>这些是真实可下载的模型吗？</h3>
+        <p>不是。三个 Loom 模型是虚构产品示例，容量也是教学 fixture，不提供安装包。</p>
+        <h3>输入会离开设备吗？</h3>
+        <p>不会。此示例不发送模型请求，也不保存输入。</p>
+        <h3>可以输入任何问题吗？</h3>
+        <p>
+          可以编辑，但只有三个配方有预置响应。修改为未支持内容会得到明确提示，不生成无依据的答案。
+        </p>
+      </section>
+    </main>
+    <footer>local loom / Local model interface · Ollama DESIGN.md 独立示例 · 原创线描</footer>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

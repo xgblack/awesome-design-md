@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Moss &amp; Mug / 季节饮品试配 · 独立风格示例</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#" class="brand">moss &amp; mug /</a>
+      <nav aria-label="产品章节"><a href="#recipe">季节配方</a><a href="#story">这杯的故事</a></nav>
+      <button id="tray-open">试配盘 <span id="tray-count">0</span></button>
+    </header>
+    <main>
+      <p class="breadcrumb">菜单 / 季节概念饮品 / <strong>燕麦云朵拿铁</strong></p>
+      <section class="pdp">
+        <div class="photo">
+          <span>THE SLOW AFTERNOON COLLECTION</span
+          ><img
+            id="drink-image"
+            src="./assets/cup-small.svg"
+            alt="原创中杯 320 ml 陶杯与拉花概念渲染"
+          />
+          <div class="visual-caption">
+            <b id="visual-size">中杯 / 320 ml</b
+            ><span id="visual-milk">陶杯与饮品均为原创视觉概念</span>
+          </div>
+          <small>并非实际容量测量或真实配料照片</small>
+        </div>
+        <form id="recipe" novalidate>
+          <p>SEASONAL / 01</p>
+          <h1 id="recipe-title" tabindex="-1">燕麦云朵，<br />慢一点的下午。</h1>
+          <p class="lead">烘烤谷物的想象，遇上一层轻盈的奶泡。把这一杯，调成自己的下午节奏。</p>
+          <p id="edit-notice" hidden>正在修改试配盘中的一杯。</p>
+          <fieldset>
+            <legend>选择杯型</legend>
+            <label class="size-choice"
+              ><input type="radio" name="size" value="中杯" checked /><span
+                class="cup-icon small-cup"
+                aria-hidden="true"
+                ><i></i></span
+              ><b>中杯</b><small>320 ml</small></label
+            ><label class="size-choice"
+              ><input type="radio" name="size" value="大杯" /><span
+                class="cup-icon large-cup"
+                aria-hidden="true"
+                ><i></i></span
+              ><b>大杯</b><small>450 ml</small></label
+            >
+          </fieldset>
+          <label class="milk-label"
+            >奶基<select id="milk" aria-describedby="milk-note">
+              <option value="">请选择奶基</option>
+              <option>燕麦奶</option>
+              <option>鲜牛奶</option>
+              <option>椰奶</option>
+            </select></label
+          >
+          <p id="milk-note">选择一种奶基，查看本页的风味创作说明。</p>
+          <div class="quantity">
+            <span>浓缩份数</span><button type="button" id="minus" aria-label="减少浓缩">−</button
+            ><output id="shots" aria-live="polite">1</output
+            ><button type="button" id="plus" aria-label="增加浓缩">＋</button>
+          </div>
+          <p id="summary">中杯 · 未选奶基 · 1 份浓缩</p>
+          <div class="shot-guide">
+            <span id="shot-dots" aria-hidden="true"><i></i><i></i><i></i></span
+            ><span>1—3 份是演示边界，非饮用建议</span>
+          </div>
+          <button class="primary" id="save-recipe" type="submit">加入试配盘</button
+          ><button id="cancel-edit" type="button" hidden>取消修改</button>
+          <p id="status" role="status">仅保存本次页面内的配方，不下单。</p>
+        </form>
+      </section>
+      <section id="story" class="green">
+        <div>
+          <p>GOOD THINGS TAKE THEIR TIME.</p>
+          <h2>把一杯日常，<br />调成自己喜欢的模样。</h2>
+          <p>
+            杯壁的暖色，奶泡的纹理，以及浓缩的份数，都能成为一次小小的选择。试配盘可以收下不同搭配，也可以随时修改。
+          </p>
+        </div>
+        <div class="recipe-note">
+          <span>THE TASTING NOTE</span>
+          <h3>谷物 / 奶泡 / 浓缩</h3>
+          <p>
+            这些词描述的是本页的创作想象。我们不提供真实营养、咖啡因、配料或过敏原承诺，也不连接门店、库存与订单。
+          </p>
+          <a href="#recipe">回到这一杯 ↑</a>
+        </div>
+      </section>
+      <section class="notes">
+        <h2>关于这份试配</h2>
+        <details>
+          <summary>试配盘会提交真实订单吗？</summary>
+          <p>不会。新增、修改、移除都只改变当前页面内存，刷新后全部清空；不会发给任何门店。</p>
+        </details>
+        <details>
+          <summary>杯型、奶基与份数会改变什么？</summary>
+          <p>
+            杯型对应两张不同陶杯结构的原创渲染；奶基与份数改变配方摘要和风味创作说明。全部为界面演示，不是营养或饮用建议。
+          </p>
+        </details>
+      </section>
+    </main>
+    <footer>moss &amp; mug / ORIGINAL RECIPE STUDY</footer>
+    <dialog id="tray" aria-labelledby="tray-title">
+      <button id="tray-close">关闭试配盘</button>
+      <h2 id="tray-title">你的试配盘</h2>
+      <div id="tray-items">试配盘还是空的。</div>
+      <p id="tray-status" role="status"></p>
+      <button id="tray-clear" disabled>清空试配盘</button>
+      <p class="demo-note">仅本次本机演示，无真实订单。</p>
+    </dialog>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

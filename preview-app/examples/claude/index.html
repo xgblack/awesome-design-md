@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Margin AI / Knowledge work assistant</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#">✳ Margin<span>AI</span></a>
+      <nav>
+        <a href="#desk">知识工作桌</a><a href="#thought">我们的想法</a
+        ><a class="dark-button" href="#desk">Open a page ↗</a>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <div>
+          <span class="eyebrow">A LITTLE CONTEXT GOES A LONG WAY.</span>
+          <h1>Good thinking<br />starts in the margins.</h1>
+          <p>
+            慢一点阅读，让一句结论回到它的出处。<br />让工程 RFC
+            与团队政策，成为有出处的摘要和追问。
+          </p>
+          <a class="coral" href="#desk">开始一次细读 ↗</a>
+        </div>
+        <svg class="sun" viewBox="0 0 440 440" role="img" aria-label="原创珊瑚色手绘太阳线稿">
+          <g fill="none" stroke="#cc785c" stroke-width="7" stroke-linecap="round">
+            <path d="M196 132C133 148 120 212 144 265s88 65 130 26 50-93 4-136-95-49-130-2" />
+            <path
+              d="m218 34-1 55m78-37-28 50m89 4-44 38m83 30-61 15m62 61-62-8m29 84-48-35m-5 89-30-51m-45 80 2-62m-75 39 29-53m-85 7 47-39m-81-34 59-10m-52-64 58 16m-20-89 44 45m7-88 23 54"
+            />
+          </g>
+        </svg>
+      </section>
+      <section class="desk" id="desk">
+        <div class="desk-head">
+          <span>KNOWLEDGE WORKSPACE / 本地预置响应</span
+          ><label
+            >材料
+            <select id="material">
+              <option value="rfc">发布工作流 RFC</option>
+              <option value="policy">团队知识库政策</option>
+              <option value="none">未选择材料</option>
+            </select></label
+          >
+        </div>
+        <div class="reading-grid">
+          <article class="summary">
+            <div class="tabs">
+              <button data-task="summary" aria-pressed="true">摘要</button
+              ><button data-task="questions">追问</button>
+            </div>
+            <span class="eyebrow">AN ANNOTATION, NOT A REPLACEMENT.</span>
+            <h2 id="summary-title">让结论回到证据。</h2>
+            <p id="summary-text"></p>
+            <div id="citations"></div>
+            <p class="small">预置文本，不进行在线生成。点击引用，核对右侧原文。</p>
+          </article>
+          <article class="source">
+            <span class="eyebrow">SOURCE / 原创固定材料</span>
+            <h3 id="source-title"></h3>
+            <div id="source-text"></div>
+          </article>
+        </div>
+      </section>
+      <section class="thought" id="thought">
+        <span class="eyebrow">THOUGHTFULLY, TOGETHER.</span>
+        <h2>Leave room<br />for another reading.</h2>
+        <div>
+          <p>
+            摘要帮助我们进入材料，但不能替代材料。边注的价值，不在于把文字变少，而在于让理由变得看得见。
+          </p>
+          <p>
+            这里没有模型、账户或上传入口。两份原创企业材料与预置响应，展示知识助手的工作关系，不假称在线推理。
+          </p>
+        </div>
+      </section>
+      <section class="closing">
+        <h2>Stay curious.<br />Read the source.</h2>
+        <a href="#desk">回到知识工作桌 ↑</a>
+      </section>
+    </main>
+    <footer>
+      ✳ Margin AI / Knowledge work <span>Claude DESIGN.md 风格研究 · 非官方示例</span>
+    </footer>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+{
+  "title": "CircuitX · 数字资产市场学堂",
+  "description": "固定样本行情表、市场检索与纸面换算，直接对应数字资产平台。无账户或真实交易。",
+  "status": "ready",
+  "features": {
+    "moods": ["tech"],
+    "tones": ["dark"],
+    "layouts": ["split", "directory"],
+    "density": ["dense"],
+    "headingScale": ["display"],
+    "headingWeight": ["bold"],
+    "geometry": ["small-radius"],
+    "visualMedia": ["ui", "type"],
+    "accentHues": ["yellow"],
+    "temperature": ["neutral"],
+    "chroma": ["mono"],
+    "backgrounds": ["solid"],
+    "layering": ["lines"],
+    "scenarios": ["tool", "calculator"],
+    "typography": ["sans"],
+    "motion": ["feedback"]
+  },
+  "interactions": ["filter", "form"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "专有字体以本地 Inter Variable 替代，保留字重、字阶、空间与组件规则；中文为系统字体回退。",
+    "交互为原创本地演示，不发出业务请求，不保存个人输入。",
+    "语境复核：保留已贴原产品类别的核心页面，复核理由：固定样本行情表、市场检索与纸面换算，直接对应数字资产平台。无账户或真实交易。"
+  ],
+  "references": [
+    {
+      "source": "DESIGN.md L342–350、434–450、525–549、595–610",
+      "reason": "暗首屏左大数字/右行情 → 五列市场表/解释/FAQ → 浅色换算对话框及页脚。`#0b0e11`/`#1e2329`、`#FCD535`配黑字、700大数/等宽数字、6–12px紧角。"
+    }
+  ],
+  "assets": []
+}

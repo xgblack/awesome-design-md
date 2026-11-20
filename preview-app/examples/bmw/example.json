@@ -1,0 +1,103 @@
+{
+  "title": "Polar E / 城市电动出行",
+  "description": "City 紧凑五座、Tour 长车身五座、Space 高顶七座的独立车型目录，按需求筛选并配置车身/轮毂。",
+  "status": "ready",
+  "features": {
+    "moods": ["minimal", "cinematic"],
+    "tones": ["mixed"],
+    "temperature": ["cool"],
+    "chroma": ["muted"],
+    "accentHues": ["blue"],
+    "backgrounds": ["solid"],
+    "layouts": ["split", "directory"],
+    "density": ["airy"],
+    "typography": ["sans"],
+    "headingScale": ["regular"],
+    "headingWeight": ["bold"],
+    "geometry": ["square"],
+    "layering": ["solid"],
+    "visualMedia": ["render", "photo"],
+    "motion": ["feedback"],
+    "scenarios": ["product", "calculator"]
+  },
+  "interactions": ["filter", "configure"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "本项目独立虚构演示，非品牌官方页面；业务操作仅在当前页面内存中生效。",
+    "Inter Variable 为本地可分发替代，不含品牌专有字体。",
+    "三车型轮廓、窗形与轴距分别绘制；两色与两种轮毂各有对应本地图，不用CSS滤镜冒充配色/型号。"
+  ],
+  "references": [
+    {
+      "source": "L281–289、340–363、438–456",
+      "reason": "不全黑、不胶囊，不用M三色作企业站通用强调。"
+    }
+  ],
+  "assets": [
+    {
+      "file": "assets/city-blue-18.webp",
+      "source": "本项目原创 SVG 场景/产品形体；同名SVG为可编辑源，本地栅格为WebP",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/city-blue-20.webp",
+      "source": "本项目原创 SVG 场景/产品形体；同名SVG为可编辑源，本地栅格为WebP",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/city-silver-18.webp",
+      "source": "本项目原创 SVG 场景/产品形体；同名SVG为可编辑源，本地栅格为WebP",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/city-silver-20.webp",
+      "source": "本项目原创 SVG 场景/产品形体；同名SVG为可编辑源，本地栅格为WebP",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/space-blue-18.webp",
+      "source": "本项目原创 SVG 场景/产品形体；同名SVG为可编辑源，本地栅格为WebP",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/space-blue-20.webp",
+      "source": "本项目原创 SVG 场景/产品形体；同名SVG为可编辑源，本地栅格为WebP",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/space-silver-18.webp",
+      "source": "本项目原创 SVG 场景/产品形体；同名SVG为可编辑源，本地栅格为WebP",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/space-silver-20.webp",
+      "source": "本项目原创 SVG 场景/产品形体；同名SVG为可编辑源，本地栅格为WebP",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/tour-blue-18.webp",
+      "source": "本项目原创 SVG 场景/产品形体；同名SVG为可编辑源，本地栅格为WebP",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/tour-blue-20.webp",
+      "source": "本项目原创 SVG 场景/产品形体；同名SVG为可编辑源，本地栅格为WebP",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/tour-silver-18.webp",
+      "source": "本项目原创 SVG 场景/产品形体；同名SVG为可编辑源，本地栅格为WebP",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/tour-silver-20.webp",
+      "source": "本项目原创 SVG 场景/产品形体；同名SVG为可编辑源，本地栅格为WebP",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "../_shared/photos/architecture.webp",
+      "source": "共享photos/sources.json",
+      "license": "Unsplash License"
+    }
+  ]
+}

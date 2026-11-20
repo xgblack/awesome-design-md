@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="墨港 · 为工作室留一点从容 · 独立设计语言本地演示" />
+    <title>墨港 · 为工作室留一点从容</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="#top">inkhaven</a>
+      <nav><a href="#ledger">运营沙盘</a><a href="#perspective">不同的工作室</a></nav>
+      <a class="button" href="#ledger">探索演示账本 ↗</a>
+    </header>
+    <main id="top">
+      <section class="hero">
+        <div>
+          <span>BUILT FOR THE WAY YOU CREATE.</span>
+          <h1>A little clarity.<br />A lot of room.</h1>
+          <p>让运营回到清晰，让创作回到自由。<br />一本为独立工作室准备的本地演示账本。</p>
+          <a class="button" href="#ledger">看看这本账</a>
+        </div>
+        <div class="hero-object">
+          <div class="orb" aria-hidden="true"></div>
+          <div class="receipt">
+            <small>INKHAVEN / STUDIO LEDGER</small>
+            <h2>十一月，井井有条。</h2>
+            <div><span>项目收入</span><b>¥48,000</b></div>
+            <div><span>计划支出</span><b>¥21,500</b></div>
+            <p>留出空间，做好作品。</p>
+          </div>
+        </div>
+      </section>
+      <section class="ledger" id="ledger">
+        <div class="ledger-heading">
+          <span>YOUR BUSINESS, IN PERSPECTIVE</span>
+          <h2>每一种创作，<br />都有自己的节奏。</h2>
+          <div class="switch">
+            <button data-studio="design" aria-pressed="true">设计工作室</button
+            ><button data-studio="film" aria-pressed="false">影像工作室</button>
+          </div>
+        </div>
+        <div class="ledger-app">
+          <div class="app-heading">
+            <div>
+              <small>墨港 / 固定运营样本</small>
+              <h3 id="studio-name">栖木设计工作室</h3>
+            </div>
+            <label
+              >查看项目<select id="filter">
+                <option value="all">全部记录</option>
+                <option value="recurring">经常性</option>
+                <option value="oneoff">一次性</option>
+                <option value="none">未分类</option>
+              </select></label
+            >
+          </div>
+          <div class="ledger-summary">
+            <span>当前范围净额<output id="total"></output></span>
+            <p>仅用于理解现金流项目。<br />无银行连接，不生成真实交易。</p>
+          </div>
+          <div id="records"></div>
+          <p id="empty" hidden>这个范围暂时没有记录。<button id="clear">查看全部记录</button></p>
+        </div>
+      </section>
+      <section class="perspective" id="perspective">
+        <div>
+          <span>FOR THE WORK, AND WHAT COMES NEXT.</span>
+          <h2>不必成为运营专家，<br />也能把事情看明白。</h2>
+        </div>
+        <blockquote>
+          “当每一笔都有去处，<br />我们才有心思，去想下一件作品。”<small
+            >虚构工作室主理人 / 演示引语</small
+          >
+        </blockquote>
+      </section>
+    </main>
+    <footer>
+      <h2>Make space<br />for your next chapter.</h2>
+      <a class="button" href="#ledger">回到演示账本 ↑</a>
+      <p>InkHaven / 独立风格参考 · 非金融服务</p>
+    </footer>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

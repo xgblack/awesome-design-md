@@ -1,0 +1,37 @@
+{
+  "title": "Vectorloom / AI inference cloud",
+  "description": "AI推理云：联合筛选模型能力与批量支持，按公开固定演示费率计算token用量明细；不运行模型、不提供实时报价。",
+  "status": "ready",
+  "features": {
+    "moods": ["tech", "editorial"],
+    "tones": ["mixed"],
+    "temperature": ["cool"],
+    "chroma": ["muted"],
+    "accentHues": ["neutral"],
+    "backgrounds": ["solid"],
+    "layouts": ["split", "directory"],
+    "density": ["dense"],
+    "typography": ["sans", "mono"],
+    "headingScale": ["regular"],
+    "headingWeight": ["regular"],
+    "geometry": ["small-radius"],
+    "layering": ["lines", "solid"],
+    "visualMedia": ["ui", "geometry", "type"],
+    "motion": ["feedback"],
+    "scenarios": ["product", "directory", "calculator"]
+  },
+  "interactions": ["filter", "form", "configure"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "保留暗海军分栏、完整橙/洋红/长春花三色编织带、白色密模型表和淡青费用区，4px控件与巨大淡字按原文实现。",
+    "Draft/Observe/Listen/Expand为虚构负载；上下文与费率是教学fixture，不代表Together真实模型规格或性能。",
+    "字体取舍：显示 \"Inter Variable\", sans-serif；正文 \"Inter Variable\", sans-serif。使用本地开放字体/系统字体替代品牌商业字体；标题筛选标签按实际桌面渲染归类。"
+  ],
+  "references": [
+    {
+      "source": "原规范 L331–411、422–459、476–528、549–579、618–633",
+      "reason": "暗海军左文/右完整三色带 → 白色密模型表 → 淡青统计/暗研究引用 → 巨淡字收尾。橙→洋红→长春花为完整SVG，句式标题/Mono大写标签、黑行动、4px角/细线无影。"
+    }
+  ],
+  "assets": []
+}

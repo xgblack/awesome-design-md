@@ -1,0 +1,37 @@
+{
+  "title": "Local Loom / Local model tools",
+  "description": "本地模型目录与运行入门：选择文本、代码或视觉模型配方，核对示意命令与固定响应；不下载模型、不推理。",
+  "status": "ready",
+  "features": {
+    "moods": ["minimal", "warm"],
+    "tones": ["light"],
+    "temperature": ["neutral"],
+    "chroma": ["mono"],
+    "accentHues": ["neutral"],
+    "backgrounds": ["solid"],
+    "layouts": ["centered", "split"],
+    "density": ["airy"],
+    "typography": ["sans", "mono"],
+    "headingScale": ["regular"],
+    "headingWeight": ["bold"],
+    "geometry": ["pill", "small-radius"],
+    "layering": ["lines"],
+    "visualMedia": ["code", "illustration", "ui"],
+    "motion": ["feedback"],
+    "scenarios": ["product", "tool"]
+  },
+  "interactions": ["configure", "form", "edit"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "重构去重工具为本地模型工具产品，保留白窄列、原创小鹅、命令胶囊与无渐变/阴影的黑白语气。",
+    "三个Loom模型、容量与命令均为虚构教学示例；仅三个已标明请求有固定输出，输入不会上传。",
+    "字体取舍：显示 \"Inter Variable\", ui-rounded, sans-serif；正文 \"Inter Variable\", ui-rounded, sans-serif。使用本地开放字体/系统字体替代品牌商业字体；标题筛选标签按实际桌面渲染归类。"
+  ],
+  "references": [
+    {
+      "source": "原规范 L250–263、302–349、428–449、511–521",
+      "reason": "720px窄白列/36px圆润标题/线描小鹅/命令胶囊 → 一处文字终端分栏 → 用法和始终展开 FAQ。纯白、黑胶囊、500/600圆润字、12px细边终端/交通灯、大间隔。"
+    }
+  ],
+  "assets": []
+}

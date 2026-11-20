@@ -1,0 +1,68 @@
+{
+  "title": "Afterlight / AI filmmaking studio",
+  "description": "影片创作与镜头审阅工作室：选择创作指令与预制影片，真实播放、暂停、静音和定位分镜；不在线生成。",
+  "status": "ready",
+  "features": {
+    "moods": ["cinematic", "minimal"],
+    "tones": ["mixed"],
+    "temperature": ["neutral"],
+    "chroma": ["mono"],
+    "accentHues": ["neutral"],
+    "backgrounds": ["image", "solid"],
+    "layouts": ["chapters", "editorial"],
+    "density": ["airy"],
+    "typography": ["sans"],
+    "headingScale": ["regular"],
+    "headingWeight": ["regular"],
+    "geometry": ["small-radius"],
+    "layering": ["lines", "solid"],
+    "visualMedia": ["photo", "ui"],
+    "motion": ["feedback", "transition"],
+    "scenarios": ["product", "media"]
+  },
+  "interactions": ["media", "configure"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "保留电影主导首屏、非等幅镜头网格、冷白创作笔记与黑导演宣言，不套开发者工具hero。",
+    "三段MP4为授权静态摄影+原创缓慢推镜剪辑，每段4秒且无声；非品牌实拍、非AI生成，不伪造静态图中未发生的运动。",
+    "字体取舍：显示 \"Manrope Variable\", \"Inter Variable\", sans-serif；正文 \"Manrope Variable\", \"Inter Variable\", sans-serif。使用本地开放字体/系统字体替代品牌商业字体；标题筛选标签按实际桌面渲染归类。"
+  ],
+  "references": [
+    {
+      "source": "原规范 L3–19、46–75、100–127、137–164、190–217",
+      "reason": "完整电影构图占首屏/仅片名与放映口 → 一大两小不等幅镜头网格 → 冷白研究笔记/黑导演宣言。48px/400几何字、黑/冷灰、4–8px小角、无影无界面渐变，颜色来自影像。"
+    }
+  ],
+  "assets": [
+    {
+      "file": "assets/city.mp4",
+      "source": "city.webp 授权摄影 + 原创推镜剪辑",
+      "license": "底图 Unsplash License；剪辑本项目原创"
+    },
+    {
+      "file": "assets/ocean.mp4",
+      "source": "ocean.webp 授权摄影 + 原创推镜剪辑",
+      "license": "底图 Unsplash License；剪辑本项目原创"
+    },
+    {
+      "file": "assets/mountain.mp4",
+      "source": "mountain.webp 授权摄影 + 原创推镜剪辑",
+      "license": "底图 Unsplash License；剪辑本项目原创"
+    },
+    {
+      "file": "../_shared/photos/city.webp",
+      "source": "公共素材池 sources.json",
+      "license": "Unsplash License"
+    },
+    {
+      "file": "../_shared/photos/ocean.webp",
+      "source": "公共素材池 sources.json",
+      "license": "Unsplash License"
+    },
+    {
+      "file": "../_shared/photos/mountain.webp",
+      "source": "公共素材池 sources.json",
+      "license": "Unsplash License"
+    }
+  ]
+}

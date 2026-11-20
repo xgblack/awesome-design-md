@@ -1,0 +1,37 @@
+{
+  "title": "Meteor / Product analytics database",
+  "description": "产品事件分析数据库：在深色SQL工作台中筛选六条固定埋点记录、按页面聚合并阅读结果；不连接数据库。",
+  "status": "ready",
+  "features": {
+    "moods": ["tech"],
+    "tones": ["dark"],
+    "temperature": ["neutral"],
+    "chroma": ["mono"],
+    "accentHues": ["yellow"],
+    "backgrounds": ["solid"],
+    "layouts": ["split"],
+    "density": ["balanced"],
+    "typography": ["sans", "mono"],
+    "headingScale": ["display"],
+    "headingWeight": ["bold"],
+    "geometry": ["small-radius"],
+    "layering": ["solid"],
+    "visualMedia": ["code", "ui"],
+    "motion": ["feedback"],
+    "scenarios": ["tool", "docs"]
+  },
+  "interactions": ["filter", "form"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "重构城市温度题材为分析数据库产品语境。按原文保留近黑/电黄、粗Inter、SQL窗和真实结果表。",
+    "六条事件为明确fixture；仅支持列出的三个查询，不执行任意SQL或采集真实行为。",
+    "字体取舍：显示 \"Inter Variable\", sans-serif；正文 \"Inter Variable\", sans-serif。使用本地开放字体/系统字体替代品牌商业字体；标题筛选标签按实际桌面渲染归类。"
+  ],
+  "references": [
+    {
+      "source": "原规范 L299–306、340–370、437–455",
+      "reason": "暗首屏7/5文案/SQL窗 → 黄字结果/真实表格 → 暗解释/单块黄强调。`#0a0a0a`/`#1a1a1a`、`#faff69`、Inter700/JetBrains Mono、8px控件/12px卡、无阴影。"
+    }
+  ],
+  "assets": []
+}

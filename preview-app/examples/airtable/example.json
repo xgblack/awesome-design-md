@@ -1,0 +1,37 @@
+{
+  "title": "片场手册 · 关联数据制片工作台",
+  "description": "以关联数据表、看板与记录详情组织制片项目，贴合 Airtable 工作流数据库语境；虚构制片场景，不是统一活动主题。",
+  "status": "ready",
+  "features": {
+    "moods": ["editorial", "tech"],
+    "tones": ["mixed"],
+    "layouts": ["split", "workspace"],
+    "density": ["balanced"],
+    "headingScale": ["regular"],
+    "headingWeight": ["regular"],
+    "geometry": ["small-radius", "rounded"],
+    "visualMedia": ["ui"],
+    "accentHues": ["neutral"],
+    "temperature": ["warm"],
+    "chroma": ["vivid"],
+    "backgrounds": ["solid"],
+    "layering": ["solid"],
+    "scenarios": ["product", "tool"],
+    "typography": ["sans"],
+    "motion": ["feedback"]
+  },
+  "interactions": ["configure"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "专有字体以本地 Inter Variable 替代，保留字重、字阶、空间与组件规则；中文为系统字体回退。",
+    "交互为原创本地演示，不发出业务请求，不保存个人输入。",
+    "语境复核：保留已贴原产品类别的核心页面，复核理由：以关联数据表、看板与记录详情组织制片项目，贴合 Airtable 工作流数据库语境；虚构制片场景，不是统一活动主题。"
+  ],
+  "references": [
+    {
+      "source": "DESIGN.md L289–301、338–368、445–457",
+      "reason": "白首屏 → 氧化珊瑚拍摄大板 → 白解释 → 奶油关联记录/森林绿协作/暗结尾。40px/400标题、黑12px CTA；`#aa2d00`/`#0a2e0e`/`#f5e9d4`整板与96px留白，高度不同，不加hero渐变。"
+    }
+  ],
+  "assets": []
+}

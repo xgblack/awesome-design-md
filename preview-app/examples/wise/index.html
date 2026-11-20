@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Roam Ledger · 让预算先去旅行 · 独立设计语言本地演示" />
+    <title>Roam Ledger · 让预算先去旅行</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#top" class="brand">roam<span>↗</span></a>
+      <nav><a href="#calculator">预算换算</a><a href="#trip">目的地计划</a></nav>
+      <a href="#calculator" class="small-pill">从预算出发</a>
+    </header>
+    <main id="top">
+      <section class="hero">
+        <div>
+          <span>MONEY FOR THE PLACES YOU'LL GO.</span>
+          <h1>去更远。<br />算明白。</h1>
+          <p>在出发之前，把费用看清楚。<br />固定演示汇率，不是实时牌价，也不是汇款服务。</p>
+          <a href="#trip" class="green">看看目的地预算 ↗</a>
+        </div>
+        <form class="converter" id="calculator">
+          <p>你的演示预算</p>
+          <label>金额<input id="amount" type="text" inputmode="decimal" value="1000" /></label>
+          <div class="currency-row">
+            <label
+              >从<select id="from">
+                <option value="CNY">CNY / 人民币</option>
+                <option value="JPY">JPY / 日元</option>
+                <option value="EUR">EUR / 欧元</option>
+              </select></label
+            ><button id="swap" type="button" aria-label="互换币种">⇄</button
+            ><label
+              >到<select id="to">
+                <option value="JPY">JPY / 日元</option>
+                <option value="CNY">CNY / 人民币</option>
+                <option value="EUR">EUR / 欧元</option>
+              </select></label
+            >
+          </div>
+          <div class="fee-row"><span>演示手续费</span><b>0.50%</b></div>
+          <div class="fee-row"><span>本地计算，不含真实服务</span><b id="fee"></b></div>
+          <output id="converted"></output>
+          <p id="rate"></p>
+          <p id="error" role="alert"></p>
+          <button type="submit" class="green">更新演示换算</button>
+        </form>
+      </section>
+      <section class="clarity">
+        <div>
+          <small>NO GUESSWORK. NO SMALL PRINT.</small>
+          <h2>每一步费用，<br />都放在明处。</h2>
+        </div>
+        <p>
+          换算先扣除 0.5% 演示费用，再使用固定汇率。CNY 为基准，1 CNY = 20 JPY = 0.13 EUR。<br />这些数字只用于理解计算，不构成报价。
+        </p>
+      </section>
+      <section id="trip" class="trip">
+        <div>
+          <span>MAKE ROOM FOR THE EXPERIENCE</span>
+          <h2>给想去的地方，<br />留一份有余地的预算。</h2>
+          <label
+            >目的地样本<select id="destination">
+              <option value="kyoto">京都 / 3 天</option>
+              <option value="lisbon">里斯本 / 3 天</option>
+            </select></label
+          >
+        </div>
+        <div class="budget">
+          <h3 id="trip-name">京都 / 三天的慢行</h3>
+          <label>住宿 / CNY<input type="number" id="stay" min="0" value="1200" /></label
+          ><label>餐饮 / CNY<input type="number" id="food" min="0" value="600" /></label
+          ><label>交通 / CNY<input type="number" id="transport" min="0" value="300" /></label>
+          <div class="trip-total"><span>演示总额</span><output id="trip-total"></output></div>
+          <p id="trip-message" role="status"></p>
+          <small>固定参考上限：3,000 CNY · 非真实旅行报价</small>
+        </div>
+      </section>
+      <section class="closing">
+        <h2>Spend on the story.<br />Not the guesswork.</h2>
+        <p>带着清楚的预算，去遇见计划之外的风景。</p>
+      </section>
+    </main>
+    <footer>Roam Ledger / 独立风格示例 · 非汇款或金融服务</footer>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vocalform / Voice project studio</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#">Ⅱ vocalform<span>voice studio</span></a>
+      <nav>
+        <a href="#listen">语音工作室</a><a href="#notes">创作笔记</a
+        ><a class="black" href="#listen">Listen closely ↗</a>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <span class="eyebrow">A STUDIO FOR EVERY KIND OF VOICE.</span>
+        <h1>A voice for<br />every kind of story.</h1>
+        <p>
+          从一段经典作品朗读，开始比较声音的表达。<br />选择预录样本、精听、调整播放速度，组织自己的语音项目。
+        </p>
+        <span class="boundary">预置真人朗读样本 + 原创合成音景 · 非在线生成 · 非音色克隆</span>
+        <div class="mist" aria-hidden="true"><i></i><b></b></div>
+      </section>
+      <section class="listen" id="listen">
+        <div class="player">
+          <div class="player-top">
+            <span>VOICE PROJECT / PREVIEW</span><span id="duration">18 SECOND READING</span>
+          </div>
+          <div class="player-title">
+            <div>
+              <span id="piece-number">VOICE SAMPLE / 01</span>
+              <h2 id="piece-title">Alice / A classic reading.</h2>
+            </div>
+            <button id="play" aria-label="播放样本">▶</button>
+          </div>
+          <div id="waveform" class="waveform" aria-label="根据实际音频振幅生成的波形"></div>
+          <label class="seek-label" for="seek"
+            ><span>播放位置</span><span id="time">0:00 / 0:18</span></label
+          ><input id="seek" type="range" min="0" max="18" step="0.01" value="0" />
+          <div class="audio-tools">
+            <label
+              >速度
+              <select id="speed">
+                <option value="1">1×</option>
+                <option value="1.5">1.5×</option>
+                <option value="0.75">0.75×</option>
+              </select></label
+            ><button id="restart">从头开始 ↺</button
+            ><span id="play-state" role="status">等待播放，不自动有声。</span>
+          </div>
+          <audio id="audio" preload="metadata"></audio>
+          <p class="boundary">
+            真人朗读为公共领域预录片段，不根据输入生成或克隆音色。波形来自实际样本振幅，进度来自媒体事件。
+          </p>
+        </div>
+        <div class="versions">
+          <button data-piece="alice" aria-pressed="true">
+            <span class="sound-icon human-one">Aa</span>
+            <div>
+              <small>01 / HUMAN READING</small>
+              <h3>Alice · 经典朗读</h3>
+              <p>Kristen McQuillin / 18秒预录样本</p>
+            </div>
+            <span>↗</span></button
+          ><button data-piece="timeMachine">
+            <span class="sound-icon human-two">Tm</span>
+            <div>
+              <small>02 / HUMAN READING</small>
+              <h3>The Time Machine</h3>
+              <p>Aaron Elliott / 18秒预录样本</p>
+            </div>
+            <span>↗</span>
+          </button>
+          <button data-piece="river">
+            <span class="sound-icon river">⌁</span>
+            <div>
+              <small>01 / WATER & LIGHT</small>
+              <h3>河岸轻音版</h3>
+              <p>短音与留白，像水面的一点光。</p>
+            </div>
+            <span>↗</span></button
+          ><button data-piece="bells">
+            <span class="sound-icon bells">◌</span>
+            <div>
+              <small>04 / A DISTANT BELL</small>
+              <h3>旧钟余响版</h3>
+              <p>更长的衰减，给声音一点时间。</p>
+            </div>
+            <span>↗</span>
+          </button>
+        </div>
+      </section>
+      <section class="notes" id="notes">
+        <div>
+          <span class="eyebrow">VOICE PROJECT / SOURCES & DRAFT</span>
+          <h2>Make room<br />for the right delivery.</h2>
+        </div>
+        <div>
+          <h3 id="note-title">Alice’s Adventures in Wonderland</h3>
+          <p id="note-text">
+            Lewis Carroll 原著，Kristen McQuillin 朗读；LibriVox
+            公共领域录音节选18秒。本页未提供逐字稿，独立草稿与样本内容无对应关系。
+          </p>
+          <label class="draft-label" for="draft">独立项目草稿 / 不是所播音频的逐字稿</label
+          ><textarea
+            id="draft"
+            maxlength="600"
+            placeholder="在这里组织自己的旁白草稿；不会转成语音。"
+          ></textarea>
+          <p id="draft-count" role="status">0 / 600 · 本页内存，不生成语音</p>
+          <p class="small">
+            两段经典作品的真人预录朗读与两段原创无人声音景可作对比。不是在线语音合成、音色克隆或录音上传服务。
+          </p>
+        </div>
+      </section>
+      <section class="closing">
+        <h2>Leave a little<br />space to listen.</h2>
+        <a href="#listen">回到语音工作室 ↑</a>
+      </section>
+    </main>
+    <footer>Ⅱ vocalform <span>ElevenLabs DESIGN.md · 独立语音产品示例</span></footer>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

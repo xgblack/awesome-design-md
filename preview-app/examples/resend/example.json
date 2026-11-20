@@ -1,0 +1,37 @@
+{
+  "title": "Postmark Studio / Transactional email API",
+  "description": "开发者事务邮件API工作室：事件payload联动实际HTML信件，回放准备/校验/预览，支持失败注入与暂停；不发邮件。",
+  "status": "ready",
+  "features": {
+    "moods": ["editorial", "tech", "minimal"],
+    "tones": ["dark"],
+    "temperature": ["neutral"],
+    "chroma": ["mono"],
+    "accentHues": ["neutral"],
+    "backgrounds": ["solid"],
+    "layouts": ["split", "centered"],
+    "density": ["airy"],
+    "typography": ["serif", "sans", "mono"],
+    "headingScale": ["display"],
+    "headingWeight": ["regular"],
+    "geometry": ["small-radius"],
+    "layering": ["lines", "solid"],
+    "visualMedia": ["code", "ui", "type"],
+    "motion": ["feedback"],
+    "scenarios": ["product", "tool"]
+  },
+  "interactions": ["configure", "replay"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "保留纯黑、96px常规衬线、白8pxCTA、深代码井和孤立白邮件；不用杂志内容替代邮件API产品。",
+    "所有事件、邮箱占位符和信件为原创fixture；交付回放仅教学，不伪称发信、投递率或打开率。",
+    "字体取舍：显示 \"Cormorant Garamond Variable\", Georgia, serif；正文 \"Inter Variable\", sans-serif。使用本地开放字体/系统字体替代品牌商业字体；标题筛选标签按实际桌面渲染归类。"
+  ],
+  "references": [
+    {
+      "source": "原规范 L267–298、336–345、384–410、451–481、559–585",
+      "reason": "纯黑大衬线标题 → 下一段才有极淡蓝光 → 代码/叙述分栏 → 一封孤立白邮件打断暗节奏 → 事件说明。76–96px常规衬线、6%/14%白线、白8px主按钮、12px代码窗/交通灯。"
+    }
+  ],
+  "assets": []
+}

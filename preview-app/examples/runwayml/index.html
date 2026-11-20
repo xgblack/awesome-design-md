@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Afterlight / AI filmmaking studio</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#">afterlight</a>
+      <nav>
+        <a href="#films">Films</a><a href="#notes">Notes</a
+        ><span>FILMMAKING TOOLS / PREPARED STUDIES</span>
+      </nav>
+    </header>
+    <main>
+      <section class="screening">
+        <div class="film-heading">
+          <span>CREATION STUDIO / PREPARED MOTION STUDY</span><span id="film-index">01 — CITY</span>
+        </div>
+        <div class="screen">
+          <video
+            id="film"
+            controls
+            playsinline
+            muted
+            preload="metadata"
+            poster="../_shared/photos/city.webp"
+            aria-label="Afterlight 本地相片剪辑短片"
+          ></video>
+          <div class="screen-caption">
+            <h1 id="film-title">Before the city wakes.</h1>
+            <p id="film-caption">A four-second study in distance and light.</p>
+          </div>
+        </div>
+        <div class="screen-tools">
+          <button id="play">Play study ▶</button><button id="stop">Stop & return ↺</button
+          ><button id="mute">Unmute</button
+          ><label class="scrub-label" for="scrub"
+            >Position <input id="scrub" type="range" min="0" max="4" step="0.01" value="0" /></label
+          ><span id="time">00:00 / 00:04</span>
+        </div>
+        <div class="direction">
+          <span>DIRECTION PROMPT / 只读创作指令</span>
+          <p id="film-prompt"></p>
+          <small>以下 MP4 由授权照片预制，非指令实时生成；不上传图片或发送模型请求。</small>
+        </div>
+        <p id="state" role="status">等待手动播放。三段本地相片剪辑短片，不自动播放。</p>
+        <p class="boundary">
+          授权静态摄影 + 原创缓慢推镜剪辑 · 每段4秒 · 无声 · 非品牌实拍视频、非在线 AI 生成
+        </p>
+      </section>
+      <section class="films" id="films">
+        <div class="head">
+          <span class="eyebrow">01 / SELECTED STUDIES</span>
+          <h2>Three directions.<br />One creative workspace.</h2>
+        </div>
+        <div class="film-grid">
+          <button data-film="city" aria-pressed="true" class="wide">
+            <img src="../_shared/photos/city.webp" alt="第一部短片海报：城市日暮" />
+            <div>
+              <span>01 / CITY</span>
+              <h3>Before the city wakes.</h3>
+              <small>PHOTOGRAPHIC MOTION · 4 SEC ↗</small>
+            </div></button
+          ><button data-film="ocean">
+            <img src="../_shared/photos/ocean.webp" alt="第二部短片海报：海浪与海岸" />
+            <div>
+              <span>02 / COAST</span>
+              <h3>The space between waves.</h3>
+              <small>PHOTOGRAPHIC MOTION · 4 SEC ↗</small>
+            </div></button
+          ><button data-film="mountain">
+            <img src="../_shared/photos/mountain.webp" alt="第三部短片海报：山峰与天空" />
+            <div>
+              <span>03 / ALPINE</span>
+              <h3>A longer horizon.</h3>
+              <small>PHOTOGRAPHIC MOTION · 4 SEC ↗</small>
+            </div>
+          </button>
+        </div>
+      </section>
+      <section class="notes" id="notes">
+        <div>
+          <span class="eyebrow">02 / DIRECT THE SCENE</span>
+          <h2>Motion doesn't<br />have to be loud.</h2>
+          <p>
+            这些短片用一张授权摄影和细微的推镜组成。它们不假装记录了原图里没有发生的动作；只是邀请你，慢一点看同一个画面。
+          </p>
+          <p>
+            原始摄影来自本地公共素材池，剪辑由本项目制作。画面不包含品牌素材，播放、暂停与进度来自真实本地
+            MP4。
+          </p>
+        </div>
+        <div class="shot-list">
+          <span>SHOT INDEX / CURRENT STUDY</span
+          ><button data-shot="0">
+            <b>01</b>
+            <div>
+              <h3>Establish the space.</h3>
+              <p>00:00 — 从完整构图开始。</p>
+            </div>
+            <span>↗</span></button
+          ><button data-shot="1.3">
+            <b>02</b>
+            <div>
+              <h3>Let the eye settle.</h3>
+              <p>00:01 — 让推镜保持克制。</p>
+            </div>
+            <span>↗</span></button
+          ><button data-shot="2.7">
+            <b>03</b>
+            <div>
+              <h3>Leave room to return.</h3>
+              <p>00:02 — 以停留代替结论。</p>
+            </div>
+            <span>↗</span>
+          </button>
+        </div>
+      </section>
+      <section class="closing">
+        <span class="eyebrow">A DIRECTOR'S NOTE.</span>
+        <h2>Stay with<br />the image.</h2>
+        <p>AI影片创作界面的本地演练，不是在线生成服务。<br />没有上传、账户或虚构的渲染进度。</p>
+        <a href="#films">Return to the films ↑</a>
+      </section>
+    </main>
+    <footer>afterlight / <span>Runway DESIGN.md · 独立影像风格研究</span></footer>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+{
+  "title": "城市观察 / City Observer",
+  "description": "「城市观察」河岸修复开放日——读原创报道与固定时间线回放。",
+  "status": "ready",
+  "features": {
+    "moods": ["editorial"],
+    "tones": ["light"],
+    "temperature": ["neutral"],
+    "chroma": ["mono"],
+    "accentHues": ["orange"],
+    "backgrounds": ["solid"],
+    "layouts": ["editorial", "timeline"],
+    "density": ["dense"],
+    "typography": ["sans"],
+    "headingScale": ["regular"],
+    "headingWeight": ["bold"],
+    "geometry": ["square", "pill"],
+    "layering": ["lines"],
+    "visualMedia": ["photo", "type"],
+    "motion": ["feedback"],
+    "scenarios": ["content"]
+  },
+  "interactions": ["filter", "replay"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "本项目独立虚构演示，非品牌官方页面；业务操作仅在当前页面内存中生效。",
+    "Inter Variable 为本地可分发替代，不含品牌专有字体。",
+    "主报道新增完整原创正文、两层小标题、署名与引用，并有可收起返回；不是只有新闻导语。"
+  ],
+  "references": [
+    {
+      "source": "L320–333、397–430、523–536",
+      "reason": "不混入企业站暗绿/金分支；橙作身份/眉题，红只作状态，不泛化CTA。"
+    }
+  ],
+  "assets": [
+    {
+      "file": "../_shared/photos/city.webp",
+      "source": "共享photos/sources.json",
+      "license": "Unsplash License"
+    }
+  ]
+}

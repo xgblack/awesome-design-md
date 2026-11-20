@@ -1,0 +1,67 @@
+{
+  "title": "Night Signal / 独立声音收听台",
+  "description": "发现三段原创合成音乐，按作品类型/关键词筛选，真实播放、拖动与调音量，并编辑本次收听队列。",
+  "status": "ready",
+  "features": {
+    "moods": ["minimal"],
+    "tones": ["dark"],
+    "temperature": ["neutral"],
+    "chroma": ["muted"],
+    "accentHues": ["green"],
+    "backgrounds": ["solid"],
+    "layouts": ["workspace", "directory"],
+    "density": ["dense"],
+    "typography": ["sans"],
+    "headingScale": ["compact"],
+    "headingWeight": ["bold"],
+    "geometry": ["pill", "small-radius"],
+    "layering": ["solid", "shadow"],
+    "visualMedia": ["illustration", "ui"],
+    "motion": ["feedback"],
+    "scenarios": ["media", "tool"]
+  },
+  "interactions": ["media", "edit", "filter"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "Spotify式资料库、封面网格、曲目行与持续播放器；标题24px/700，不增加营销hero。本地Inter替代专有字体。",
+    "三张封面为原创SVG；三段WAV是本项目原创12秒合成短乐句，不是商业歌曲或真实环境录音。播放器事件驱动进度，资源失败可重试，不做假计时。"
+  ],
+  "references": [
+    {
+      "source": "L3–19、54–83、117–180、215–220",
+      "reason": "不能做音乐SaaS首页或假计时器，不使用真实商业歌曲。"
+    }
+  ],
+  "assets": [
+    {
+      "file": "assets/window.wav",
+      "source": "本项目原创12秒合成短乐句，固定音高与包络，单声道PCM",
+      "license": "本项目原创声音，可随示例分发"
+    },
+    {
+      "file": "assets/tidal.wav",
+      "source": "本项目原创12秒合成短乐句，固定音高与包络，单声道PCM",
+      "license": "本项目原创声音，可随示例分发"
+    },
+    {
+      "file": "assets/afterglow.wav",
+      "source": "本项目原创12秒合成短乐句，固定音高与包络，单声道PCM",
+      "license": "本项目原创声音，可随示例分发"
+    },
+    {
+      "file": "assets/window-cover.svg",
+      "source": "本项目原创音乐封面图形",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/tidal-cover.svg",
+      "source": "本项目原创音乐封面图形",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/afterglow-cover.svg",
+      "source": "本项目原创音乐封面图形",
+      "license": "本项目原创，可随示例分发"
+    }
+  ]
+}

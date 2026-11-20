@@ -1,0 +1,62 @@
+{
+  "title": "Kiln & Thread / Made by hand. Built to last.",
+  "description": "手作商家的在线经营案例；编辑商品上架与库存草稿，体验履约步骤，无真实店铺、订单或支付。",
+  "status": "ready",
+  "features": {
+    "moods": ["cinematic", "editorial"],
+    "tones": ["mixed"],
+    "temperature": ["warm"],
+    "chroma": ["muted"],
+    "accentHues": ["neutral"],
+    "backgrounds": ["solid"],
+    "layouts": ["split", "chapters", "workspace"],
+    "density": ["balanced"],
+    "typography": ["sans"],
+    "headingScale": ["display"],
+    "headingWeight": ["medium"],
+    "geometry": ["square"],
+    "layering": ["lines"],
+    "visualMedia": ["photo", "render", "ui"],
+    "motion": ["feedback"],
+    "scenarios": ["commerce", "tool", "content"]
+  },
+  "interactions": ["configure", "edit", "filter", "form"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "原创虚构品牌与概念产品，非官方页面；操作仅在当前页面内存生效，不提交真实业务。",
+    "Inter500本地替代；工艺摄影为许可情境，不是虚构商家实拍。",
+    "新增真实商品上架/库存编辑与固定订单打包演示，不连接业务、支付或配送API。"
+  ],
+  "references": [
+    {
+      "source": "DESIGN.md L266–281、314–429",
+      "reason": "黑色电影感商家摄影与大字分离，核心补足商户经营/商品/库存/履约，保留手作商家语境而非纯工艺刊物。"
+    },
+    {
+      "source": "DESIGN.md L452–516",
+      "reason": "制作→上架→履约分章，真实DOM商家界面与小店同步，所有商业操作限定本页草稿。"
+    }
+  ],
+  "assets": [
+    {
+      "file": "assets/bowl-object.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/cup-object.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/vase-object.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "../_shared/photos/craft.webp",
+      "source": "共享photos/sources.json；手作商家情境参考",
+      "license": "Unsplash License"
+    }
+  ]
+}

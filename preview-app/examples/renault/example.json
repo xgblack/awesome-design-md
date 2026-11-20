@@ -1,0 +1,87 @@
+{
+  "title": "BRIK / A little more possible.",
+  "description": "模块化四轮电动厢式车目录与配置；用途、座椅/货架、车色联动，无购车、运输订单或性能承诺。",
+  "status": "ready",
+  "features": {
+    "moods": ["minimal", "tech"],
+    "tones": ["mixed"],
+    "temperature": ["contrast"],
+    "chroma": ["vivid"],
+    "accentHues": ["yellow"],
+    "backgrounds": ["solid"],
+    "layouts": ["directory", "split", "chapters"],
+    "density": ["airy"],
+    "typography": ["sans"],
+    "headingScale": ["regular"],
+    "headingWeight": ["bold"],
+    "geometry": ["square", "small-radius"],
+    "layering": ["lines"],
+    "visualMedia": ["render"],
+    "motion": ["feedback"],
+    "scenarios": ["product"]
+  },
+  "interactions": ["filter", "configure"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "原创虚构品牌与概念产品，非官方页面；操作仅在当前页面内存生效，不提交真实业务。",
+    "本地Manrope为NouvelR替代，保留展示700字重/约0.95行高与正文400。",
+    "三套内装模块、三车色均为原创四轮厢式车分层渲染；旧货运自行车素材保留未使用。"
+  ],
+  "references": [
+    {
+      "source": "DESIGN.md L269–303、333–398",
+      "reason": "四轮汽车目录/配置语境，白-黑-黄场景、700字重紧行高、方正车图目录与60/40配置器。"
+    },
+    {
+      "source": "DESIGN.md L419–432、492–573",
+      "reason": "配置行、用途过滤与模块兼容反馈，以原创厢式车承接车型结构，不以自行车改名。"
+    }
+  ],
+  "assets": [
+    {
+      "file": "assets/brik-sun-family.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/brik-sun-studio.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/brik-sun-cargo.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/brik-chalk-family.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/brik-chalk-studio.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/brik-chalk-cargo.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/brik-blue-family.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/brik-blue-studio.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/brik-blue-cargo.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "title": "Commute Well · 个人通勤预算指南",
+  "description": "金融生活指南中的编辑文章与成本计算，费用假设公开，符合金融教育/决策辅助语境。",
+  "status": "ready",
+  "features": {
+    "moods": ["editorial"],
+    "tones": ["light"],
+    "layouts": ["split"],
+    "density": ["balanced"],
+    "headingScale": ["regular"],
+    "headingWeight": ["bold"],
+    "geometry": ["square"],
+    "visualMedia": ["type", "ui"],
+    "accentHues": ["green"],
+    "temperature": ["neutral"],
+    "chroma": ["muted"],
+    "backgrounds": ["solid"],
+    "layering": ["lines"],
+    "scenarios": ["content", "calculator"],
+    "typography": ["sans", "serif"],
+    "motion": ["feedback"]
+  },
+  "interactions": ["form", "configure"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "专有显示字使用本地 Inter 700，长文标题使用系统 Georgia 以保留编辑性。方正2px控件与绿色标题带按规范组织。",
+    "无图表；可读数值表提供所有演示假设，零次通勤合法，不使用实时票价。",
+    "语境复核：保留已贴原产品类别的核心页面，复核理由：金融生活指南中的编辑文章与成本计算，费用假设公开，符合金融教育/决策辅助语境。"
+  ],
+  "references": [
+    {
+      "source": "DESIGN.md L372–400、429–459、470–476、621–638",
+      "reason": "全宽绿标题带/作者及口径 → 白底指南 → 薄荷计算面板/成本比较 → 提示及 FAQ。`#008254`云杉绿/多层薄荷、2px方正按钮、300正文/700标题、细分隔/近无阴影。"
+    }
+  ],
+  "assets": []
+}

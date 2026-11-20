@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Still Electric / The everyday, reimagined. · 独立风格示例</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a class="wordmark" href="#">S T I L L</a>
+      <nav>
+        <a href="#vehicles">Vehicles</a><a href="#energy">Energy</a><a href="#visit">Experience</a>
+      </nav>
+      <a href="#visit" aria-label="查看演示边界">ⓘ</a>
+    </header>
+    <main>
+      <section class="model" id="vehicles">
+        <picture
+          ><source
+            id="mobile-scene"
+            media="(max-width:650px)"
+            srcset="./assets/mobile-s-pearl.svg" />
+          <img
+            id="scene-image"
+            src="./assets/scene-s-pearl.svg"
+            alt="Still S 珍珠白原创电动车，山麓环境渲染"
+        /></picture>
+        <div class="model-heading">
+          <h1 id="model-name">Still S</h1>
+          <p id="model-line">把日常，开向更远。</p>
+          <a href="#configure">探索全电动出行</a>
+        </div>
+        <div class="model-actions">
+          <a class="light" href="#configure">选择外观</a
+          ><a class="dark" href="#visit">试驾意向草稿</a>
+        </div>
+        <span class="scene-label">原创车辆与环境概念渲染，非实车摄影。</span>
+      </section>
+      <section class="model second">
+        <picture
+          ><source media="(max-width:650px)" srcset="./assets/mobile-x-graphite.svg" />
+          <img
+            src="./assets/scene-x-graphite.svg"
+            alt="Still X 石墨灰原创跨界电动车，独立高车顶车身"
+        /></picture>
+        <div class="model-heading">
+          <h2>Still X</h2>
+          <p>更多空间，同样从容。</p>
+          <span>为家人、行李，和计划之外的路。</span>
+        </div>
+        <div class="model-actions">
+          <a class="light" href="#configure">探索车型</a
+          ><a class="dark" href="#visit">记录体验意向</a>
+        </div>
+      </section>
+      <section class="config" id="configure">
+        <div class="config-image">
+          <img id="car-image" src="./assets/s-pearl.svg" alt="Still S 珍珠白电动车独立产品渲染" />
+        </div>
+        <div class="config-options">
+          <p>THE VEHICLE STUDY</p>
+          <h2>Your Still.</h2>
+          <label for="model-select">车型</label
+          ><select id="model-select">
+            <option value="s">Still S / 双门轿跑</option>
+            <option value="x">Still X / 高车顶跨界</option>
+          </select>
+          <div class="paint-options" aria-label="外观颜色">
+            <button data-paint="pearl" aria-pressed="true">珍珠白</button
+            ><button data-paint="graphite" aria-pressed="false">石墨灰</button
+            ><button data-paint="red" aria-pressed="false">暮光红</button>
+          </div>
+          <p id="paint-note" role="status">Still S / 珍珠白</p>
+          <dl>
+            <div>
+              <dt>座舱构型</dt>
+              <dd id="seats">2 + 2</dd>
+            </div>
+            <div>
+              <dt>车身设计</dt>
+              <dd id="body-style">低风阻双门概念</dd>
+            </div>
+            <div>
+              <dt>动力语境</dt>
+              <dd>全电动设计研究</dd>
+            </div>
+          </dl>
+          <p class="demo-note">参数为设计构型，不提供续航、售价或性能实测。</p>
+        </div>
+      </section>
+      <section class="energy" id="energy">
+        <img src="./assets/home-energy.svg" alt="原创家庭能源环境：屋顶光伏阵列与墙面家储设备" />
+        <div class="model-heading">
+          <h2>Home, powered.</h2>
+          <p>让家的每一天，连接阳光。</p>
+        </div>
+        <div class="energy-copy">
+          <p>
+            屋顶光伏、家庭储能与出行，在一套日常生活里相遇。这是系统关系的视觉概念，不是能源收益或安装方案。
+          </p>
+          <a class="dark" href="#visit">探索体验主题</a>
+        </div>
+      </section>
+      <section class="visit" id="visit">
+        <div>
+          <h2>Take a closer look.</h2>
+          <p>先记录一份体验意向。选择车型、日期与同行人数，看看你想亲自了解什么。</p>
+          <p class="demo-note">仅当前页面草稿。没有联系人、预约接口、费用或订单。</p>
+        </div>
+        <form id="visit-form" novalidate>
+          <label for="visit-date">意向日期</label><input id="visit-date" type="date" /><label
+            for="visit-guests"
+            >同行人数</label
+          ><select id="visit-guests">
+            <option value="">请选择</option>
+            <option value="1">1 人</option>
+            <option value="2">2 人</option>
+            <option value="3">3 人</option></select
+          ><label for="visit-topic">体验主题</label
+          ><select id="visit-topic">
+            <option value="车型与座舱">车型与座舱</option>
+            <option value="家庭能源关系">家庭能源关系</option></select
+          ><button class="dark" type="submit">保存意向草稿</button>
+          <p id="visit-result" role="status">尚未保存。信息只在本页内存中。</p>
+          <button type="button" id="edit-visit" hidden>编辑草稿</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      Still Electric · Original vehicle & energy study.
+      <p>原创虚构品牌；渲染非实拍，非汽车销售、能源安装或真实试驾预约。</p>
+    </footer>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

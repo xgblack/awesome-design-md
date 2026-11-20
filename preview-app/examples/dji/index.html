@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tern Imaging / More perspective. Less to carry. · 独立风格示例</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="announcement">
+      Tern Air 04 / 从另一种视角，留住此刻。<a href="#choose">探索器材 ↗</a>
+    </div>
+    <header>
+      <a class="logo" href="#">tern.</a>
+      <nav>
+        <a href="#products">产品</a><a href="#choose">找到你的器材</a
+        ><a href="#explore">影像故事</a>
+      </nav>
+      <a class="pill" href="#choose">组合探索</a>
+    </header>
+    <main>
+      <section class="hero">
+        <div>
+          <span class="rank">FLAGSHIP / AIR SERIES</span>
+          <h1>Tern Air 04</h1>
+          <p>More perspective.<br />Less to carry.</p>
+          <a class="ghost" href="#choose">探索 Tern Air ↗</a>
+        </div>
+        <img
+          src="./assets/tern-air.svg"
+          alt="Tern Air 04 原创无人机：四组折叠臂、螺旋桨、云台与前置双目窗口"
+        /><span class="hero-note">原创器材概念渲染 · 非实际飞行画面</span>
+      </section>
+      <section class="product-tiles" id="products">
+        <article>
+          <span class="rank">POCKET SERIES</span>
+          <h2>Tern Pocket</h2>
+          <p>稳稳地，把日常拍成故事。</p>
+          <a href="#choose">探索手持稳定器 ›</a
+          ><img src="./assets/tern-pocket.svg" alt="原创口袋稳定器，可旋转云台、镜头、竖屏与握柄" />
+        </article>
+        <article>
+          <span class="rank">AUDIO SERIES</span>
+          <h2>Tern Mic</h2>
+          <p>每个故事，都值得被听清楚。</p>
+          <a href="#choose">探索无线麦克风 ›</a
+          ><img src="./assets/tern-mic.svg" alt="原创无线麦克风，一枚带小屏的接收器与独立发射器" />
+        </article>
+      </section>
+      <section class="choose" id="choose">
+        <span class="rank">FIND YOUR PERSPECTIVE</span>
+        <h2>为你要拍的故事，<br />选一套合适的器材。</h2>
+        <div class="tasks" aria-label="拍摄任务">
+          <button data-task="landscape" aria-pressed="true">山海旅行</button
+          ><button data-task="portrait" aria-pressed="false">轻装旅拍</button
+          ><button data-task="studio" aria-pressed="false">室内记录</button>
+        </div>
+        <div class="kit">
+          <div class="kit-visual">
+            <img id="kit-image" src="./assets/tern-air.svg" alt="Tern Air 04 无人机原创渲染" />
+          </div>
+          <div class="kit-options">
+            <span class="rank" id="kit-tier">AIR SERIES</span>
+            <h3 id="kit-name">Tern Air 04</h3>
+            <p id="kit-desc">广阔视野与稳定云台，为山海旅程保留全景叙事。</p>
+            <dl>
+              <div>
+                <dt>构型</dt>
+                <dd id="form-factor">四旋翼无人机</dd>
+              </div>
+              <div>
+                <dt>记录方式</dt>
+                <dd id="record-mode">宽幅影像概念</dd>
+              </div>
+            </dl>
+            <label for="bundle">选择演示组合</label
+            ><select id="bundle">
+              <option value="basic">基础组合</option>
+              <option value="field">野外记录组合</option>
+            </select>
+            <p id="kit-status" role="status">当前为山海旅行任务，可选择野外记录组合。</p>
+            <h4>In the box / 盒内概念物件</h4>
+            <ul id="box-items"></ul>
+          </div>
+        </div>
+      </section>
+      <section class="explore" id="explore">
+        <div>
+          <span class="rank">CREATE WITH A PURPOSE</span>
+          <h2>The coast,<br />from a new angle.</h2>
+          <p>器材不是故事的终点。海岸作为成像情境，提醒我们先决定想表达什么，再决定站在哪里。</p>
+          <span class="demo-note">许可环境参考摄影，非 Tern 设备实拍。</span>
+        </div>
+        <img src="../_shared/photos/ocean.webp" alt="海岸环境参考摄影，非虚构器材拍摄" />
+      </section>
+    </main>
+    <footer>
+      <a class="logo" href="#">tern.</a>
+      <p>Products · Perspectives · Support</p>
+      <p class="demo-note">
+        原创虚构影像器材展厅 · 原创器材渲染与固定概念数据，不涉及购买、飞行控制或相机性能测试。
+      </p>
+    </footer>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>补给情报站 · 独立风格示例</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#">补给<span>情报站</span></a
+      ><label
+        ><span class="sr-only">搜索补给</span
+        ><input id="deal-search" type="search" placeholder="搜索你的下次出发" /></label
+      ><span>本机热度演示</span>
+    </header>
+    <nav>
+      <button data-cat="all" aria-pressed="true">全部情报</button
+      ><button data-cat="camp">露营</button><button data-cat="walk">徒步</button
+      ><button data-cat="daily">日常</button>
+    </nav>
+    <main>
+      <div class="feed">
+        <div class="feed-head">
+          <h1>今日补给</h1>
+          <label><input id="valid-only" type="checkbox" />只看有效条目</label
+          ><label
+            >排序<select id="deal-sort">
+              <option value="heat">热度</option>
+              <option value="price">价格</option>
+            </select></label
+          >
+        </div>
+        <div id="deals"></div>
+        <p id="deal-status" role="status"></p>
+      </div>
+      <aside>
+        <h2>把好东西，带到路上。</h2>
+        <p>这不是实际优惠站。价格、有效期与热度都是固定演示数据。</p>
+        <h3>本周讨论</h3>
+        <p>01 / 第一次露营，哪些可以不买？</p>
+        <p>02 / 下雨天的轻装徒步清单</p>
+        <p>03 / 一个杯子能用多久？</p>
+        <div class="tip">投票仅在本页生效，<br />每条最多一票，可撤回。</div>
+      </aside>
+    </main>
+    <footer>SUPPLY BULLETIN / 非实际商家或优惠，无领券、支付或订单</footer>
+    <dialog id="deal-detail">
+      <button id="deal-close">关闭详情</button>
+      <h2 id="deal-name"></h2>
+      <p id="deal-description"></p>
+      <p>这是一条虚构补给情报。不会跳转商家或发送任何订单。</p>
+    </dialog>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

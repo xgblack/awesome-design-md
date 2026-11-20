@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AUREL Atelier / An exercise in restraint · 独立风格示例</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <button id="index-open">MENU +</button><a class="wordmark" href="#">AUREL</a
+      ><a class="nav-end" href="#atelier">THE ATELIER</a>
+    </header>
+    <main>
+      <section class="hero">
+        <p class="micro">GRAND TOURING · ÉTUDE No. 08</p>
+        <h1>AN EXERCISE<br />IN RESTRAINT.</h1>
+        <p class="hero-sub">当每一个细节，都恰如其分。</p>
+        <img
+          id="hero-car"
+          src="./assets/aurel-argent.svg"
+          alt="AUREL Argent 长车头 GT 原创三分之四视角渲染"
+        /><a class="outline" href="#atelier">DISCOVER AUREL 08</a
+        ><span class="small-index">01 / 03</span>
+      </section>
+      <section class="intro" id="atelier">
+        <p class="micro">I — FORM FOLLOWS FEELING</p>
+        <h2>A GRAND TOURER.<br />NOT AN ARRIVAL.</h2>
+        <p class="serif">
+          不是为了赶到某处，而是让每一段路值得停留。长车头、后移座舱与连贯的肩线，把力量收进一个安静的比例里。
+        </p>
+      </section>
+      <section class="finish">
+        <div class="finish-heading">
+          <p class="micro">II — A PERSONAL EXPRESSION</p>
+          <h2>YOUR SHADE<br />OF SILENCE.</h2>
+        </div>
+        <div class="finish-visual">
+          <img id="finish-car" src="./assets/aurel-argent.svg" alt="Argent 银色 GT 外观渲染" />
+        </div>
+        <div class="finish-controls">
+          <div role="group" aria-label="车身表面">
+            <button data-paint="argent" aria-pressed="true"><i class="argent"></i>ARGENT</button
+            ><button data-paint="noir" aria-pressed="false"><i class="noir"></i>NOIR</button
+            ><button data-paint="ivory" aria-pressed="false"><i class="ivory"></i>IVOIRE</button>
+          </div>
+          <p class="serif" id="paint-note" role="status">
+            Argent — 冷银表面，让长而连续的光线描述车身。
+          </p>
+        </div>
+      </section>
+      <section class="cabin" id="craft">
+        <img src="./assets/cabin.svg" alt="原创座舱：金属中控、三辐方向盘和手工缝线皮革" />
+        <div class="cabin-copy">
+          <p class="micro">III — THE HUMAN TOUCH</p>
+          <h2>MADE TO<br />BE FELT.</h2>
+          <p class="serif">指尖经过的地方，才是工艺的起点。</p>
+        </div>
+        <div class="hotspots" aria-label="座舱工艺">
+          <button data-hot="leather" aria-pressed="true">01 / LEATHER</button
+          ><button data-hot="metal" aria-pressed="false">02 / ALUMINIUM</button
+          ><button data-hot="stitch" aria-pressed="false">03 / STITCH</button>
+        </div>
+        <p class="serif" id="craft-note" role="status">
+          开孔皮革保留自然纹理，包覆在手掌与座椅接触的位置。图为原创材质概念，不主张实物触感。
+        </p>
+      </section>
+      <section class="proportions">
+        <p class="micro">THE STUDY IN NUMBERS</p>
+        <dl>
+          <div>
+            <dt>PROPORTION</dt>
+            <dd>2 + 2</dd>
+            <span>座舱布局概念</span>
+          </div>
+          <div>
+            <dt>LENGTH</dt>
+            <dd>4,820</dd>
+            <span>毫米 · 设计目标</span>
+          </div>
+          <div>
+            <dt>BODY</dt>
+            <dd>GT</dd>
+            <span>长车头双门构型</span>
+          </div>
+          <div>
+            <dt>EDITION</dt>
+            <dd>08</dd>
+            <span>原创设计研究</span>
+          </div>
+        </dl>
+      </section>
+    </main>
+    <footer>
+      <span class="wordmark">AUREL</span>
+      <p class="demo-note">
+        独立虚构汽车展厅 · 原创 SVG 产品与座舱渲染，非摄影、官方车型或实际性能规格。
+      </p>
+      <span>THE ROAD IS A REASON.</span>
+    </footer>
+    <dialog id="index">
+      <button id="index-close">CLOSE ×</button>
+      <p class="micro">THE CHAPTERS</p>
+      <a href="#atelier">I — FORM</a><a href="#craft">II — HUMAN TOUCH</a>
+      <p class="serif">一份关于汽车比例与材质的原创设计研究。</p>
+    </dialog>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

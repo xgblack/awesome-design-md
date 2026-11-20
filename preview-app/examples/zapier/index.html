@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Relay · 把报名，变成有条理的准备 · 独立设计语言本地演示" />
+    <title>Relay · 把报名，变成有条理的准备</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#top" class="brand">relay<span>✳</span></a>
+      <nav><a href="#workflow">工作流演示</a><a href="#principles">清楚的规则</a></nav>
+      <a class="button" href="#workflow">试一次本地流程 ↗</a>
+    </header>
+    <main id="top">
+      <section class="hero">
+        <div>
+          <span>LESS COPYING. MORE CONNECTING.</span>
+          <h1>Let the small<br />things flow.</h1>
+          <p>从报名资料，到活动名单，再到一条提醒草稿。<br />把重复的准备，整理成看得懂的步骤。</p>
+          <a class="button" href="#workflow">探索演示流程 →</a
+          ><small>本地固定数据 · 不连接外部应用</small>
+        </div>
+        <div class="flow-art">
+          <div><b>01</b><span>FORM / 收到报名</span><small>name · topic · guests</small></div>
+          <i>↓</i>
+          <div><b>02</b><span>LIST / 形成名单</span><small>字段映射 + 人数条件</small></div>
+          <i>↓</i>
+          <div><b>03</b><span>DRAFT / 提醒草稿</span><small>不发送真实消息</small></div>
+        </div>
+      </section>
+      <section class="workflow" id="workflow">
+        <div class="workflow-title">
+          <span>BUILD THE LOGIC, NOT THE BUSYWORK</span>
+          <h2>每一步，<br />都知道为什么。</h2>
+          <p>映射字段，设定条件，再用一条演示事件走一遍。</p>
+        </div>
+        <div class="workflow-grid">
+          <div class="settings">
+            <section>
+              <span>1. Trigger / 演示事件</span
+              ><label
+                >选择报名样本<select id="event">
+                  <option value="complete">完整报名 / 林夏</option>
+                  <option value="missing">缺少姓名 / 匿名样本</option>
+                  <option value="large">人数超限 / 周安</option>
+                </select></label
+              >
+            </section>
+            <section>
+              <span>2. Map / 字段映射</span
+              ><label
+                >名单姓名来自<select id="mapping">
+                  <option value="name">name / 姓名</option>
+                  <option value="topic">topic / 活动主题</option>
+                  <option value="">未映射</option>
+                </select></label
+              >
+            </section>
+            <section>
+              <span>3. Condition / 人数条件</span
+              ><label
+                >单次报名最多人数<select id="limit">
+                  <option value="2">2 人</option>
+                  <option value="4">4 人</option>
+                  <option value="6">6 人</option>
+                </select></label
+              >
+            </section>
+          </div>
+          <div class="execution">
+            <div class="run-head">
+              <span>LOCAL EVENT REPLAY</span><button id="restart">重新开始</button>
+            </div>
+            <ol id="log"></ol>
+            <p id="error" role="alert"></p>
+            <button class="button" id="next">下一步：读取样本 →</button>
+            <div class="result" id="result" hidden>
+              <h3>本地提醒草稿</h3>
+              <p id="draft"></p>
+              <small>没有外部调用，也没有消息发送。</small>
+            </div>
+          </div>
+        </div>
+        <section class="roster">
+          <div>
+            <h3>当前规则下的演示名单</h3>
+            <p id="count"></p>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>名单姓名</th>
+                  <th>活动主题</th>
+                  <th>人数</th>
+                  <th>结果</th>
+                </tr>
+              </thead>
+              <tbody id="rows"></tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+      <section class="principles" id="principles">
+        <div>
+          <span>WHEN THE RULE IS CLEAR, THE FLOW IS CALM.</span>
+          <h2>自动化的起点，<br />是一个清楚的决定。</h2>
+        </div>
+        <div>
+          <article>
+            <h3>没有映射，就不猜。</h3>
+            <p>缺少字段会明确停止流程，不把错误数据包装成成功。</p>
+          </article>
+          <article>
+            <h3>超出条件，就说明原因。</h3>
+            <p>通过、拦截和草稿是不同结果。这里逐步执行本地逻辑，不模拟外部集成成功。</p>
+          </article>
+        </div>
+      </section>
+      <section class="closing">
+        <h2>Make room for<br />the human part.</h2>
+        <a class="button" href="#workflow">回到流程演示 ↑</a>
+      </section>
+    </main>
+    <footer>Relay / 独立设计语言示例 · 不接入表单、不发送消息</footer>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

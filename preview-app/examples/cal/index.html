@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Studio Hours · 留一段时间给想法 · 独立设计语言本地演示" />
+    <title>Studio Hours · 留一段时间给想法</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#top" class="brand">Studio Hours<span> /</span></a>
+      <nav><a href="#how">如何预约</a><a href="#schedule">演示日程</a></nav>
+      <a href="#schedule" class="button">找个时间 ↗</a>
+    </header>
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <span class="badge">Your next good conversation</span>
+          <h1>Make time.<br />Make it<br />meaningful.</h1>
+          <p>把一个还没成形的想法，带到一场清晰的对话里。<br />与独立创作者一起，留出 30 分钟。</p>
+          <a class="button" href="#schedule">选择演示时段</a
+          ><small>纯本地预约草稿 · 不占用真实日历</small>
+        </div>
+        <div class="calendar" id="schedule">
+          <div class="host">
+            <span class="avatar">SL</span>
+            <div>
+              <small>Studio with Lin</small>
+              <h2>创作聊聊</h2>
+              <span>30 分钟 · 在线讨论</span>
+            </div>
+          </div>
+          <div class="calendar-content">
+            <div>
+              <div class="month">2026 年 11 月<span>固定演示周</span></div>
+              <div class="week">
+                <span>一</span><span>二</span><span>三</span><span>四</span><span>五</span
+                ><span>六</span><span>日</span>
+              </div>
+              <div class="dates" id="dates"></div>
+              <label class="zone-label"
+                >显示时区<select id="zone">
+                  <option value="8">上海 UTC+8</option>
+                  <option value="0">伦敦 UTC+0</option>
+                  <option value="9">东京 UTC+9</option>
+                </select></label
+              >
+            </div>
+            <div class="times">
+              <h3 id="chosen-day">11 月 23 日，周一</h3>
+              <div id="slots"></div>
+              <p>灰色为已占用或过去的演示日期。</p>
+            </div>
+          </div>
+          <form id="booking" hidden>
+            <h3 id="slot-summary"></h3>
+            <label
+              >本次讨论主题<input id="topic" maxlength="60" placeholder="例如：独立杂志的第一期"
+            /></label>
+            <p id="error" role="alert"></p>
+            <button class="button" type="submit">生成本地草稿</button
+            ><button type="button" id="back">重新选时间</button>
+          </form>
+          <div id="draft" hidden role="status"></div>
+        </div>
+      </section>
+      <section class="how" id="how">
+        <div>
+          <p class="eyebrow">LESS BACK AND FORTH</p>
+          <h2>从「有空吗」，<br />到「到时见」。</h2>
+          <p>确定时间之后，注意力就可以回到事情本身。</p>
+        </div>
+        <ol>
+          <li>
+            <span>01</span>
+            <h3>带来一个问题</h3>
+            <p>不需要完整的提案。一个真正在意的问题，就足够。</p>
+          </li>
+          <li>
+            <span>02</span>
+            <h3>选择合适的片刻</h3>
+            <p>切换时区查看同一时刻，不必心算时间差。</p>
+          </li>
+          <li>
+            <span>03</span>
+            <h3>留下对话的起点</h3>
+            <p>这个示例只生成本地草稿，刷新后将回到初始状态。</p>
+          </li>
+        </ol>
+      </section>
+      <section class="quote">
+        <div class="avatar">YW</div>
+        <blockquote>“最好的日程安排，是让我们忘记安排，<br />只记得那场值得的对话。”</blockquote>
+        <small>演示人物 / 独立出版人</small>
+      </section>
+    </main>
+    <footer>
+      <h2>A little time.<br />A new perspective.</h2>
+      <span>Studio Hours / 独立风格示例</span><a href="#schedule">回到日历 ↑</a>
+    </footer>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

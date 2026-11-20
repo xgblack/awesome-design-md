@@ -1,0 +1,57 @@
+{
+  "title": "APEX / 性能汽车文化档案",
+  "description": "按车型与场景组合筛选汽车文化档案，阅读许可摄影与原创驾驶舱、封闭场地图解；无真实赛事或驾驶教学。",
+  "status": "ready",
+  "features": {
+    "moods": ["cinematic", "tech"],
+    "tones": ["dark"],
+    "temperature": ["neutral"],
+    "chroma": ["mono"],
+    "accentHues": ["neutral"],
+    "backgrounds": ["image", "solid"],
+    "layouts": ["chapters", "editorial"],
+    "density": ["airy"],
+    "typography": ["sans"],
+    "headingScale": ["display"],
+    "headingWeight": ["bold"],
+    "geometry": ["square"],
+    "layering": ["lines"],
+    "visualMedia": ["photo", "illustration"],
+    "motion": ["feedback"],
+    "scenarios": ["content", "portfolio"]
+  },
+  "interactions": ["filter", "media"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "纯黑汽车影像、80px/700大写标题与300轻正文；三色仅为4px身份线。",
+    "道路和室内汽车摄影均标为文化参考，不冒充赛道或虚构车型实拍；场地与驾驶舱为原创工程概念，非驾驶教学。"
+  ],
+  "references": [
+    {
+      "source": "L254–260、307–327、403–429",
+      "reason": "不同于企业蓝BMW；三色线不填CTA，不铺碳纤全页。"
+    }
+  ],
+  "assets": [
+    {
+      "file": "../_shared/photos/car.webp",
+      "source": "共享 photos/sources.json",
+      "license": "Unsplash License"
+    },
+    {
+      "file": "../_shared/photos/sportscar.webp",
+      "source": "共享 photos/sources.json",
+      "license": "Unsplash License"
+    },
+    {
+      "file": "assets/closed-course.svg",
+      "source": "本项目原创封闭场地概念图",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/cockpit.svg",
+      "source": "本项目原创驾驶舱工程概念",
+      "license": "本项目原创，可随示例分发"
+    }
+  ]
+}

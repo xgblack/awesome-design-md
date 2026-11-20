@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>山居日记 · 独立风格示例</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="#">山居日记</a>
+      <nav>
+        <button id="all" aria-pressed="true">发现驻留</button
+        ><button id="saved" aria-pressed="false">已关注</button>
+      </nav>
+      <span>周末，住进山里。</span>
+    </header>
+    <main>
+      <form id="searchbar">
+        <label>入住<input id="checkin" type="date" value="2026-12-04" min="2026-12-01" /></label
+        ><label>退房<input id="checkout" type="date" value="2026-12-06" min="2026-12-01" /></label
+        ><label
+          >人数<select id="guests">
+            <option value="2">2 位</option>
+            <option value="4">4 位</option>
+            <option value="6">6 位</option>
+          </select></label
+        ><button>搜索驻留</button>
+      </form>
+      <p id="search-status" role="status">4 处虚构驻留 · 固定日期演示，无预订</p>
+      <div class="categories">
+        <span>△ 山间小屋</span><span>⌂ 自然里的家</span><span>≈ 湖岸慢居</span
+        ><span>○ 周末留白</span>
+      </div>
+      <h1>值得慢下来的地方</h1>
+      <section class="stays">
+        <article data-stay="0" data-capacity="2">
+          <button class="photo" data-open="0">
+            <img src="../_shared/photos/cabin.webp" alt="雪林里的木屋，摄影作场景参考" /></button
+          ><button class="heart" data-heart="0" aria-label="关注松间小屋" aria-pressed="false">
+            ♡
+          </button>
+          <div>
+            <h2>松间小屋</h2>
+            <span>4.92</span>
+          </div>
+          <p>山谷 · 2 位 · 周末驻留</p>
+          <p>12月4日至6日</p>
+          <strong>给自己两天留白</strong>
+        </article>
+        <article data-stay="1" data-capacity="4">
+          <button class="photo" data-open="1">
+            <img src="../_shared/photos/interior.webp" alt="暖色客厅，摄影作室内参考" /></button
+          ><button class="heart" data-heart="1" aria-label="关注林边客厅" aria-pressed="false">
+            ♡
+          </button>
+          <div>
+            <h2>林边客厅</h2>
+            <span>4.87</span>
+          </div>
+          <p>林缘 · 4 位 · 共享长桌</p>
+          <p>12月4日至8日</p>
+          <strong>把聊天留给傍晚</strong>
+        </article>
+        <article data-stay="2" data-capacity="6">
+          <button class="photo" data-open="2">
+            <img src="../_shared/photos/lake.webp" alt="宁静湖岸，摄影作周边环境参考" /></button
+          ><button class="heart" data-heart="2" aria-label="关注湖岸慢居" aria-pressed="false">
+            ♡
+          </button>
+          <div>
+            <h2>湖岸慢居</h2>
+            <span>4.96</span>
+          </div>
+          <p>湖岸 · 6 位 · 湖边散步</p>
+          <p>12月5日至8日</p>
+          <strong>醒来，先看看水面</strong>
+        </article>
+        <article data-stay="3" data-capacity="2">
+          <button class="photo" data-open="3">
+            <img src="../_shared/photos/mountain.webp" alt="高山景色，摄影作周边环境参考" /></button
+          ><button class="heart" data-heart="3" aria-label="关注云上两人" aria-pressed="false">
+            ♡
+          </button>
+          <div>
+            <h2>云上两人</h2>
+            <span>4.90</span>
+          </div>
+          <p>山脊 · 2 位 · 轻装出发</p>
+          <p>12月4日至7日</p>
+          <strong>在风里，读完一本书</strong>
+        </article>
+      </section>
+      <p id="empty" hidden>没有匹配的驻留，试试减少人数或切回发现驻留。</p>
+      <section class="destinations">
+        <h2>出发，不一定要很远。</h2>
+        <div>
+          <p>森林边缘<br /><small>在树影里重新找到日常的节奏</small></p>
+          <p>安静的湖岸<br /><small>留一点时间，给没有安排的时刻</small></p>
+          <p>云经过的山脊<br /><small>白天看远山，晚上看星星</small></p>
+        </div>
+      </section>
+    </main>
+    <footer>
+      山居日记 · 独立设计示例<br /><span
+        >摄影为已许可场景参考；所有名称、评分、日期均虚构。无真实房源、价格或预订。</span
+      >
+    </footer>
+    <dialog id="stay-detail">
+      <button id="detail-close">关闭详情</button><img id="detail-image" alt="驻留参考摄影" />
+      <h2 id="detail-title"></h2>
+      <p id="stay-description">一张长桌、一段散步、一整个不赶时间的周末。</p>
+      <ul id="stay-facilities"></ul>
+      <p class="demo-note">这是本地详情演示，不提供住宿或预订服务。</p>
+    </dialog>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

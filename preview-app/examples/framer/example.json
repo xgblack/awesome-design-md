@@ -1,0 +1,37 @@
+{
+  "title": "Nightshift · 可视化作品集网站构建",
+  "description": "以网站案例库与真实DOM作品集编辑器体现建站工具：编辑首屏、布局、网站名称与作品顺序。",
+  "status": "ready",
+  "features": {
+    "moods": ["experimental", "cinematic"],
+    "tones": ["dark"],
+    "layouts": ["editorial", "workspace"],
+    "density": ["airy"],
+    "headingScale": ["display"],
+    "headingWeight": ["medium"],
+    "geometry": ["pill", "rounded"],
+    "visualMedia": ["ui", "type", "geometry"],
+    "accentHues": ["neutral"],
+    "temperature": ["neutral"],
+    "chroma": ["vivid"],
+    "backgrounds": ["solid"],
+    "layering": ["solid"],
+    "scenarios": ["product", "tool", "portfolio"],
+    "typography": ["sans"],
+    "motion": ["feedback"]
+  },
+  "interactions": ["filter", "edit", "configure"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "专有字体以本地 Inter Variable 替代，保留字重、字阶、空间与组件规则；中文为系统字体回退。",
+    "交互为原创本地演示，不发出业务请求，不保存个人输入。",
+    "语境复核：海报工作室偏离网页构建：改为作品集网站构建，预览包含导航、首屏、项目目录与页脚，内容与排序均真实变化。"
+  ],
+  "references": [
+    {
+      "source": "DESIGN.md L265–271、306–358、447–453",
+      "reason": "黑画布110px压紧标题/白胶囊 → 双列作品和一两张紫/橙聚光卡 → 大浏览器预览/暗页脚。显示字距约−5%、可变字体、15–20px卡/30px聚光，蓝仅焦点/选中。"
+    }
+  ],
+  "assets": []
+}

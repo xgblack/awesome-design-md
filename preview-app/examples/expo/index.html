@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pocket Studio / React Native app platform</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#">▴ pocket studio</a>
+      <nav>
+        <a href="#studio">Studio</a><a href="#workflow">Workflow</a
+        ><a class="black" href="#studio">Make a note ↗</a>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <span>ONE CODEBASE. EVERY SCREEN.</span>
+        <h1>Build once.<br />Let your ideas travel.</h1>
+        <p>
+          编辑一次，在两种设备中看见。<br />React Native 开发平台的独立演示：便笺 App 的双端 DOM
+          预览，不是真机构建或发布。
+        </p>
+        <div class="platforms" aria-label="平台">
+          <button data-platform="ios" aria-pressed="true">iOS</button
+          ><button data-platform="android">Android</button>
+        </div>
+        <div class="devices">
+          <div class="laptop">
+            <div class="laptop-bar"><i></i><span>pocket / web preview</span></div>
+            <div class="note-web">
+              <span>YOUR POCKET NOTEBOOK</span>
+              <h2 class="note-title">Take the slower road.</h2>
+              <p class="note-body">周末去河岸走一走，带一本书，不赶时间。</p>
+              <div class="sketch" aria-hidden="true"><i></i><b></b></div>
+              <small>Notes for a good weekend / 01</small>
+            </div>
+          </div>
+          <div class="phone">
+            <div class="phone-top"><span id="device-name">iPhone / preview</span><i></i></div>
+            <div class="note-phone">
+              <span>POCKET / 01</span>
+              <h2 class="note-title">Take the slower road.</h2>
+              <p class="note-body">周末去河岸走一走，带一本书，不赶时间。</p>
+              <div class="phone-line"></div>
+              <small>Saved in this page only.</small>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="studio" id="studio">
+        <div>
+          <span class="eyebrow">01 / BUILD YOUR FIRST LITTLE APP</span>
+          <h2>Keep the idea.<br />Change the surface.</h2>
+          <p>编辑 App 文案，提交后同步到两个设备预览。<br />不会保存到设备，也不会上传文字。</p>
+          <pre id="command">npx expo run:ios</pre>
+          <p class="small">Expo CLI 命令展示，不在页面内安装或编译。</p>
+          <div class="native-source">
+            <span>APP.TSX / READABLE COMPONENT</span>
+            <pre id="native-source"></pre>
+          </div>
+        </div>
+        <form id="form">
+          <label for="title">便笺标题</label
+          ><input id="title" value="Take the slower road." maxlength="60" required /><label
+            for="body"
+            >正文</label
+          ><textarea id="body" maxlength="240">周末去河岸走一走，带一本书，不赶时间。</textarea
+          ><button class="black" type="submit">同步到预览 ↗</button>
+          <p id="feedback" role="status">输入只在本页内存中使用。</p>
+        </form>
+      </section>
+      <section class="workflow" id="workflow">
+        <h2>One idea, less friction.</h2>
+        <div>
+          <article>
+            <span>01</span>
+            <h3>Write it down.</h3>
+            <p>真实文字，而不是图片里的占位。长标题会自然换行。</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>See it differently.</h3>
+            <p>
+              同一份 App 内容面向 iOS 与 Android。切换平台会更新设备与 CLI 说明，代码面板展示对应
+              React Native 结构。
+            </p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Keep it local.</h3>
+            <p>没有登录、云同步或发布成功的虚假提示。刷新即可重新开始。</p>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer>pocket studio / <span>Expo DESIGN.md · 原创设备界面示例</span></footer>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

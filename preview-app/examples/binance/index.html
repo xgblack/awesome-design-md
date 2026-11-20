@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="CircuitX · 数字资产观察学堂 · 独立设计语言本地演示" />
+    <title>CircuitX · 数字资产观察学堂</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="#top">▧ CIRCUITX</a>
+      <nav><a href="#markets">市场样本</a><a href="#learn">学习资料</a></nav>
+      <button class="primary" id="open-calc">纸面换算</button>
+    </header>
+    <main id="top">
+      <section class="hero">
+        <div>
+          <span>KNOW THE NUMBERS. UNDERSTAND THE RISK.</span>
+          <h1>从一个数字，<br />看懂一个市场。</h1>
+          <p>不追逐波动。先理解价格、规模与变化的含义。</p>
+          <a href="#markets" class="primary">探索市场样本 ↓</a
+          ><small>固定演示数据 · 非实时行情 · 不提供交易</small>
+        </div>
+        <div class="spotlight">
+          <div>
+            <span>示例市场总值</span><strong>$1,284.80<span>M</span></strong>
+          </div>
+          <div class="ticker">
+            <span>◈ BTC / USD</span><b>68,400.00</b><small>▲ +2.40% · 示例变化</small>
+          </div>
+          <div class="ticker">
+            <span>◇ ETH / USD</span><b>3,240.00</b><small>▼ −0.80% · 示例变化</small>
+          </div>
+          <a href="#learn">这些数字分别意味着什么？ ↗</a>
+        </div>
+      </section>
+      <section class="markets" id="markets">
+        <div class="market-head">
+          <h2>Markets, without the noise.</h2>
+          <div>
+            <label>搜索资产<input id="search" placeholder="名称或代码" /></label
+            ><label
+              >排序<select id="sort">
+                <option value="default">默认顺序</option>
+                <option value="price">价格从高到低</option>
+                <option value="name">名称 A–Z</option>
+              </select></label
+            >
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>资产</th>
+                <th>示例价格 / USD</th>
+                <th>示例变化</th>
+                <th>演示规模 / M</th>
+                <th>了解</th>
+              </tr>
+            </thead>
+            <tbody id="rows"></tbody>
+          </table>
+        </div>
+        <p id="empty" hidden>没有匹配的资产。<button id="clear">清空搜索</button></p>
+      </section>
+      <section id="learn" class="learn">
+        <div>
+          <small>START WITH THE BASICS</small>
+          <h2>先理解，<br />再做判断。</h2>
+          <p>价格不是价值的全部。这个学堂只解释概念，不构成投资建议。</p>
+        </div>
+        <div>
+          <details open>
+            <summary>「变化」指的是什么？</summary>
+            <p>这里的百分比是手工设定的演示区间差值，不来自实时交易平台。</p>
+          </details>
+          <details>
+            <summary>「规模」可以比较什么？</summary>
+            <p>用于示范不同资产量级的读取方法，不能据此判断收益或风险。</p>
+          </details>
+          <details>
+            <summary>纸面换算会执行交易吗？</summary>
+            <p>不会。换算使用固定样本价格，结果只用于学习。</p>
+          </details>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <b>CIRCUITX / LEARN BEFORE YOU ACT</b>
+      <p>原创本地学堂 · 无账户、无余额、无交易</p>
+    </footer>
+    <dialog id="calculator">
+      <form id="calc-form">
+        <h2>纸面换算</h2>
+        <p>BTC 示例单价：68,400 USD。<br />不是牌价，不产生交易。</p>
+        <label>演示美元金额<input type="text" inputmode="decimal" id="amount" value="100" /></label>
+        <p id="error" role="alert"></p>
+        <output id="result"></output>
+        <div>
+          <button type="submit" class="primary">计算示例数量</button
+          ><button type="button" id="close">关闭</button>
+        </div>
+      </form></dialog
+    ><dialog id="asset">
+      <h2 id="asset-title"></h2>
+      <p>该条目用于演示市场信息层次。价格、变化与规模均是固定样本，不提供交易或收益承诺。</p>
+      <button id="asset-close">返回市场</button>
+    </dialog>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

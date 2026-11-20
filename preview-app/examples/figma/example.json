@@ -1,0 +1,37 @@
+{
+  "title": "Common Room · 产品协作设计空间",
+  "description": "在桌面/手机双画板中编辑产品组件、切换变体和设计文件，并留下本地评审评论。",
+  "status": "ready",
+  "features": {
+    "moods": ["editorial", "playful"],
+    "tones": ["mixed"],
+    "layouts": ["centered", "workspace"],
+    "density": ["balanced"],
+    "headingScale": ["display"],
+    "headingWeight": ["light"],
+    "geometry": ["pill", "square"],
+    "visualMedia": ["ui", "geometry"],
+    "accentHues": ["neutral"],
+    "temperature": ["contrast"],
+    "chroma": ["muted"],
+    "backgrounds": ["solid"],
+    "layering": ["solid"],
+    "scenarios": ["tool", "product"],
+    "typography": ["sans"],
+    "motion": ["feedback"]
+  },
+  "interactions": ["edit", "configure"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "专有字体以本地 Inter Variable 替代，保留字重、字阶、空间与组件规则；中文为系统字体回退。",
+    "交互为原创本地演示，不发出业务请求，不保存个人输入。",
+    "语境复核：从同质化活动便签板重做为真实产品UI与共享组件设计；编辑卡片/按钮可同步两个画板，符合设计协作产品。"
+  ],
+  "references": [
+    {
+      "source": "DESIGN.md L282–288、335–357、371–396、511–527",
+      "reason": "白大字/窄黑标语 → 白解释 → 淡紫工作板 → 回白 → 青柠结构/深蓝复盘/白模板目录。86px/340展示、320正文、黑白胶囊；粉彩是整板，Mono大写仅分类。"
+    }
+  ],
+  "assets": []
+}

@@ -1,0 +1,26 @@
+import { test, expect } from '@playwright/test'
+test.beforeEach(async ({ page }) => {
+  await page.goto('examples/clay/index.html')
+})
+test('ICP 条件改变实际研究记录，补全来自固定资料', async ({ page }) => {
+  await page.locator('#industry').selectOption('software')
+  await expect(page.locator('#companies tr')).toHaveCount(2)
+  await page.locator('#enrich').click()
+  await expect(page.locator('#companies')).toContainText('林乔')
+  await expect(page.locator('#companies')).toContainText('资料未收录')
+  await page.locator('#size').selectOption('growth')
+  await expect(page.locator('#companies tr')).toHaveCount(1)
+  await expect(page.locator('#download')).toBeDisabled()
+})
+test('无字段不能补全，下载包含筛选后的数据', async ({ page }) => {
+  await page.getByLabel('业务联系人', { exact: true }).uncheck()
+  await page.getByLabel('使用工具', { exact: true }).uncheck()
+  await expect(page.locator('#enrich')).toBeDisabled()
+  await expect(page.locator('#error')).toContainText('至少选择')
+  await page.getByLabel('近期需求信号', { exact: true }).check()
+  await page.locator('#industry').selectOption('commerce')
+  await page.locator('#enrich').click()
+  const download = page.waitForEvent('download')
+  await page.locator('#download').click()
+  expect((await download).suggestedFilename()).toBe('moss-research.csv')
+})

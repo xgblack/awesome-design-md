@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quiet One · 独立风格示例</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <nav class="global">
+      <b>quiet /</b><a href="#sound">声音</a><a href="#compare">比较</a
+      ><a href="#accessories">配件</a>
+    </nav>
+    <div class="subnav"><strong>Quiet One</strong><button id="compare-open">比较机型</button></div>
+    <main>
+      <section class="hero">
+        <p class="eyebrow">A LITTLE MORE ROOM FOR SOUND.</p>
+        <h1>听见。整个房间。</h1>
+        <p class="lead">小巧的形体，宽阔的声场。</p>
+        <a class="pill" href="#sound">探索声音</a>
+        <div class="product">
+          <img id="speaker" src="./assets/speaker-chalk.webp" alt="粉笔白桌面音响原创渲染" />
+        </div>
+        <div class="swatches" aria-label="音响颜色">
+          <button data-color="chalk" aria-pressed="true">粉笔白</button
+          ><button data-color="night" aria-pressed="false">夜幕黑</button
+          ><button data-color="tide" aria-pressed="false">潮汐蓝</button>
+        </div>
+        <p id="color-name" role="status">粉笔白 · 为你的空间留白</p>
+      </section>
+      <section id="sound" class="sound">
+        <span>小空间。大有回响。</span>
+        <h2>把每一层，听清楚。</h2>
+        <div class="sound-grid">
+          <div class="cutaway">
+            <img
+              src="./assets/speaker-exploded.webp"
+              alt="原创音响结构想象：触控顶盖、低频振膜、网孔声腔与底部导音盘分层展示"
+            />
+          </div>
+          <p>
+            一枚低频单元与环绕导音结构，在桌面上展开声音。这里展示的是原创产品概念，不是实测音质或认证参数。
+          </p>
+        </div>
+      </section>
+      <section id="accessories" class="accessories">
+        <h2>你的声音，你的摆法。</h2>
+        <div>
+          <article>
+            <img
+              src="./assets/desk-stand.webp"
+              alt="银色桌面音响底座，托盘、支柱与椭圆金属基座的原创产品图"
+            />
+            <h3>轻型底座</h3>
+            <p>让声音稍稍离开桌面。</p>
+          </article>
+          <article>
+            <img
+              src="./assets/braided-cable.webp"
+              alt="浅灰编织连接线卷成松弛线圈，两端为可见的原创连接器"
+            />
+            <h3>编织连接线</h3>
+            <p>把细节也整理得恰到好处。</p>
+          </article>
+        </div>
+      </section>
+      <section id="compare" class="end">
+        <h2>为日常，留一点安静。</h2>
+        <p>听音乐、听故事，或者只听一场雨。</p>
+        <button id="compare-bottom" class="pill">找到合适的 Quiet</button>
+        <p class="demo-note">原创虚构产品 · 本地演示，无购买或声学性能承诺。</p>
+      </section>
+    </main>
+    <dialog id="comparison">
+      <button id="close">关闭比较</button>
+      <h2>哪一个，属于你的房间？</h2>
+      <div class="choice">
+        <label><input type="checkbox" value="One" checked />Quiet One</label
+        ><label><input type="checkbox" value="Mini" checked />Quiet Mini</label
+        ><label><input type="checkbox" value="Studio" />Quiet Studio</label>
+      </div>
+      <p id="compare-msg" role="status">已选择 2 款，最多同时比较 2 款。</p>
+      <table>
+        <caption>
+          虚构概念参数
+        </caption>
+        <thead>
+          <tr>
+            <th>机型</th>
+            <th>高度</th>
+            <th>摆放建议</th>
+          </tr>
+        </thead>
+        <tbody id="comparison-rows">
+          <tr>
+            <td>One</td>
+            <td>18 cm</td>
+            <td>书桌 / 客厅</td>
+          </tr>
+          <tr>
+            <td>Mini</td>
+            <td>12 cm</td>
+            <td>床头 / 书架</td>
+          </tr>
+        </tbody>
+      </table>
+    </dialog>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

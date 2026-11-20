@@ -1,0 +1,506 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+button,
+a,
+input,
+select,
+textarea {
+  touch-action: manipulation;
+}
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+button {
+  cursor: pointer;
+}
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+a {
+  color: inherit;
+  text-underline-offset: 4px;
+}
+img,
+svg {
+  max-width: 100%;
+  display: block;
+}
+button,
+input,
+select,
+textarea {
+  min-height: 44px;
+}
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #527dff;
+  outline-offset: 4px;
+}
+p {
+  line-height: 1.6;
+}
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+h1,
+h2,
+h3 {
+  overflow-wrap: anywhere;
+}
+[hidden] {
+  display: none !important;
+}
+dialog {
+  max-width: min(600px, calc(100% - 32px));
+  border: 0;
+  padding: 32px;
+  border-radius: 12px;
+}
+dialog::backdrop {
+  background: #0009;
+}
+dialog h2 {
+  font-size: 28px;
+}
+dialog button {
+  margin: 8px 8px 0 0;
+}
+label {
+  display: block;
+}
+input,
+select,
+textarea {
+  max-width: 100%;
+}
+textarea {
+  resize: vertical;
+}
+small {
+  line-height: 1.5;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+body {
+  font-family: 'Inter Variable', sans-serif;
+  color: #111;
+  background: white;
+  font-size: 14px;
+}
+header {
+  height: 88px;
+  padding: 0 6%;
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+a {
+  text-decoration: none;
+}
+.brand {
+  font-size: 23px;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+.brand span {
+  color: #999;
+}
+nav {
+  display: flex;
+  gap: 25px;
+  margin-left: auto;
+}
+.button {
+  display: inline-block;
+  background: #111;
+  color: white;
+  border: 1px solid #111;
+  border-radius: 8px;
+  padding: 14px 20px;
+  font-weight: 600;
+}
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 6%;
+  padding: 65px 5% 95px;
+  max-width: 1440px;
+  margin: auto;
+  align-items: start;
+}
+.hero-copy {
+  padding-top: 20px;
+}
+.badge {
+  border: 1px solid #ddd;
+  background: #fafafa;
+  padding: 7px 10px;
+  border-radius: 100px;
+  font-size: 11px;
+}
+.hero h1 {
+  font-size: 64px;
+  line-height: 1.05;
+  letter-spacing: -2.6px;
+  font-weight: 600;
+  margin: 30px 0;
+}
+.hero-copy p {
+  font-size: 16px;
+  color: #5a5a5a;
+}
+.hero-copy small {
+  display: block;
+  margin-top: 18px;
+  color: #6b6b73;
+  font-size: 11px;
+}
+.calendar {
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  padding: 25px;
+  background: white;
+  box-shadow: 0 15px 50px #11100008;
+  margin-top: 15px;
+}
+.host {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 22px;
+}
+.avatar {
+  width: 45px;
+  height: 45px;
+  background: #e4d2bf;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  font-weight: 500;
+}
+.host h2 {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 5px 0;
+}
+.host small,
+.host span:last-child {
+  color: #686868;
+  font-size: 12px;
+}
+.calendar-content {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 22px;
+  padding-top: 25px;
+}
+.month {
+  font-weight: 600;
+}
+.month > span {
+  display: block;
+  font-size: 10px;
+  color: #666;
+  margin-top: 4px;
+}
+.week,
+.dates {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 3px;
+}
+.week {
+  font-size: 10px;
+  color: #777;
+  text-align: center;
+  margin: 20px 0 8px;
+}
+.dates button {
+  border: 0;
+  background: #f3f3f3;
+  border-radius: 6px;
+  min-height: 33px;
+  padding: 4px;
+  font-size: 11px;
+}
+.dates button:disabled {
+  background: transparent;
+  color: #aaa;
+}
+.dates button[aria-pressed='true'] {
+  background: #111;
+  color: #fff;
+}
+.zone-label {
+  font-size: 11px;
+  margin-top: 20px;
+  color: #5b5b5b;
+}
+.zone-label select {
+  display: block;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  width: 100%;
+  padding: 8px;
+  margin-top: 6px;
+  font-size: 12px;
+  background: white;
+}
+.times h3 {
+  font-size: 12px;
+  font-weight: 600;
+  margin: 0 0 18px;
+}
+.times button {
+  display: block;
+  width: 100%;
+  margin: 7px 0;
+  border: 1px solid #ddd;
+  background: #fff;
+  color: #111;
+  border-radius: 7px;
+  padding: 10px;
+  font-size: 12px;
+}
+.times button:disabled {
+  color: #888;
+  text-decoration: line-through;
+}
+.times p {
+  font-size: 10px;
+  color: #777;
+}
+.how {
+  background: #f5f5f5;
+  padding: 80px 7%;
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 7%;
+}
+.how h2 {
+  font-size: 44px;
+  letter-spacing: -1.5px;
+  line-height: 1.15;
+  font-weight: 600;
+}
+.eyebrow {
+  font-size: 11px;
+  color: #666;
+  letter-spacing: 1px;
+}
+.how ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.how li {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  column-gap: 22px;
+  padding: 17px 0;
+  border-bottom: 1px solid #ddd;
+}
+.how li > span {
+  grid-row: 1/3;
+  font-size: 12px;
+  color: #777;
+  padding-top: 4px;
+}
+.how h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.how p {
+  color: #666;
+}
+.quote {
+  text-align: center;
+  padding: 85px 20px;
+}
+.quote .avatar {
+  margin: 0 auto 20px;
+  background: #e6e4f2;
+}
+blockquote {
+  font-size: 25px;
+  line-height: 1.4;
+  font-weight: 500;
+  margin: 20px;
+}
+.quote small {
+  color: #666;
+}
+footer {
+  background: #101010;
+  color: white;
+  padding: 65px 7%;
+  position: relative;
+}
+footer h2 {
+  font-size: 48px;
+  line-height: 1.05;
+  letter-spacing: -2px;
+  font-weight: 600;
+}
+footer span {
+  color: #aaa;
+  font-size: 12px;
+}
+footer a {
+  float: right;
+}
+#booking {
+  padding-top: 25px;
+  border-top: 1px solid #eee;
+  margin-top: 24px;
+}
+#booking input {
+  display: block;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 12px;
+  margin-top: 8px;
+  width: 100%;
+}
+#booking > button:last-child,
+#draft button {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: white;
+  padding: 12px 16px;
+  margin-top: 12px;
+}
+#error {
+  color: #a32d20;
+  font-size: 12px;
+  margin: 10px 0;
+}
+#draft {
+  background: #f5f5f5;
+  border-radius: 12px;
+  padding: 25px;
+  margin-top: 24px;
+}
+#draft h3 {
+  font-size: 20px;
+}
+#draft p {
+  overflow-wrap: anywhere;
+}
+@media (max-width: 760px) {
+  header {
+    padding: 0 22px;
+    height: 75px;
+    gap: 10px;
+  }
+  nav {
+    display: none;
+  }
+  header .button {
+    margin-left: auto;
+    font-size: 11px;
+    padding: 12px;
+  }
+  .brand {
+    font-size: 20px;
+  }
+  .hero {
+    display: block;
+    padding: 35px 20px 55px;
+  }
+  .hero h1 {
+    font-size: 52px;
+    margin: 26px 0;
+  }
+  .calendar {
+    margin-top: 45px;
+    padding: 20px;
+  }
+  .calendar-content {
+    display: block;
+  }
+  .dates button {
+    min-height: 36px;
+  }
+  .times {
+    margin-top: 25px;
+  }
+  .times h3 {
+    font-size: 14px;
+  }
+  .times #slots {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .times p {
+    font-size: 12px;
+  }
+  .how {
+    display: block;
+    padding: 55px 24px;
+  }
+  .how h2 {
+    font-size: 36px;
+  }
+  .how ol {
+    margin-top: 35px;
+  }
+  .quote {
+    padding: 50px 14px;
+  }
+  blockquote {
+    font-size: 21px;
+  }
+  footer {
+    padding: 50px 24px;
+  }
+  footer h2 {
+    font-size: 38px;
+  }
+  footer a {
+    float: none;
+    display: block;
+    margin-top: 22px;
+  }
+}

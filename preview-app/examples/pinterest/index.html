@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>巢里 / Nest Notes · 独立风格示例</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="#">巢里</a><a href="#wall">发现</a
+      ><label
+        ><span class="sr-only">搜索灵感</span
+        ><input id="pin-search" type="search" placeholder="试试：阅读、窗、客厅" /></label
+      ><button id="only-saved" aria-pressed="false">清单 <span id="saved-count">0</span></button>
+    </header>
+    <main>
+      <section class="intro">
+        <p>A LITTLE SPACE, A LOT OF LIFE.</p>
+        <h1>把喜欢的日常，<br />慢慢收集起来。</h1>
+        <div class="topics">
+          <button data-topic-filter="all" aria-pressed="true">全部灵感</button
+          ><button data-topic-filter="living">客厅</button
+          ><button data-topic-filter="bedroom">卧室</button
+          ><button data-topic-filter="work">收纳角</button
+          ><button data-topic-filter="kitchen">厨房</button
+          ><button data-topic-filter="dining">餐厅</button>
+        </div>
+      </section>
+      <p id="pin-status" role="status">20 张室内摄影 · 本次灵感墙</p>
+      <section id="wall" class="wall">
+        <button class="pin" data-pin="0" data-topic="living" data-title="浅色阶梯客厅">
+          <img
+            src="./assets/room-1571460.jpg"
+            alt="浅色阶梯客厅，许可室内摄影"
+            loading="eager"
+          /><span>浅色阶梯客厅</span><small>客厅</small></button
+        ><button class="pin" data-pin="1" data-topic="living" data-title="客餐相连的木色空间">
+          <img
+            src="./assets/room-1643383.jpg"
+            alt="客餐相连的木色空间，许可室内摄影"
+            loading="eager"
+          /><span>客餐相连的木色空间</span><small>客厅</small></button
+        ><button class="pin" data-pin="2" data-topic="bedroom" data-title="深色毯子的明亮卧室">
+          <img
+            src="./assets/room-1454806.jpg"
+            alt="深色毯子的明亮卧室，许可室内摄影"
+            loading="eager"
+          /><span>深色毯子的明亮卧室</span><small>卧室</small></button
+        ><button class="pin" data-pin="3" data-topic="bedroom" data-title="弧形坐榻与床边小桌">
+          <img
+            src="./assets/room-271618.jpg"
+            alt="弧形坐榻与床边小桌，许可室内摄影"
+            loading="eager"
+          /><span>弧形坐榻与床边小桌</span><small>卧室</small></button
+        ><button class="pin" data-pin="4" data-topic="living" data-title="蓝灰沙发的小客厅">
+          <img
+            src="./assets/room-1571468.jpg"
+            alt="蓝灰沙发的小客厅，许可室内摄影"
+            loading="eager"
+          /><span>蓝灰沙发的小客厅</span><small>客厅</small></button
+        ><button class="pin" data-pin="5" data-topic="kitchen" data-title="白色岛台厨房">
+          <img
+            src="./assets/room-1080721.jpg"
+            alt="白色岛台厨房，许可室内摄影"
+            loading="eager"
+          /><span>白色岛台厨房</span><small>厨房</small></button
+        ><button class="pin" data-pin="6" data-topic="living" data-title="深色沙发与整面窗">
+          <img
+            src="./assets/room-1457842.jpg"
+            alt="深色沙发与整面窗，许可室内摄影"
+            loading="eager"
+          /><span>深色沙发与整面窗</span><small>客厅</small></button
+        ><button class="pin" data-pin="7" data-topic="kitchen" data-title="木色吧台与开放厨房">
+          <img
+            src="./assets/room-279648.jpg"
+            alt="木色吧台与开放厨房，许可室内摄影"
+            loading="eager"
+          /><span>木色吧台与开放厨房</span><small>厨房</small></button
+        ><button class="pin" data-pin="8" data-topic="living" data-title="楼梯旁的会客空间">
+          <img
+            src="./assets/room-1669799.jpg"
+            alt="楼梯旁的会客空间，许可室内摄影"
+            loading="lazy"
+          /><span>楼梯旁的会客空间</span><small>客厅</small></button
+        ><button class="pin" data-pin="9" data-topic="living" data-title="暖木书墙客厅">
+          <img
+            src="./assets/room-276724.jpg"
+            alt="暖木书墙客厅，许可室内摄影"
+            loading="lazy"
+          /><span>暖木书墙客厅</span><small>客厅</small></button
+        ><button class="pin" data-pin="10" data-topic="living" data-title="相片墙前的深灰沙发">
+          <img
+            src="./assets/room-276583.jpg"
+            alt="相片墙前的深灰沙发，许可室内摄影"
+            loading="lazy"
+          /><span>相片墙前的深灰沙发</span><small>客厅</small></button
+        ><button class="pin" data-pin="11" data-topic="living" data-title="木饰面电视墙与沙发">
+          <img
+            src="./assets/room-275484.jpg"
+            alt="木饰面电视墙与沙发，许可室内摄影"
+            loading="lazy"
+          /><span>木饰面电视墙与沙发</span><small>客厅</small></button
+        ><button class="pin" data-pin="12" data-topic="living" data-title="白色收纳柜的明亮客厅">
+          <img
+            src="./assets/room-1571467.jpg"
+            alt="白色收纳柜的明亮客厅，许可室内摄影"
+            loading="lazy"
+          /><span>白色收纳柜的明亮客厅</span><small>客厅</small></button
+        ><button class="pin" data-pin="13" data-topic="dining" data-title="砖墙窗边的长餐桌">
+          <img
+            src="./assets/room-1080696.jpg"
+            alt="砖墙窗边的长餐桌，许可室内摄影"
+            loading="lazy"
+          /><span>砖墙窗边的长餐桌</span><small>餐厅</small></button
+        ><button class="pin" data-pin="14" data-topic="living" data-title="紫色顶灯下的客餐厅">
+          <img
+            src="./assets/room-259580.jpg"
+            alt="紫色顶灯下的客餐厅，许可室内摄影"
+            loading="lazy"
+          /><span>紫色顶灯下的客餐厅</span><small>客厅</small></button
+        ><button class="pin" data-pin="15" data-topic="work" data-title="给唱片与书留一个角落">
+          <img
+            src="./assets/room-245208.jpg"
+            alt="给唱片与书留一个角落，许可室内摄影"
+            loading="lazy"
+          /><span>给唱片与书留一个角落</span><small>收纳角</small></button
+        ><button class="pin" data-pin="16" data-topic="bedroom" data-title="卧室里的小坐榻">
+          <img
+            src="./assets/room-271624.jpg"
+            alt="卧室里的小坐榻，许可室内摄影"
+            loading="lazy"
+          /><span>卧室里的小坐榻</span><small>卧室</small></button
+        ><button class="pin" data-pin="17" data-topic="living" data-title="简洁电视墙客厅">
+          <img
+            src="./assets/room-1571458.jpg"
+            alt="简洁电视墙客厅，许可室内摄影"
+            loading="lazy"
+          /><span>简洁电视墙客厅</span><small>客厅</small></button
+        ><button class="pin" data-pin="18" data-topic="kitchen" data-title="通透的开放岛台厨房">
+          <img
+            src="./assets/room-276554.jpg"
+            alt="通透的开放岛台厨房，许可室内摄影"
+            loading="lazy"
+          /><span>通透的开放岛台厨房</span><small>厨房</small></button
+        ><button class="pin" data-pin="19" data-topic="living" data-title="绿色壁炉与书架客厅">
+          <img
+            src="./assets/room-271795.jpg"
+            alt="绿色壁炉与书架客厅，许可室内摄影"
+            loading="lazy"
+          /><span>绿色壁炉与书架客厅</span><small>客厅</small>
+        </button>
+      </section>
+      <p id="pin-empty" hidden>没有匹配的灵感。清空关键词，或切回全部灵感。</p>
+      <section class="editorial">
+        <div>
+          <span>LESS SPACE. MORE YOU.</span>
+          <h2>小房间，<br />也装得下很多喜欢。</h2>
+          <p>一张有光的桌子，一个容纳旧书的角落。收集不是复制别人的家，而是看见自己在意什么。</p>
+        </div>
+        <img src="./assets/room-1571460.jpg" alt="许可客厅摄影" />
+      </section>
+    </main>
+    <footer>
+      巢里 / 本地灵感收录演示<br />20 张独立室内摄影来自
+      Pexels（许可与原图页见素材说明）；非虚构房源实拍，无真实账户。
+    </footer>
+    <dialog id="pin-detail">
+      <button id="pin-close">关闭详情</button>
+      <div class="pin-detail-grid">
+        <img id="pin-image" alt="所选室内摄影" />
+        <div>
+          <p>FOUND IN THE EVERYDAY</p>
+          <h2 id="pin-title"></h2>
+          <p>留意光线、材质与收纳的关系，而不只是复制一套摆设。</p>
+          <button id="save-pin">收录到本次清单</button>
+          <p id="save-note" role="status">清单只在当前页面中保留。</p>
+        </div>
+      </div>
+    </dialog>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

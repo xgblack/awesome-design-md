@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Postmark Studio / Transactional email API</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#">≋ postmark studio</a>
+      <nav>
+        <a href="#studio">Specimens</a><a href="#sequence">Delivery notes</a
+        ><a class="white" href="#studio">Explore a letter ↗</a>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <span class="eyebrow">A SMALL MESSAGE. A CONSIDERED EXPERIENCE.</span>
+        <h1>Letters that arrive<br />with a purpose.</h1>
+        <p>
+          开发者邮件 API，让一个产品事件变成读得懂的事务邮件。<br />只在本地预览，不向任何地址发信。
+        </p>
+        <a class="white" href="#studio">Open the specimen ↗</a>
+      </section>
+      <section class="studio" id="studio">
+        <div class="head">
+          <div>
+            <span class="eyebrow">01 / CHOOSE THE MOMENT</span>
+            <h2>One event.<br />A different letter.</h2>
+          </div>
+          <label
+            >事件
+            <select id="event">
+              <option value="welcome">欢迎加入</option>
+              <option value="dispatch">样本发出</option>
+              <option value="reminder">阅读提醒</option>
+            </select></label
+          >
+        </div>
+        <div class="studio-grid">
+          <div class="code-window">
+            <div><span>EVENT PAYLOAD</span><span>LOCAL FIXTURE</span></div>
+            <pre id="code"></pre>
+            <p>DEMO_ADDRESS 不是可投递地址。<br />页面不连接邮件或业务服务。</p>
+          </div>
+          <article class="letter">
+            <div class="letter-meta">
+              <span>SPECIMEN / NOT SENT</span><span>POSTMARK STUDIO</span>
+            </div>
+            <div class="letter-body">
+              <span class="seal">P</span>
+              <h3 id="subject">A place for your next thought.</h3>
+              <p class="greeting">Hello, reader.</p>
+              <p id="body"></p>
+              <div id="letter-action"></div>
+              <p class="sign">Warmly,<br />The little editorial desk</p>
+            </div>
+            <div class="letter-foot">本地预置邮件 · 不包含真实收件人</div>
+          </article>
+        </div>
+      </section>
+      <section class="sequence" id="sequence">
+        <div>
+          <span class="eyebrow">02 / UNDERSTAND THE JOURNEY</span>
+          <h2>Make the middle<br />as clear as the end.</h2>
+          <p>
+            准备、校验、模拟交付。每一站都有明确的结果。<br />“完成”仅代表预置演练走完，不代表发信成功。
+          </p>
+        </div>
+        <div class="replay">
+          <div class="stages">
+            <span data-stage="0">01 / PREPARE</span><span data-stage="1">02 / VALIDATE</span
+            ><span data-stage="2">03 / PREVIEW</span>
+          </div>
+          <p id="status" role="status">等待开始。</p>
+          <pre id="log">No delivery attempted.</pre>
+          <label><input id="failure" type="checkbox" />校验阶段注入失败</label>
+          <div class="actions">
+            <button id="start" class="white">开始回放</button
+            ><button id="pause" disabled>暂停</button><button id="reset">重置</button>
+          </div>
+        </div>
+      </section>
+      <section class="notes">
+        <span class="eyebrow">A NOTE ON TRUST</span>
+        <h2>Good messages<br />don't pretend.</h2>
+        <p>
+          这里没有投递率、打开率或虚构的成功统计。每封信都由本项目原创，演练的唯一目标，是让事件与内容之间的关系清晰可见。
+        </p>
+        <a href="#studio">Read another specimen ↑</a>
+      </section>
+    </main>
+    <footer>postmark studio / <span>Resend DESIGN.md · 独立邮件预览示例</span></footer>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Motion · Your money, a wider world · 独立设计语言本地演示" />
+    <title>Motion · Your money, a wider world</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="#top">MOTION</a>
+      <nav><a href="#benefits">账户体验</a><a href="#plans">账户方案</a></nav>
+      <a href="#plans" class="pill">Explore your account ↗</a>
+    </header>
+    <main id="top">
+      <section class="hero">
+        <div>
+          <span>MORE POSSIBILITIES. CLEARER MONEY.</span>
+          <h1>Money without<br />the maze.</h1>
+          <p>从日常消费，到跨境生活。<br />把账户、换汇与费用，放在同一个清晰的视角里。</p>
+          <a href="#plans" class="pill">探索账户方案</a>
+        </div>
+        <div class="pass-scene" aria-label="原创银色与黑色账户卡视觉示意">
+          <div class="pass silver">
+            <span>MOTION / PERSONAL ACCOUNT</span><b>Move<br />your way.</b
+            ><small>DEMO CARD / NOT FOR PAYMENT</small><i>↗</i>
+          </div>
+          <div class="pass black">
+            <span>MOTION / METAL ACCOUNT</span><b>A wider<br />world.</b
+            ><small>NO. 0042 / DEMO EDITION</small>
+          </div>
+        </div>
+      </section>
+      <section class="benefits" id="benefits">
+        <div>
+          <span>THE ACCOUNT IS JUST THE BEGINNING</span>
+          <h2>把资金看清楚，<br />让生活更从容。</h2>
+          <p>日常支出与换汇需求各不相同。<br />用固定模型，理解不同方案的费用差别。</p>
+        </div>
+        <div class="benefit-grid">
+          <article>
+            <b>01</b>
+            <h3>日常消费</h3>
+            <p>在同一视角里看消费规模与服务费用。</p>
+          </article>
+          <article>
+            <b>02</b>
+            <h3>跨境换汇</h3>
+            <p>把免费额度与超出部分的费率分开核对。</p>
+          </article>
+          <article>
+            <b>03</b>
+            <h3>清楚比较</h3>
+            <p>先理解固定模型，再判断真实产品是否适合。</p>
+          </article>
+        </div>
+      </section>
+      <section class="plans" id="plans">
+        <div class="plans-title">
+          <span>FIND YOUR KIND OF ACCOUNT</span>
+          <h2>One account.<br />Your way.</h2>
+        </div>
+        <form id="recommend" novalidate>
+          <label
+            >月度消费 / 美元<input
+              id="spend"
+              type="number"
+              min="0"
+              max="1000000"
+              value="800" /></label
+          ><label
+            >月度换汇 / 美元<input
+              id="exchange"
+              type="number"
+              min="0"
+              max="1000000"
+              value="500" /></label
+          ><button type="submit" class="pill">核对演示费用 ↗</button>
+        </form>
+        <p id="recommendation" role="status">费用仅为虚构模型，不对应任何真实银行方案。</p>
+        <div class="tiers" id="tiers"></div>
+        <div class="compare-bar">
+          <p id="selected" role="status">选择两档，看看不同。</p>
+          <button id="compare" class="pill" disabled>比较两档</button>
+        </div>
+        <p class="disclaimer">
+          固定演示模型：月费 + 消费服务费 +
+          超额度换汇费。没有隐藏费率/实时汇率，不开户、不交易，不代表 Revolut 实际价格。
+        </p>
+      </section>
+    </main>
+    <footer>
+      <strong>MOTION / PERSONAL FINANCE</strong><span>独立风格示例 · 无开户、交易或支付</span>
+    </footer>
+    <dialog id="comparison">
+      <h2>两种账户，清楚比较。</h2>
+      <div id="comparison-body"></div>
+      <button id="close">返回方案</button>
+    </dialog>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

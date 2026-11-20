@@ -1,0 +1,37 @@
+{
+  "title": "Nextchapter / Career matching platform",
+  "description": "求职匹配平台：按技能、资历与工作方式筛选虚构岗位，核对可解释理由并关注机会；不上传简历、不投递。",
+  "status": "ready",
+  "features": {
+    "moods": ["warm", "playful"],
+    "tones": ["mixed"],
+    "temperature": ["warm"],
+    "chroma": ["muted"],
+    "accentHues": ["neutral", "green"],
+    "backgrounds": ["solid"],
+    "layouts": ["split", "directory"],
+    "density": ["balanced"],
+    "typography": ["sans"],
+    "headingScale": ["display"],
+    "headingWeight": ["bold"],
+    "geometry": ["pill", "rounded"],
+    "layering": ["solid", "lines"],
+    "visualMedia": ["ui", "type"],
+    "motion": ["feedback"],
+    "scenarios": ["product", "directory"]
+  },
+  "interactions": ["filter", "configure"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "重构公益项目题材为求职平台。薄荷大标题、真实档案/岗位DOM、非对称圆角、黑CTA/规则带与绿色结尾遵循原规范。",
+    "六个公司与岗位为虚构fixture；匹配只由已选条件计算，不假称AI分数、实时职位或就业结果。",
+    "字体取舍：显示 \"Manrope Variable\", sans-serif；正文 \"Inter Variable\", sans-serif。使用本地开放字体/系统字体替代品牌商业字体；标题筛选标签按实际桌面渲染归类。"
+  ],
+  "references": [
+    {
+      "source": "原规范 L282–294、317–340、451–472",
+      "reason": "浅薄荷首屏的匹配卡 → 白底项目列表 → 黑色项目条与交替说明 → 黑底人物故事/薄荷 FAQ。大面积 `#ecffe0`、少量 `#00f0a0`；Titillium Web 粗标题与 Inter 轻正文；黑主胶囊、绿色收尾胶囊，白卡保留单侧尖角。"
+    }
+  ],
+  "assets": []
+}

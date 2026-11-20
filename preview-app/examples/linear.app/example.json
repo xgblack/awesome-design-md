@@ -1,0 +1,37 @@
+{
+  "title": "Vector · 软件发行作战室",
+  "description": "软件项目的负责人/阻塞筛选、任务状态修改与发行计数，直接对应项目协同。",
+  "status": "ready",
+  "features": {
+    "moods": ["minimal", "tech"],
+    "tones": ["dark"],
+    "layouts": ["workspace"],
+    "density": ["dense"],
+    "headingScale": ["display"],
+    "headingWeight": ["bold"],
+    "geometry": ["small-radius"],
+    "visualMedia": ["ui"],
+    "accentHues": ["purple"],
+    "temperature": ["cool"],
+    "chroma": ["mono"],
+    "backgrounds": ["solid"],
+    "layering": ["lines"],
+    "scenarios": ["tool"],
+    "typography": ["sans"],
+    "motion": ["feedback"]
+  },
+  "interactions": ["filter", "edit"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "专有字体以本地 Inter Variable 替代，保留字重、字阶、空间与组件规则；中文为系统字体回退。",
+    "交互为原创本地演示，不发出业务请求，不保存个人输入。",
+    "语境复核：保留已贴原产品类别的核心页面，复核理由：软件项目的负责人/阻塞筛选、任务状态修改与发行计数，直接对应项目协同。"
+  ],
+  "references": [
+    {
+      "source": "DESIGN.md L260–275、312–347、382–405、462–474",
+      "reason": "短标题后立即是可操作发行面板 → 不同尺度 issue 列表、进展和变更日志 → 克制入口。`#010102`微蓝黑、四级暗表面、顶部细高光；薰衣草蓝仅行动/焦点；负字距中等字重，8/12/16px分工。"
+    }
+  ],
+  "assets": []
+}

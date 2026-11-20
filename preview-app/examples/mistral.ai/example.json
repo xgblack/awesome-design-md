@@ -1,0 +1,43 @@
+{
+  "title": "Frontier / Open model platform",
+  "description": "开放模型与API平台：按任务能力浏览模型，选择模型查看Python/cURL调用示意与固定响应；不调用API。",
+  "status": "ready",
+  "features": {
+    "moods": ["editorial", "warm"],
+    "tones": ["mixed"],
+    "temperature": ["warm"],
+    "chroma": ["muted"],
+    "accentHues": ["orange", "neutral"],
+    "backgrounds": ["paper", "solid"],
+    "layouts": ["split", "directory"],
+    "density": ["airy"],
+    "typography": ["serif", "sans", "mono"],
+    "headingScale": ["display"],
+    "headingWeight": ["regular"],
+    "geometry": ["small-radius"],
+    "layering": ["solid", "lines"],
+    "visualMedia": ["photo", "code", "ui"],
+    "motion": ["feedback"],
+    "scenarios": ["product", "directory", "docs"]
+  },
+  "interactions": ["filter", "configure"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "从山野资料重构为开放AI模型平台，山景仅作签名：暖奶油编辑衬线/山景分栏、暗代码井、橙行动与日落条。",
+    "Frontier模型、上下文、SDK与.example地址均为虚构教学样本，不代表真实Mistral规格、价格或模型输出。",
+    "字体取舍：显示 Georgia, serif；正文 \"Inter Variable\", sans-serif。使用本地开放字体/系统字体替代品牌商业字体；标题筛选标签按实际桌面渲染归类。"
+  ],
+  "references": [
+    {
+      "source": "原规范 L404–414、463–468、509–517、688–705、718–724",
+      "reason": "落日山景与编辑大字分栏 → 奶油档案/暗色代码/开放资料交替 → 红橙黄奶油日落色条连接页脚。近衬线展示/Inter/JetBrains Mono；橙行动，8px按钮/12px卡；暖黄奶油是表面而非所有内容的渐变。"
+    }
+  ],
+  "assets": [
+    {
+      "file": "../_shared/photos/mountain.webp",
+      "source": "公共素材池 sources.json",
+      "license": "Unsplash License"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+import { test, expect } from '@playwright/test'
+test('renault: 用途筛选与配置跳转', async ({ page }) => {
+  await page.goto('examples/renault/index.html')
+  await page.locator('#use-case').selectOption('cargo')
+  await expect(page.locator('#range-cards article')).toHaveCount(1)
+  await page.locator('#range-cards button').click()
+  await expect(page.locator('input[value=cargo]')).toBeChecked()
+  await expect(page.locator('#config-caption')).toContainText('箱件装载区')
+})
+test('renault: 模块颜色与工具架兼容边界', async ({ page }) => {
+  await page.goto('examples/renault/index.html')
+  await expect(page.locator('#rack')).toBeDisabled()
+  await page.locator('input[value=studio]').check()
+  await page.locator('#rack').check()
+  await page.locator('[data-color=blue]').click()
+  await expect(page.locator('#config-image')).toHaveAttribute('src', /brik-blue-studio/)
+  await expect(page.locator('#layout-label')).toContainText('固定工具架')
+  await page.locator('input[value=family]').check()
+  await expect(page.locator('#rack')).not.toBeChecked()
+  await expect(page.locator('#rack')).toBeDisabled()
+  await expect(page.locator('#compatibility')).toContainText('不兼容')
+})

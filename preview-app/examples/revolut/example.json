@@ -1,0 +1,37 @@
+{
+  "title": "Motion · 跨境个人账户",
+  "description": "按月消费与换汇金额核对四档虚构账户费用，清楚比较额度与费率；不开户、不交易。",
+  "status": "ready",
+  "features": {
+    "moods": ["minimal", "cinematic"],
+    "tones": ["mixed"],
+    "layouts": ["split", "chapters"],
+    "density": ["airy"],
+    "headingScale": ["display"],
+    "headingWeight": ["medium"],
+    "geometry": ["pill", "rounded"],
+    "visualMedia": ["render", "type"],
+    "accentHues": ["neutral", "purple"],
+    "temperature": ["neutral"],
+    "chroma": ["mono"],
+    "backgrounds": ["solid"],
+    "layering": ["solid"],
+    "scenarios": ["product", "calculator"],
+    "typography": ["sans"],
+    "motion": ["feedback"]
+  },
+  "interactions": ["configure", "form"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "专有字体以本地 Inter Variable 替代，保留字重、字阶、空间与组件规则；中文为系统字体回退。",
+    "交互为原创本地演示，不发出业务请求，不保存个人输入。",
+    "语境复核：从城市通行证改为消费者银行账户/跨境资金服务；黑白巨型章节与原创金属账户卡保持。"
+  ],
+  "references": [
+    {
+      "source": "DESIGN.md L302–333、381–473、478–529、611–636",
+      "reason": "真黑巨大短句/账户卡视觉 → 硬切白权益目录 → 黑底四档账户模型比较。80–136px/500紧字、暗区白胶囊、20px卡/12px输入、钴紫为费用模型反馈；黑白带无卡影。"
+    }
+  ],
+  "assets": []
+}

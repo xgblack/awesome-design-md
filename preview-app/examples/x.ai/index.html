@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Boundary / Frontier AI research bulletin</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#">⨯ boundary</a>
+      <nav>
+        <a href="#bulletin">Bulletin</a><a href="#compare">Versions</a
+        ><a class="outline" href="#bulletin">Read the archive ↗</a>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <span class="eyebrow">FRONTIER AI / OPEN RESEARCH NOTES</span>
+        <h1>At the edge<br />of understanding.</h1>
+        <div>
+          <p>
+            AI 推理、模型评估、阶段记录与可见的修改。<br />一间认真核对前沿模型研究方法的公告室。
+          </p>
+          <a class="outline" href="#bulletin">Explore the bulletin ↗</a>
+        </div>
+        <svg class="diagram" viewBox="0 0 340 240" aria-label="原创技术线图：边界与交点">
+          <g fill="none" stroke="#ffffff38" stroke-width="1">
+            <path d="M20 120h300M170 10v220M35 200 305 40M35 40l270 160" />
+            <ellipse cx="170" cy="120" rx="130" ry="75" />
+            <ellipse cx="170" cy="120" rx="65" ry="110" />
+            <circle cx="170" cy="120" r="35" />
+          </g>
+          <circle cx="170" cy="120" r="4" fill="white" />
+        </svg>
+      </section>
+      <section id="bulletin" class="bulletin">
+        <div class="head">
+          <div>
+            <span class="eyebrow">01 / RESEARCH BULLETIN</span>
+            <h2>Questions in progress.</h2>
+          </div>
+          <div class="filters">
+            <select id="topic" aria-label="课题">
+              <option value="all">全部课题</option>
+              <option value="reasoning">推理</option>
+              <option value="evaluation">评估</option></select
+            ><select id="year" aria-label="年份">
+              <option value="all">全部年份</option>
+              <option value="2026">2026</option>
+              <option value="2025">2025</option>
+              <option value="2024">2024</option>
+            </select>
+          </div>
+        </div>
+        <p id="count" role="status"></p>
+        <div id="entries"></div>
+        <p id="empty" hidden>这个范围没有公告。筛选条件已保留，不自动放宽。</p>
+      </section>
+      <section id="compare" class="compare">
+        <div>
+          <span class="eyebrow">02 / A RECORD OF CHANGE</span>
+          <h2>Read what changed.</h2>
+          <p>从同一项 AI 评估协议的两个草稿版本开始。<br />增删标记以文字呈现，不只靠颜色。</p>
+        </div>
+        <div class="version-tools">
+          <label for="left">较早版本</label
+          ><select id="left">
+            <option value="v1">Draft 01</option>
+            <option value="v2">Draft 02</option></select
+          ><label for="right">较新版本</label
+          ><select id="right">
+            <option value="v2">Draft 02</option>
+            <option value="v1">Draft 01</option></select
+          ><button id="compare-button" class="outline">Compare versions ↗</button>
+        </div>
+        <div id="diff" role="status"><p>选择两个不同版本，查看段落级增删。</p></div>
+      </section>
+      <section class="closing">
+        <span class="eyebrow">KNOWLEDGE STAYS OPEN.</span>
+        <h2>A note, not<br />a final word.</h2>
+        <p>所有公告均为本项目原创虚构研究说明。<br />不是论文、模型能力或品牌发布信息。</p>
+        <a class="outline" href="#bulletin">Return to the questions ↑</a>
+      </section>
+    </main>
+    <footer>boundary / <span>xAI DESIGN.md · Independent local bulletin</span></footer>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

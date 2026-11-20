@@ -1,0 +1,37 @@
+{
+  "title": "Hedgehog Handbook / Product analytics docs",
+  "description": "产品分析开发者手册：用本地事件沙盒理解埋点、属性与上下文，切换语言复制示例；不采集真实用户浏览。",
+  "status": "ready",
+  "features": {
+    "moods": ["warm", "playful", "editorial"],
+    "tones": ["light"],
+    "temperature": ["warm"],
+    "chroma": ["muted"],
+    "accentHues": ["yellow"],
+    "backgrounds": ["paper", "solid"],
+    "layouts": ["workspace"],
+    "density": ["balanced"],
+    "typography": ["sans", "mono"],
+    "headingScale": ["regular"],
+    "headingWeight": ["bold"],
+    "geometry": ["pill", "small-radius"],
+    "layering": ["lines", "solid"],
+    "visualMedia": ["code", "ui", "illustration"],
+    "motion": ["feedback"],
+    "scenarios": ["docs", "tool"]
+  },
+  "interactions": ["configure", "edit"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "保留暖奶油连续文档、左目录/白正文卡、暗橄榄代码岛、刺猬旁注与黄色胶囊。书店只是被分析的示例产品。",
+    "只在明确按钮操作时向内存事件流追加教学记录，不装分析SDK、不采设备/账号/真实页面行为。",
+    "字体取舍：显示 \"IBM Plex Sans Variable\", sans-serif；正文 \"IBM Plex Sans Variable\", sans-serif。使用本地开放字体/系统字体替代品牌商业字体；标题筛选标签按实际桌面渲染归类。"
+  ],
+  "references": [
+    {
+      "source": "原规范 L359–372、412–483、557–574、634–639、683–690",
+      "reason": "暖奶油连续画布/小文档目录/白正文卡 → 暗橄榄代码岛、粉彩提示和刺猬旁注。`#eeefe9`/深橄榄、`#f7a501`主胶囊；IBM Plex Sans 层级、6/8px卡/细橄榄边。"
+    }
+  ],
+  "assets": []
+}

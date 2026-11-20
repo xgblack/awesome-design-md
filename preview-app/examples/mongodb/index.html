@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Leafline Academy / Document database learning</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#">◢ leafline <span>academy</span></a>
+      <nav><a href="#courses">课程</a><a href="#path">学习路径</a><span>LEARN BY MAKING</span></nav>
+    </header>
+    <main>
+      <section class="hero">
+        <div>
+          <span class="eyebrow">A SCHOOL FOR DATA THINKERS</span>
+          <h1>Grow your<br />understanding.</h1>
+          <p>从第一份文档，到理解一个数据系统。<br />把小课程连成自己的学习路径。</p>
+          <a class="green" href="#courses">寻找你的下一课 ↗</a>
+        </div>
+        <div class="terminal">
+          <span>LEAFLINE / FIELD NOTEBOOK</span>
+          <pre>
+{
+  "question": "What comes next?",
+  "approach": "learn by making",
+  "first_step": "one document"
+}</pre>
+          <div class="leaf" aria-hidden="true"><i></i></div>
+          <small>本地教学资料 · 不提供证书或真实学分</small>
+        </div>
+      </section>
+      <section class="catalog" id="courses">
+        <div class="catalog-title">
+          <div>
+            <span class="eyebrow">MAKE A LITTLE PROGRESS</span>
+            <h2>Your learning library.</h2>
+          </div>
+          <div class="filters">
+            <label
+              >方向
+              <select id="track">
+                <option value="all">全部方向</option>
+                <option value="data">数据建模</option>
+                <option value="query">查询</option>
+                <option value="ops">运维</option>
+              </select></label
+            ><label
+              >难度
+              <select id="level">
+                <option value="all">全部难度</option>
+                <option value="intro">入门</option>
+                <option value="next">进阶</option>
+              </select></label
+            >
+          </div>
+        </div>
+        <div id="cards" class="cards"></div>
+        <p id="empty" role="status" hidden>没有匹配课程。保留当前条件，可切回“全部方向”。</p>
+      </section>
+      <section class="path" id="path">
+        <div>
+          <span class="eyebrow">LEARNING PATH / IN THIS SESSION</span>
+          <h2>A path that<br />makes sense.</h2>
+          <p>加入课程前，先完成它的先修课程。<br />路径仅在本次页面中保留，不代表已学完课程。</p>
+        </div>
+        <div>
+          <p id="path-message" role="status">还没有选择课程。从“文档基础”开始。</p>
+          <ol id="path-list"></ol>
+          <button id="clear">清空本次路径</button>
+        </div>
+      </section>
+      <section class="closing">
+        <span>BUILD THE MENTAL MODEL FIRST.</span>
+        <h2>Better questions.<br />Stronger foundations.</h2>
+        <a href="#courses" class="green">回到课程库 ↑</a>
+      </section>
+    </main>
+    <footer>leafline academy / <span>独立原创课程 · MongoDB DESIGN.md 风格研究</span></footer>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

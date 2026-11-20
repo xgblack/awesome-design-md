@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Ledgerlane · 看清票款如何流动 · 独立设计语言本地演示" />
+    <title>Ledgerlane · 看清票款如何流动</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#top" class="brand">ledgerlane<span> /</span></a>
+      <nav><a href="#sandbox">结算沙盘</a><a href="#method">费用口径</a></nav>
+      <a href="#sandbox" class="pill">探索演示 ↗</a>
+    </header>
+    <main id="top">
+      <section class="hero">
+        <div class="mesh" aria-hidden="true"></div>
+        <div class="hero-copy">
+          <span>EVERY EVENT. EVERY ENTRY.</span>
+          <h1>Good experiences.<br />Clear accounts.</h1>
+          <p>把票款、费用和结算放进同一本账。<br />从一次演示售票，理解钱如何流动。</p>
+          <a href="#sandbox" class="pill">打开结算沙盘 →</a>
+        </div>
+        <div class="layered">
+          <div class="ticket">
+            <small>RIVERSIDE / TICKET</small><strong>Sunday<br />at the studio.</strong
+            ><span>11.29 / OPEN WORKSHOP</span><i>▥▥▥▥▥▥▥▥</i>
+          </div>
+          <div class="ledger-preview">
+            <span>票务账本 / 固定示例</span>
+            <div><small>票款</small><b>¥400.00</b></div>
+            <div><small>示例费用</small><b>−¥13.60</b></div>
+            <div><small>可结算</small><b>¥386.40</b></div>
+          </div>
+          <pre
+            class="code"
+          >event: "ticket.confirmed"<br>status: "demo_only"<br>currency: "CNY"</pre>
+        </div>
+      </section>
+      <section class="method" id="method">
+        <div>
+          <span>01 / FOLLOW THE FLOW</span>
+          <h2>一次售票，<br />不止一个数字。</h2>
+        </div>
+        <div>
+          <p>票款是起点，费用与结算是不同的账本分录。把规则摊开，才能对结果心中有数。</p>
+          <p>
+            本地演示规则：票款 × 2.9% + 每单 2
+            元。退款演示不退示例费用；这不是任何支付服务的真实费率。
+          </p>
+        </div>
+      </section>
+      <section class="sandbox" id="sandbox">
+        <div class="sandbox-title">
+          <span>02 / TRY A LOCAL EVENT</span>
+          <h2>让每笔变化，<br />都有可读的来路。</h2>
+          <p>调整票数与单价，再切换业务事件。</p>
+        </div>
+        <div class="sandbox-grid">
+          <form id="ticket-form">
+            <label>票数<input id="quantity" type="text" inputmode="numeric" value="2" /></label
+            ><label
+              >示例单价 / CNY<input id="price" type="text" inputmode="decimal" value="200" /></label
+            ><button class="pill" type="submit">更新演示账本 →</button>
+            <p id="error" role="alert"></p>
+          </form>
+          <div class="entries">
+            <div class="event-tabs">
+              <button data-event="confirmed" aria-pressed="true">确认票款</button
+              ><button data-event="refunded" aria-pressed="false">整单退款</button>
+            </div>
+            <dl>
+              <div>
+                <dt>票款总额</dt>
+                <dd id="gross"></dd>
+              </div>
+              <div>
+                <dt>示例服务费用</dt>
+                <dd id="fee"></dd>
+              </div>
+              <div>
+                <dt id="net-label">可结算金额</dt>
+                <dd id="net"></dd>
+              </div>
+            </dl>
+            <p id="event-note"></p>
+          </div>
+        </div>
+      </section>
+      <section class="payload">
+        <div>
+          <span>03 / INSPECT THE DETAILS</span>
+          <h2>给系统的结构，<br />也给人的理解。</h2>
+          <p>右侧 JSON 与账本来自同一份本地计算。<br />没有网络事件，也没有真实支付。</p>
+          <button id="copy">复制演示 payload ↗</button>
+          <p id="copy-status" role="status"></p>
+        </div>
+        <pre id="payload" tabindex="0" aria-label="演示事件 JSON"></pre>
+      </section>
+    </main>
+    <footer><strong>ledgerlane /</strong><span>独立设计语言参考 · 无真实收款与支付</span></footer>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

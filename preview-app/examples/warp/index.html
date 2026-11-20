@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Workbench / Agentic terminal workspace</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#">▰ workbench</a>
+      <nav>
+        <a href="#practice">Practice</a><a href="#notes">Field notes</a><span>v.01 / LOCAL</span>
+      </nav>
+    </header>
+    <main>
+      <section class="opening">
+        <span class="eyebrow">AGENT GUIDANCE. TERMINAL PRECISION.</span>
+        <h1>Find your way.<br />One command at a time.</h1>
+        <div class="lead">
+          <p>
+            在开发环境中，把 Agent 指引与终端验证放在一起。<br />这里的命令只在页面中模拟，不会接触你的电脑。
+          </p>
+          <a class="button" href="#practice">开始一个练习 ↗</a>
+        </div>
+      </section>
+      <section class="practice" id="practice">
+        <div class="guide">
+          <div class="panel-head">AGENT GUIDE / 预置开发指引</div>
+          <label for="lesson">选择练习</label
+          ><select id="lesson">
+            <option value="network">找出服务状态</option>
+            <option value="files">追踪配置来源</option>
+          </select>
+          <h2 id="task-title">服务为什么没有响应？</h2>
+          <p id="task">先查看目录，再读取 status 文件。你不需要猜测；每一条线索都可以验证。</p>
+          <form id="agent-form">
+            <label for="agent-question">向指引助手提问 / 只支持当前两项任务</label
+            ><input
+              id="agent-question"
+              maxlength="160"
+              placeholder="例如：为什么服务没有响应？"
+            /><button type="submit">查看预置指引 ↗</button>
+            <p id="agent-response" role="status">固定规则匹配，不调用在线 Agent。</p>
+          </form>
+          <ol id="steps">
+            <li>输入 ls，查看文件</li>
+            <li>输入 cat status，读取状态</li>
+            <li>根据提示写下观察</li>
+          </ol>
+          <button id="hint" class="ghost">显示下一条提示</button>
+          <p id="hint-text" role="status"></p>
+          <label for="note">本次观察（不保存）</label
+          ><textarea id="note" placeholder="例如：服务正常，但端口不一致。"></textarea>
+        </div>
+        <div class="terminal">
+          <div class="panel-head">
+            <span>TERMINAL / sandbox</span><button id="reset">重置输出</button>
+          </div>
+          <div id="output" role="log" aria-live="polite">
+            <p class="welcome">
+              Workbench safe shell — type help.<br />白名单：help · ls · cat status · cat note.txt ·
+              clear
+            </p>
+          </div>
+          <form id="command-form">
+            <span aria-hidden="true">›</span><label class="sr-only" for="command">模拟命令</label
+            ><input id="command" autocomplete="off" spellcheck="false" placeholder="help" /><button
+              type="submit"
+              aria-label="运行模拟命令"
+            >
+              ↵
+            </button>
+          </form>
+          <div class="terminal-foot">SIMULATION ONLY · NO HOST SHELL</div>
+        </div>
+      </section>
+      <section class="notes" id="notes">
+        <span class="eyebrow">NOTES FROM THE WORKBENCH</span>
+        <h2>Curiosity is a useful <em>command.</em></h2>
+        <div class="note-row">
+          <span>01</span>
+          <h3>先观察，再行动</h3>
+          <p>ls 只告诉你有哪些文件。它不会证明服务正在运行，状态还要从下一条记录中读取。</p>
+        </div>
+        <div class="note-row">
+          <span>02</span>
+          <h3>让失败可解释</h3>
+          <p>未知命令会列出允许的操作。输入不会被解释为 JavaScript、HTML 或系统命令。</p>
+        </div>
+        <div class="note-row">
+          <span>03</span>
+          <h3>留下你的判断</h3>
+          <p>练习笔记仅在本页内存中存在。刷新页面，回到一张干净的工作台。</p>
+        </div>
+      </section>
+      <section class="index">
+        <h2>Small tools.<br />Lasting understanding.</h2>
+        <a class="button" href="#practice">回到工作台 ↑</a>
+      </section>
+    </main>
+    <footer>workbench / <span>独立示例 · Warp DESIGN.md · 非真实终端</span></footer>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

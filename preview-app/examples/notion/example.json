@@ -1,0 +1,37 @@
+{
+  "title": "Night Desk · 内容团队工作空间",
+  "description": "编辑团队以数据库看板、日历与稿件属性协作，符合一体化团队工作空间；保留深蓝/紫CTA/彩插画。",
+  "status": "ready",
+  "features": {
+    "moods": ["playful", "tech"],
+    "tones": ["mixed"],
+    "layouts": ["split", "workspace"],
+    "density": ["balanced"],
+    "headingScale": ["display"],
+    "headingWeight": ["bold"],
+    "geometry": ["small-radius"],
+    "visualMedia": ["ui", "illustration"],
+    "accentHues": ["purple"],
+    "temperature": ["cool"],
+    "chroma": ["vivid"],
+    "backgrounds": ["solid"],
+    "layering": ["solid"],
+    "scenarios": ["product", "tool"],
+    "typography": ["sans"],
+    "motion": ["feedback"]
+  },
+  "interactions": ["filter", "edit", "schedule"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "专有字体以本地 Inter Variable 替代，保留字重、字阶、空间与组件规则；中文为系统字体回退。",
+    "交互为原创本地演示，不发出业务请求，不保存个人输入。",
+    "语境复核：保留已贴原产品类别的核心页面，复核理由：编辑团队以数据库看板、日历与稿件属性协作，符合一体化团队工作空间；保留深蓝/紫CTA/彩插画。"
+  ],
+  "references": [
+    {
+      "source": "DESIGN.md L448–463、529–555、608–625、745–748、792–804",
+      "reason": "深海军蓝/彩点线框插画/紫行动 → 可操作编辑部面板 → 鲜黄横幅和桃/粉/薄荷资料模块 → 浅页脚。600/400字重、8px矩形按钮/12px卡；真实文档层级与彩色属性。"
+    }
+  ],
+  "assets": []
+}

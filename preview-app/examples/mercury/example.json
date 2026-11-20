@@ -1,0 +1,37 @@
+{
+  "title": "InkHaven · 工作室商业账户沙盘",
+  "description": "独立工作室商业现金流与经常性收支，对应企业银行/运营账本，不扩成泛生活活动。",
+  "status": "ready",
+  "features": {
+    "moods": ["minimal", "luxury"],
+    "tones": ["mixed"],
+    "layouts": ["split", "directory"],
+    "density": ["airy"],
+    "headingScale": ["display"],
+    "headingWeight": ["regular"],
+    "geometry": ["pill", "rounded"],
+    "visualMedia": ["render", "ui"],
+    "accentHues": ["blue"],
+    "temperature": ["cool"],
+    "chroma": ["muted"],
+    "backgrounds": ["solid"],
+    "layering": ["solid"],
+    "scenarios": ["product", "tool"],
+    "typography": ["sans"],
+    "motion": ["feedback"]
+  },
+  "interactions": ["filter", "configure"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "专有字体以本地 Inter Variable 替代，保留字重、字阶、空间与组件规则；中文为系统字体回退。",
+    "交互为原创本地演示，不发出业务请求，不保存个人输入。",
+    "语境复核：保留已贴原产品类别的核心页面，复核理由：独立工作室商业现金流与经常性收支，对应企业银行/运营账本，不扩成泛生活活动。"
+  ],
+  "references": [
+    {
+      "source": "DESIGN.md L323–359、383–389、419–439、469–491",
+      "reason": "夜紫导航/柔光物件及收支卡 → 近白/淡紫的产品演示 → 居中引语/深色页脚。`#171721`、`#edecfb`、`#5266eb`；360/420/480轻字重、单实色主按钮、半透明次胶囊，填色卡而非强描边。"
+    }
+  ],
+  "assets": []
+}

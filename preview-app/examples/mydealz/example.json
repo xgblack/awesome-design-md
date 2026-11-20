@@ -1,0 +1,58 @@
+{
+  "title": "补给情报站",
+  "description": "「补给情报站」——浏览虚构户外优惠并参与本机热度讨论。",
+  "status": "ready",
+  "features": {
+    "moods": ["playful"],
+    "tones": ["light"],
+    "temperature": ["cool"],
+    "chroma": ["muted"],
+    "accentHues": ["green"],
+    "backgrounds": ["solid"],
+    "layouts": ["directory", "workspace"],
+    "density": ["dense"],
+    "typography": ["sans"],
+    "headingScale": ["compact"],
+    "headingWeight": ["bold"],
+    "geometry": ["small-radius", "pill"],
+    "layering": ["solid"],
+    "visualMedia": ["render"],
+    "motion": ["feedback"],
+    "scenarios": ["commerce", "directory"]
+  },
+  "interactions": ["filter", "form"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "Inter本地替代Averta；商品缩图为本项目CSS原创示意，不伪装摄影或真实在售物品。",
+    "热度为固定资料加本机最多1票，过期条目只保留阅读；无真实领券/支付。",
+    "天幕、旅行杯、日行背包与双人帐篷均使用可辨认的独立原创产品渲染；旧CSS几何物件不再被使用。"
+  ],
+  "references": [
+    {
+      "source": "L296–339、355–374、476–498",
+      "reason": "不做大留白海报，不互换冷热语义色。"
+    }
+  ],
+  "assets": [
+    {
+      "file": "assets/tarp.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/tent.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/pack.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/mug.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    }
+  ]
+}

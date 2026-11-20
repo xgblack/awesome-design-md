@@ -1,0 +1,37 @@
+{
+  "title": "Loom Code / AI code editor replay",
+  "description": "AI代码编辑器：切换修复案例、文件与前后版本，沿五阶段Agent时间线回放或取消补丁；不读写或运行宿主代码。",
+  "status": "ready",
+  "features": {
+    "moods": ["minimal", "warm"],
+    "tones": ["light"],
+    "temperature": ["warm"],
+    "chroma": ["muted"],
+    "accentHues": ["orange"],
+    "backgrounds": ["solid"],
+    "layouts": ["workspace"],
+    "density": ["balanced"],
+    "typography": ["sans", "mono"],
+    "headingScale": ["display"],
+    "headingWeight": ["regular"],
+    "geometry": ["small-radius"],
+    "layering": ["lines"],
+    "visualMedia": ["ui", "code"],
+    "motion": ["feedback"],
+    "scenarios": ["product", "tool"]
+  },
+  "interactions": ["edit", "replay", "configure"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "保留原文暖奶油/暖黑与橙行动，而非按品牌印象改成全深IDE；增加原规范五色Agent阶段条。",
+    "Thinking桃、Grepping薄荷、Reading蓝、Editing薰衣草、Done金，只用于产品时间线；所有修复与断言结果预置，不是真实模型或测试输出。",
+    "字体取舍：显示 \"Inter Variable\", sans-serif；正文 \"Inter Variable\", sans-serif。使用本地开放字体/系统字体替代品牌商业字体；标题筛选标签按实际桌面渲染归类。"
+  ],
+  "references": [
+    {
+      "source": "原规范 L293–331、435–459",
+      "reason": "奶油72px常规标题 → 白色文件树/代码/对话/终端多窗 → 小型差异说明/留白编辑段。`#f7f7f4`/`#26251e`、`#f54e00`主行动、400标题/1px细线无影；五色阶段只给时间线。"
+    }
+  ],
+  "assets": []
+}

@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Vista · 抬头，遇见更多 · 独立设计语言本地演示" />
+    <title>Vista · 抬头，遇见更多</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#top" class="brand">vista</a>
+      <nav>
+        <a href="#configure">产品与搭配</a><a href="#field">抬头看见</a
+        ><a href="#specs">技术细节</a>
+      </nav>
+      <a class="black-pill" href="#configure">探索智能眼镜 ↗</a>
+    </header>
+    <main id="top">
+      <section class="product" id="configure">
+        <div class="gallery">
+          <div class="main-image">
+            <img
+              id="glasses"
+              src="./assets/glasses-graphite-sun.webp"
+              alt="Vista 石墨黑智能眼镜，日光镜片正面"
+            />
+          </div>
+          <div class="thumbnails">
+            <button data-view="front" aria-pressed="true">正面</button
+            ><button data-view="side" aria-pressed="false">镜腿侧面</button
+            ><button data-view="detail" aria-pressed="false">传感器细节</button>
+          </div>
+          <span>原创概念渲染 / 不是实物商品</span>
+        </div>
+        <div class="config">
+          <span class="eyebrow">VISTA SMART GLASSES / INDEPENDENT CONCEPT</span>
+          <h1>See more.<br />Carry less.</h1>
+          <p>抬头看看，生活还有更多。<br />一副虚构的智能眼镜，为手与目光留出自由。</p>
+          <div class="config-block">
+            <h2>01 / 镜框色彩</h2>
+            <div class="swatches">
+              <button data-color="graphite" aria-pressed="true">
+                <i class="graphite"></i>石墨黑</button
+              ><button data-color="sand" aria-pressed="false"><i class="sand"></i>暖沙色</button>
+            </div>
+          </div>
+          <div class="config-block">
+            <h2>02 / 镜片外观</h2>
+            <label><input type="radio" name="lens" value="sun" checked />日光色 / 深色镜片</label
+            ><label><input type="radio" name="lens" value="clear" />透亮色 / 透明镜片</label>
+          </div>
+          <div class="config-block">
+            <h2>03 / 佩戴组件</h2>
+            <label for="fit" class="sr-only">佩戴组件</label
+            ><select id="fit">
+              <option value="standard">标准鼻托</option>
+              <option value="sport">运动鼻托 / 石墨框专用</option>
+            </select>
+            <p id="compatibility" role="status"></p>
+          </div>
+          <button id="summary" class="blue-button">生成本地配置摘要</button
+          ><small
+            >产品、镜片与兼容规则均为原创演示设定。非处方建议，不开启相机/录音，不加入购物车。</small
+          >
+        </div>
+      </section>
+      <section class="field" id="field">
+        <img src="../_shared/photos/forest.webp" alt="光线穿过绿色森林，呈现安静的自然观察环境" />
+        <div>
+          <span>A LITTLE LESS SCREEN. A LITTLE MORE WORLD.</span>
+          <h2>把双手空出来，<br />把世界装进眼里。</h2>
+          <p>一副眼镜的形态，一份自由的想象。功能仅为概念，不提供真实捕捉。</p>
+        </div>
+      </section>
+      <section class="details" id="specs">
+        <div>
+          <small>A CONCEPT FOR YOUR NEXT WALK</small>
+          <h2>为轻装出发，<br />留出更多可能。</h2>
+          <p>
+            镜框、镜片与佩戴组件，构成一个可核对的配置。所有规则为本项目假设，不代表真实 Meta 产品。
+          </p>
+        </div>
+        <dl>
+          <div>
+            <dt>镜框设计</dt>
+            <dd>圆角方框 / 原创概念渲染</dd>
+          </div>
+          <div>
+            <dt>镜片选择</dt>
+            <dd>日光色 / 透亮色</dd>
+          </div>
+          <div>
+            <dt>配置边界</dt>
+            <dd>运动鼻托仅适配石墨框</dd>
+          </div>
+          <div>
+            <dt>连接与记录</dt>
+            <dd>无网络，无本地持久保存</dd>
+          </div>
+        </dl>
+      </section>
+      <section class="faq">
+        <h2>一些你可能好奇的事。</h2>
+        <details>
+          <summary>这是可以购买的智能眼镜吗？</summary>
+          <p>不是。Vista 是为展示硬件产品设计语言创作的原创概念，参数与配置关系仅供演示。</p>
+        </details>
+        <details>
+          <summary>为什么暖沙色不支持运动鼻托？</summary>
+          <p>
+            这是示例中细镜腿与组件接口的假设，用于展示明确的兼容性反馈，不是现实硬件安全或佩戴建议。
+          </p>
+        </details>
+      </section>
+    </main>
+    <footer>vista / 独立设计语言参考 · 非 Meta 官方产品</footer>
+    <dialog id="result">
+      <h2>为这一次出发，准备好了。</h2>
+      <p id="result-copy"></p>
+      <small>仅生成本地搭配文本，不是订单。</small><button id="close">继续探索</button>
+    </dialog>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

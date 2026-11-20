@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Launchbase / Postgres backend platform</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#">ϟ launchbase</a>
+      <nav>
+        <a href="#archive">Archive</a><a href="#method">How it works</a
+        ><a class="green" href="#archive">Open the demo ↗</a>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <span class="eyebrow">POSTGRES. AUTH. REALTIME. ONE BACKEND.</span>
+        <h1>Build the product.<br /><span>We'll show the backend.</span></h1>
+        <p>
+          数据库记录、查询与 Realtime 变更，在同一套开发工作台中。<br />一份固定的后端项目演示，不创建云资源。
+        </p>
+        <a class="green" href="#archive">Explore the backend</a>
+        <div class="stack">
+          <div class="sql">
+            <div>QUERY / READ ONLY</div>
+            <pre>
+select name, environment
+from public.projects
+where environment = 'production';</pre>
+            <span>固定示例，不执行任意 SQL。</span>
+          </div>
+          <div class="mini-table">
+            <div>public.projects <span>3 rows</span></div>
+            <p><span>name</span><span>environment</span><span>status</span></p>
+            <p><span>api-service</span><span>production</span><span>healthy</span></p>
+            <p><span>docs-site</span><span>preview</span><span>building</span></p>
+            <p><span>mobile-backend</span><span>development</span><span>healthy</span></p>
+          </div>
+        </div>
+      </section>
+      <section id="archive" class="archive">
+        <div class="heading">
+          <span class="eyebrow">01 / EXPLORE THE DATA</span>
+          <h2>One record.<br />Every view, updated.</h2>
+          <p>选择一条记录，修改环境。观察表格与变更流如何连在一起。</p>
+        </div>
+        <div class="workspace">
+          <div class="records">
+            <div class="table-tools">
+              <label for="search">查找项目</label
+              ><input id="search" type="search" placeholder="例如：api-service" /><select
+                id="query"
+                aria-label="预设查询"
+              >
+                <option value="all">全部环境</option>
+                <option value="production">生产</option>
+                <option value="preview">预览</option>
+              </select>
+            </div>
+            <div id="rows"></div>
+            <p id="empty" hidden>没有项目记录。清除关键词或放宽环境条件。</p>
+          </div>
+          <form id="edit">
+            <span class="eyebrow">RECORD DETAILS</span><label for="name">名称</label
+            ><input id="name" required maxlength="24" /><label for="location">环境</label
+            ><input id="location" required maxlength="24" /><button class="green" type="submit">
+              更新本地记录
+            </button>
+            <p id="feedback" role="status"></p>
+          </form>
+        </div>
+        <div class="stream">
+          <span>CHANGE STREAM / SESSION ONLY</span>
+          <p id="stream" role="log">等待修改。没有连接数据库服务。</p>
+          <button id="reset">重置演示</button>
+        </div>
+      </section>
+      <section id="method" class="method">
+        <h2>See the relationship.<br />Not just the interface.</h2>
+        <div>
+          <h3>01 / Query</h3>
+          <p>关键词与环境条件同时生效。没有结果，就是没有结果，不偷偷替换条件。</p>
+        </div>
+        <div>
+          <h3>02 / Update</h3>
+          <p>名称和环境必须填写，重名会得到明确提示。这里的变更只存在于当前页面。</p>
+        </div>
+        <div>
+          <h3>03 / Observe</h3>
+          <p>从同一份内存数据更新三个视图，让每一次修改都能被重新核对。</p>
+        </div>
+      </section>
+    </main>
+    <footer>launchbase / <span>Supabase white marketing track · 非官方示例</span></footer>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

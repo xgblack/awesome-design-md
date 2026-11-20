@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="通勤预算算盘 · 算清每一次出发 · 独立设计语言本地演示" />
+    <title>通勤预算算盘 · 算清每一次出发</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="#top">commute well</a>
+      <nav><a href="#calculator">预算算盘</a><a href="#assumptions">计算口径</a></nav>
+      <span>独立生活指南 / 演示</span>
+    </header>
+    <main id="top">
+      <section class="hero">
+        <p>生活成本 / 通勤指南</p>
+        <h1>每天的路，<br />也能走得更明白。</h1>
+        <p>公交、骑行，还是混合出行？用一次简单的计算，<br />看见每月通勤成本的差别。</p>
+        <div>
+          <span class="avatar">YC</span
+          ><span>叶川 · 虚构编辑<br /><small>2026 年 11 月 19 日 / 固定示例</small></span>
+        </div>
+      </section>
+      <div class="article-layout">
+        <article>
+          <section class="lead">
+            <span>THE SHORT VERSION</span>
+            <h2>不只比票价，也要看频次。</h2>
+            <p>
+              单次费用很小，但每月累积的数字会告诉你另一件事。先填写自己的单程次数，再比较不同方式的假设成本。
+            </p>
+            <p>这里不使用实时票价。所有价格都是为了说明计算方法而设定的演示假设。</p>
+          </section>
+          <section id="calculator" class="calculator">
+            <h2>每月通勤算盘</h2>
+            <p>从一个单程开始，最多比较三种方式。</p>
+            <form id="cost-form">
+              <label
+                >每月单程次数<input id="trips" type="text" inputmode="numeric" value="44" /></label
+              ><label
+                >每次平均里程 / 公里<input
+                  id="distance"
+                  type="text"
+                  inputmode="decimal"
+                  value="8" /></label
+              ><button type="submit">计算演示成本 →</button>
+              <p id="error" role="alert"></p>
+            </form>
+            <div class="options">
+              <label><input type="checkbox" value="bus" checked /> 公交</label
+              ><label><input type="checkbox" value="bike" checked /> 骑行</label
+              ><label><input type="checkbox" value="mixed" checked /> 混合通勤</label>
+            </div>
+            <div id="results"></div>
+            <p id="summary" role="status"></p>
+          </section>
+          <section id="assumptions" class="assumptions">
+            <h2>数字从哪里来？</h2>
+            <dl>
+              <dt>公交</dt>
+              <dd>每次 2 元，无月票折扣。</dd>
+              <dt>骑行</dt>
+              <dd>自有自行车，每公里维护成本 0.15 元。不计购置费。</dd>
+              <dt>混合通勤</dt>
+              <dd>单程次数一半公交、一半骑行；奇数次数时公交多一次。</dd>
+            </dl>
+            <p>时间、天气、体力和可达性同样重要。这份算盘只比较费用，不给出个人出行建议。</p>
+          </section>
+          <details>
+            <summary>零次通勤，可以计算吗？</summary>
+            <p>可以，结果为零。这个边界让没有固定通勤的月份也能使用。</p>
+          </details>
+        </article>
+        <aside>
+          <span>IN THIS GUIDE</span><a href="#calculator">每月通勤算盘</a
+          ><a href="#assumptions">计算口径</a>
+          <div class="tip">
+            <h3>比起「最省」，<br />先找「合适」。</h3>
+            <p>保留一份清楚的假设，比记住一个孤立的数字更有用。</p>
+          </div>
+        </aside>
+      </div>
+    </main>
+    <footer><strong>commute well /</strong><span>固定假设 · 非财务建议 · 输入不保存</span></footer>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Patchbay / Agent tool infrastructure</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#">✳ patchbay</a>
+      <nav>
+        <a href="#bench">Playground</a><a href="#how">How it works</a><span>LOCAL REPLAY</span>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <span class="eyebrow">TOOLS FOR AGENTS. CONTROL FOR BUILDERS.</span>
+        <h1>Give agents tools.<br />Keep a <em>clear trace.</em></h1>
+        <p>
+          从权限范围，到工具参数与结果，把 Agent 的行动放在一起看。<br />预置工具调用调试台，不连接真实业务账户。
+        </p>
+        <a href="#bench" class="blue">Inspect a recipe ↗</a>
+      </section>
+      <section class="bench" id="bench">
+        <div class="controls">
+          <label
+            >配方
+            <select id="recipe">
+              <option value="digest">工单分流</option>
+              <option value="checklist">知识库查证</option>
+            </select></label
+          ><label class="failure"><input type="checkbox" id="inject" />注入权限不足</label
+          ><button id="next" class="blue">前进一步 →</button><button id="reset">重置</button>
+        </div>
+        <div class="quad">
+          <div>
+            <div class="pane-label"><span>01 / INPUT</span><span>JSON</span></div>
+            <pre id="input"></pre>
+            <small>固定工单 fixture · 不接收真实账户凭据</small>
+          </div>
+          <div>
+            <div class="pane-label">
+              <span>02 / TOOL CALLS</span><span id="progress">0 / 3</span>
+            </div>
+            <ol id="steps"></ol>
+          </div>
+          <div>
+            <div class="pane-label"><span>03 / TRACE</span><span>LOCAL</span></div>
+            <pre id="trace" role="log">Ready. Choose a recipe.</pre>
+          </div>
+          <div>
+            <div class="pane-label"><span>04 / OUTPUT</span><span id="state">WAITING</span></div>
+            <div id="result">完成三个步骤后，输出将在这里出现。</div>
+          </div>
+        </div>
+      </section>
+      <section class="how" id="how">
+        <span class="eyebrow">CONNECTED IN THE RECIPE. NOT ON THE NETWORK.</span>
+        <h2>Small pieces.<br />One understandable flow.</h2>
+        <div class="connections">
+          <div>
+            <b>▧</b>
+            <h3>Collect</h3>
+            <p>读取固定工单、问题或知识片段，保留工具调用的原始上下文。</p>
+          </div>
+          <span>→</span>
+          <div>
+            <b>⌘</b>
+            <h3>Validate</h3>
+            <p>核对读写scope；权限不足时在工具边界停止，而不是默认放行。</p>
+          </div>
+          <span>→</span>
+          <div>
+            <b>≡</b>
+            <h3>Summarize</h3>
+            <p>展示结构化工具结果与调用trace，输出来自本地fixture，不假称远程执行。</p>
+          </div>
+        </div>
+      </section>
+      <section class="last">
+        <h2>Make failure visible.</h2>
+        <p>
+          勾选一次失败再回放。错误不是成功状态的另一种颜色，<br />它会阻止输出，并告诉你从哪里重新开始。
+        </p>
+        <a href="#bench">Back to the debugger ↑</a>
+      </section>
+    </main>
+    <footer>patchbay / <span>Composio design study · 原创本地演练</span></footer>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

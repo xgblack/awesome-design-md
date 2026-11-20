@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Orbit · A little room for important mail · 独立设计语言本地演示"
+    />
+    <title>Orbit · A little room for important mail</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#top" class="brand">orbit</a><a href="#ritual">The workflow</a
+      ><button id="commands">⌘ K / 命令面板</button>
+    </header>
+    <main id="top">
+      <section class="hero">
+        <img src="../_shared/photos/portrait.webp" alt="安静的深色背景中，一位创作者的半身肖像" />
+        <div>
+          <span>LESS DISTRACTION. MORE INTENTION.</span>
+          <h1>Make room<br />for your<br />best work.</h1>
+          <p>更少收件箱里的噪声。<br />更多留给重要对话的注意力。</p>
+          <a href="#focus" class="pill">体验清晰的收件箱 ↗</a>
+        </div>
+      </section>
+      <section class="ritual" id="ritual">
+        <article>
+          <span>01 / FOCUS</span>
+          <h2>One thing.<br />Fully present.</h2>
+          <p>把需要你回应的对话放在前面。优先视图让下一封信，少一点寻找。</p>
+        </article>
+        <article>
+          <span>02 / REVIEW</span>
+          <h2>A clear ending.<br />A calmer mind.</h2>
+          <p>读完就决定：继续对话，还是归档。每一封信都有明确的去处。</p>
+        </article>
+        <article>
+          <span>03 / PLAN</span>
+          <h2>Know what's next.<br />Then let it go.</h2>
+          <p>写一封清晰的回复草稿，约好下一步。这里不会代你按下发送。</p>
+        </article>
+      </section>
+      <section class="focus" id="focus">
+        <div class="mail-heading">
+          <span>A CLEARER INBOX</span>
+          <h2>重要的邮件，<br />值得专注回应。</h2>
+          <p>三封本地示例邮件。分拣、归档，写一封不被打断的回复。</p>
+        </div>
+        <div class="mail-shell">
+          <div class="mail-toolbar">
+            <strong>orbit / Inbox</strong>
+            <div role="group" aria-label="邮件视图">
+              <button data-filter="priority" aria-pressed="true">优先</button
+              ><button data-filter="all" aria-pressed="false">全部</button
+              ><button data-filter="archive" aria-pressed="false">已归档</button>
+            </div>
+          </div>
+          <div class="mail-layout">
+            <div class="mail-list" id="mail-list"></div>
+            <article class="mail-reader">
+              <span id="mail-sender"></span>
+              <h3 id="mail-subject"></h3>
+              <p id="mail-body"></p>
+              <div class="mail-tools">
+                <button id="archive">归档这封邮件</button
+                ><button id="undo" disabled>撤销归档</button>
+              </div>
+              <form id="reply-form">
+                <label for="reply">回复草稿 / 不发送</label
+                ><textarea
+                  id="reply"
+                  rows="4"
+                  maxlength="1200"
+                  placeholder="把接下来的一步，说清楚。"
+                ></textarea
+                ><button type="submit">保存本地草稿 ↗</button>
+              </form>
+              <p id="mail-status" role="status"></p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="closing">
+        <h2>Do less noise.<br />Make more meaning.</h2>
+        <p>独立邮箱交互演示。邮件、联系人均为虚构样本，不读取或发送真实邮件。</p>
+        <a href="#focus">回到收件箱 ↑</a>
+      </section>
+    </main>
+    <footer>Orbit / 独立设计语言参考 · 无账号与远程数据</footer>
+    <dialog id="command-dialog">
+      <h2>Go straight to what matters.</h2>
+      <button data-command="priority">优先收件箱</button><button data-command="all">全部邮件</button
+      ><button data-command="archive">已归档邮件</button>
+      <p>⌘ K 打开命令面板；Escape 关闭。只有本地邮件样本。</p>
+      <button id="close">取消</button>
+    </dialog>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

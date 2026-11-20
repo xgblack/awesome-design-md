@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fourfold / Multimodal model platform</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#">fourfold<span> / MULTIMODAL</span></a>
+      <nav>
+        <a href="#studies">模型任务</a><a href="#workbench">工作台</a
+        ><a class="black" href="#studies">Explore the models ↗</a>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <span class="eyebrow">ONE PLATFORM. EVERY CREATIVE MODALITY.</span>
+        <h1>Make room<br />for every medium.</h1>
+        <p>
+          文本、音频、影像与语音脚本模型任务。<br />四组固定输入与预制输出，体验多模态创作工作流。
+        </p>
+        <span class="boundary">本地预置演示 · 不进行在线生成</span>
+      </section>
+      <section id="studies" class="studies">
+        <button data-kind="text" aria-pressed="true" class="album text">
+          <span>01 / WORDS</span>
+          <div class="album-art">Aa<span>—</span></div>
+          <h2>A sentence<br />to begin with.</h2>
+          <small>文本模型样本 ↗</small></button
+        ><button data-kind="music" class="album music">
+          <span>02 / SOUND</span>
+          <div class="album-art"><i></i></div>
+          <h2>A little<br />resonance.</h2>
+          <small>音频模型任务 ↗</small></button
+        ><button data-kind="story" class="album story">
+          <span>03 / FRAMES</span>
+          <div class="album-art"><i></i><b></b></div>
+          <h2>A scene<br />worth keeping.</h2>
+          <small>影像分镜任务 ↗</small></button
+        ><button data-kind="narration" class="album narration">
+          <span>04 / NOTES</span>
+          <div class="album-art">“<span>”</span></div>
+          <h2>A voice<br />on the page.</h2>
+          <small>语音项目任务 ↗</small>
+        </button>
+      </section>
+      <section class="workbench" id="workbench">
+        <div class="workbench-top">
+          <span>MODEL WORKBENCH / PREPARED OUTPUT</span><span id="current">01 / WORDS</span>
+        </div>
+        <div class="workbench-grid">
+          <div>
+            <span class="eyebrow" id="medium">FICTIONAL MODEL. REAL LOCAL MATERIAL.</span>
+            <h2 id="title">The city, a little slower.</h2>
+            <p id="description">
+              一个关于步行与观察的原创短段落。它是预先写好的材料，不是根据输入生成。
+            </p>
+            <div class="task-input">
+              <label for="task-prompt">PRESET INPUT / 只读任务输入</label
+              ><textarea id="task-prompt" readonly></textarea><span id="model-name"></span>
+            </div>
+            <p class="boundary" id="boundary">所有内容仅供本地创作阅读。</p>
+          </div>
+          <div class="material">
+            <div id="text">
+              <p id="text-body">
+                沿着河岸走的时候，我们没有急着找到目的地。风把树叶翻到另一面，桥下的阴影挪了一点位置。城市没有变小，只是我们终于走慢了一些。
+              </p>
+              <button id="copy">复制文字 ↗</button>
+              <p id="feedback" role="status"></p>
+              <div id="voice-sample" hidden>
+                <label for="voice-version">预置真人朗读对照样本 / 不是上方草稿的语音</label
+                ><select id="voice-version">
+                  <option value="alice">Alice / Kristen McQuillin</option>
+                  <option value="timeMachine">The Time Machine / Aaron Elliott</option></select
+                ><audio id="voice-audio" controls preload="metadata"></audio>
+                <p id="voice-note">
+                  18秒LibriVox公共领域预录朗读 · 非在线生成 · 非音色克隆 · 未提供逐字稿
+                </p>
+              </div>
+            </div>
+            <div id="sound" hidden>
+              <audio id="audio" controls preload="metadata"></audio
+              ><label
+                >声音版本
+                <select id="version">
+                  <option value="river">河岸轻音</option>
+                  <option value="bells">旧钟余响</option>
+                </select></label
+              >
+              <p id="audio-note">原创八秒合成旋律，不含人声，非口述录音。</p>
+            </div>
+            <div id="storyboard" hidden>
+              <img id="frame" src="../_shared/photos/city.webp" alt="城市分镜：日暮的街道与建筑" />
+              <div>
+                <button data-frame="city" aria-pressed="true">01 城市</button
+                ><button data-frame="ocean">02 海岸</button
+                ><button data-frame="mountain">03 山野</button>
+              </div>
+              <p id="frame-caption">01 / Establishing frame · 用城市远景建立空间。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="notes">
+        <span class="eyebrow">A CLEAR INPUT. AN HONEST OUTPUT.</span>
+        <h2>Know what<br />you're working with.</h2>
+        <dl>
+          <div>
+            <dt>Text / 原创文字</dt>
+            <dd>
+              每项任务显示固定输入prompt与人工预制输出，文本和独立语音脚本不称为实时模型响应。
+            </dd>
+          </div>
+          <div>
+            <dt>Sound / 合成旋律</dt>
+            <dd>
+              音景由本项目数学合成；真人朗读来自LibriVox公共领域录音节选，非实时语音生成或克隆。
+            </dd>
+          </div>
+          <div>
+            <dt>Frames / 授权摄影</dt>
+            <dd>公共素材池摄影构成可切换分镜，不冒充影片或在线生成影像。</dd>
+          </div>
+        </dl>
+      </section>
+    </main>
+    <footer>
+      fourfold / Multimodal models <span>MiniMax DESIGN.md · 独立多模态平台示例</span>
+    </footer>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

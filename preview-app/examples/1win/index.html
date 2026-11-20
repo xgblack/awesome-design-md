@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>电竞夜航 / Night Circuit · 独立风格示例</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <aside class="rail">
+      <b>NC</b><a href="#events">赛程</a><a href="#watchlist">清单</a><a href="#about">说明</a>
+    </aside>
+    <div class="shell">
+      <header>
+        <b>NIGHT CIRCUIT<span> / 电竞夜航</span></b
+        ><label
+          ><span class="sr-only">搜索赛事</span
+          ><input id="event-search" type="search" placeholder="搜索游戏、场次或战队" /></label
+        ><span>观赛模式 · 无竞猜</span>
+      </header>
+      <main>
+        <section class="promos">
+          <article>
+            <img
+              src="./assets/rally-keyart.webp"
+              alt="原创电竞竞速游戏主视觉：07号蓝白赛车、赛道灯光与夜间赛场"
+            />
+            <p>NIGHT CIRCUIT / NEON RALLY</p>
+            <h1>这一弯，<br />为热爱出发。</h1>
+            <span>原创电竞概念 / 固定演示赛程</span>
+          </article>
+          <article>
+            <img
+              src="./assets/arena-keyart.webp"
+              alt="原创 Orbit Arena 战术游戏主视觉：银色机器人、青色面罩与数字竞技场"
+            />
+            <p>ORBIT ARENA / TEAM LEAGUE</p>
+            <h2>团队登场。<br />今晚有新故事。</h2>
+            <a href="#events">探索对抗赛程 →</a>
+          </article>
+        </section>
+        <section class="game-directory" aria-label="游戏分类">
+          <div class="section-head">
+            <h2>找到你的主场</h2>
+            <span>原创游戏概念 / 选择游戏类型筛赛程</span>
+          </div>
+          <div class="game-rail">
+            <button data-category="sprint" aria-pressed="false">
+              <img src="./assets/rally-card.webp" alt="Neon Rally 原创赛车游戏封面" /><span
+                >竞速联赛 <b>2 场</b></span
+              ></button
+            ><button data-category="endurance" aria-pressed="false">
+              <img src="./assets/arena-card.webp" alt="Orbit Arena 原创机器人竞技封面" /><span
+                >团队对抗 <b>2 场</b></span
+              ></button
+            ><button data-category="endurance" aria-pressed="false">
+              <img
+                src="./assets/tactics-card.webp"
+                alt="Vector Tactics 原创战术棋盘与立体角色封面"
+              /><span>战术计划 <b>团队赛</b></span></button
+            ><button data-category="sprint" aria-pressed="false">
+              <img src="./assets/sprint-card.webp" alt="Midnight Sprint 原创双车夜赛封面" /><span
+                >夜间冲刺 <b>竞速赛</b></span
+              >
+            </button>
+          </div>
+        </section>
+        <div class="lobby">
+          <section id="events">
+            <div class="section-head">
+              <h2>热门赛程</h2>
+              <div class="tabs">
+                <button data-category="all" aria-pressed="true">全部</button
+                ><button data-category="sprint">竞速联赛</button
+                ><button data-category="endurance">团队对抗</button>
+              </div>
+            </div>
+            <div id="event-list"></div>
+            <p id="event-status" role="status"></p>
+          </section>
+          <aside id="watchlist">
+            <div class="section-head">
+              <h2>观赛清单</h2>
+              <span id="list-count">0 场</span>
+            </div>
+            <div id="list">还没加入场次。选一个你想看的夜晚。</div>
+            <p id="list-status" role="status">不涉及投注、余额或真实订票。</p>
+            <button id="clear-list">清空清单</button>
+          </aside>
+        </div>
+        <section id="about" class="about">
+          <h2>关于夜航</h2>
+          <p>
+            这是原创游戏与虚构电竞赛程大厅。固定赛程用于体验筛选、去重和时间重叠检测；不提供真实直播、竞猜、余额、赌博或订票。
+          </p>
+        </section>
+      </main>
+      <footer>NIGHT CIRCUIT / LOCAL SCHEDULE DEMO</footer>
+    </div>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

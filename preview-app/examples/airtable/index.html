@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="片场手册 · 让创意准时发生 · 独立设计语言本地演示" />
+    <title>片场手册 · 让创意准时发生</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="#top"><i></i>片场手册</a>
+      <nav>
+        <a href="#shoot">拍摄计划</a><a href="#connect">关联记录</a><a href="#team">协作方式</a>
+      </nav>
+      <a class="button" href="#shoot">探索演示模板 ↗</a>
+    </header>
+    <main id="top">
+      <section class="hero">
+        <p>FOR THE PEOPLE BEHIND THE PICTURE</p>
+        <h1>把天马行空的想象，<br />变成有条不紊的现场。</h1>
+        <div>
+          <p>一个片场，千种细节。把场景、演员和日程连接起来，<br />为真正重要的创作，留出空间。</p>
+          <a class="button" href="#shoot">打开制片模板</a>
+        </div>
+      </section>
+      <section class="coral" id="shoot">
+        <div class="section-intro">
+          <span>01 / KEEP THE WHOLE PICTURE</span>
+          <h2>每一场戏，<br />都有它的位置。</h2>
+          <p>表格看清细节，看板把握进展。点击场景，查看它背后的关联。</p>
+        </div>
+        <div class="app">
+          <div class="app-title"><strong>◈ 河边的星期天</strong><span>短片 · 本地演示</span></div>
+          <div class="app-controls">
+            <span>场景记录</span>
+            <div>
+              <button id="table" aria-pressed="true">表格</button
+              ><button id="board" aria-pressed="false">看板</button>
+            </div>
+          </div>
+          <div id="records"></div>
+        </div>
+      </section>
+      <section class="explain">
+        <p>不是更多表格。<br />是更少的信息孤岛。</p>
+        <div>
+          <h2>把一次变更，<br />放回整个故事里。</h2>
+          <p>一场雨会改变拍摄顺序，但不必打乱所有人的节奏。演员、场地与日程通过同一个场景连接。</p>
+        </div>
+      </section>
+      <section class="cream" id="connect">
+        <div>
+          <small>02 / CONNECTED, NOT COMPLICATED</small>
+          <h2>有关系的事，<br />放在一起。</h2>
+          <p>从「雨后码头」出发，就能找到当天的演员与拍摄时段。</p>
+        </div>
+        <div class="relation">
+          <span>场景 / 雨后码头</span><i>↓</i>
+          <div><b>演员 / 林夏</b><b>日程 / 11 月 24 日</b></div>
+          <small>关联关系为演示数据，不连接真实剧组</small>
+        </div>
+      </section>
+      <section class="forest" id="team">
+        <h2>好创意，值得一个<br />同样出色的制作过程。</h2>
+        <p>为下一次小型拍摄，先整理一份清晰的计划。</p>
+        <a class="button light" href="#shoot">回到拍摄计划 ↑</a>
+      </section>
+    </main>
+    <footer>
+      <strong>片场手册</strong>
+      <p>独立设计语言示例 · 虚构项目 · 输入不持久保存</p>
+    </footer>
+    <dialog id="detail">
+      <p>关联记录 / 场景</p>
+      <h2 id="scene-title"></h2>
+      <div id="scene-info"></div>
+      <button id="close">关闭记录</button>
+    </dialog>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

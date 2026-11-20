@@ -1,0 +1,491 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+}
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+button,
+a,
+input,
+select,
+textarea {
+  touch-action: manipulation;
+}
+button {
+  cursor: pointer;
+}
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+a {
+  color: inherit;
+}
+img,
+svg,
+video {
+  max-width: 100%;
+}
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid #7b96d3;
+  outline-offset: 4px;
+}
+pre {
+  overflow: auto;
+}
+p {
+  line-height: 1.65;
+}
+dialog {
+  max-width: calc(100% - 32px);
+}
+[hidden] {
+  display: none !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:root {
+  --ink: #111;
+  --dim: #667075;
+  --line: #e0e5e8;
+  --blue: #0068c5;
+}
+body {
+  background: white;
+  color: var(--ink);
+  font-family: 'Inter Variable', sans-serif;
+}
+header {
+  padding: 24px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header > a {
+  font-size: 22px;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: -0.5px;
+}
+nav {
+  display: flex;
+  gap: 27px;
+  align-items: center;
+  font-size: 12px;
+}
+nav a {
+  text-decoration: none;
+}
+.black {
+  background: #111;
+  color: white;
+  border: 0;
+  border-radius: 8px;
+  padding: 13px 19px;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 12px;
+}
+.hero {
+  text-align: center;
+  background: linear-gradient(#e9f5ff 0, #f4faff 44%, #fff 100%);
+  padding: 55px 5% 0;
+  overflow: hidden;
+}
+.hero > span,
+.eyebrow {
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  color: var(--dim);
+}
+h1 {
+  font-size: 64px;
+  line-height: 1.04;
+  letter-spacing: -2.8px;
+  font-weight: 600;
+  margin: 24px 0;
+}
+.hero > p {
+  font-size: 13px;
+  color: var(--dim);
+  line-height: 1.8;
+}
+.platforms {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 28px 0 35px;
+}
+.platforms button {
+  padding: 9px 20px;
+  border: 1px solid var(--line);
+  background: white;
+  border-radius: 999px;
+  font-size: 11px;
+}
+.platforms button[aria-pressed='true'] {
+  color: white;
+  background: #111;
+  border-color: #111;
+}
+.devices {
+  position: relative;
+  width: 900px;
+  max-width: 100%;
+  height: 385px;
+  margin: 0 auto;
+  text-align: left;
+}
+.laptop {
+  width: 79%;
+  background: #fff;
+  border: 8px solid #25272c;
+  border-bottom: 15px solid #25272c;
+  border-radius: 17px;
+  position: absolute;
+  left: 0;
+  top: 10px;
+  overflow: hidden;
+  box-shadow: 0 16px 25px #19394a16;
+}
+.laptop-bar {
+  padding: 11px 18px;
+  background: #f4f5f6;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid var(--line);
+  font-size: 9px;
+  color: var(--dim);
+}
+.laptop-bar i {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #aaa;
+  box-shadow:
+    9px 0 #bbb,
+    18px 0 #ccc;
+}
+.laptop-bar span {
+  margin-left: 18px;
+}
+.note-web {
+  padding: 30px 45px;
+  background: #f4f1e7;
+  min-height: 280px;
+  position: relative;
+}
+.note-web > span,
+.note-phone > span {
+  font-size: 8px;
+  letter-spacing: 1px;
+  color: #787365;
+}
+.note-web h2 {
+  font-family: Georgia, serif;
+  font-size: 36px;
+  font-weight: 400;
+  letter-spacing: -1px;
+  max-width: 330px;
+  margin: 27px 0 15px;
+  position: relative;
+  z-index: 1;
+  overflow-wrap: anywhere;
+}
+.note-web p {
+  font-size: 12px;
+  max-width: 260px;
+  position: relative;
+  z-index: 1;
+  overflow-wrap: anywhere;
+}
+.note-web small {
+  font-size: 8px;
+  color: #787365;
+}
+.sketch {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 1px solid #a6aaa0;
+  right: 45px;
+  top: 55px;
+}
+.sketch i {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  border-radius: 50%;
+  border: 1px solid #a6aaa0;
+  top: 25%;
+}
+.sketch b {
+  position: absolute;
+  left: 50%;
+  top: -20%;
+  height: 140%;
+  width: 1px;
+  background: #a6aaa0;
+  transform: rotate(30deg);
+}
+.phone {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 200px;
+  height: 365px;
+  border: 7px solid #1d2025;
+  border-radius: 30px;
+  background: #f4f1e7;
+  overflow: hidden;
+  box-shadow: 0 15px 30px #192b3b20;
+}
+.phone.android {
+  border-radius: 14px;
+  border-color: #444b4b;
+}
+.phone-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 13px;
+  font-size: 7px;
+  color: #605e56;
+}
+.phone-top i {
+  width: 28px;
+  height: 8px;
+  border-radius: 5px;
+  background: #1d2025;
+}
+.note-phone {
+  padding: 30px 20px;
+}
+.note-phone h2 {
+  font:
+    27px/1.05 Georgia,
+    serif;
+  letter-spacing: -1px;
+  margin: 25px 0 18px;
+  overflow-wrap: anywhere;
+}
+.note-phone p {
+  font-size: 10px;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+.phone-line {
+  height: 1px;
+  background: #c9c5b7;
+  width: 35px;
+  margin: 30px 0 12px;
+}
+.note-phone small {
+  font-size: 7px;
+  color: #787365;
+}
+.studio {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10%;
+  padding: 85px 8%;
+  border-top: 1px solid var(--line);
+}
+h2 {
+  font-size: 40px;
+  line-height: 1.15;
+  font-weight: 600;
+  letter-spacing: -1.2px;
+}
+.studio p {
+  font-size: 13px;
+  color: var(--dim);
+}
+pre {
+  font:
+    11px/1.7 'JetBrains Mono Variable',
+    monospace;
+  border: 1px solid var(--line);
+  padding: 15px;
+  border-radius: 8px;
+  background: #f7f9fa;
+  margin-top: 30px;
+  white-space: pre-wrap;
+}
+.small {
+  font-size: 9px !important;
+}
+label {
+  display: block;
+  font-size: 11px;
+  margin: 12px 0;
+}
+input,
+textarea {
+  background: white;
+  border: 1px solid #bcc5ca;
+  border-radius: 8px;
+  padding: 12px 14px;
+  width: 100%;
+  font-size: 13px;
+  color: var(--ink);
+}
+textarea {
+  height: 120px;
+  resize: vertical;
+  margin-bottom: 20px;
+}
+#feedback {
+  font-size: 11px;
+}
+.workflow {
+  padding: 45px 8% 85px;
+  border-top: 1px solid var(--line);
+}
+.workflow > div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 45px;
+  margin-top: 45px;
+}
+.workflow article > span {
+  font:
+    10px 'JetBrains Mono Variable',
+    monospace;
+  color: var(--blue);
+}
+h3 {
+  font-size: 19px;
+  font-weight: 500;
+}
+.workflow p {
+  font-size: 12px;
+  color: var(--dim);
+}
+footer {
+  padding: 25px 5%;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--line);
+  font-size: 10px;
+  color: var(--dim);
+}
+@media (max-width: 650px) {
+  header {
+    padding: 22px 6%;
+  }
+  nav a:not(.black) {
+    display: none;
+  }
+  nav {
+    gap: 0;
+  }
+  header > a {
+    font-size: 18px;
+  }
+  .hero {
+    padding: 45px 6% 0;
+  }
+  h1 {
+    font-size: 43px;
+    letter-spacing: -1.8px;
+  }
+  .devices {
+    height: 370px;
+    width: 220px;
+  }
+  .laptop {
+    display: none;
+  }
+  .phone {
+    width: 210px;
+    right: 5px;
+  }
+  .note-phone h2 {
+    font-size: 29px;
+  }
+  .note-phone p {
+    font-size: 11px;
+  }
+  .studio {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 55px 7%;
+  }
+  h2 {
+    font-size: 31px;
+  }
+  .workflow {
+    padding: 35px 7% 65px;
+  }
+  .workflow > div {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .workflow article {
+    border-top: 1px solid var(--line);
+    padding-top: 20px;
+  }
+  footer {
+    gap: 20px;
+    line-height: 1.7;
+    font-size: 9px;
+  }
+}
+
+.native-source {
+  margin-top: 30px;
+  border: 1px solid #dedede;
+  border-radius: 9px;
+  background: #fafafa;
+  padding: 16px;
+  max-width: 100%;
+  min-width: 0;
+}
+.native-source > span {
+  font:
+    9px 'JetBrains Mono Variable',
+    monospace;
+  color: #666;
+}
+.native-source pre {
+  font:
+    10px/1.8 'JetBrains Mono Variable',
+    monospace;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  margin-top: 14px;
+}
+.studio > div {
+  min-width: 0;
+}
+.note-title {
+  overflow-wrap: anywhere;
+}
+
+.note-body {
+  overflow-wrap: anywhere;
+}

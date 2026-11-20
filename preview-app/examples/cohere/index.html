@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Northfield / Enterprise knowledge AI</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#">northfield<span>◒</span></a>
+      <nav>
+        <a href="#searchroom">Explore</a><a href="#archive">Archive</a
+        ><a href="#searchroom" class="black">Find a reference ↗</a>
+      </nav>
+    </header>
+    <main>
+      <section class="intro">
+        <span class="eyebrow">ENTERPRISE KNOWLEDGE. WITH ITS SOURCES.</span>
+        <h1>Knowledge,<br />put to work.</h1>
+        <p>工程知识与团队政策，不应该藏在模糊答案背后。<br />带着一个问题，找到可以核对的原文。</p>
+      </section>
+      <section class="searchroom" id="searchroom">
+        <div class="search-card">
+          <span>01 / ASK THE ARCHIVE</span>
+          <h2>Where should<br />we begin?</h2>
+          <label for="domain">语料域</label
+          ><select id="domain">
+            <option value="all">全部资料</option>
+            <option value="engineering">工程</option>
+            <option value="people">人事</option></select
+          ><label for="query">搜索企业语料</label>
+          <form id="search-form">
+            <input id="query" type="search" placeholder="试试：回滚、值班、休假" /><button
+              type="submit"
+              aria-label="搜索资料"
+            >
+              ↗
+            </button>
+          </form>
+          <div class="suggestions">
+            <button data-query="回滚">发布回滚</button><button data-query="休假">休假政策</button>
+          </div>
+          <p id="result-count" role="status">从一个具体问题开始。搜索仅匹配四份固定企业材料。</p>
+        </div>
+        <figure>
+          <img src="../_shared/photos/architecture.webp" alt="建筑立面与清晰的几何结构" />
+          <figcaption>
+            Your work, connected.<span>Retrieval starts with a trusted source.</span>
+          </figcaption>
+        </figure>
+      </section>
+      <section class="results" id="results"></section>
+      <section class="green-band">
+        <span class="eyebrow">AN ANSWER IS ONLY THE BEGINNING.</span>
+        <h2>Keep the source<br />in the conversation.</h2>
+        <p>
+          每条结果都能展开原文证据。没有匹配时，<br />我们保留问题，而不是编造一个看似合理的答案。
+        </p>
+        <div class="lines" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+      </section>
+      <section class="archive" id="archive">
+        <div>
+          <span class="eyebrow">02 / THE READING LIST</span>
+          <h2>Open, by design.</h2>
+        </div>
+        <article>
+          <time>JUN 2026</time><span class="tag">ENGINEERING</span>
+          <h3>工程发布与回滚手册</h3>
+          <p>回滚前置条件、构建验证与日志保留。原创企业语料 fixture，不是运维操作建议。</p>
+        </article>
+        <article>
+          <time>JUN 2026</time><span class="tag">PEOPLE OPS</span>
+          <h3>团队休假与交接政策</h3>
+          <p>休假申请与值班交接。每个结果都能核对来源段落，不装作语义搜索或在线模型输出。</p>
+        </article>
+      </section>
+    </main>
+    <footer>northfield / <span>Cohere DESIGN.md 独立风格研究</span></footer>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

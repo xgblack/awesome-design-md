@@ -1,0 +1,504 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+}
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+button,
+a,
+input,
+select,
+textarea {
+  touch-action: manipulation;
+}
+button {
+  cursor: pointer;
+}
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+a {
+  color: inherit;
+}
+img,
+svg,
+video {
+  max-width: 100%;
+}
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid #7b96d3;
+  outline-offset: 4px;
+}
+pre {
+  overflow: auto;
+}
+p {
+  line-height: 1.65;
+}
+dialog {
+  max-width: calc(100% - 32px);
+}
+[hidden] {
+  display: none !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:root {
+  --bg: #fff8e7;
+  --ink: #2b211b;
+  --dim: #756956;
+  --line: #dfd1b7;
+  --orange: #f06428;
+}
+body {
+  font-family: 'Inter Variable', sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+}
+header {
+  padding: 26px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+}
+header > a {
+  font-size: 27px;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: -1px;
+}
+header > a span {
+  color: var(--orange);
+  margin-left: 8px;
+}
+nav {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  font-size: 11px;
+}
+nav a {
+  text-decoration: none;
+}
+nav > span {
+  font:
+    9px 'JetBrains Mono Variable',
+    monospace;
+  color: var(--dim);
+}
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 620px;
+  border-bottom: 1px solid var(--line);
+}
+.hero > div {
+  padding: 75px 12%;
+}
+.eyebrow {
+  font:
+    9px 'JetBrains Mono Variable',
+    monospace;
+  letter-spacing: 0.8px;
+  color: var(--dim);
+}
+h1 {
+  font:
+    400 91px/0.96 Georgia,
+    serif;
+  letter-spacing: -5px;
+  margin: 32px 0;
+}
+.hero p {
+  font-size: 13px;
+  color: var(--dim);
+  line-height: 1.9;
+}
+.black,
+.orange {
+  display: inline-block;
+  background: var(--ink);
+  border: 0;
+  border-radius: 8px;
+  color: var(--bg);
+  padding: 13px 20px;
+  font-size: 11px;
+  text-decoration: none;
+  margin-top: 20px;
+}
+.orange {
+  background: var(--orange);
+  color: #291e0b;
+}
+.hero figure {
+  margin: 0;
+  position: relative;
+  min-height: 500px;
+  overflow: hidden;
+}
+.hero img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+  filter: saturate(0.75) sepia(0.15);
+}
+figcaption {
+  position: absolute;
+  left: 25px;
+  bottom: 25px;
+  color: white;
+  font:
+    9px 'JetBrains Mono Variable',
+    monospace;
+  letter-spacing: 1px;
+  text-shadow: 0 1px 5px #000;
+}
+.samples {
+  padding: 80px 6%;
+  position: relative;
+}
+h2 {
+  font:
+    400 44px/1.1 Georgia,
+    serif;
+  letter-spacing: -1.5px;
+}
+.filter {
+  position: absolute;
+  right: 6%;
+  top: 110px;
+  font-size: 10px;
+}
+.filter label {
+  display: block;
+  margin-bottom: 10px;
+}
+select {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid #b5a485;
+  border-radius: 8px;
+  padding: 10px 13px;
+  font-size: 11px;
+  max-width: 100%;
+}
+#records {
+  margin-top: 45px;
+}
+.record {
+  display: grid;
+  grid-template-columns: 110px 1fr 1.5fr 80px;
+  gap: 25px;
+  padding: 25px 0;
+  border-top: 1px solid var(--line);
+  align-items: center;
+}
+.record small {
+  font:
+    9px 'JetBrains Mono Variable',
+    monospace;
+  color: var(--dim);
+}
+.record h3 {
+  font-size: 18px;
+  font-weight: 500;
+}
+.record p {
+  font-size: 12px;
+  color: var(--dim);
+}
+.record b {
+  font:
+    12px 'JetBrains Mono Variable',
+    monospace;
+  font-weight: 400;
+}
+#empty {
+  font-size: 13px;
+  padding: 25px 0;
+  color: var(--dim);
+}
+.recipe {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8%;
+  padding: 75px 6%;
+  background: #25211d;
+  color: #fbf2dc;
+}
+.recipe .eyebrow {
+  color: #c3b79f;
+}
+.recipe h2 {
+  font-size: 47px;
+}
+.recipe p {
+  font-size: 12px;
+  color: #c3b79f;
+}
+.langs {
+  display: flex;
+  gap: 8px;
+  margin-top: 30px;
+}
+.langs button {
+  padding: 9px 16px;
+  border: 1px solid #655c4b;
+  background: none;
+  color: #ded1b7;
+  border-radius: 8px;
+  font-size: 11px;
+}
+.langs button[aria-pressed='true'] {
+  background: #f06428;
+  color: #21180e;
+  border-color: #f06428;
+}
+.code-window {
+  border: 1px solid #51483d;
+  border-radius: 12px;
+  background: #1d1a17;
+  min-width: 0;
+  align-self: center;
+}
+.code-window > div {
+  padding: 16px 20px;
+  border-bottom: 1px solid #51483d;
+  display: flex;
+  justify-content: space-between;
+  font:
+    9px 'JetBrains Mono Variable',
+    monospace;
+  color: #bcad92;
+}
+.code-window button {
+  background: none;
+  border: 0;
+  color: #efc6a2;
+  font-size: 10px;
+}
+.code-window pre {
+  padding: 25px;
+  font:
+    11px/1.9 'JetBrains Mono Variable',
+    monospace;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  color: #f0d6a4;
+  min-height: 155px;
+  margin: 0;
+}
+.code-window > p {
+  padding: 0 25px 15px;
+  font-size: 9px;
+  min-height: 16px;
+}
+.field-notes {
+  padding: 80px 6%;
+  max-width: 850px;
+}
+.field-notes h2 {
+  font-size: 60px;
+}
+.field-notes p {
+  font-size: 14px;
+  color: var(--dim);
+  line-height: 1.9;
+  max-width: 620px;
+}
+.sunset {
+  height: 100px;
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+}
+.sunset i {
+  background: #c74a22;
+}
+.sunset i:nth-child(2) {
+  background: #f37026;
+}
+.sunset i:nth-child(3) {
+  background: #f5a73a;
+}
+.sunset i:nth-child(4) {
+  background: #f7cf71;
+}
+.sunset i:nth-child(5) {
+  background: #f7e4a6;
+}
+footer {
+  padding: 30px 5%;
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  color: var(--dim);
+}
+@media (max-width: 650px) {
+  header {
+    padding: 22px 6%;
+  }
+  nav span,
+  nav a:last-of-type {
+    display: none;
+  }
+  nav {
+    gap: 0;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .hero > div {
+    padding: 55px 7%;
+  }
+  h1 {
+    font-size: 66px;
+    letter-spacing: -3px;
+  }
+  .hero figure {
+    min-height: 340px;
+  }
+  .samples {
+    padding: 55px 7%;
+  }
+  h2 {
+    font-size: 34px;
+  }
+  .filter {
+    position: static;
+    margin: 25px 0;
+  }
+  .record {
+    grid-template-columns: 70px 1fr;
+    gap: 10px;
+    padding: 20px 0;
+  }
+  .record p {
+    grid-column: 1/-1;
+    margin: 0;
+  }
+  .record b {
+    grid-column: 2;
+    font-size: 10px;
+  }
+  .record h3 {
+    font-size: 17px;
+  }
+  .recipe {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 50px 7%;
+  }
+  .recipe h2 {
+    font-size: 37px;
+  }
+  .code-window pre {
+    padding: 20px;
+    font-size: 10px;
+  }
+  .field-notes {
+    padding: 55px 7%;
+  }
+  .field-notes h2 {
+    font-size: 43px;
+  }
+  .sunset {
+    height: 75px;
+  }
+  footer {
+    font-size: 9px;
+    gap: 20px;
+    line-height: 1.7;
+  }
+}
+
+.hero > div {
+  min-width: 0;
+}
+h1 {
+  font-size: clamp(62px, 6.3vw, 91px);
+}
+.record > div {
+  min-width: 0;
+}
+.record h3 {
+  margin: 0 0 12px;
+}
+.model-choice {
+  background: none;
+  border: 0;
+  border-bottom: 1px solid var(--orange);
+  padding: 5px 0;
+  color: var(--ink);
+  font-size: 10px;
+}
+.record {
+  grid-template-columns: 110px 1fr 1.3fr 110px;
+}
+.model-label {
+  font-size: 10px;
+  display: block;
+  margin: 25px 0 10px;
+}
+.recipe select {
+  color: #fbf2dc;
+  background: #25211d;
+}
+.response-label {
+  font:
+    9px 'JetBrains Mono Variable',
+    monospace;
+  padding: 18px 25px 0;
+  border-top: 1px solid #51483d;
+  color: #bcad92;
+}
+.code-window #response {
+  font-size: 12px;
+  min-height: 100px;
+  color: #e6dbc6;
+}
+.code-window > div.response-label {
+  display: block;
+}
+@media (max-width: 650px) {
+  h1 {
+    font-size: clamp(51px, 16vw, 66px);
+    letter-spacing: -3px;
+  }
+  .record {
+    grid-template-columns: 75px 1fr;
+  }
+  .record b {
+    grid-column: 2;
+  }
+  .code-window #response {
+    font-size: 11px;
+  }
+  .response-label {
+    padding-left: 20px;
+  }
+}

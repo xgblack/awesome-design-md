@@ -1,0 +1,37 @@
+{
+  "title": "Relay · 表单到名单的工作流自动化",
+  "description": "以字段映射、条件判断和事件回放说明连接应用，不做通用活动官网；所有步骤执行本地逻辑。",
+  "status": "ready",
+  "features": {
+    "moods": ["warm", "tech"],
+    "tones": ["mixed"],
+    "layouts": ["split", "timeline"],
+    "density": ["balanced"],
+    "headingScale": ["display"],
+    "headingWeight": ["medium"],
+    "geometry": ["small-radius"],
+    "visualMedia": ["ui", "geometry"],
+    "accentHues": ["orange"],
+    "temperature": ["warm"],
+    "chroma": ["muted"],
+    "backgrounds": ["solid"],
+    "layering": ["solid"],
+    "scenarios": ["tool", "product"],
+    "typography": ["sans"],
+    "motion": ["feedback"]
+  },
+  "interactions": ["configure", "replay"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "专有字体以本地 Inter Variable 替代，保留字重、字阶、空间与组件规则；中文为系统字体回退。",
+    "交互为原创本地演示，不发出业务请求，不保存个人输入。",
+    "语境复核：保留已贴原产品类别的核心页面，复核理由：以字段映射、条件判断和事件回放说明连接应用，不做通用活动官网；所有步骤执行本地逻辑。"
+  ],
+  "references": [
+    {
+      "source": "DESIGN.md L295–309、331–414、420–485、524–537",
+      "reason": "暖奶油56px左题/右流程 → 触发/映射/条件/结果 → 奶油说明/深咖异常/暖FAQ。`#fffefb`/`#201515`、`#ff4f00`单橙、温暖500展示、12px中角/细线实色，不彩虹连线。"
+    }
+  ],
+  "assets": []
+}

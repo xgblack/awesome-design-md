@@ -1,0 +1,57 @@
+{
+  "title": "Everywhere / More than a connection.",
+  "description": "手机与家庭数字连接服务概念；按通信需求查看固定套餐示例、数字支持资料与人物故事，不查真实覆盖、不办理业务。",
+  "status": "ready",
+  "features": {
+    "moods": ["warm", "editorial"],
+    "tones": ["mixed"],
+    "temperature": ["contrast"],
+    "chroma": ["vivid"],
+    "accentHues": ["red"],
+    "backgrounds": ["image", "solid"],
+    "layouts": ["split", "chapters"],
+    "density": ["airy"],
+    "typography": ["sans"],
+    "headingScale": ["display"],
+    "headingWeight": ["bold", "light"],
+    "geometry": ["small-radius", "pill"],
+    "layering": ["solid", "lines"],
+    "visualMedia": ["photo", "render", "ui"],
+    "motion": ["feedback"],
+    "scenarios": ["product", "content", "tool"]
+  },
+  "interactions": ["configure", "filter"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "原创虚构品牌与概念产品，非官方页面；操作仅在当前页面内存生效，不提交真实业务。",
+    "本地Inter700/300替代品牌字形。",
+    "人物摄影无真实身份、使用关系；原创手机与家庭路由渲染补足通信设备主角，方案值均固定示例。"
+  ],
+  "references": [
+    {
+      "source": "DESIGN.md L276–290、313–391",
+      "reason": "photo-led telecom campaign，深色人物首章/红弧/超大重标题/白300轻解释；主体是通信服务，不是泛公益活动。"
+    },
+    {
+      "source": "DESIGN.md L410–425、467–538",
+      "reason": "连接服务、手机/家庭网络、固定套餐概念和数字支持资料构成完整通信语境；无真实覆盖查询或业务开通。"
+    }
+  ],
+  "assets": [
+    {
+      "file": "assets/connection-devices.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "../_shared/photos/portrait.webp",
+      "source": "共享photos/sources.json；通信campaign人物参考",
+      "license": "Unsplash License"
+    },
+    {
+      "file": "../_shared/photos/portrait-woman.webp",
+      "source": "共享photos/sources.json；虚构手机故事视觉参考",
+      "license": "Unsplash License"
+    }
+  ]
+}

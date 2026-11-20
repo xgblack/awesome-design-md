@@ -1,0 +1,37 @@
+{
+  "title": "Support Desk · 客户支持工作台",
+  "description": "产品客服收件箱：选择客户问题联动帮助资料，形成可撤回重置的本地回复。",
+  "status": "ready",
+  "features": {
+    "moods": ["warm", "minimal"],
+    "tones": ["light"],
+    "layouts": ["centered", "workspace"],
+    "density": ["balanced"],
+    "headingScale": ["display"],
+    "headingWeight": ["medium"],
+    "geometry": ["small-radius", "rounded"],
+    "visualMedia": ["ui"],
+    "accentHues": ["neutral"],
+    "temperature": ["warm"],
+    "chroma": ["muted"],
+    "backgrounds": ["solid"],
+    "layering": ["solid"],
+    "scenarios": ["product", "tool"],
+    "typography": ["sans"],
+    "motion": ["feedback"]
+  },
+  "interactions": ["form"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "专有字体以本地 Inter Variable 替代，保留字重、字阶、空间与组件规则；中文为系统字体回退。",
+    "交互为原创本地演示，不发出业务请求，不保存个人输入。",
+    "语境复核：收件箱交互已贴合产品；全面重设客户账户/导出/归档问题与帮助文案，不再借社区活动解释客服。"
+  ],
+  "references": [
+    {
+      "source": "DESIGN.md L266–272、325–349、365–385、412–423、481–498",
+      "reason": "暖奶油72px标题 → 白框三栏收件箱 → 白知识片段/分类示范 → 暖结尾。`#f5f1ec`/`#111111`、500负字距、12px卡/16px样机；橙仅助手标签，不作通用CTA。"
+    }
+  ],
+  "assets": []
+}

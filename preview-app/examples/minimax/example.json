@@ -1,0 +1,74 @@
+{
+  "title": "Fourfold / Multimodal model platform",
+  "description": "多模态模型工作台：在文本、音频、影像与语音任务间切换固定prompt和预制输出，真实播放音景/朗读并审阅分镜；不在线生成。",
+  "status": "ready",
+  "features": {
+    "moods": ["playful", "editorial"],
+    "tones": ["light"],
+    "temperature": ["neutral"],
+    "chroma": ["vivid"],
+    "accentHues": ["neutral"],
+    "backgrounds": ["solid"],
+    "layouts": ["centered", "editorial"],
+    "density": ["balanced"],
+    "typography": ["sans"],
+    "headingScale": ["display"],
+    "headingWeight": ["bold"],
+    "geometry": ["pill", "rounded"],
+    "layering": ["solid", "lines"],
+    "visualMedia": ["ui", "photo", "geometry", "type"],
+    "motion": ["feedback"],
+    "scenarios": ["product", "media", "tool"]
+  },
+  "interactions": ["configure", "media"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "白80px紧标题、珊瑚/洋红/蓝/紫四任务唱片卡、32px作品角、黑胶囊和真实媒体工作台保持原规范视觉。",
+    "四个Fourfold模型为虚构任务标识。文本与分镜人工预制、音景原创合成，真人朗读是公共领域预录对照，均不称AI生成。",
+    "独立旁白不是朗读逐字稿；LibriVox录音节选来源与美国公共领域声明见共享audio/sources.json/LICENSE.md。",
+    "字体取舍：显示 \"Manrope Variable\", \"Inter Variable\", sans-serif；正文 \"Manrope Variable\", \"Inter Variable\", sans-serif。使用本地开放字体/系统字体替代品牌商业字体；标题筛选标签按实际桌面渲染归类。"
+  ],
+  "references": [
+    {
+      "source": "原规范 L383–394、433–462、543–559、648–668、717–729",
+      "reason": "白底80px紧凑标题 → 四张唱片封面式彩卡 → 当前作品工作台 → 白色能力/材料表 → 黑页脚。DM Sans 单字体，黑主胶囊/描边次胶囊；珊瑚/洋红/蓝/紫编码作品；彩卡32px、白卡16px。"
+    }
+  ],
+  "assets": [
+    {
+      "file": "assets/river.wav",
+      "source": "原创数学合成 PCM，8秒",
+      "license": "本项目原创"
+    },
+    {
+      "file": "assets/bells.wav",
+      "source": "原创数学合成 PCM，8秒",
+      "license": "本项目原创"
+    },
+    {
+      "file": "../_shared/photos/city.webp",
+      "source": "公共素材池 sources.json",
+      "license": "Unsplash License"
+    },
+    {
+      "file": "../_shared/photos/ocean.webp",
+      "source": "公共素材池 sources.json",
+      "license": "Unsplash License"
+    },
+    {
+      "file": "../_shared/photos/mountain.webp",
+      "source": "公共素材池 sources.json",
+      "license": "Unsplash License"
+    },
+    {
+      "file": "../_shared/audio/alice-reading.mp3",
+      "source": "LibriVox / Lewis Carroll, read by Kristen McQuillin; 60–78 s excerpt. Details: ../_shared/audio/sources.json",
+      "license": "LibriVox public-domain dedication (United States); pre-recorded human reading."
+    },
+    {
+      "file": "../_shared/audio/time-machine-reading.mp3",
+      "source": "LibriVox / H. G. Wells, read by Aaron Elliott; 60–78 s excerpt. Details: ../_shared/audio/sources.json",
+      "license": "LibriVox public-domain dedication (United States); pre-recorded human reading."
+    }
+  ]
+}

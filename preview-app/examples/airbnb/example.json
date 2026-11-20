@@ -1,0 +1,58 @@
+{
+  "title": "山居日记",
+  "description": "「山居日记」周末驻留目录——按日期和人数找小屋并关注。",
+  "status": "ready",
+  "features": {
+    "moods": ["minimal", "warm"],
+    "tones": ["light"],
+    "temperature": ["neutral"],
+    "chroma": ["mono"],
+    "accentHues": ["pink"],
+    "backgrounds": ["solid"],
+    "layouts": ["editorial", "directory"],
+    "density": ["balanced"],
+    "typography": ["sans"],
+    "headingScale": ["compact"],
+    "headingWeight": ["bold"],
+    "geometry": ["rounded", "pill"],
+    "layering": ["lines"],
+    "visualMedia": ["photo"],
+    "motion": ["feedback"],
+    "scenarios": ["directory", "commerce"]
+  },
+  "interactions": ["filter", "schedule"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "Inter 本地替代 Cereal；摄影为已许可真实环境参考，不宣称虚构房源的实拍。",
+    "日期为2026年12月1–8日固定演示；所有评分/设施为虚构，不预订、不持久化。",
+    "四处驻留均有独立空间构型、日常节奏与事实边界；不再共用一段设施介绍。"
+  ],
+  "references": [
+    {
+      "source": "L331–345、429–446、464–506",
+      "reason": "不以巨大营销字抢摄影，不做金星/整卡厚影。"
+    }
+  ],
+  "assets": [
+    {
+      "file": "../_shared/photos/cabin.webp",
+      "source": "见共享 photos/sources.json",
+      "license": "Unsplash License"
+    },
+    {
+      "file": "../_shared/photos/interior.webp",
+      "source": "见共享 photos/sources.json",
+      "license": "Unsplash License"
+    },
+    {
+      "file": "../_shared/photos/lake.webp",
+      "source": "见共享 photos/sources.json",
+      "license": "Unsplash License"
+    },
+    {
+      "file": "../_shared/photos/mountain.webp",
+      "source": "见共享 photos/sources.json",
+      "license": "Unsplash License"
+    }
+  ]
+}

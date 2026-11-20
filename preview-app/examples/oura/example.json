@@ -1,0 +1,66 @@
+{
+  "title": "Luma Ring / Find your own rhythm",
+  "description": "选择智能指环材质与尺寸，阅读固定睡眠日记并记录当次感受；无诊断、传感器连接或医学得分。",
+  "status": "ready",
+  "features": {
+    "moods": ["warm", "editorial"],
+    "tones": ["mixed"],
+    "temperature": ["warm"],
+    "chroma": ["muted"],
+    "accentHues": ["blue"],
+    "backgrounds": ["paper"],
+    "layouts": ["split", "chapters"],
+    "density": ["airy"],
+    "typography": ["serif", "sans"],
+    "headingScale": ["display"],
+    "headingWeight": ["regular"],
+    "geometry": ["pill", "small-radius"],
+    "layering": ["solid"],
+    "visualMedia": ["render", "photo"],
+    "motion": ["feedback"],
+    "scenarios": ["product", "tool"]
+  },
+  "interactions": ["configure", "schedule", "form"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "原创虚构品牌与概念产品，非官方页面；操作仅在当前页面内存生效，不提交真实业务。",
+    "Cormorant Garamond / Inter本地替代；未连接设备，不提供医学诊断、健康分数或传感器准确性承诺。"
+  ],
+  "references": [
+    {
+      "source": "DESIGN.md L337–371、385–455",
+      "reason": "保留暖纸/暖黑/银灰三世界、生活与珠宝式指环主角；衬线展示字、蓝色胶囊行动与芥末/橄榄色章。"
+    },
+    {
+      "source": "DESIGN.md L502–503、610–616",
+      "reason": "可穿戴硬件与内圈结构承担主体，主观日记仅为次级体验，不以手帐替代产品。"
+    }
+  ],
+  "assets": [
+    {
+      "file": "assets/luma-silver.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/luma-gold.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/luma-black.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/ring-profile.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "../_shared/photos/portrait-woman.webp",
+      "source": "共享 photos/sources.json；人物生活情境参考",
+      "license": "Unsplash License"
+    }
+  ]
+}

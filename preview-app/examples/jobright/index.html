@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nextchapter / Career matching platform</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#">nextchapter<span>↗</span></a>
+      <nav>
+        <a href="#projects">发现岗位</a><a href="#rules">匹配方法</a
+        ><a class="black" href="#projects">Find your place ↗</a>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <div>
+          <span class="eyebrow">GOOD SKILLS. GOOD COMPANY.</span>
+          <h1>Your next role.<br />Your kind of<br /><span>possibility.</span></h1>
+          <p>
+            把已有技能，带向下一次职业选择。<br />用技能、资历和工作方式，找到说得清理由的匹配。
+          </p>
+          <a href="#projects" class="black">找到适合的岗位 ↗</a>
+        </div>
+        <div class="match-card">
+          <span>YOUR SKILLS CAN GO FURTHER.</span>
+          <div class="resume-sheet">
+            <div class="resume-person">
+              <b>A</b><span>Alex / 演示档案<small>PRODUCT DESIGNER</small></span
+              ><em>PROFILE</em>
+            </div>
+            <div class="resume-skills">
+              <span>Design systems</span><span>Research</span><span>Prototyping</span>
+            </div>
+            <p class="resume-label">YOUR NEXT MATCH</p>
+            <div class="resume-match">
+              <span class="match-company">O</span>
+              <div>
+                <strong>Product Designer</strong><small>Outline Studio / Remote / Mid-level</small>
+              </div>
+            </div>
+            <p class="match-reason">
+              ✓ 设计能力相符<br />✓ 中级资历 · 远程工作<br /><small
+                >依据明确筛选条件，不是 AI 评分</small
+              >
+            </p>
+          </div>
+          <h2>A clearer profile.<br />A better next step.</h2>
+          <div><span>职业档案</span><span>固定岗位样例</span></div>
+        </div>
+      </section>
+      <section class="projects" id="projects">
+        <div class="projects-head">
+          <div>
+            <span class="eyebrow">FIND SOMETHING THAT FITS.</span>
+            <h2>Good work.<br />The right direction.</h2>
+          </div>
+          <p>
+            匹配依据由明确规则计算，不是 AI 推测。<br />加入关注只在当前页面，不提交简历或投递。
+          </p>
+        </div>
+        <div class="filters">
+          <label
+            >技能
+            <select id="skill">
+              <option value="all">不限技能</option>
+              <option value="design">设计</option>
+              <option value="development">开发</option>
+              <option value="data">数据</option>
+            </select></label
+          ><label
+            >资历
+            <select id="time">
+              <option value="all">不限资历</option>
+              <option value="junior">初级</option>
+              <option value="mid">中级</option>
+            </select></label
+          ><label
+            >地点
+            <select id="place">
+              <option value="all">不限地点</option>
+              <option value="onsite">现场</option>
+              <option value="remote">远程</option>
+            </select></label
+          ><label class="saved"><input type="checkbox" id="saved" />只看关注</label>
+        </div>
+        <p id="count" role="status"></p>
+        <div id="list"></div>
+        <p id="empty" hidden>暂时没有匹配岗位。当前条件已保留，可选择“不限”重新探索。</p>
+        <div id="details" hidden tabindex="-1">
+          <button id="close">关闭详情 ×</button>
+          <h3 id="detail-title"></h3>
+          <p id="reason"></p>
+        </div>
+      </section>
+      <section class="rules" id="rules">
+        <span class="eyebrow">A NOTE ON MATCHING.</span>
+        <h2>No mystery.<br />Just clearer matches.</h2>
+        <p>
+          岗位必须同时满足你选择的技能、资历和工作方式。未选择的维度不限制结果。没有隐藏评分，也不会根据浏览记录推断你的兴趣。
+        </p>
+        <div><span>技能明确</span><span>资历明确</span><span>边界透明</span></div>
+      </section>
+      <section class="faq">
+        <h2>A real direction.<br />An honest starting point.</h2>
+        <p>
+          这是虚构岗位目录，不是真实招聘或即时求职服务。不要提交姓名、电话或简历；你可以在本地练习筛选与关注的过程。
+        </p>
+        <a href="#projects">回到岗位列表 ↑</a>
+      </section>
+    </main>
+    <footer>
+      nextchapter / Career matching <span>Jobright DESIGN.md · 独立求职平台示例</span>
+    </footer>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

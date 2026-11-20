@@ -1,0 +1,68 @@
+{
+  "title": "NEBULA / 独立试玩节",
+  "description": "「Nebula 独立游戏试玩节」——发现原创游戏并安排个人试玩清单。",
+  "status": "ready",
+  "features": {
+    "moods": ["cinematic", "playful"],
+    "tones": ["mixed"],
+    "temperature": ["cool"],
+    "chroma": ["vivid"],
+    "accentHues": ["blue"],
+    "backgrounds": ["solid", "image"],
+    "layouts": ["chapters", "editorial"],
+    "density": ["airy"],
+    "typography": ["sans"],
+    "headingScale": ["regular"],
+    "headingWeight": ["light"],
+    "geometry": ["pill", "small-radius"],
+    "layering": ["solid"],
+    "visualMedia": ["illustration"],
+    "motion": ["feedback"],
+    "scenarios": ["directory", "media"]
+  },
+  "interactions": ["filter", "schedule"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "游戏世界、宇航员与场景均为原创SVG美术，不借现役IP。",
+    "本地Roboto300保留轻标题，Inter/Roboto为可分发替代；清单无真实游戏占位/下载。",
+    "三款游戏重新制作不同世界/角色/构图：群岛黄雨衣送信人、发光果园白色小兽、空间中继站机器人；非同一宇航员山谷换色。"
+  ],
+  "references": [
+    {
+      "source": "L318–355、378–428、523–534、602–609",
+      "reason": "不是粗黑霓虹游戏站；金渐变限定原文 PS Plus，不任意移植。"
+    }
+  ],
+  "assets": [
+    {
+      "file": "assets/tidal.svg",
+      "source": "本项目原创矢量产品/场景插画",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/orchard.svg",
+      "source": "本项目原创矢量产品/场景插画",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/relay.svg",
+      "source": "本项目原创矢量产品/场景插画",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/tidal-world.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/orchard-world.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/relay-world.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    }
+  ]
+}

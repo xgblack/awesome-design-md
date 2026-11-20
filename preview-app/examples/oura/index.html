@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Luma Ring / Find your own rhythm · 独立风格示例</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="#">luma<span>ring</span></a>
+      <nav>
+        <a href="#living">Everyday</a><a href="#ring">The ring</a><a href="#journal">Your rhythm</a>
+      </nav>
+      <a class="blue small" href="#ring">Find your finish</a>
+    </header>
+    <main>
+      <section class="hero">
+        <div>
+          <p class="eyebrow">A LITTLE CLOSER TO YOURSELF.</p>
+          <h1>Your rhythm.<br />Beautifully<br />understood.</h1>
+          <p class="lead">一枚轻巧的指环，陪你留意睡眠，<br />也留意没有被日程写下的日常。</p>
+          <a class="blue" href="#ring">Meet Luma Ring ↗</a
+          ><span class="fine">原创可穿戴产品设计研究</span>
+        </div>
+        <figure>
+          <img
+            src="./assets/luma-gold.svg"
+            alt="Luma Gold 金色智能指环原创渲染，可见金属内圈与三组光学窗口"
+          />
+          <figcaption>Small by design. Personal by nature.</figcaption>
+        </figure>
+      </section>
+      <section class="living" id="living">
+        <img
+          src="../_shared/photos/portrait-woman.webp"
+          alt="人物生活情境参考摄影，与虚构产品无真实使用关系"
+        />
+        <div>
+          <p class="eyebrow">NOT ANOTHER THING TO DO.</p>
+          <h2>More room<br />for being.</h2>
+          <p>
+            从一个从容的清晨开始。把昨天看清楚一点，把今天安排得松弛一点。信息可以是提醒，但不应成为新的压力。
+          </p>
+          <span>记录是理解的起点，不是身体的成绩单。</span>
+        </div>
+      </section>
+      <section class="product" id="ring">
+        <div class="product-heading">
+          <p class="eyebrow">MADE TO LIVE WITH YOU</p>
+          <h2>Technology,<br />with a softer side.</h2>
+          <p>圆润内圈、连续的金属表面。<br />把复杂留给内部，把轻盈留给日常。</p>
+        </div>
+        <div class="product-layout">
+          <img id="ring-image" src="./assets/luma-silver.svg" alt="Silver 银色智能指环原创渲染" />
+          <div class="ring-options">
+            <p class="eyebrow">LUMA RING — DESIGN SERIES 01</p>
+            <h3 id="finish-name">Silver</h3>
+            <div class="swatches" aria-label="指环材质">
+              <button data-finish="silver" aria-pressed="true"><i></i>Silver</button
+              ><button data-finish="gold" aria-pressed="false"><i></i>Gold</button
+              ><button data-finish="black" aria-pressed="false"><i></i>Midnight</button>
+            </div>
+            <p id="finish-note" role="status">冷银金属，映出柔和的日常光线。</p>
+            <label for="ring-size">选择演示尺寸</label
+            ><select id="ring-size">
+              <option value="6">Size 6 · 内径 16.5 mm</option>
+              <option value="8" selected>Size 8 · 内径 18.1 mm</option>
+              <option value="10">Size 10 · 内径 19.8 mm</option>
+            </select>
+            <p id="size-note">当前为 Size 8 概念，非实际佩戴建议。</p>
+            <p class="demo-note">尺寸与结构为设计示意；未连接传感器，无购买或身体测量。</p>
+          </div>
+        </div>
+        <div class="details">
+          <img
+            src="./assets/ring-profile.svg"
+            alt="指环内圈结构原创剖面，标注光学窗口、触点和弧面"
+          />
+          <div>
+            <p class="eyebrow">SMALL DETAILS. CONSIDERED.</p>
+            <h3>Feel the ring.<br />Not the technology.</h3>
+            <p>
+              内圈窗口与触点嵌入连续弧面。你看到的是产品结构概念，而不是实物传感器验证或健康功能证明。
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="journal" id="journal">
+        <div>
+          <p class="eyebrow">A WEEK, AT YOUR OWN PACE.</p>
+          <h2>How did<br />you feel?</h2>
+          <p>
+            选择一个固定演示日期，读一条睡眠与日常记录。比起一个分数，你对自己的感受同样值得被留下。
+          </p>
+        </div>
+        <div class="paper">
+          <div class="days" aria-label="演示记录日期">
+            <button data-day="0" aria-pressed="true">MON<br />16</button
+            ><button data-day="1" aria-pressed="false">TUE<br />17</button
+            ><button data-day="2" aria-pressed="false">WED<br />18</button>
+          </div>
+          <p id="record-date">2026年11月16日 · 固定演示记录</p>
+          <dl>
+            <div>
+              <dt>休息时段</dt>
+              <dd id="sleep-window">23:20 – 07:10</dd>
+            </div>
+            <div>
+              <dt>主观感受</dt>
+              <dd id="feeling">醒来舒展</dd>
+            </div>
+          </dl>
+          <blockquote id="entry">昨天早点放下了手机。清晨醒来时，窗边的光刚刚好。</blockquote>
+          <form id="note-form" novalidate>
+            <label for="note">补充你的当次感受</label
+            ><textarea id="note" maxlength="240" placeholder="一句话也很好。"></textarea
+            ><button class="blue" type="submit">保存当次自述</button>
+            <p id="note-status" role="status">最多240字，仅当前页面保存，刷新后清空。</p>
+          </form>
+        </div>
+      </section>
+      <section class="closing">
+        <p>Not a score to chase.<br />A rhythm to return to.</p>
+        <span>LUMA / A MORE CONSIDERED EVERYDAY.</span>
+      </section>
+    </main>
+    <footer>
+      <span class="brand">luma<span>ring</span></span>
+      <p class="demo-note">
+        原创虚构智能指环 ·
+        渲染非实拍，日记为固定样例，照片仅为情境参考；不提供医疗诊断、健康评分或设备数据。
+      </p>
+    </footer>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

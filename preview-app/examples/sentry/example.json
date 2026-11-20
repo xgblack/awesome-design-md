@@ -1,0 +1,37 @@
+{
+  "title": "Bug Parade / Error monitoring platform",
+  "description": "错误监控与诊断演练：选择缺资源或成功事件，筛应用帧、阅读栈与对应源代码并重置；不制造真实崩溃。",
+  "status": "ready",
+  "features": {
+    "moods": ["playful", "tech"],
+    "tones": ["mixed"],
+    "temperature": ["cool"],
+    "chroma": ["vivid"],
+    "accentHues": ["purple"],
+    "backgrounds": ["solid"],
+    "layouts": ["split", "workspace"],
+    "density": ["balanced"],
+    "typography": ["sans", "mono"],
+    "headingScale": ["display"],
+    "headingWeight": ["bold"],
+    "geometry": ["small-radius"],
+    "layering": ["solid", "hard"],
+    "visualMedia": ["ui", "code", "illustration"],
+    "motion": ["feedback"],
+    "scenarios": ["product", "tool"]
+  },
+  "interactions": ["replay", "filter", "configure"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "保留紫夜星点、荧光单词、粉怪兽贴纸、错位产品窗与白色密诊断区，不用普通监控模板抹掉原文性格。",
+    "事件、异常栈和代码来自固定教学fixture，不是线上监控；真实页面运行错误仍应另行检测。",
+    "字体取舍：显示 \"Inter Variable\", sans-serif；正文 \"Inter Variable\", sans-serif。使用本地开放字体/系统字体替代品牌商业字体；标题筛选标签按实际桌面渲染归类。"
+  ],
+  "references": [
+    {
+      "source": "原规范 L275–322、326–455、469–489、531–541",
+      "reason": "紫夜星点/一个荧光关键词/跨区贴纸 → 错位演练产品窗 → 白色密集诊断 → 荧光曲线结尾。`#1f1633`/`#c2ef4e`、Rubik正文/大写按钮、营销2.0行高对报告1.5，角色不关卡里。"
+    }
+  ],
+  "assets": []
+}

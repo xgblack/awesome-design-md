@@ -1,0 +1,62 @@
+{
+  "title": "ASTER Launch / For a wider view",
+  "description": "虚构可重复使用运载器与地球观测载荷任务展厅；资料图身份明确，固定任务概念，无实时遥测或发射宣称。",
+  "status": "ready",
+  "features": {
+    "moods": ["cinematic", "tech"],
+    "tones": ["dark"],
+    "temperature": ["cool", "contrast"],
+    "chroma": ["vivid"],
+    "accentHues": ["neutral"],
+    "backgrounds": ["image"],
+    "layouts": ["chapters"],
+    "density": ["airy"],
+    "typography": ["sans"],
+    "headingScale": ["display"],
+    "headingWeight": ["bold"],
+    "geometry": ["square"],
+    "layering": ["lines"],
+    "visualMedia": ["photo", "render"],
+    "motion": ["feedback"],
+    "scenarios": ["product"]
+  },
+  "interactions": ["configure"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "原创虚构品牌与概念产品，非官方页面；操作仅在当前页面内存生效，不提交真实业务。",
+    "Inter 600为本地替代，headline尺寸/正字距保留工业气质。",
+    "NASA Artemis I图片来源、作者信用及Usage Guidelines由共享photos/sources.json和LICENSE.md记录；图下注明真实任务，不暗示NASA背书。"
+  ],
+  "references": [
+    {
+      "source": "DESIGN.md L151–165、195–265",
+      "reason": "火箭发射与全视口摄影就是设计语言；工业大写、单描边行动、极少UI装饰。"
+    },
+    {
+      "source": "DESIGN.md L295–353",
+      "reason": "发射/升空/轨道三章与黑底运载器简报；NASA图明确标资料来源而非虚构型号实拍。"
+    }
+  ],
+  "assets": [
+    {
+      "file": "assets/aster-vehicle.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "../_shared/photos/artemis-launch.webp",
+      "source": "NASA / Bill Ingalls；2022-11-16 Artemis I launch，见共享photos/sources.json",
+      "license": "NASA Media Usage Guidelines；非NASA背书"
+    },
+    {
+      "file": "../_shared/photos/artemis-liftoff.webp",
+      "source": "NASA / Joel Kowsky；2022 Artemis I，见共享photos/sources.json",
+      "license": "NASA Media Usage Guidelines；非NASA背书"
+    },
+    {
+      "file": "../_shared/photos/space.webp",
+      "source": "共享photos/sources.json；地球环境参考",
+      "license": "Unsplash License"
+    }
+  ]
+}

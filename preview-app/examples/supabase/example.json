@@ -1,0 +1,37 @@
+{
+  "title": "Launchbase / Postgres backend platform",
+  "description": "Postgres后端平台：在项目数据表、查询与Realtime事件流间查看与修改固定演示记录；不创建账号、数据库或云资源。",
+  "status": "ready",
+  "features": {
+    "moods": ["minimal", "tech"],
+    "tones": ["light"],
+    "temperature": ["neutral"],
+    "chroma": ["mono"],
+    "accentHues": ["green"],
+    "backgrounds": ["solid"],
+    "layouts": ["centered", "workspace"],
+    "density": ["balanced"],
+    "typography": ["sans", "mono"],
+    "headingScale": ["display"],
+    "headingWeight": ["medium"],
+    "geometry": ["small-radius"],
+    "layering": ["lines"],
+    "visualMedia": ["ui", "code"],
+    "motion": ["feedback"],
+    "scenarios": ["tool", "product"]
+  },
+  "interactions": ["filter", "edit"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "从植物档案重构为后端开发平台；遵照原文白色营销轨、绿行动、真实SQL/表/日志叠窗。",
+    "数据库编辑只更新本页内存；环境值与项目名称会校验，输入不作为SQL执行。",
+    "字体取舍：显示 \"Inter Variable\", sans-serif；正文 \"Inter Variable\", sans-serif。使用本地开放字体/系统字体替代品牌商业字体；标题筛选标签按实际桌面渲染归类。"
+  ],
+  "references": [
+    {
+      "source": "原规范 L226–241、274–335、353–385、405–430、447–462",
+      "reason": "白营销轨64px中标题/绿行动 → SQL、表、变更流叠窗 → 录入/查询/观察章节。白/`#171717`、`#3ecf8e`配深字、500负字距、6px技术钮/12px窗；暗色仅代码，无气氛渐变。"
+    }
+  ],
+  "assets": []
+}

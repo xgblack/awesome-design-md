@@ -1,0 +1,496 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+button,
+a,
+input,
+select,
+textarea {
+  touch-action: manipulation;
+}
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+button {
+  cursor: pointer;
+}
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+a {
+  color: inherit;
+  text-underline-offset: 4px;
+}
+img,
+svg {
+  max-width: 100%;
+  display: block;
+}
+button,
+input,
+select,
+textarea {
+  min-height: 44px;
+}
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #527dff;
+  outline-offset: 4px;
+}
+p {
+  line-height: 1.6;
+}
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+h1,
+h2,
+h3 {
+  overflow-wrap: anywhere;
+}
+[hidden] {
+  display: none !important;
+}
+dialog {
+  max-width: min(600px, calc(100% - 32px));
+  border: 0;
+  padding: 32px;
+  border-radius: 12px;
+}
+dialog::backdrop {
+  background: #0009;
+}
+dialog h2 {
+  font-size: 28px;
+}
+dialog button {
+  margin: 8px 8px 0 0;
+}
+label {
+  display: block;
+}
+input,
+select,
+textarea {
+  max-width: 100%;
+}
+textarea {
+  resize: vertical;
+}
+small {
+  line-height: 1.5;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+body {
+  background: #f5f1ec;
+  color: #111;
+  font:
+    16px 'Inter Variable',
+    sans-serif;
+}
+a {
+  text-decoration: none;
+}
+header {
+  padding: 26px 5%;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.brand {
+  font-size: 23px;
+  font-weight: 500;
+  letter-spacing: -0.6px;
+}
+nav {
+  display: flex;
+  gap: 25px;
+  margin-left: auto;
+  font-size: 13px;
+}
+.button,
+button {
+  background: #111;
+  border: 1px solid #111;
+  color: #fff;
+  border-radius: 8px;
+  padding: 13px 19px;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+}
+.hero {
+  text-align: center;
+  padding: 60px 20px 70px;
+}
+.hero > p:first-child {
+  font-size: 14px;
+  font-weight: 500;
+}
+.hero h1 {
+  font-size: 72px;
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -2px;
+  margin: 25px 0;
+}
+.hero > p:last-child {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #5c5a57;
+}
+.inbox {
+  margin: 0 4%;
+  background: #fff;
+  border: 1px solid #d9d6d2;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.inbox-top {
+  display: flex;
+  padding: 16px 22px;
+  align-items: center;
+  gap: 25px;
+  border-bottom: 1px solid #e5e3df;
+  font-size: 14px;
+  font-weight: 500;
+}
+.local {
+  font-size: 11px;
+  color: #676560;
+}
+.inbox-top button {
+  background: #fff;
+  color: #111;
+  border-color: #ddd;
+  margin-left: auto;
+  font-size: 11px;
+  padding: 7px 12px;
+}
+.inbox-grid {
+  display: grid;
+  grid-template-columns: 240px 1fr 240px;
+  min-height: 470px;
+}
+.inbox aside {
+  padding: 23px 15px;
+}
+.inbox h2 {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 10px 24px;
+}
+.inbox h2 > span {
+  font-size: 12px;
+  float: right;
+}
+.question {
+  width: 100%;
+  display: block;
+  text-align: left;
+  background: white;
+  color: #111;
+  border: 0;
+  border-radius: 8px;
+  padding: 16px 12px;
+  margin-bottom: 7px;
+}
+.question strong {
+  font-weight: 500;
+  font-size: 12px;
+  display: block;
+}
+.question span {
+  display: block;
+  white-space: normal;
+  font-size: 12px;
+  margin: 8px 0;
+  line-height: 1.5;
+  color: #666;
+}
+.question[aria-pressed='true'] {
+  background: #f1efed;
+}
+.conversation {
+  border-left: 1px solid #eee;
+  border-right: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+}
+.conversation-head {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  font-size: 13px;
+  border-bottom: 1px solid #eee;
+}
+.conversation-head span:last-child {
+  font-size: 11px;
+  color: #777;
+}
+#messages {
+  padding: 26px 22px;
+  min-height: 190px;
+  flex: 1;
+}
+.message {
+  max-width: 90%;
+  padding: 15px 18px;
+  background: #f0eeeb;
+  font-size: 13px;
+  line-height: 1.7;
+  border-radius: 12px;
+  margin: 0 0 12px;
+}
+.message.reply {
+  margin-left: auto;
+  background: #182621;
+  color: #f7faf7;
+}
+#reply-form {
+  padding: 20px;
+}
+#reply-form label {
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 8px;
+}
+textarea {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 13px;
+}
+#reply-form > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+#reply-form small {
+  font-size: 10px;
+  color: #777;
+}
+#reply-form .button {
+  font-size: 11px;
+  padding: 10px 12px;
+}
+.knowledge {
+  background: #fcfcfb;
+}
+.assistant {
+  background: #ffdac0;
+  color: #702e0b;
+  padding: 6px 9px;
+  border-radius: 6px;
+  font-size: 10px;
+}
+.knowledge h3 {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 25px 0 20px;
+}
+.knowledge #context {
+  font-size: 12px;
+  line-height: 1.9;
+}
+.knowledge small {
+  font-size: 11px;
+  display: block;
+  color: #777;
+  margin-top: 35px;
+}
+.care {
+  padding: 100px 9%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10%;
+  background: #fff;
+  margin-top: 85px;
+}
+.care > div > span {
+  font-size: 10px;
+}
+.care h2 {
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  margin: 25px 0;
+}
+.care p {
+  color: #5a5a5a;
+}
+.snippet {
+  padding: 35px;
+  background: #f5f1ec;
+  border-radius: 12px;
+  align-self: center;
+}
+.snippet small {
+  font-size: 11px;
+  color: #666;
+}
+.snippet h3 {
+  font-size: 22px;
+  font-weight: 500;
+  margin: 20px 0;
+}
+.snippet > span {
+  font-size: 10px;
+  color: #666;
+}
+.closing {
+  text-align: center;
+  padding: 80px 20px;
+}
+.closing h2 {
+  font-size: 54px;
+  font-weight: 500;
+  letter-spacing: -1.5px;
+  line-height: 1.1;
+}
+footer {
+  border-top: 1px solid #ddd;
+  padding: 35px 6%;
+  font-size: 11px;
+  color: #666;
+}
+#error {
+  font-size: 12px;
+  color: #9a3027;
+}
+@media (max-width: 780px) {
+  header {
+    padding: 20px;
+    gap: 14px;
+  }
+  .brand {
+    font-size: 18px;
+  }
+  nav {
+    display: none;
+  }
+  header > .button {
+    margin-left: auto;
+    font-size: 10px;
+    padding: 10px;
+  }
+  .hero {
+    padding: 40px 20px;
+  }
+  .hero h1 {
+    font-size: 43px;
+    letter-spacing: -1.5px;
+  }
+  .hero > p:last-child {
+    font-size: 16px;
+  }
+  .inbox {
+    margin: 0 12px;
+  }
+  .inbox-top {
+    padding: 12px 15px;
+    gap: 8px;
+  }
+  .local {
+    display: none;
+  }
+  .inbox-grid {
+    display: block;
+  }
+  .inbox aside {
+    padding: 18px 12px;
+  }
+  .inbox h2 {
+    margin-bottom: 12px;
+  }
+  .inbox #questions {
+    display: flex;
+    gap: 6px;
+    overflow: auto;
+  }
+  .question {
+    min-width: 150px;
+    max-width: 160px;
+    padding: 12px;
+  }
+  .question span {
+    font-size: 11px;
+  }
+  .conversation {
+    border: 0;
+    border-top: 1px solid #eee;
+  }
+  .conversation-head {
+    padding: 17px 15px;
+    font-size: 12px;
+  }
+  .inbox .knowledge {
+    padding: 25px;
+  }
+  .knowledge small {
+    margin-top: 15px;
+  }
+  #reply-form {
+    padding: 16px;
+  }
+  .care {
+    display: block;
+    padding: 55px 24px;
+    margin-top: 55px;
+  }
+  .care h2 {
+    font-size: 38px;
+  }
+  .snippet {
+    margin-top: 30px;
+    padding: 25px;
+  }
+  .closing {
+    padding: 55px 20px;
+  }
+  .closing h2 {
+    font-size: 39px;
+    letter-spacing: -1px;
+  }
+}

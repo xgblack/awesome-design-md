@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Commitlight / Frontend delivery platform</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#">▲ commitlight</a>
+      <nav>
+        <a href="#delivery">Delivery</a><a href="#notes">Notes</a
+        ><a class="pill" href="#delivery">Preview a change ↗</a>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <span class="eyebrow">LOCAL FRONTEND DELIVERY / A REHEARSAL</span>
+        <h1>From a small change.<br />To a clearer experience.</h1>
+        <p>理解一次前端交付：准备、构建、预览。<br />固定回放，不读取仓库，也不真正部署。</p>
+        <div class="mesh" aria-hidden="true"><i></i><b></b><em></em></div>
+        <div class="hero-card">
+          <span>commitlight / studio-notes</span><b>One idea. Ready to preview.</b
+          ><a href="#delivery">Open the delivery room →</a>
+        </div>
+      </section>
+      <section class="delivery" id="delivery">
+        <div class="title">
+          <div>
+            <span class="eyebrow">01 / FOLLOW THE CHANGE</span>
+            <h2>A visible path to preview.</h2>
+          </div>
+          <label
+            >演示分支
+            <select id="branch">
+              <option value="journal">journal / new-title</option>
+              <option value="field">field-notes / warm-surface</option>
+            </select></label
+          >
+        </div>
+        <div class="pipeline">
+          <div data-stage="0"><b>01</b><span>Prepare</span><small>读取固定示例</small></div>
+          <div data-stage="1"><b>02</b><span>Build</span><small>模拟构建状态</small></div>
+          <div data-stage="2"><b>03</b><span>Preview</span><small>显示对应页面</small></div>
+        </div>
+        <div class="delivery-grid">
+          <div class="console">
+            <div class="console-head">BUILD LOG <span>SIMULATED</span></div>
+            <pre id="log">Ready to start a local rehearsal.</pre>
+            <div class="actions">
+              <button id="run" class="pill">开始回放</button
+              ><button id="cancel" disabled>取消</button
+              ><label><input type="checkbox" id="fail" />模拟构建失败</label>
+            </div>
+            <p id="status" role="status">等待手动开始。</p>
+          </div>
+          <div class="preview">
+            <div class="preview-bar">
+              <span>PREVIEW / FIXTURE</span><span id="preview-version">journal</span>
+            </div>
+            <div id="page-preview">
+              <span id="preview-label">THE EVERYDAY JOURNAL</span>
+              <h3 id="preview-title">A thought worth keeping.</h3>
+              <p id="preview-body">把今天的一点观察，留给明天的自己。</p>
+              <span class="preview-rule"></span><small>Independent notes, thoughtfully made.</small>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="notes" id="notes">
+        <span class="eyebrow">THE CHANGE IS SMALL. THE CONTEXT MATTERS.</span>
+        <h2>Ship understanding,<br />before shipping code.</h2>
+        <div>
+          <p>分支切换改变预览内容。回放只解释步骤，不伪造真实编译耗时或部署地址。</p>
+          <p>取消会终止当前计时器；失败可以重试。刷新后所有状态恢复，不产生云端资源。</p>
+        </div>
+      </section>
+    </main>
+    <footer>▲ commitlight <span>Vercel DESIGN.md 风格研究 · 本地交付演练</span></footer>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

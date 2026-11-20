@@ -1,0 +1,396 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+}
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+button,
+a,
+input,
+select,
+textarea {
+  touch-action: manipulation;
+}
+button {
+  cursor: pointer;
+}
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+a {
+  color: inherit;
+}
+img,
+svg,
+video {
+  max-width: 100%;
+}
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid #7b96d3;
+  outline-offset: 4px;
+}
+pre {
+  overflow: auto;
+}
+p {
+  line-height: 1.65;
+}
+dialog {
+  max-width: calc(100% - 32px);
+}
+[hidden] {
+  display: none !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:root {
+  --bg: #0a0a0a;
+  --ink: #f6f6f6;
+  --dim: #a4a4a4;
+  --line: #ffffff40;
+  --soft: #191919;
+}
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Inter Variable', sans-serif;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 5%;
+  border-bottom: 1px solid #ffffff22;
+}
+header > a {
+  font-size: 23px;
+  font-weight: 400;
+  text-decoration: none;
+}
+nav {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  font-size: 11px;
+}
+nav a {
+  text-decoration: none;
+}
+.outline {
+  display: inline-block;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 13px 20px;
+  text-decoration: none;
+  font-size: 11px;
+  color: var(--ink);
+  background: none;
+}
+.hero {
+  position: relative;
+  min-height: 680px;
+  padding: 90px 6% 65px;
+}
+.eyebrow {
+  font:
+    9px 'JetBrains Mono Variable',
+    monospace;
+  letter-spacing: 1.4px;
+  color: var(--dim);
+}
+h1 {
+  font-size: 96px;
+  line-height: 1.03;
+  letter-spacing: -2.4px;
+  font-weight: 400;
+  margin: 32px 0;
+}
+.hero > div {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  position: relative;
+  z-index: 1;
+}
+.hero p {
+  font-size: 13px;
+  color: var(--dim);
+  line-height: 1.9;
+}
+.diagram {
+  position: absolute;
+  right: 5%;
+  bottom: 35px;
+  width: 320px;
+  opacity: 0.6;
+}
+.bulletin {
+  padding: 75px 6%;
+  border-top: 1px solid #ffffff22;
+}
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+h2 {
+  font-size: 43px;
+  line-height: 1.15;
+  letter-spacing: -1.5px;
+  font-weight: 400;
+}
+.filters {
+  display: flex;
+  gap: 12px;
+}
+select {
+  background: #0a0a0a;
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 10px 15px;
+  font-size: 11px;
+  max-width: 100%;
+}
+#count,
+#empty {
+  font:
+    10px/1.8 'JetBrains Mono Variable',
+    monospace;
+  color: var(--dim);
+  margin: 25px 0;
+}
+.entry {
+  display: grid;
+  grid-template-columns: 150px 1fr 100px;
+  gap: 25px;
+  padding: 28px 0;
+  border-top: 1px solid #ffffff30;
+}
+.entry > span {
+  font:
+    9px 'JetBrains Mono Variable',
+    monospace;
+  color: var(--dim);
+  line-height: 1.9;
+}
+.entry h3 {
+  font-size: 23px;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  margin: 0 0 13px;
+}
+.entry p {
+  font-size: 12px;
+  color: var(--dim);
+  max-width: 640px;
+}
+.entry details {
+  grid-column: 2/4;
+  font-size: 12px;
+  color: #b7b7b7;
+  line-height: 1.9;
+}
+.entry summary {
+  cursor: pointer;
+  font-size: 10px;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  margin-bottom: 12px;
+}
+.entry > small {
+  font:
+    8px 'JetBrains Mono Variable',
+    monospace;
+  color: var(--dim);
+  text-align: right;
+  letter-spacing: 0.5px;
+}
+.compare {
+  padding: 70px 6%;
+  border-top: 1px solid #ffffff22;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px 10%;
+}
+.compare p {
+  font-size: 13px;
+  color: var(--dim);
+}
+.version-tools {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 15px;
+  align-items: center;
+  max-width: 440px;
+  justify-self: end;
+  width: 100%;
+}
+.version-tools label {
+  font-size: 10px;
+  color: var(--dim);
+}
+.version-tools button {
+  grid-column: 2;
+}
+.compare #diff {
+  grid-column: 1/-1;
+  background: var(--soft);
+  border: 1px solid #ffffff22;
+  border-radius: 8px;
+  padding: 25px;
+  font-size: 13px;
+  line-height: 1.9;
+}
+#diff p {
+  margin: 10px 0;
+}
+#diff .label {
+  font:
+    9px 'JetBrains Mono Variable',
+    monospace;
+  color: white;
+  letter-spacing: 1px;
+}
+.closing {
+  padding: 80px 6%;
+  border-top: 1px solid #ffffff22;
+}
+.closing h2 {
+  font-size: 67px;
+  letter-spacing: -2px;
+}
+.closing p {
+  font-size: 13px;
+  color: var(--dim);
+}
+.closing a {
+  margin-top: 25px;
+}
+footer {
+  padding: 28px 5%;
+  border-top: 1px solid #ffffff22;
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  color: var(--dim);
+}
+@media (max-width: 650px) {
+  header {
+    padding: 24px 6%;
+  }
+  nav a:not(.outline) {
+    display: none;
+  }
+  nav {
+    gap: 0;
+  }
+  .outline {
+    font-size: 10px;
+    padding: 12px 15px;
+  }
+  header > a {
+    font-size: 20px;
+  }
+  .hero {
+    padding: 65px 6% 60px;
+    min-height: 610px;
+  }
+  h1 {
+    font-size: 55px;
+    letter-spacing: -1.7px;
+  }
+  .hero > div {
+    display: block;
+  }
+  .hero p {
+    font-size: 12px;
+  }
+  .hero .outline {
+    margin-top: 10px;
+  }
+  .diagram {
+    width: 200px;
+    bottom: 10px;
+    right: 0;
+    opacity: 0.35;
+  }
+  .eyebrow {
+    font-size: 8px;
+  }
+  .bulletin {
+    padding: 55px 6%;
+  }
+  .head {
+    display: block;
+  }
+  h2 {
+    font-size: 32px;
+  }
+  .entry {
+    grid-template-columns: 90px 1fr;
+    gap: 18px;
+  }
+  .entry h3 {
+    font-size: 20px;
+  }
+  .entry > small {
+    display: none;
+  }
+  .entry details {
+    grid-column: 1/-1;
+  }
+  .compare {
+    grid-template-columns: 1fr;
+    padding: 55px 6%;
+    gap: 25px;
+  }
+  .version-tools {
+    justify-self: start;
+    max-width: none;
+  }
+  .compare #diff {
+    grid-column: 1;
+    padding: 20px;
+  }
+  .closing {
+    padding: 60px 6%;
+  }
+  .closing h2 {
+    font-size: 47px;
+  }
+  footer {
+    font-size: 9px;
+    gap: 20px;
+    line-height: 1.8;
+  }
+}
+
+@media (max-width: 650px) {
+  .hero h1 {
+    font-size: clamp(40px, 12.5vw, 49px);
+  }
+}

@@ -1,0 +1,31 @@
+import { test, expect } from '@playwright/test'
+test.beforeEach(async ({ page }) => {
+  await page.goto('examples/bmw/index.html')
+})
+test('车型目录有独立主体且续航座位共同筛选', async ({ page }) => {
+  await expect(page.locator('.model-render')).toHaveCount(3)
+  const srcs = await page
+    .locator('.model-render')
+    .evaluateAll((images) => images.map((image) => (image as HTMLImageElement).src))
+  expect(new Set(srcs).size).toBe(3)
+  await page.locator('#range').selectOption('600')
+  await expect(page.locator('#model-status')).toContainText('没有匹配')
+  await page.locator('#reset-models').click()
+  await page.locator('#seats').selectOption('7')
+  await expect(page.locator('.models article:visible')).toHaveCount(1)
+  await page.locator('[data-configure-model="space"]').click()
+  await expect(page.locator('#model')).toHaveValue('space')
+  await expect(page.locator('#configuration')).toContainText('480')
+})
+test('配置联动对应机型/颜色/轮毂图，互斥明确反馈', async ({ page }) => {
+  await page.locator('#wheels').selectOption('20')
+  await expect(page.locator('#configuration')).toContainText('525')
+  await expect(page.locator('#configured-car')).toHaveAttribute('src', /tour-silver-20/)
+  await page.locator('#paint').selectOption('blue')
+  await expect(page.locator('#wheels')).toHaveValue('18')
+  await expect(page.locator('#configured-car')).toHaveAttribute('src', /tour-blue-18/)
+  await expect(page.locator('#configuration')).toContainText('不兼容')
+  await page.locator('#model').selectOption('city')
+  await expect(page.locator('#configured-car')).toHaveAttribute('src', /city-blue-18/)
+  await expect(page.locator('#configuration')).toContainText('420')
+})

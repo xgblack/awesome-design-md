@@ -1,0 +1,37 @@
+{
+  "title": "Oddments / Creative model predictions",
+  "description": "创意模型样本库：按能力与关键词筛选模型实验，查看固定prompt、原创视觉输出与Python/cURL请求配方；不进行推理。",
+  "status": "ready",
+  "features": {
+    "moods": ["experimental", "editorial"],
+    "tones": ["mixed"],
+    "temperature": ["warm"],
+    "chroma": ["vivid"],
+    "accentHues": ["orange"],
+    "backgrounds": ["solid", "paper"],
+    "layouts": ["editorial", "split"],
+    "density": ["airy"],
+    "typography": ["sans", "mono"],
+    "headingScale": ["display"],
+    "headingWeight": ["bold"],
+    "geometry": ["pill", "small-radius"],
+    "layering": ["solid", "lines"],
+    "visualMedia": ["geometry", "code", "ui"],
+    "motion": ["feedback"],
+    "scenarios": ["product", "directory", "media"]
+  },
+  "interactions": ["filter", "configure"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "保留原规范允许的奶油/热橙巨字hero、原创方作品与深Mono代码井，不误做白底模型商城。",
+    "四幅视觉输出为原创CSS图，模型标识、API与输入为虚构教学fixture；不称AI生成、不发送推理请求。",
+    "字体取舍：显示 \"Inter Variable\", sans-serif；正文 \"Inter Variable\", sans-serif。使用本地开放字体/系统字体替代品牌商业字体；标题筛选标签按实际桌面渲染归类。"
+  ],
+  "references": [
+    {
+      "source": "原规范 L291–324、362–370、412–457、502–508、590–616",
+      "reason": "奶油刊头/单块橙宣言 → 方作品目录 → 深色分栏实验笔记 → 奶油收尾。`#f9f7f3`/`#ea2804`、72–128px紧粗展示、深色Mono代码井，胶囊与10px作品框分工。"
+    }
+  ],
+  "assets": []
+}

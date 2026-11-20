@@ -1,0 +1,365 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+}
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+button,
+a,
+input,
+select,
+textarea {
+  touch-action: manipulation;
+}
+button {
+  cursor: pointer;
+}
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+a {
+  color: inherit;
+}
+img,
+svg,
+video {
+  max-width: 100%;
+}
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid #7b96d3;
+  outline-offset: 4px;
+}
+pre {
+  overflow: auto;
+}
+p {
+  line-height: 1.65;
+}
+dialog {
+  max-width: calc(100% - 32px);
+}
+[hidden] {
+  display: none !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:root {
+  --bg: #0f0f0f;
+  --panel: #181818;
+  --raised: #222;
+  --line: #343434;
+  --text: #f3f3f3;
+  --dim: #a0a0a0;
+  --blue: #0007cd;
+}
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter Variable', sans-serif;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 5%;
+  border-bottom: 1px solid #262626;
+}
+header > a {
+  font-size: 24px;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: -0.5px;
+}
+nav {
+  display: flex;
+  gap: 30px;
+  font-size: 12px;
+  align-items: center;
+}
+nav a {
+  text-decoration: none;
+}
+nav > span {
+  font:
+    9px 'JetBrains Mono Variable',
+    monospace;
+  color: var(--dim);
+}
+.hero {
+  text-align: center;
+  position: relative;
+  padding: 70px 20px 75px;
+  background: radial-gradient(ellipse at 50% 120%, #0007cd35, transparent 68%);
+}
+.eyebrow {
+  font:
+    10px 'JetBrains Mono Variable',
+    monospace;
+  letter-spacing: 1.5px;
+  color: var(--dim);
+}
+h1 {
+  font-size: 72px;
+  font-weight: 500;
+  letter-spacing: -3px;
+  line-height: 1.05;
+  margin: 26px 0;
+}
+h1 em {
+  font-style: normal;
+  color: #8b96ff;
+}
+.hero p {
+  font-size: 14px;
+  color: var(--dim);
+  line-height: 1.9;
+}
+.blue {
+  background: var(--blue);
+  color: white;
+  border: 1px solid #3b42ed;
+  border-radius: 8px;
+  padding: 13px 20px;
+  font-size: 12px;
+  display: inline-block;
+  text-decoration: none;
+}
+.hero .blue {
+  margin-top: 18px;
+}
+.bench {
+  margin: 0 5%;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.controls {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+  background: #131313;
+  padding: 18px 25px;
+  font-size: 11px;
+}
+.controls label {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+}
+select {
+  background: var(--raised);
+  color: white;
+  border: 1px solid #555;
+  border-radius: 6px;
+  padding: 8px;
+  font-size: 11px;
+}
+.controls > button:last-child {
+  background: none;
+  color: var(--dim);
+  border: 1px solid #555;
+  border-radius: 8px;
+  padding: 12px 18px;
+}
+.quad {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.quad > div {
+  padding: 25px;
+  background: var(--panel);
+  min-height: 220px;
+  min-width: 0;
+  border-top: 1px solid var(--line);
+}
+.quad > div:nth-child(odd) {
+  border-right: 1px solid var(--line);
+}
+.pane-label {
+  font:
+    10px 'JetBrains Mono Variable',
+    monospace;
+  display: flex;
+  justify-content: space-between;
+  letter-spacing: 1px;
+  color: var(--dim);
+  margin-bottom: 25px;
+}
+pre {
+  font:
+    12px/1.9 'JetBrains Mono Variable',
+    monospace;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  color: #c9c9d5;
+  margin: 0 0 16px;
+}
+small {
+  font-size: 10px;
+  color: var(--dim);
+}
+ol {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+li {
+  padding: 11px 15px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font-size: 12px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+li.done {
+  background: #222337;
+  border-color: #747ee0;
+}
+#result {
+  font-size: 14px;
+  line-height: 1.9;
+  color: #b8b8b8;
+}
+.how {
+  padding: 100px 8%;
+}
+.how h2,
+.last h2 {
+  font-size: 48px;
+  line-height: 1.15;
+  font-weight: 500;
+  letter-spacing: -1.5px;
+}
+.connections {
+  display: grid;
+  grid-template-columns: 1fr 40px 1fr 40px 1fr;
+  gap: 20px;
+  align-items: center;
+  margin-top: 60px;
+}
+.connections b {
+  font-size: 35px;
+  font-weight: 400;
+}
+.connections h3 {
+  font-size: 18px;
+  font-weight: 500;
+}
+.connections p {
+  font-size: 12px;
+  color: var(--dim);
+}
+.connections > span {
+  color: #767676;
+  font-size: 25px;
+}
+.last {
+  padding: 50px 8% 100px;
+  border-top: 1px solid var(--line);
+}
+.last p {
+  font-size: 13px;
+  color: var(--dim);
+}
+.last a {
+  font-size: 12px;
+  text-underline-offset: 6px;
+  display: inline-block;
+  margin-top: 25px;
+}
+footer {
+  padding: 25px 5%;
+  border-top: 1px solid var(--line);
+  font-size: 10px;
+  color: var(--dim);
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 650px) {
+  header {
+    padding: 22px 6%;
+  }
+  nav > a,
+  nav > span {
+    display: none;
+  }
+  .hero {
+    padding: 55px 6%;
+  }
+  h1 {
+    font-size: 45px;
+    letter-spacing: -2px;
+  }
+  .hero p {
+    font-size: 12px;
+  }
+  .controls {
+    padding: 18px;
+    gap: 13px;
+  }
+  .controls .failure {
+    font-size: 10px;
+  }
+  .quad {
+    grid-template-columns: 1fr;
+  }
+  .quad > div {
+    border-right: 0 !important;
+    padding: 22px;
+    min-height: 190px;
+  }
+  .how {
+    padding: 70px 7%;
+  }
+  .how h2,
+  .last h2 {
+    font-size: 35px;
+  }
+  .connections {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-top: 35px;
+  }
+  .connections > div {
+    border-top: 1px solid var(--line);
+    padding-top: 20px;
+  }
+  .connections > span {
+    display: none;
+  }
+  .connections h3 {
+    display: inline;
+    margin-left: 20px;
+  }
+  .last {
+    padding: 35px 7% 70px;
+  }
+  footer {
+    gap: 20px;
+    line-height: 1.8;
+  }
+}

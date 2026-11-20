@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Crosstown / 社区接驳规划 · 独立风格示例</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a class="wordmark" href="#">Crosstown</a>
+      <nav aria-label="服务章节"><a href="#how">服务说明</a><a href="#volunteer">一起同行</a></nav>
+      <span>社区接驳演示</span>
+    </header>
+    <main>
+      <section class="plan">
+        <div>
+          <p class="eyebrow">把熟悉的地方，连起来。</p>
+          <h1>下一站，<br />就在社区里。</h1>
+          <form id="planner">
+            <label
+              >出发地<select id="from">
+                <option value="library">河岸图书馆</option>
+                <option value="market">周末集市</option>
+                <option value="garden">北园活动站</option>
+                <option value="hill">山顶书屋</option>
+              </select></label
+            ><button type="button" id="swap" aria-label="交换起终点">↕</button
+            ><label
+              >目的地<select id="to">
+                <option value="market">周末集市</option>
+                <option value="library">河岸图书馆</option>
+                <option value="garden">北园活动站</option>
+                <option value="hill">山顶书屋</option>
+              </select></label
+            ><label class="check"><input id="accessible" type="checkbox" />优先无障碍路线</label
+            ><button class="primary" type="submit">查看演示路线</button>
+            <p id="route-status" role="status">选择两个地点，看看如何抵达。</p>
+          </form>
+          <div id="route-results" hidden>
+            <p>本页固定情境 / 不是实际班次或导航</p>
+            <div>
+              <button id="mode-walk" type="button" aria-pressed="true">
+                <b>步行</b><span id="walk-time"></span><small id="walk-detail"></small></button
+              ><button id="mode-shuttle" type="button" aria-pressed="false">
+                <b>接驳</b><span id="shuttle-time"></span><small>示例停靠点之间</small>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="map">
+          <svg viewBox="0 0 600 620" role="img" aria-labelledby="map-title">
+            <title id="map-title">虚构街区地图，选择地点后显示对应示意路线</title>
+            <rect width="600" height="620" fill="#e8e9e3" />
+            <path
+              d="M80 0 130 620M340 0 380 620M0 160 600 120M0 350 600 320M0 510 600 490"
+              stroke="white"
+              stroke-width="24"
+            />
+            <path
+              d="M500 0Q280 170 480 330T430 620"
+              fill="none"
+              stroke="#b9d7dd"
+              stroke-width="74"
+            />
+            <path d="M15 20H260V100H15ZM20 390H300V470H20ZM30 540H330V600H30Z" fill="#c9d6bd" />
+            <g fill="#d3d4cd">
+              <path
+                d="M170 210H280V280H170ZM174 370H280V400H174ZM180 30H245V89H180ZM45 220H90V305H45ZM398 540H540V600H398Z"
+              />
+            </g>
+            <path
+              id="route-line"
+              d=""
+              stroke="#111"
+              stroke-width="8"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              hidden
+            />
+            <g fill="#111">
+              <circle cx="130" cy="160" r="10" />
+              <circle cx="360" cy="337" r="10" />
+              <circle cx="165" cy="510" r="10" />
+            </g>
+            <circle cx="516" cy="88" r="9" fill="#777" />
+            <path d="M485 62H551V112H485Z" fill="none" stroke="#777" stroke-dasharray="4 5" />
+            <circle
+              id="start-marker"
+              cx="0"
+              cy="0"
+              r="12"
+              fill="#fff"
+              stroke="#111"
+              stroke-width="5"
+              hidden
+            />
+            <rect
+              id="end-marker"
+              x="0"
+              y="0"
+              width="24"
+              height="24"
+              fill="#111"
+              stroke="#fff"
+              stroke-width="3"
+              hidden
+            />
+            <g font-family="Arial,sans-serif" font-size="18" fill="#222">
+              <text x="151" y="185">图书馆</text>
+              <text x="350" y="305">集市</text>
+              <text x="188" y="543">北园</text>
+              <text x="454" y="141" font-size="14">山顶书屋</text>
+              <text x="458" y="162" font-size="11">尚未接入</text>
+              <text x="421" y="580" font-size="12">河岸</text>
+            </g>
+          </svg>
+          <p id="map-route-name">尚未选定路线</p>
+          <span>原创示意地图 · 不提供真实导航 / 班次</span>
+        </div>
+      </section>
+      <section id="how">
+        <p class="eyebrow">A FEW WAYS TO GO</p>
+        <h2>路不远，选择可以多一点。</h2>
+        <div class="services">
+          <article>
+            <svg viewBox="0 0 210 140" role="img" aria-label="原创步行与街角长椅插画">
+              <path d="M12 121H198" stroke="#aaa" stroke-width="2" />
+              <path
+                d="M136 78H197V90H136ZM146 90V120M187 90V120"
+                fill="none"
+                stroke="#3b403b"
+                stroke-width="7"
+              />
+              <circle cx="69" cy="28" r="11" fill="#111" />
+              <path
+                d="M64 48 49 83 84 111M62 53 90 67M51 81 27 114"
+                stroke="#111"
+                stroke-width="10"
+                stroke-linecap="round"
+                fill="none"
+              />
+              <path d="M107 68V121" stroke="#aaa" stroke-width="3" /></svg
+            ><b>01 / Walk</b>
+            <h3>慢慢走，看看街角</h3>
+            <p>比较固定步行情境。沿街角与河岸前行，不请求你的位置。</p>
+          </article>
+          <article>
+            <svg viewBox="0 0 210 140" role="img" aria-label="原创社区接驳小巴插画">
+              <path d="M12 119H198" stroke="#aaa" stroke-width="2" />
+              <path d="M25 46H155Q171 46 180 66L195 103H18V63Q18 46 25 46Z" fill="#111" />
+              <path d="M29 55H67V79H29ZM76 55H112V79H76ZM121 55H153L168 79H121Z" fill="#cad2c7" />
+              <path d="M23 91H184" stroke="#eee" stroke-width="3" />
+              <circle cx="56" cy="104" r="17" fill="#111" />
+              <circle cx="157" cy="104" r="17" fill="#111" />
+              <circle cx="56" cy="104" r="7" fill="#ccc" />
+              <circle cx="157" cy="104" r="7" fill="#ccc" /></svg
+            ><b>02 / Shuttle</b>
+            <h3>接驳，把人带近</h3>
+            <p>查看演示停靠点之间的路线。没有真实发车时间，也不会发起叫车。</p>
+          </article>
+          <article>
+            <svg viewBox="0 0 210 140" role="img" aria-label="原创无台阶通道和轮椅插画">
+              <path d="M10 121H196" stroke="#aaa" stroke-width="2" />
+              <circle cx="77" cy="90" r="27" fill="none" stroke="#111" stroke-width="7" />
+              <circle cx="80" cy="27" r="10" fill="#111" />
+              <path
+                d="M79 46 84 77H113L131 106H147M84 60H110"
+                fill="none"
+                stroke="#111"
+                stroke-width="8"
+                stroke-linecap="round"
+              />
+              <path d="M146 120 190 82" stroke="#6e7b69" stroke-width="5" /></svg
+            ><b>03 / Together</b>
+            <h3>给每个人留位置</h3>
+            <p>勾选无障碍偏好，会切换为另一路径与零台阶情境。不构成现实可达性承诺。</p>
+          </article>
+        </div>
+      </section>
+      <section class="neighborhood">
+        <img
+          src="./assets/neighborhood.svg"
+          alt="原创社区接驳小巴、图书馆、步行者与沿街建筑情境插画"
+        />
+        <div>
+          <p class="eyebrow">FAMILIAR STREETS. NEW POSSIBILITIES.</p>
+          <h2>从一本书，<br />到一篮新鲜。</h2>
+          <p>
+            图书馆、集市和活动站，把日常连成一张小小的网。Crosstown
+            用一个虚构街区，演示不同出行选择如何被清楚地放在一起。
+          </p>
+          <a href="#planner">比较一段路线 ↑</a>
+        </div>
+      </section>
+      <section id="volunteer" class="dark">
+        <h2>城市的温度，<br />来自愿意同行的人。</h2>
+        <p>
+          原创社区服务界面练习。地点、车辆、时长与服务能力均为固定示例，没有定位、扣款或真实订单。
+        </p>
+        <a href="#planner">试试路线规划 ↑</a>
+      </section>
+    </main>
+    <footer class="demo-note">CROSSTOWN / 本地内存演示 / 地点和距离均为虚构</footer>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

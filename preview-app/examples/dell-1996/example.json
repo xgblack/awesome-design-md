@@ -1,0 +1,52 @@
+{
+  "title": "Byte Attic 1996",
+  "description": "搜索及年份筛选虚构旧电脑馆藏，比较处理器、显示器、扩展槽，并检查两块虚构主板的配置兼容。",
+  "status": "ready",
+  "features": {
+    "moods": ["retro"],
+    "tones": ["light"],
+    "temperature": ["neutral"],
+    "chroma": ["muted"],
+    "accentHues": ["red", "yellow", "blue"],
+    "backgrounds": ["solid"],
+    "layouts": ["directory", "workspace"],
+    "density": ["dense"],
+    "typography": ["sans", "serif"],
+    "headingScale": ["compact"],
+    "headingWeight": ["bold"],
+    "geometry": ["square"],
+    "layering": ["lines", "hard"],
+    "visualMedia": ["illustration"],
+    "motion": ["feedback"],
+    "scenarios": ["directory", "calculator"]
+  },
+  "interactions": ["filter", "configure"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "Arial Black / Helvetica / Times 系统字体分工，无现代 webfont；平 tint ribbon、硬边框、蓝色下划线与灰底规格表保留目录年代感。",
+    "三类计算机为本项目原创有限色矢量插画；全部型号、参数与主板兼容规则是明确的本页 fixture，不概括历史全部机型。"
+  ],
+  "references": [
+    {
+      "source": "L349–359、391–459、515–540",
+      "reason": "不加现代圆角软影，不把Times换Inter。"
+    }
+  ],
+  "assets": [
+    {
+      "file": "assets/desktop.svg",
+      "source": "本项目原创有限色计算机、显示器与键盘插画",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/notebook.svg",
+      "source": "本项目原创有限色计算机、显示器与键盘插画",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/tower.svg",
+      "source": "本项目原创有限色计算机、显示器与键盘插画",
+      "license": "本项目原创，可随示例分发"
+    }
+  ]
+}

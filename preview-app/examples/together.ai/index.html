@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vectorloom / AI inference cloud</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#">vectorloom<span>／</span></a>
+      <nav>
+        <a href="#models">Workloads</a><a href="#estimate">Estimator</a
+        ><span>RESEARCH / LOCAL DEMO</span>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <div>
+          <span class="eyebrow">OPEN QUESTIONS. MEASURABLE CHOICES.</span>
+          <h1>Pick the workload.<br />Understand the tradeoff.</h1>
+          <p>
+            从文本、视觉、音频与批量能力开始，读懂一套 AI 推理云。<br />固定演示费率，不是在线服务报价。
+          </p>
+          <a href="#models" class="black">Explore the catalog ↗</a>
+        </div>
+        <svg viewBox="0 0 500 430" role="img" aria-label="原创橙色、洋红和长春花三条编织带">
+          <defs>
+            <linearGradient id="ribbon" x1="0" y1="0" x2="1" y2="1">
+              <stop stop-color="#ff7b3c" />
+              <stop offset=".5" stop-color="#d93c95" />
+              <stop offset="1" stop-color="#8498ed" />
+            </linearGradient>
+          </defs>
+          <g fill="none" stroke="url(#ribbon)" stroke-width="35">
+            <path d="M-20 40c220 0 70 230 290 230S400 30 530 30" />
+            <path d="M-20 110c220 0 70 230 290 230S400 100 530 100" />
+            <path d="M-20 180c220 0 70 230 290 230S400 170 530 170" />
+          </g>
+        </svg>
+      </section>
+      <section class="models" id="models">
+        <div class="head">
+          <div>
+            <span class="eyebrow">01 / THE WORKLOAD CATALOG</span>
+            <h2>Capability before complexity.</h2>
+          </div>
+          <div class="filters">
+            <select id="type" aria-label="能力类型">
+              <option value="all">All modalities</option>
+              <option value="text">TEXT</option>
+              <option value="vision">VISION</option>
+              <option value="audio">AUDIO</option></select
+            ><label><input type="checkbox" id="batch" />支持批量</label>
+          </div>
+        </div>
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Workload</th>
+                <th>Modality</th>
+                <th>Context</th>
+                <th>Batch</th>
+                <th>Demo rate / 1M</th>
+              </tr>
+            </thead>
+            <tbody id="rows"></tbody>
+          </table>
+        </div>
+        <p id="count" role="status"></p>
+      </section>
+      <section class="estimate" id="estimate">
+        <div>
+          <span class="eyebrow">02 / A TRANSPARENT ESTIMATE</span>
+          <h2>Make the math<br />visible.</h2>
+          <p>
+            输入 token 数，查看标准与批量的演示费用。<br />所有费率固定，不计税费、输入输出差别或真实套餐。
+          </p>
+        </div>
+        <form id="form">
+          <label for="workload">工作负载</label
+          ><select id="workload">
+            <option value="draft">Draft / Text</option>
+            <option value="vision">Observe / Vision</option>
+            <option value="voice">Listen / Audio</option></select
+          ><label for="tokens">Token 数（0–100,000,000）</label
+          ><input id="tokens" type="number" min="0" max="100000000" value="1000000" /><label
+            class="batch"
+            ><input type="checkbox" id="batch-price" />使用批量演示费率</label
+          ><button class="black" type="submit">Estimate locally ↗</button>
+          <p id="cost" role="status">选择模型工作负载并计算。</p>
+        </form>
+      </section>
+      <section class="research">
+        <span class="eyebrow">A NOTE FROM THE RESEARCH DESK</span>
+        <h2>Not every choice<br />needs a leaderboard.</h2>
+        <p>
+          能力目录不是性能排名。没有运行模型，也没有发布质量或吞吐量结论。这里练习的是把需求、能力和费用放在同一张可读的桌面上。
+        </p>
+      </section>
+      <section class="end">
+        <span>Work together.</span><a href="#models">Return to the catalog ↑</a>
+      </section>
+    </main>
+    <footer>vectorloom / <span>Together AI DESIGN.md · 独立研究演示</span></footer>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bug Parade / Error monitoring platform</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#">◬ bug parade</a>
+      <nav>
+        <a href="#drill">The drill</a><a href="#learn">Field notes</a
+        ><a class="white" href="#drill">START A DRILL ↗</a>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <span class="eyebrow">EVERY BUG HAS A BACKSTORY.</span>
+        <h1>Meet the<br /><mark>unexpected.</mark></h1>
+        <p>一次故障，不必是一个谜。<br />沿着一个预置事件，找到异常发生的位置。</p>
+        <a class="white" href="#drill">FOLLOW THE TRACE ↗</a
+        ><svg class="monster" viewBox="0 0 260 270" role="img" aria-label="原创粉色小怪兽贴纸">
+          <path
+            d="m47 65 18-35 32 20 30-23 25 22 31-15 12 40c53 35 34 133 3 144-30 10-65-4-97 4-41 12-68-56-54-96Z"
+            fill="#fa7faa"
+            stroke="#100a1c"
+            stroke-width="6"
+          />
+          <path
+            d="M55 214v29m112-30 11 28"
+            stroke="#100a1c"
+            stroke-width="12"
+            stroke-linecap="round"
+          />
+          <ellipse
+            cx="96"
+            cy="107"
+            rx="22"
+            ry="29"
+            fill="white"
+            stroke="#100a1c"
+            stroke-width="4"
+          />
+          <ellipse
+            cx="152"
+            cy="107"
+            rx="22"
+            ry="29"
+            fill="white"
+            stroke="#100a1c"
+            stroke-width="4"
+          />
+          <circle cx="103" cy="112" r="7" />
+          <circle cx="145" cy="112" r="7" />
+          <path d="M98 165q25 24 50-3" stroke="#100a1c" stroke-width="6" fill="none" />
+        </svg>
+        <div class="stars" aria-hidden="true">✦<span>✧</span><b>✦</b></div>
+      </section>
+      <section class="drill" id="drill">
+        <div class="drill-heading">
+          <div>
+            <span class="eyebrow">01 / DIAGNOSTIC PLAYGROUND</span>
+            <h2>Give the failure a place.</h2>
+          </div>
+          <div>
+            <button id="trigger">TRIGGER MISSING RESOURCE</button
+            ><button id="success">LOAD SUCCESS FIXTURE</button>
+          </div>
+        </div>
+        <div class="diagnostic">
+          <div class="issue-head">
+            <span id="issue-type">READY / NO EVENT</span><span>LOCAL FIXTURE</span>
+          </div>
+          <h3 id="issue-title">等待一次受控演练。</h3>
+          <p id="issue-copy">按钮只选择预置教学事件，不制造应用自身崩溃。</p>
+          <div class="stack-tools">
+            <span>STACK TRACE</span
+            ><label><input type="checkbox" id="app-only" checked />仅应用帧</label>
+          </div>
+          <div class="stack-grid">
+            <div id="frames"></div>
+            <div class="source">
+              <span id="file-name">No frame selected</span>
+              <pre id="source">Select a simulated event to begin.</pre>
+            </div>
+          </div>
+          <button id="reset">RESET THE DRILL ↺</button>
+        </div>
+      </section>
+      <section class="learn" id="learn">
+        <span class="eyebrow">SEE THE CONTEXT, NOT JUST THE ERROR.</span>
+        <h2>Better clues.<br />Less guesswork.</h2>
+        <div>
+          <p>
+            第一步是分清楚：这是教学预置错误，还是页面本身的运行故障？这里的异常栈来自固定
+            fixture，不是线上监控。
+          </p>
+          <p>切换帧查看对应代码。显示第三方帧不会改变诊断结论，只是让上下文更完整。</p>
+        </div>
+      </section>
+      <svg class="squiggle" viewBox="0 0 1440 65" preserveAspectRatio="none" aria-hidden="true">
+        <path
+          d="M0 35Q120-15 240 35T480 35T720 35T960 35T1200 35T1440 35"
+          fill="none"
+          stroke="#c2ef4e"
+          stroke-width="8"
+        />
+      </svg>
+    </main>
+    <footer>bug parade / <span>Sentry DESIGN.md · 独立故障演练</span></footer>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

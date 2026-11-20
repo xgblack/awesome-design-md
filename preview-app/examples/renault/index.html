@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BRIK / A little more possible. · 独立风格示例</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a class="logo" href="#">BRIK<span>electric, everyday.</span></a>
+      <nav>
+        <a href="#range">车型</a><a href="#story">日常灵感</a><a href="#configure">配置你的 BRIK</a>
+      </nav>
+      <a class="yellow" href="#configure">开始配置 ↗</a>
+    </header>
+    <main>
+      <section class="hero">
+        <div>
+          <p>100% ELECTRIC / A DESIGN STUDY</p>
+          <h1>小一点的车。<br />大一点的可能。</h1>
+          <p class="hero-body">把座椅留给朋友，<br />把空间留给一整天。</p>
+          <a class="black" href="#range">探索 BRIK 家族</a>
+        </div>
+        <img
+          src="./assets/brik-sun-family.svg"
+          alt="原创BRIK阳光黄四轮模块电动车，侧面透明研究图可见三排座椅"
+        /><span>BRIK 01 / 模块车概念渲染</span>
+      </section>
+      <section class="range" id="range">
+        <div class="range-head">
+          <h2>一个日常，<br />不止一种打开方式。</h2>
+          <label for="use-case"
+            >按用途探索<select id="use-case">
+              <option value="all">全部用途</option>
+              <option value="family">家庭同行</option>
+              <option value="studio">移动工坊</option>
+              <option value="cargo">街区配送</option>
+            </select></label
+          >
+        </div>
+        <div class="range-cards" id="range-cards"></div>
+        <p id="range-status" role="status">3 种内部布局概念，均为四轮模块车。</p>
+      </section>
+      <section class="story" id="story">
+        <div>
+          <p>THE EVERYDAY, WITH MORE ROOM.</p>
+          <h2>不必每次，<br />都从头打包。</h2>
+          <p>
+            一辆紧凑的四轮车，容纳家庭出行、移动工作与街区运输。模块变化发生在车内，日常的节奏不必被打断。
+          </p>
+          <a class="yellow" href="#configure">看看里面有什么 ↗</a>
+        </div>
+        <img src="./assets/brik-chalk-studio.svg" alt="BRIK粉笔白模块车移动工坊内部货架概念" />
+      </section>
+      <section class="configure" id="configure">
+        <div class="configuration-visual">
+          <p>MAKE ROOM FOR YOUR DAY.</p>
+          <h2>你的 BRIK，<br />由今天决定。</h2>
+          <img
+            id="config-image"
+            src="./assets/brik-sun-family.svg"
+            alt="阳光黄家庭同行模块车原创渲染"
+          />
+          <p id="config-caption">三排座椅 / 6 座构型概念</p>
+        </div>
+        <div class="options">
+          <p class="overline">BRIK 01 / CONFIGURATOR STUDY</p>
+          <h3>配置你的日常</h3>
+          <fieldset>
+            <legend>01 / 内部模块</legend>
+            <label
+              ><input type="radio" name="module" value="family" checked />家庭同行
+              <span>6座 · 三排座椅</span></label
+            ><label
+              ><input type="radio" name="module" value="studio" />移动工坊
+              <span>2座 · 侧向货架</span></label
+            ><label
+              ><input type="radio" name="module" value="cargo" />街区配送
+              <span>2座 · 箱件装载区</span></label
+            >
+          </fieldset>
+          <fieldset>
+            <legend>02 / 车身颜色</legend>
+            <div class="colors">
+              <button type="button" data-color="sun" aria-pressed="true">阳光黄</button
+              ><button type="button" data-color="chalk" aria-pressed="false">粉笔白</button
+              ><button type="button" data-color="blue" aria-pressed="false">海港蓝</button>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>03 / 附加模块</legend>
+            <label class="rack"
+              ><input type="checkbox" id="rack" />固定工具架 <span>仅移动工坊可选</span></label
+            >
+            <p id="compatibility" role="status">家庭同行保留座椅通道，不兼容固定工具架。</p>
+          </fieldset>
+          <dl>
+            <div>
+              <dt>座椅</dt>
+              <dd id="seat-count">6座概念</dd>
+            </div>
+            <div>
+              <dt>布局</dt>
+              <dd id="layout-label">三排座椅</dd>
+            </div>
+            <div>
+              <dt>当前配置</dt>
+              <dd id="summary">阳光黄 / 家庭同行</dd>
+            </div>
+          </dl>
+          <p class="demo-note">
+            配置仅在本页生效。尺寸、座位和车内模块为原创设计构型，不代表法规认证或实际出售。
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <span class="logo">BRIK</span>
+      <p>Small in the city. Open to your day.</p>
+      <p class="demo-note">
+        原创虚构四轮电动车展厅 · 非官方车型、销售报价、真实运输服务或续航实测。
+      </p>
+    </footer>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

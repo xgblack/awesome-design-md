@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PocketArcade 2001 · 独立风格示例</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="machine">
+      <header>
+        <div class="mascot">
+          <img src="./assets/courier-guide.webp" alt="原创像素快递员向导，橙色夹克与蓝色长裤" />
+        </div>
+        <div>
+          <b>POCKET<span>ARCADE</span></b>
+          <p>嘿，玩家！今天想去哪个世界？</p>
+        </div>
+        <label>找个游戏<input id="query" type="search" placeholder="搜索游戏名" /></label>
+      </header>
+      <nav class="primary">
+        <a href="#games">GAMES</a><a href="#systems">SYSTEMS</a><a href="#news">NEWS</a
+        ><a href="#poll">PLAYER'S CLUB</a>
+      </nav>
+      <nav class="secondary">
+        <a href="#games">Game Finder →</a><a href="#poll">本周投票 →</a
+        ><span>NO DOWNLOADS. JUST DISCOVERY.</span>
+      </nav>
+      <main>
+        <section class="feature">
+          <div class="pixel-world">
+            <img
+              src="./assets/moon-world.webp"
+              alt="原创月光快递像素世界：快递员骑车穿过漂浮小岛，远处有月亮、山城与灯光"
+            />
+            <p>MOON COURIER</p>
+          </div>
+          <div>
+            <small>FEATURED / ORIGINAL GAME CONCEPT</small>
+            <h1>月光快递，<br />今晚出发！</h1>
+            <p>骑着浮空自行车，把每一封来信送到会做梦的岛屿。</p>
+            <a href="#games">查找试玩档案 →</a>
+          </div>
+        </section>
+        <div class="columns">
+          <section id="games">
+            <h2>GAME FINDER</h2>
+            <label
+              >平台<select id="platform">
+                <option value="all">全部平台</option>
+                <option value="pocket">Pocket</option>
+                <option value="cube">Cube</option>
+              </select></label
+            >
+            <div class="finder-options">
+              <label
+                >类型<select id="genre">
+                  <option value="all">全部类型</option>
+                  <option value="explore">探索</option>
+                  <option value="puzzle">解谜</option>
+                  <option value="story">叙事</option>
+                </select></label
+              ><button id="reset-games">清空条件</button>
+            </div>
+            <div class="games">
+              <article data-platform="pocket" data-genre="explore" data-title="月光快递">
+                <div class="cover">
+                  <img
+                    src="./assets/moon-cover.webp"
+                    alt="月光快递原创封面，月夜浮岛与骑车送信的像素角色"
+                  />
+                </div>
+                <h3>月光快递</h3>
+                <p>Pocket / 探索 / 2001</p>
+              </article>
+              <article data-platform="cube" data-genre="puzzle" data-title="积木海港">
+                <div class="cover">
+                  <img
+                    src="./assets/harbor-cover.webp"
+                    alt="积木海港原创封面，港口集装箱、起重机与帆船"
+                  />
+                </div>
+                <h3>积木海港</h3>
+                <p>Cube / 解谜 / 2001</p>
+              </article>
+              <article data-platform="pocket" data-genre="story" data-title="树屋电台">
+                <div class="cover">
+                  <img
+                    src="./assets/tree-cover.webp"
+                    alt="树屋电台原创封面，森林木屋、梯子和小收音机"
+                  />
+                </div>
+                <h3>树屋电台</h3>
+                <p>Pocket / 叙事 / 2001</p>
+              </article>
+            </div>
+            <p id="find-status" role="status">3 个原创游戏档案</p>
+            <section id="news">
+              <h2>CLUB NEWS</h2>
+              <h3>把掌机装进口袋，把世界带在身边。</h3>
+              <p>本期会馆特别介绍三款虚构独立游戏概念。没有借用现役游戏角色、封面或官方素材。</p>
+            </section>
+          </section>
+          <aside>
+            <section id="poll">
+              <h2>WEEKLY POLL</h2>
+              <p>如果去月球送信，<br />你最想带什么？</p>
+              <form id="vote">
+                <label><input type="radio" name="vote" value="收音机" />小收音机</label
+                ><label><input type="radio" name="vote" value="明信片" />空白明信片</label
+                ><label><input type="radio" name="vote" value="热可可" />一杯热可可</label
+                ><button>SUBMIT →</button>
+              </form>
+              <p id="vote-status" role="status">本机模拟投票，无社区统计。</p>
+              <button id="undo" hidden>撤回投票</button>
+            </section>
+            <section id="systems">
+              <h2>SYSTEM NOTES</h2>
+              <img
+                class="handheld"
+                src="./assets/pocket-console.webp"
+                alt="原创 Pocket Color 横向掌机，LCD像素世界、方向键与紫色按钮"
+              />
+              <h3>POCKET / COLOR</h3>
+              <p>一个可以装进口袋的世界。<br />原创掌机概念，不是真实硬件或游戏下载。</p>
+              <a href="#games">查找 Pocket 游戏 →</a>
+              <p>手机重排为现代演绎，不是2001年实测布局。</p>
+            </section>
+          </aside>
+        </div>
+      </main>
+      <footer>
+        POCKETARCADE / ORIGINAL WORLDS, OLD WEB SPIRIT.<br />本地演示，无真实游戏下载或社区账户。
+      </footer>
+    </div>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

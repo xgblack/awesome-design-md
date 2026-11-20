@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Launchpaper / Website prototype builder</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#">launchpaper<span>✧</span></a>
+      <nav><a href="#templates">Templates</a><a href="#about">How it works</a></nav>
+    </header>
+    <main>
+      <section class="hero">
+        <span class="eyebrow">MAKE YOUR IDEA A LITTLE MORE REAL.</span>
+        <h1>What will you<br />build today?</h1>
+        <p>写下网站或应用的想法，把它变成真正可以编辑的网页。<br />预置示范，不使用在线模型。</p>
+        <form id="prompt-form">
+          <label for="prompt">你想构建怎样的网站或应用？</label
+          ><textarea
+            id="prompt"
+            placeholder="例如：为独立设计师制作作品集"
+            maxlength="180"
+          ></textarea>
+          <div>
+            <span>仅支持下方三种模板</span><button type="submit">Build a prototype ↗</button>
+          </div>
+        </form>
+        <div class="suggestions">
+          <button data-template="portfolio">设计师作品集</button
+          ><button data-template="product">产品落地页</button
+          ><button data-template="workspace">项目工作台</button>
+        </div>
+        <p id="feedback" role="status">选择模板，或写出包含“作品集 / 产品 / 工作台”的想法。</p>
+      </section>
+      <section class="plan" id="plan" hidden>
+        <div class="plan-top">
+          <span>YOUR APP / EDITABLE PROTOTYPE</span><button id="download">导出 HTML ↗</button>
+        </div>
+        <label for="plan-title">网站名称</label><input id="plan-title" maxlength="60" />
+        <div id="prototype" class="prototype"></div>
+        <div class="section-order">PAGE SECTIONS / 调整章节顺序</div>
+        <div id="plan-items"></div>
+        <p id="plan-status" role="status"></p>
+        <p>三个预置模板生成实际 DOM 网页，不调用在线模型；导出为可独立打开的 HTML。</p>
+      </section>
+      <section class="templates" id="templates">
+        <div>
+          <span class="eyebrow">SOMEWHERE TO BEGIN.</span>
+          <h2>Start with a spark.<br />Make it your own.</h2>
+        </div>
+        <div class="template-grid">
+          <button data-template="portfolio" class="template rain">
+            <div class="art">
+              <div class="site-art">
+                <span>STUDIO / 01</span><strong>Make a<br />little mark.</strong><i></i>
+              </div>
+            </div>
+            <h3>A place for your work.</h3>
+            <p>作品集 · 把项目与故事交给版面。</p></button
+          ><button data-template="product" class="template walk">
+            <div class="art">
+              <div class="site-art landing-art">
+                <span>SOFTSPACE</span><strong>Less friction.<br />More flow.</strong><i></i>
+              </div>
+            </div>
+            <h3>Launch something good.</h3>
+            <p>产品页 · 从清晰的问题到产品价值。</p></button
+          ><button data-template="workspace" class="template friends">
+            <div class="art">
+              <div class="site-art workspace-art">
+                <span>MY WORKSPACE</span><strong>Good work,<br />in progress.</strong><i></i>
+              </div>
+            </div>
+            <h3>Give your team a home.</h3>
+            <p>工作台 · 项目、计划与进行中的工作。</p>
+          </button>
+        </div>
+      </section>
+      <section class="about" id="about">
+        <span class="eyebrow">BUILT FROM REAL BUILDING BLOCKS.</span>
+        <h2>Your idea.<br />Your next iteration.</h2>
+        <p>
+          从自然语言入口到可编辑网页，三个由人设计的模板提供起点。标题与章节顺序由你决定；不生成服务器代码，不发布网站，也不持久保存输入。
+        </p>
+      </section>
+    </main>
+    <footer>launchpaper / <span>Lovable DESIGN.md · 独立本地示例</span></footer>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

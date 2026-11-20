@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import Icon from './Icon.vue'
-import SpecCover from './SpecCover.vue'
+import ExampleCover from './ExampleCover.vue'
+import { valuesFor } from '../lib/catalog.ts'
 import { labelFor } from '../data/facets.ts'
 import type { StyleEntry } from '../types.ts'
 defineProps<{
   style: StyleEntry
+  basis: 'reference' | 'example'
   number: number
   href: string
   sourceHref: string
@@ -16,7 +18,7 @@ defineEmits<{ favorite: [id: string]; compare: [id: string] }>()
 <template>
   <article class="style-card" :class="{ selected }" :data-style="style.id">
     <a :href="href" class="cover-link" :aria-label="`查看 ${style.name} 详情`"
-      ><SpecCover :style="style" :number="number"
+      ><ExampleCover :style="style" :number="number"
     /></a>
     <div class="card-content">
       <div class="card-title-row">
@@ -35,7 +37,7 @@ defineEmits<{ favorite: [id: string]; compare: [id: string] }>()
           ><button
             class="icon-button candidate-button"
             :class="{ active: selected }"
-            :aria-label="`${selected ? '从规范对照移除' : '加入规范对照'} ${style.name}`"
+            :aria-label="`${selected ? '从风格对照移除' : '加入风格对照'} ${style.name}`"
             :aria-pressed="selected"
             @click="$emit('compare', style.id)"
           >
@@ -45,12 +47,19 @@ defineEmits<{ favorite: [id: string]; compare: [id: string] }>()
       </div>
       <p class="card-summary">{{ style.summary }}</p>
       <div class="card-tags">
-        <span v-if="style.moods[0]" class="tag">{{ labelFor('moods', style.moods[0]) }}</span
-        ><span v-if="style.tone" class="tag">{{ labelFor('tones', style.tone) }}</span
+        <span v-if="valuesFor(style, 'moods', basis)[0]" class="tag">{{
+          labelFor('moods', valuesFor(style, 'moods', basis)[0])
+        }}</span
+        ><span v-if="valuesFor(style, 'tones', basis)[0]" class="tag">{{
+          labelFor('tones', valuesFor(style, 'tones', basis)[0])
+        }}</span
         ><span v-if="!style.curated" class="tag">资料待整理</span>
       </div>
       <div class="card-foot">
-        <span class="pending-label"><span class="status-dot" />示例待制作</span
+        <span class="pending-label" :class="{ 'ready-label': style.preview === 'ready' }"
+          ><span class="status-dot" />{{
+            style.preview === 'ready' ? '已有示例' : '示例待制作'
+          }}</span
         ><a :href="sourceHref">阅读规范<Icon name="arrow" :size="15" /></a>
       </div>
     </div>

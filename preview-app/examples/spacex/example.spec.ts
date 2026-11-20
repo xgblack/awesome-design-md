@@ -1,0 +1,20 @@
+import { test, expect } from '@playwright/test'
+test('spacex: 任务简报标签显示不同内容', async ({ page }) => {
+  await page.goto('examples/spacex/index.html')
+  await page.locator('[data-brief=mission]').click()
+  await expect(page.locator('#brief-title')).toHaveText('ÉTUDE 07')
+  await page.locator('[data-tab=vehicle]').click()
+  await expect(page.locator('#brief-title')).toHaveText('ASTER 02')
+  await expect(page.locator('#brief-text')).toContainText('两级运载器')
+  await page.keyboard.press('Escape')
+  await expect(page.locator('[data-brief=mission]')).toBeFocused()
+})
+test('spacex: 任务目录跳章和载荷说明', async ({ page }) => {
+  await page.goto('examples/spacex/index.html')
+  await page.locator('#index-open').click()
+  await page.locator('#index a[href="#orbit"]').click()
+  await expect(page.locator('#index')).toBeHidden()
+  await page.locator('[data-brief=payload]').click()
+  await expect(page.locator('#brief-title')).toHaveText('A WIDER VIEW')
+  await expect(page.locator('#brief-text')).toContainText('不是该载荷回传')
+})

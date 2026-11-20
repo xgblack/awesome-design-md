@@ -1,0 +1,138 @@
+{
+  "title": "Still Electric / The everyday, reimagined.",
+  "description": "电动车与家庭能源展厅；切换车型/外观，编辑试驾意向草稿，不预约、不购车、不定位。",
+  "status": "ready",
+  "features": {
+    "moods": ["minimal"],
+    "tones": ["mixed"],
+    "temperature": ["cool"],
+    "chroma": ["muted"],
+    "accentHues": ["neutral"],
+    "backgrounds": ["image"],
+    "layouts": ["chapters", "split"],
+    "density": ["airy"],
+    "typography": ["sans"],
+    "headingScale": ["regular"],
+    "headingWeight": ["medium"],
+    "geometry": ["small-radius"],
+    "layering": ["lines"],
+    "visualMedia": ["render"],
+    "motion": ["feedback"],
+    "scenarios": ["product"]
+  },
+  "interactions": ["configure", "form"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "原创虚构品牌与概念产品，非官方页面；操作仅在当前页面内存生效，不提交真实业务。",
+    "Inter500本地替代；两种车型为独立车身轮廓，高车顶跨界不靠同一轿跑仅改颜色。",
+    "原创新电动车/山麓环境/太阳能屋顶及家储图，不是实车照片；旧小屋摄影不再作为产品主视觉。",
+    "手机独立纵构图保留完整车身与山麓环境，不用横图cover裁掉车头/车轮。"
+  ],
+  "references": [
+    {
+      "source": "DESIGN.md L3–20、55–129",
+      "reason": "电动车/能源、100vh车型图、40px500字重常规字距和双4px行动，主体为原创车辆而非小屋。"
+    },
+    {
+      "source": "DESIGN.md L139–176、208–259",
+      "reason": "逐章车型与2:1家庭能源场景；保留极简选择/草稿表单，没有购车与预约业务。"
+    }
+  ],
+  "assets": [
+    {
+      "file": "assets/s-pearl.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/s-graphite.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/s-red.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/x-pearl.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/x-graphite.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/x-red.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/scene-s-pearl.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/scene-s-graphite.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/scene-s-red.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/scene-x-pearl.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/scene-x-graphite.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/scene-x-red.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/home-energy.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/mobile-s-pearl.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/mobile-s-graphite.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/mobile-s-red.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/mobile-x-pearl.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/mobile-x-graphite.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/mobile-x-red.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    }
+  ]
+}

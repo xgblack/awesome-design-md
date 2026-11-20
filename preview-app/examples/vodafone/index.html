@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Everywhere / More than a connection. · 独立风格示例</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#">everywhere<span>◜</span></a>
+      <nav>
+        <a href="#services">连接服务</a><a href="#points">通信支持</a
+        ><a href="#stories">连接故事</a>
+      </nav>
+      <span>MORE THAN A CONNECTION.</span>
+    </header>
+    <main>
+      <section class="hero">
+        <img
+          src="../_shared/photos/portrait.webp"
+          alt="许可人物肖像作为通信连接campaign情境参考，无真实身份或使用关系"
+        />
+        <div>
+          <p>NO ONE SHOULD FEEL FAR AWAY.</p>
+          <h1>让每种<br />连接，<br />更靠近。</h1>
+          <a href="#services">找到适合你的连接 →</a>
+        </div>
+        <i class="arc"></i>
+      </section>
+      <section class="statement">
+        <h2>连起来的，<br />不只是一个号码。</h2>
+        <p>
+          是手机里的第一次视频通话，是不再被流量术语挡住的套餐选择，是一家人各自在忙，却随时可以说上一句话的日常。
+        </p>
+      </section>
+      <section class="services" id="services">
+        <div class="services-top">
+          <div>
+            <p>CONNECTIONS FOR EVERYDAY LIFE</p>
+            <h2>你的日常，<br />需要怎样的连接？</h2>
+            <p>从真实的通信任务出发，读懂一套固定概念方案。不是价格表，也不触发任何套餐办理。</p>
+          </div>
+          <img
+            src="./assets/connection-devices.svg"
+            alt="原创智能手机视频通话界面与家庭Wi-Fi设备渲染"
+          />
+        </div>
+        <div class="service-options" role="group" aria-label="通信使用需求">
+          <button data-plan="mobile" aria-pressed="true">
+            <span>01 / MOBILE</span><b>轻装出门</b><small>地图、消息、偶尔一通视频</small></button
+          ><button data-plan="family" aria-pressed="false">
+            <span>02 / HOME</span><b>一家人的日常</b
+            ><small>多设备、家庭Wi-Fi与共享时间</small></button
+          ><button data-plan="voice" aria-pressed="false">
+            <span>03 / VOICE</span><b>从一通电话开始</b><small>通话、文字消息与手机入门</small>
+          </button>
+        </div>
+        <div class="plan-result" aria-live="polite">
+          <div>
+            <p>YOUR CONNECTION STUDY</p>
+            <h3 id="plan-title">Everyday Mobile</h3>
+            <p id="plan-description">为移动中的地图、消息和轻量视频，理解流量与通话如何组合。</p>
+          </div>
+          <dl id="plan-specs"></dl>
+          <p class="demo-note">
+            固定方案示例，不是实际套餐、报价、网络覆盖、速率保证或运营商服务。
+          </p>
+        </div>
+      </section>
+      <section id="points" class="points">
+        <div>
+          <p>DIGITAL CONNECTION SUPPORT</p>
+          <h2>把通信术语，<br />换成听得懂的话。</h2>
+          <label for="neighbourhood">选择演示街区</label
+          ><select id="neighbourhood">
+            <option value="river">河岸街区</option>
+            <option value="north">北园街区</option>
+            <option value="hill">山顶街区</option>
+          </select>
+          <p class="demo-note">仅展示虚构数字支持资料，不查询覆盖或定位。</p>
+        </div>
+        <div id="point-result" role="status"></div>
+      </section>
+      <section id="stories">
+        <div class="story-head">
+          <h2>远方的人，<br />也在日常里面。</h2>
+          <div>
+            <button data-need="all" aria-pressed="true">全部故事</button
+            ><button data-need="learn" aria-pressed="false">手机入门</button
+            ><button data-need="share" aria-pressed="false">家庭连接</button>
+          </div>
+        </div>
+        <div class="stories">
+          <article data-story-need="learn">
+            <img
+              src="../_shared/photos/portrait-woman.webp"
+              alt="许可人物摄影，作为手机学习故事参考，无真实人物关系"
+            />
+            <h3>“视频接通的时候，<br />距离就小了一点。”</h3>
+            <p>虚构人物 / 第一次独立使用视频通话</p>
+            <button data-person="learn">阅读手机连接资料 →</button>
+          </article>
+          <article data-story-need="share">
+            <img
+              src="../_shared/photos/portrait.webp"
+              alt="许可人物肖像，作为家庭连接故事参考，无真实人物关系"
+            />
+            <h3>“不同的房间，<br />同一个家的节奏。”</h3>
+            <p>虚构人物 / 家庭多设备连接</p>
+            <button data-person="share">阅读家庭网络资料 →</button>
+          </article>
+        </div>
+        <p id="story-status" role="status">2 篇虚构数字连接故事</p>
+      </section>
+    </main>
+    <footer>
+      EVERYWHERE / ORIGINAL TELECOM CONNECTION STUDY
+      <p>
+        原创虚构通信campaign；人物与故事无真实身份关联。方案、支持资料与时间均为固定演示，无网络查询、SIM办理、付款或客服服务。
+      </p>
+    </footer>
+    <dialog id="person">
+      <button id="person-close">关闭资料</button>
+      <p>DIGITAL CONNECTION NOTES</p>
+      <h2 id="person-title"></h2>
+      <p id="person-text"></p>
+      <p class="demo-note">固定原创故事，非真实用户证言；摄影仅作视觉参考。</p>
+    </dialog>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

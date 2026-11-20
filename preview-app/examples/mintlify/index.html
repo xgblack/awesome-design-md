@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nimbus / Developer documentation platform</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#">☁ nimbus<span> / developer docs</span></a
+      ><label class="search"
+        ><span>⌕</span
+        ><input
+          id="search"
+          type="search"
+          aria-label="搜索文档"
+          placeholder="Search documentation…"
+        /><kbd>/</kbd></label
+      ><a href="#quickstart" class="start">Get started ↗</a>
+    </header>
+    <section class="sky">
+      <span>THE NIMBUS SENSOR SDK</span>
+      <h1>A clearer signal.<br />A simpler integration.</h1>
+      <p>为小型环境传感器提供可读、可复制的接入说明。<br />以下设备与请求均为本地教学样例。</p>
+      <div class="cloud c1"></div>
+      <div class="cloud c2"></div>
+    </section>
+    <main>
+      <aside class="sidebar">
+        <h2>Documentation</h2>
+        <a href="#quickstart" class="current">Quickstart</a
+        ><a href="#authentication">Authentication</a><a href="#readings">Readings</a
+        ><a href="#errors">Error handling</a>
+        <div class="version">SDK v1.2<br /><span>固定文档 · 2026-06</span></div>
+      </aside>
+      <article>
+        <p id="search-info" role="status">4 个文档章节</p>
+        <section id="quickstart" data-doc="quickstart 接入 安装 请求">
+          <span class="crumb">GUIDES / QUICKSTART</span>
+          <h2>从第一条观测开始</h2>
+          <p>这份手册演示如何构造一个读取请求。不发送网络请求，也不需要真实设备或密钥。</p>
+          <div class="tip">
+            <b>✓ Before you begin</b>
+            <p>
+              准备一个演示设备 ID：<code>nimbus-demo-01</code>。下面的 DEMO_TOKEN 是无效占位符。
+            </p>
+          </div>
+          <h3>1. 选择你熟悉的语言</h3>
+          <div class="code">
+            <div class="tabs">
+              <button data-language="curl" aria-pressed="true">cURL</button
+              ><button data-language="python">Python</button><button id="copy">复制代码</button>
+            </div>
+            <pre id="code"></pre>
+          </div>
+          <p id="copied" role="status"></p>
+          <h3>2. 理解返回字段</h3>
+          <p>
+            <code>temperature</code> 使用摄氏度；<code>recorded_at</code> 为 UTC 时间。缺失读数返回
+            null，不返回虚构的零。
+          </p>
+        </section>
+        <section id="authentication" data-doc="authentication 认证 token 密钥">
+          <span class="crumb">REFERENCE</span>
+          <h2>认证与令牌</h2>
+          <p>真实集成应在服务端管理令牌。本示例只展示字段结构，绝不要求粘贴你的生产密钥。</p>
+          <pre class="inline-code">Authorization: Bearer DEMO_TOKEN</pre>
+        </section>
+        <section id="readings" data-doc="readings 读数 参数 温度">
+          <span class="crumb">REFERENCE</span>
+          <h2>读取一条观测</h2>
+          <dl>
+            <div>
+              <dt>device_id</dt>
+              <dd>必填 · string · 演示设备的标识</dd>
+            </div>
+            <div>
+              <dt>temperature</dt>
+              <dd>number | null · 单位 °C</dd>
+            </div>
+            <div>
+              <dt>recorded_at</dt>
+              <dd>string · ISO 8601 时间</dd>
+            </div>
+          </dl>
+        </section>
+        <section id="errors" data-doc="error 错误 失败 空 响应">
+          <h2>失败也是接口的一部分</h2>
+          <p>
+            404 表示设备记录不存在；429
+            表示应稍后重试。空数据和请求失败应分别处理，不能把它们都显示成 0°C。
+          </p>
+          <div class="author">
+            <span>N</span>
+            <p>Written for careful builders.<br /><small>本地演示 · 不连接 Nimbus 服务</small></p>
+          </div>
+        </section>
+      </article>
+      <aside class="toc">
+        <span>ON THIS PAGE</span><a href="#quickstart">Quickstart</a
+        ><a href="#authentication">Authentication</a><a href="#readings">Readings</a
+        ><a href="#errors">Errors</a>
+      </aside>
+    </main>
+    <footer>nimbus / <span>独立风格示例 · Mintlify DESIGN.md</span></footer>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

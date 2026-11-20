@@ -1,0 +1,159 @@
+{
+  "title": "巢里 / Nest Notes",
+  "description": "「巢里小空间灵感墙」——搜索室内图片并收录当次灵感清单。",
+  "status": "ready",
+  "features": {
+    "moods": ["warm", "playful"],
+    "tones": ["light"],
+    "temperature": ["warm"],
+    "chroma": ["muted"],
+    "accentHues": ["red"],
+    "backgrounds": ["solid"],
+    "layouts": ["masonry", "split"],
+    "density": ["dense"],
+    "typography": ["sans"],
+    "headingScale": ["regular"],
+    "headingWeight": ["bold"],
+    "geometry": ["rounded"],
+    "layering": ["lines"],
+    "visualMedia": ["photo"],
+    "motion": ["feedback"],
+    "scenarios": ["directory", "portfolio"]
+  },
+  "interactions": ["filter", "edit"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "20张独立室内摄影均本地存储，保留自然比例；Pexels许可允许在本应用设计中使用，不提供素材打包售卖。",
+    "Inter本地替代Pin Sans，瀑布流与清单是独立设计演示，非官方board系统。",
+    "20张当前室内照片已逐图核对：3张厨房、3张卧室、1张餐厅、1张收纳角，其余为客厅；不使用i%3随机房间分类。",
+    "标题和详情alt按真实岛台、床、沙发、书架等可见内容编写。"
+  ],
+  "references": [
+    {
+      "source": "L286–299、344–387、478–500、539–542、590–597",
+      "reason": "不做等高齐整网格；收藏详情是演示补充，不宣称源文包含完整 board 系统。"
+    }
+  ],
+  "assets": [
+    {
+      "file": "assets/room-1571460.jpg",
+      "source": "https://www.pexels.com/photo/1571460/",
+      "license": "Pexels License — https://www.pexels.com/license/",
+      "bytes": 50893
+    },
+    {
+      "file": "assets/room-1643383.jpg",
+      "source": "https://www.pexels.com/photo/1643383/",
+      "license": "Pexels License — https://www.pexels.com/license/",
+      "bytes": 51785
+    },
+    {
+      "file": "assets/room-1454806.jpg",
+      "source": "https://www.pexels.com/photo/1454806/",
+      "license": "Pexels License — https://www.pexels.com/license/",
+      "bytes": 37628
+    },
+    {
+      "file": "assets/room-271618.jpg",
+      "source": "https://www.pexels.com/photo/271618/",
+      "license": "Pexels License — https://www.pexels.com/license/",
+      "bytes": 35830
+    },
+    {
+      "file": "assets/room-1571468.jpg",
+      "source": "https://www.pexels.com/photo/1571468/",
+      "license": "Pexels License — https://www.pexels.com/license/",
+      "bytes": 47958
+    },
+    {
+      "file": "assets/room-1080721.jpg",
+      "source": "https://www.pexels.com/photo/1080721/",
+      "license": "Pexels License — https://www.pexels.com/license/",
+      "bytes": 51173
+    },
+    {
+      "file": "assets/room-1457842.jpg",
+      "source": "https://www.pexels.com/photo/1457842/",
+      "license": "Pexels License — https://www.pexels.com/license/",
+      "bytes": 42483
+    },
+    {
+      "file": "assets/room-279648.jpg",
+      "source": "https://www.pexels.com/photo/279648/",
+      "license": "Pexels License — https://www.pexels.com/license/",
+      "bytes": 97862
+    },
+    {
+      "file": "assets/room-1669799.jpg",
+      "source": "https://www.pexels.com/photo/1669799/",
+      "license": "Pexels License — https://www.pexels.com/license/",
+      "bytes": 42169
+    },
+    {
+      "file": "assets/room-276724.jpg",
+      "source": "https://www.pexels.com/photo/276724/",
+      "license": "Pexels License — https://www.pexels.com/license/",
+      "bytes": 62785
+    },
+    {
+      "file": "assets/room-276583.jpg",
+      "source": "https://www.pexels.com/photo/276583/",
+      "license": "Pexels License — https://www.pexels.com/license/",
+      "bytes": 43834
+    },
+    {
+      "file": "assets/room-275484.jpg",
+      "source": "https://www.pexels.com/photo/275484/",
+      "license": "Pexels License — https://www.pexels.com/license/",
+      "bytes": 56669
+    },
+    {
+      "file": "assets/room-1571467.jpg",
+      "source": "https://www.pexels.com/photo/1571467/",
+      "license": "Pexels License — https://www.pexels.com/license/",
+      "bytes": 49986
+    },
+    {
+      "file": "assets/room-1080696.jpg",
+      "source": "https://www.pexels.com/photo/1080696/",
+      "license": "Pexels License — https://www.pexels.com/license/",
+      "bytes": 149235
+    },
+    {
+      "file": "assets/room-259580.jpg",
+      "source": "https://www.pexels.com/photo/259580/",
+      "license": "Pexels License — https://www.pexels.com/license/",
+      "bytes": 49462
+    },
+    {
+      "file": "assets/room-245208.jpg",
+      "source": "https://www.pexels.com/photo/245208/",
+      "license": "Pexels License — https://www.pexels.com/license/",
+      "bytes": 54832
+    },
+    {
+      "file": "assets/room-271624.jpg",
+      "source": "https://www.pexels.com/photo/271624/",
+      "license": "Pexels License — https://www.pexels.com/license/",
+      "bytes": 38307
+    },
+    {
+      "file": "assets/room-1571458.jpg",
+      "source": "https://www.pexels.com/photo/1571458/",
+      "license": "Pexels License — https://www.pexels.com/license/",
+      "bytes": 47665
+    },
+    {
+      "file": "assets/room-276554.jpg",
+      "source": "https://www.pexels.com/photo/276554/",
+      "license": "Pexels License — https://www.pexels.com/license/",
+      "bytes": 47406
+    },
+    {
+      "file": "assets/room-271795.jpg",
+      "source": "https://www.pexels.com/photo/271795/",
+      "license": "Pexels License — https://www.pexels.com/license/",
+      "bytes": 68306
+    }
+  ]
+}

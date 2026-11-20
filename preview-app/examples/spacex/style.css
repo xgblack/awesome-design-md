@@ -1,0 +1,469 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+}
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+button,
+a,
+input,
+select,
+textarea {
+  touch-action: manipulation;
+}
+button,
+a {
+  cursor: pointer;
+}
+button {
+  color: inherit;
+  min-height: 44px;
+}
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+a {
+  color: inherit;
+}
+img,
+video,
+svg {
+  max-width: 100%;
+}
+img {
+  display: block;
+}
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--focus, #84a9d0);
+  outline-offset: 4px;
+}
+fieldset {
+  min-width: 0;
+}
+dialog {
+  max-width: calc(100% - 32px);
+  max-height: 90dvh;
+  overflow: auto;
+}
+dialog::backdrop {
+  background: #000b;
+}
+[hidden] {
+  display: none !important;
+}
+.demo-note {
+  font-size: 12px;
+  line-height: 1.7;
+  opacity: 0.72;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+:root {
+  --black: #000;
+  --white: #fff;
+  --muted: #aaa;
+  --line: #333;
+  --focus: #fff;
+}
+body {
+  background: var(--black);
+  color: white;
+  font:
+    14px Inter Variable,
+    sans-serif;
+}
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 108px;
+  z-index: 2;
+  padding: 0 5%;
+  display: flex;
+  gap: 65px;
+  align-items: center;
+}
+.logo {
+  font-size: 31px;
+  letter-spacing: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-style: italic;
+}
+.logo span {
+  font-size: 8px;
+  letter-spacing: 3px;
+  display: block;
+  text-align: right;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 2px;
+}
+nav {
+  display: flex;
+  gap: 30px;
+}
+nav a {
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: 600;
+}
+header button {
+  margin-left: auto;
+  background: none;
+  border: 0;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+.mission {
+  height: 100vh;
+  min-height: 900px;
+  position: relative;
+  isolation: isolate;
+}
+.mission > img {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.mission:after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(0deg, #000c 0%, transparent 65%, #0006 100%);
+}
+.launch > img {
+  object-position: center center;
+}
+.mission-copy {
+  position: absolute;
+  left: 6%;
+  bottom: 17%;
+}
+.mission-copy > p,
+.vehicle > div > p:first-child {
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+h1,
+.mission h2,
+.vehicle h2 {
+  font-size: 80px;
+  line-height: 1.03;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin: 20px 0 36px;
+}
+.outline {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 20px 28px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  min-width: 240px;
+  position: relative;
+}
+.photo-credit {
+  position: absolute;
+  bottom: 22px;
+  left: 6%;
+  max-width: 580px;
+  font-size: 9px;
+  line-height: 1.7;
+  color: #ccc;
+}
+.down {
+  position: absolute;
+  bottom: 38px;
+  left: 50%;
+  font-size: 32px;
+  line-height: 1;
+  text-decoration: none;
+}
+.ascent > img {
+  object-position: 65% center;
+}
+.vehicle {
+  padding: 100px 6% 80px;
+  max-width: 1600px;
+  margin: auto;
+}
+.vehicle h2 {
+  font-size: 64px;
+}
+.vehicle .body-copy {
+  font-size: 14px;
+  line-height: 1.9;
+  color: #aaa;
+  max-width: 550px;
+}
+.vehicle > img {
+  width: 100%;
+  height: 490px;
+  object-fit: contain;
+  margin: 10px 0 -20px;
+}
+.vehicle-specs {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 850px;
+  margin: 15px auto;
+}
+.vehicle-specs > div {
+  display: grid;
+  gap: 18px;
+  text-align: center;
+}
+.vehicle-specs span {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #aaa;
+}
+.vehicle-specs b {
+  font-size: 50px;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+.vehicle-specs small {
+  font-size: 10px;
+  color: #888;
+}
+.orbit > img {
+  object-position: center;
+}
+.orbit .mission-copy {
+  bottom: 16%;
+}
+footer {
+  text-align: center;
+  padding: 50px 6%;
+  border-top: 1px solid #333;
+  font-size: 9px;
+  letter-spacing: 0.3px;
+}
+footer > p {
+  max-width: 780px;
+  margin: 20px auto 0;
+  line-height: 2;
+  color: #999;
+}
+dialog {
+  background: #07090b;
+  color: white;
+  border: 1px solid #444;
+  padding: 35px;
+  width: 680px;
+}
+dialog > button {
+  float: right;
+  background: none;
+  border: 0;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+.micro {
+  font-size: 10px;
+  color: #aaa;
+  clear: both;
+  padding-top: 20px;
+}
+.brief-tabs {
+  display: flex;
+  gap: 16px;
+  border-bottom: 1px solid #333;
+  margin: 25px 0;
+}
+.brief-tabs button {
+  background: none;
+  border: 0;
+  color: #999;
+  font-size: 10px;
+  letter-spacing: 1px;
+  padding: 12px 0;
+}
+.brief-tabs [aria-pressed='true'] {
+  color: #fff;
+  border-bottom: 2px solid white;
+}
+dialog h2 {
+  font-size: 42px;
+  font-weight: 500;
+  line-height: 1.05;
+}
+#brief-text {
+  line-height: 1.9;
+  color: #ccc;
+  font-size: 14px;
+}
+dialog dl {
+  font-size: 12px;
+}
+dialog dl > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  border-bottom: 1px solid #333;
+  padding: 16px 0;
+}
+dialog dt {
+  color: #999;
+}
+dialog dd {
+  margin: 0;
+}
+#index > a {
+  display: block;
+  text-decoration: none;
+  padding: 25px 0;
+  border-bottom: 1px solid #333;
+  font-size: 20px;
+}
+@media (max-width: 650px) {
+  header {
+    height: 85px;
+    padding: 0 24px;
+    gap: 15px;
+  }
+  .logo {
+    font-size: 25px;
+    letter-spacing: 4px;
+  }
+  .logo span {
+    font-size: 7px;
+  }
+  nav {
+    display: none;
+  }
+  header button {
+    font-size: 9px;
+  }
+  .mission {
+    height: 844px;
+    min-height: 0;
+  }
+  .launch > img {
+    object-position: 58% center;
+  }
+  .ascent > img {
+    object-position: 60% center;
+  }
+  .mission-copy {
+    left: 24px;
+    right: 24px;
+    bottom: 150px;
+  }
+  .mission-copy > p {
+    font-size: 10px;
+    line-height: 1.7;
+  }
+  h1,
+  .mission h2 {
+    font-size: 48px;
+    line-height: 1.04;
+    margin: 20px 0 30px;
+    letter-spacing: 0.4px;
+  }
+  .outline {
+    min-width: 0;
+    padding: 19px 22px;
+    font-size: 10px;
+  }
+  .photo-credit {
+    font-size: 8px;
+    left: 24px;
+    right: 24px;
+    bottom: 30px;
+    max-width: 260px;
+  }
+  .down {
+    bottom: 92px;
+    font-size: 29px;
+  }
+  .vehicle {
+    padding: 65px 24px;
+  }
+  .vehicle h2 {
+    font-size: 39px;
+  }
+  .vehicle > div > p:first-child {
+    font-size: 10px;
+  }
+  .vehicle .body-copy {
+    font-size: 13px;
+  }
+  .vehicle > img {
+    height: 230px;
+    margin: 10px -10px 20px;
+    width: calc(100% + 20px);
+    max-width: calc(100% + 20px);
+  }
+  .vehicle-specs {
+    gap: 12px;
+    margin: 15px 0;
+  }
+  .vehicle-specs span {
+    font-size: 8px;
+    letter-spacing: 0.5px;
+  }
+  .vehicle-specs b {
+    font-size: 27px;
+    letter-spacing: 1px;
+  }
+  .vehicle-specs small {
+    font-size: 9px;
+  }
+  .orbit .mission-copy {
+    bottom: 140px;
+  }
+  footer {
+    padding: 35px 24px;
+    font-size: 8px;
+  }
+  dialog {
+    padding: 24px;
+  }
+  dialog h2 {
+    font-size: 33px;
+  }
+  .brief-tabs {
+    gap: 18px;
+  }
+  .brief-tabs button {
+    font-size: 9px;
+  }
+  dialog dl {
+    font-size: 11px;
+  }
+}

@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Byte Attic 1996 / 旧电脑馆藏 · 独立风格示例</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="frame">
+      <header>
+        <strong>BYTE ATTIC<span> .com</span></strong
+        ><b>CATALOG<br />1994—1996</b>
+      </header>
+      <div class="banner">
+        BUILD YOUR OWN MEMORY. ONLINE.<br /><small
+          >原创电脑目录 / 所有型号、主板与兼容规则均为虚构馆藏示例</small
+        >
+      </div>
+      <main>
+        <aside>
+          <img src="./assets/desktop.svg" alt="原创低色位 CRT、桌面主机、键盘和鼠标插画" />
+          <h1>Welcome to<br />Byte Attic!</h1>
+          <nav aria-label="目录导航">
+            <a href="#collection">FIND / 馆藏目录</a><a href="#comparison">COMPARE / 规格表</a
+            ><a href="#build">CONFIGURE / 配置单</a><a href="#about">ABOUT / 维护手记</a>
+          </nav>
+          <div class="red">
+            <b>第一台电脑，<br />总是值得记住。</b>
+            <p>不询价，不下单。从显示器、扩展槽和一张配置单，重访桌面计算机的日常。</p>
+          </div>
+          <form id="filters">
+            <label
+              >搜索馆藏<input id="search" type="search" placeholder="如 Notebook / 486" /></label
+            ><label
+              >馆藏年份<select id="year">
+                <option value="all">全部年份</option>
+                <option>1994</option>
+                <option>1995</option>
+                <option>1996</option>
+              </select></label
+            ><button type="button" id="reset-search">清除筛选</button>
+          </form>
+          <p id="search-status" role="status">3 件馆藏</p>
+          <p class="rail-note">LOCAL COLLECTION<br />3 SYSTEMS / 3 YEARS<br />NO ONLINE SALES</p>
+        </aside>
+        <div class="right">
+          <section id="collection">
+            <h2>THE COLLECTION</h2>
+            <article data-name="Byte Desktop 486 桌面 CRT ISA BA-94" data-year="1994">
+              <h3>BYTE DESKTOP / 1994</h3>
+              <div class="ribbon peach">
+                <div>
+                  <b>Desktop 486</b>
+                  <p>486 DX2 / 4 MB RAM<br />14" VGA CRT / 3 × ISA</p>
+                  <p>台式机与圆润 CRT 配对。前面板保留双盘位，键盘仍带着清晰的机械轮廓。</p>
+                  <a href="#comparison">VIEW SPECIFICATIONS →</a>
+                </div>
+                <img src="./assets/desktop.svg" alt="Byte Desktop 原创 CRT 套装插画" />
+              </div>
+            </article>
+            <article data-name="Byte Mobile Notebook 75 笔记本 单色 PCMCIA" data-year="1995">
+              <h3>BYTE MOBILE / 1995</h3>
+              <div class="ribbon sage">
+                <div>
+                  <b>Notebook 75</b>
+                  <p>75 MHz / 8 MB RAM<br />10.4" MONO LCD / 2 × PCMCIA</p>
+                  <p>厚实的上盖，单色屏幕和一小块掌托。把办公桌折叠，装进旅途。</p>
+                  <a href="#comparison">VIEW SPECIFICATIONS →</a>
+                </div>
+                <img src="./assets/notebook.svg" alt="Byte Mobile 原创厚机身单色屏笔记本插画" />
+              </div>
+            </article>
+            <article data-name="Byte Tower 90 塔式 Pentium VGA ISA PCI BA-96" data-year="1996">
+              <h3>BYTE TOWER / 1996 <span class="new">NEW!</span></h3>
+              <div class="ribbon salmon">
+                <div>
+                  <b>Tower 90</b>
+                  <p>Pentium 90 / 16 MB RAM<br />15" VGA CRT / 2 × ISA + 2 × PCI</p>
+                  <p>一台为扩展卡留下空间的塔式主机。独立声卡，让桌面第一次有了自己的声音。</p>
+                  <a href="#comparison">VIEW SPECIFICATIONS →</a>
+                </div>
+                <img src="./assets/tower.svg" alt="Byte Tower 原创主机、盘位与散热格栅插画" />
+              </div>
+            </article>
+          </section>
+          <section id="comparison">
+            <h2>AT A GLANCE</h2>
+            <p>三份固定馆藏卡。参数是本页虚构系统设定，不是历史品牌产品档案。</p>
+            <table>
+              <caption>
+                处理器 / 显示器 / 扩展能力对照
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">项目</th>
+                  <th scope="col">Desktop</th>
+                  <th scope="col">Notebook</th>
+                  <th scope="col">Tower</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">CPU</th>
+                  <td>486 DX2</td>
+                  <td>75 MHz</td>
+                  <td>Pentium 90</td>
+                </tr>
+                <tr>
+                  <th scope="row">内存</th>
+                  <td>4 MB</td>
+                  <td>8 MB</td>
+                  <td>16 MB</td>
+                </tr>
+                <tr>
+                  <th scope="row">显示</th>
+                  <td>14" CRT</td>
+                  <td>10.4" 单色 LCD</td>
+                  <td>15" CRT</td>
+                </tr>
+                <tr>
+                  <th scope="row">扩展</th>
+                  <td>3 × ISA</td>
+                  <td>2 × PCMCIA</td>
+                  <td>ISA + PCI</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section id="build">
+            <h2>BUILD A MEMORY</h2>
+            <p>以两块虚构主板搭配内存与扩展卡，只生成当次配置单。</p>
+            <form id="config">
+              <label
+                >CPU / 主板<select id="cpu">
+                  <option value="486">486 DX2 / BA-94</option>
+                  <option value="pentium">Pentium 90 / BA-96</option>
+                </select></label
+              ><label
+                >内存<select id="ram">
+                  <option value="4">4 MB</option>
+                  <option value="16">16 MB</option>
+                  <option value="64">64 MB</option>
+                </select></label
+              ><label
+                >扩展卡<select id="slot">
+                  <option value="isa">ISA 声卡</option>
+                  <option value="pci">PCI 显示卡</option>
+                </select></label
+              ><button>GENERATE!</button>
+            </form>
+            <p id="config-result" role="status">先选择 CPU、内存与扩展卡。</p>
+            <p class="fixture">
+              馆内设定：BA-94 仅支持 4 / 16 MB 与 ISA；BA-96 支持本页全部选项。这不是所有 486 /
+              Pentium 主板的通用结论。
+            </p>
+          </section>
+          <section id="about">
+            <h2>MAINTAINER'S NOTE</h2>
+            <p>
+              <b class="new">NEW!</b>
+              新增三台原创低色位硬件插画与规格表。显示器、键帽、盘位和散热格栅，也值得被仔细看见。
+            </p>
+            <p>
+              Times 正文、蓝色下划线、原生控件留在
+              1996。手机单列重排与可见焦点，是这个怀旧目录的当代补充。
+            </p>
+          </section>
+        </div>
+      </main>
+      <footer>
+        <nav aria-label="页脚导航">
+          <a href="#collection">FIND</a><a href="#">HOME</a><a href="#build">CONFIGURE</a
+          ><a href="#about">SUPPORT</a>
+        </nav>
+        Byte Attic 1996 · 原创虚构电脑目录 / 无真实库存、订单或电话号码
+      </footer>
+    </div>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

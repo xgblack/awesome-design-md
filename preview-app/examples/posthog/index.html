@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hedgehog Handbook / Product analytics docs</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#">▥ hedgehog handbook</a>
+      <nav>
+        <a href="#sandbox">Sandbox</a><a href="#guide">Guide</a><span>NO TRACKING HERE</span>
+      </nav>
+    </header>
+    <main>
+      <aside class="sidebar">
+        <span>THE FIELD GUIDE</span><a href="#guide" class="active">事件，从哪里来？</a
+        ><a href="#sandbox">本地沙盒</a><a href="#code">代码示意</a
+        ><a href="#boundaries">边界与隐私</a
+        ><svg viewBox="0 0 150 130" role="img" aria-label="原创刺猬插画">
+          <path
+            d="m22 84-8-25 18 7-1-25 21 10 8-30 21 16 17-16 10 25 20 2-5 24 20 10-15 27-97 4Z"
+            fill="#ba8157"
+            stroke="#3c3d2e"
+            stroke-width="3"
+          />
+          <path
+            d="M60 78c19-20 47-12 60 8l14 5-6 15H45Z"
+            fill="#ead6ba"
+            stroke="#3c3d2e"
+            stroke-width="3"
+          />
+          <circle cx="108" cy="86" r="3" fill="#252b20" />
+          <path d="M130 91h8M65 107v9m44-9v9" stroke="#3c3d2e" stroke-width="4" />
+        </svg>
+        <p>只记录你明确点击的示例操作。没有真实访客分析。</p>
+      </aside>
+      <article>
+        <section id="guide">
+          <div class="breadcrumb">HANDBOOK / EVENTS / 01</div>
+          <h1>Events are stories<br />with <em>useful details.</em></h1>
+          <p class="lead">
+            一次点击，不止是一个数字。看看事件名、属性与上下文，怎样一起讲清楚发生了什么。
+          </p>
+          <div class="callout">
+            <b>先说清楚边界</b>
+            <p>
+              这里没有分析
+              SDK。只在你点击沙盒按钮时，产生页面内的固定演示记录，不收集浏览、设备或账户数据。
+            </p>
+          </div>
+        </section>
+        <section id="sandbox">
+          <div class="section-heading">
+            <h2>A tiny event playground.</h2>
+            <span>SESSION ONLY</span>
+          </div>
+          <div class="sample-shop">
+            <span>THE LITTLE BOOKSHOP</span>
+            <h3>Notes from a slower city.</h3>
+            <p>一本虚构的小册子。用两个操作，理解不同事件。</p>
+            <div>
+              <button id="view" class="yellow">查看样本</button
+              ><button id="save" class="outline">加入阅读清单</button>
+            </div>
+            <p id="shop-status" role="status">等待你的第一步。</p>
+          </div>
+          <div class="event-log">
+            <div><span>EVENT STREAM</span><button id="clear">清空日志</button></div>
+            <p id="empty">还没有事件。试着查看一次样本。</p>
+            <ol id="events"></ol>
+          </div>
+        </section>
+        <section id="code">
+          <div class="section-heading">
+            <h2>Give the action a name.</h2>
+            <div class="langs">
+              <button data-lang="js" aria-pressed="true">JavaScript</button
+              ><button data-lang="python">Python</button>
+            </div>
+          </div>
+          <div class="code-well">
+            <div>
+              <span>ILLUSTRATIVE CODE / NOT EXECUTED</span><button id="copy">复制 ↗</button>
+            </div>
+            <pre id="snippet"></pre>
+          </div>
+          <p id="copied" role="status"></p>
+        </section>
+        <section id="boundaries">
+          <h2>Small events. Clear boundaries.</h2>
+          <p>
+            事件名称应表达用户的意图，而不是某个 CSS 选择器。属性只保留理解这个动作所必需的信息。
+          </p>
+          <p>
+            本示例不会保存记录。清空日志或刷新页面，就回到最初的空态；真实分析系统应另行处理授权、保留期限与删除。
+          </p>
+        </section>
+      </article>
+    </main>
+    <footer>hedgehog handbook / <span>PostHog DESIGN.md · 原创本地事件教学</span></footer>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

@@ -1,6 +1,7 @@
 import { test } from 'vite-plus/test'
 import assert from 'node:assert/strict'
-import { copyText, fetchDocument, renderDocument } from '../src/lib/documents.ts'
+import { copyText, fetchDocument } from '../src/lib/documents.ts'
+import { renderDocument } from '../src/lib/markdown.ts'
 
 test('safe reading preserves the original source and displays frontmatter separately', () => {
   const source = '---\nname: test\n---\n# A heading\n正文 **加粗**'

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Sprintboard · 产品团队共创白板 · 独立设计语言本地演示" />
+    <title>Sprintboard · 产品团队共创白板</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#top" class="brand">Sprintboard<span>／</span></a>
+      <nav><a href="#board">产品共创白板</a><a href="#next">下一步</a></nav>
+      <a class="pill" href="#board">加入这次讨论 ↗</a>
+    </header>
+    <main id="top">
+      <section class="intro">
+        <p>A SPACE FOR EVERY PERSPECTIVE</p>
+        <h1>好产品，<br />一起想清楚。</h1>
+        <div>
+          <p>把研究、假设和实验，放进同一张团队白板。<br />移动便签，投出你在意的方向。</p>
+          <span class="sketch" aria-hidden="true">↘</span>
+        </div>
+      </section>
+      <section id="board" class="board">
+        <div class="board-head">
+          <div>
+            <span>Sprintboard / 产品发现工作坊</span>
+            <h2>怎样让第一次工作，<br />更容易开始？</h2>
+          </div>
+          <p id="votes" role="status"></p>
+        </div>
+        <div class="groups" id="groups"></div>
+        <p class="board-note">
+          可拖放，也可使用「移至」菜单。每人最多投 3
+          票，点击已投项可撤回。纯本地演示，没有实时协作。
+        </p>
+      </section>
+      <section class="pink" id="next">
+        <div>
+          <small>01 / FIND WHAT MATTERS</small>
+          <h2>不是选一个赢家。<br />是找到共同的在意。</h2>
+          <p>
+            把用户观察、团队假设与可执行实验分开，避免把意见直接当成结论。让每一次投票都能回到证据。
+          </p>
+        </div>
+        <div class="paper">
+          <span>Sprintboard / 下一次碰面</span>
+          <h3>把讨论，带进下一次迭代。</h3>
+          <ul>
+            <li>选择一个可以验证的产品假设</li>
+            <li>邀请负责设计、研发与支持的同事</li>
+            <li>下一次迭代一起回顾</li>
+          </ul>
+          <a href="#board">再看看共创板 ↗</a>
+        </div>
+      </section>
+      <section class="closing">
+        <h2>Big ideas.<br />Small beginnings.</h2>
+        <p>从三张便签开始，给变化一个位置。</p>
+        <a class="pill light" href="#board">回到共创板 ↑</a>
+      </section>
+    </main>
+    <footer>Sprintboard / 独立设计语言示例 · 票数仅保存在本次演示</footer>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

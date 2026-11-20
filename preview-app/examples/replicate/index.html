@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Oddments / Creative model predictions</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#">oddments<span>®</span></a>
+      <nav>
+        <a href="#works">Experiments</a><a href="#recipe">Recipe book</a
+        ><span>MODELS. INPUTS. OUTPUTS.</span>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <span class="eyebrow">CREATIVE MODELS / PREPARED PREDICTIONS</span>
+        <h1>Make<br />something<br />unexpected.</h1>
+        <div>
+          <p>从模型能力到视觉输出，<br />把实验和输入一起收藏。</p>
+          <a href="#works">Explore the oddments ↘</a>
+        </div>
+        <span class="hero-number">[ 01—04 ]</span>
+      </section>
+      <section class="works" id="works">
+        <div class="toolbar">
+          <h2>Models in the making.</h2>
+          <label
+            ><span class="sr-only">搜索作品</span
+            ><input id="search" type="search" placeholder="Search the collection…" /></label
+          ><select id="kind" aria-label="实验类型">
+            <option value="all">All models</option>
+            <option value="shape">Vector models</option>
+            <option value="texture">Texture models</option>
+          </select>
+        </div>
+        <div id="gallery" class="gallery"></div>
+        <p id="empty" hidden role="status">No experiments found. 保留条件，清空搜索可重新浏览。</p>
+      </section>
+      <section id="recipe" class="recipe">
+        <div>
+          <span class="eyebrow">INPUT / OUTPUT / A READABLE RECIPE</span>
+          <h2 id="work-title">Folded silence.</h2>
+          <p id="work-description">从一张纸的折线，寻找图形的节奏。</p>
+          <p id="work-model" class="model-id"></p>
+          <div class="prompt-block">
+            <span>PRESET INPUT / 预置创作指令</span>
+            <p id="work-prompt"></p>
+          </div>
+          <p class="note">
+            每幅作品由本项目原创 SVG/CSS
+            绘制。它们是人工预制输出；模型标识与API为虚构演示，不发送推理请求。
+          </p>
+          <div class="langs">
+            <button data-lang="python" aria-pressed="true">Python</button
+            ><button data-lang="curl">cURL</button>
+          </div>
+        </div>
+        <div class="code">
+          <div><span>RECIPE / TEXT ONLY</span><button id="copy">Copy ↗</button></div>
+          <pre id="code"></pre>
+          <p id="feedback" role="status"></p>
+        </div>
+      </section>
+      <section class="closing">
+        <span class="eyebrow">LEAVE WITH A QUESTION.</span>
+        <h2>What would<br />you try next?</h2>
+        <a href="#works">Back to the collection ↑</a>
+      </section>
+    </main>
+    <footer>oddments / <span>Replicate DESIGN.md · 原创实验图与本地示意</span></footer>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+import { test, expect } from '@playwright/test'
+test.beforeEach(async ({ page }) => {
+  await page.goto('examples/meta/index.html')
+})
+test('镜框、镜片、视角对应真实不同眼镜资源', async ({ page }) => {
+  const initial = await page.locator('#glasses').getAttribute('src')
+  await page.locator('[data-color="sand"]').click()
+  await expect(page.locator('#glasses')).not.toHaveAttribute('src', initial!)
+  await expect(page.locator('#glasses')).toHaveAttribute('alt', /暖沙色/)
+  await page.getByLabel('透亮色 / 透明镜片').check()
+  await expect(page.locator('#glasses')).toHaveAttribute('alt', /透亮色/)
+  await page.locator('[data-view="side"]').click()
+  await expect(page.locator('#glasses')).toHaveAttribute('alt', /镜腿侧面/)
+})
+test('不兼容配置被阻止且提供恢复，摘要反映当前选择', async ({ page }) => {
+  await page.locator('[data-color="sand"]').click()
+  await page.locator('#fit').selectOption('sport')
+  await expect(page.locator('#summary')).toBeDisabled()
+  await expect(page.locator('#compatibility')).toContainText('不支持')
+  await page.locator('[data-color="graphite"]').click()
+  await page.locator('#summary').click()
+  await expect(page.locator('#result-copy')).toContainText('石墨黑')
+  await expect(page.locator('#result-copy')).toContainText('运动')
+  await page.keyboard.press('Escape')
+  await expect(page.locator('#summary')).toBeFocused()
+})

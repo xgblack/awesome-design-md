@@ -1,0 +1,26 @@
+[
+  {
+    "file": "alice-reading.mp3",
+    "work": "Alice’s Adventures in Wonderland, Chapter 1",
+    "author": "Lewis Carroll (1832–1898)",
+    "reader": "Kristen McQuillin",
+    "source": "https://librivox.org/alices-adventures-in-wonderland-by-lewis-carroll/",
+    "download": "https://archive.org/download/alice_in_wonderland_librivox/wonderland_ch_01_64kb.mp3",
+    "source_time_seconds": [60, 78],
+    "license": "LibriVox public-domain dedication (United States); https://librivox.org/pages/public-domain/",
+    "use": "Pre-recorded human reading excerpt, not AI synthesis, cloning, dubbing, or generated response. No endorsement by the author or reader. No time-aligned transcript supplied.",
+    "processing": "18-second excerpt; mono 32kHz MP3 64kbps; 0.06s fade-in and 0.2s fade-out; JSON peaks measured from decoded clip."
+  },
+  {
+    "file": "time-machine-reading.mp3",
+    "work": "The Time Machine, Chapter 1",
+    "author": "H. G. Wells (1866–1946)",
+    "reader": "Aaron Elliott",
+    "source": "https://librivox.org/the-time-machine-by-hg-wells/",
+    "download": "https://archive.org/download/time_machine_0805_librivox/timemachinewells_01_ae_64kb.mp3",
+    "source_time_seconds": [60, 78],
+    "license": "LibriVox public-domain dedication (United States); https://librivox.org/pages/public-domain/",
+    "use": "Pre-recorded human reading excerpt, not AI synthesis, cloning, dubbing, or generated response. No endorsement by the author or reader. No time-aligned transcript supplied.",
+    "processing": "18-second excerpt; mono 32kHz MP3 64kbps; 0.06s fade-in and 0.2s fade-out; JSON peaks measured from decoded clip."
+  }
+]

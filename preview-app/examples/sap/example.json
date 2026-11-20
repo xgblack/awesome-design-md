@@ -1,0 +1,37 @@
+{
+  "title": "Forma Business · 让业务流程彼此连接",
+  "description": "切换采购、库存与财务模块，按组织规模核对实施资料并下载准备单。",
+  "status": "ready",
+  "features": {
+    "moods": ["minimal", "tech"],
+    "tones": ["mixed"],
+    "layouts": ["chapters", "split"],
+    "density": ["balanced"],
+    "headingScale": ["regular"],
+    "headingWeight": ["medium"],
+    "geometry": ["square", "small-radius"],
+    "visualMedia": ["ui", "geometry"],
+    "accentHues": ["blue"],
+    "temperature": ["cool"],
+    "chroma": ["muted"],
+    "backgrounds": ["solid"],
+    "layering": ["solid"],
+    "scenarios": ["product", "tool"],
+    "typography": ["sans"],
+    "motion": ["feedback"]
+  },
+  "interactions": ["configure", "form"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "72 Brand 专有字体采用本地 Source Sans 3 Variable（350/400/500）替代，保留内页字阶与蓝色主动作。",
+    "材料要求与服务说明为原创演示假设，不引用真实法规或机构流程，不生成或提交正式申请。",
+    "语境复核：从市政服务改为企业业务软件解决方案语境，应用框架与宽平整带保留；不冒充真实Fiori后台。"
+  ],
+  "references": [
+    {
+      "source": "DESIGN.md L356–371、402–470、489–548、619–639",
+      "reason": "60px全局栏/面包屑/标签轨 → 深蓝服务简介 → 白两列要求/淡蓝适用范围/灰文件区 → 法规说明。`#0057d2`单行动、黑字/石板正文、350列表/400导航、8px控件/12px媒体/方整带。"
+    }
+  ],
+  "assets": []
+}

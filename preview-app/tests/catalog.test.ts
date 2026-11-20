@@ -136,3 +136,45 @@ test('name sorting really orders results, without treating filesystem timestamps
   )
   assert.equal(filterCatalog(catalog, emptyFilters())[0].id, 'linear.app')
 })
+
+test('accepted examples merge independently of source YAML and a missing required file is diagnosed', async () => {
+  const root = await mkdtemp(join(tmpdir(), 'atlas-example-registry-'))
+  const sourceRoot = join(root, 'sources'),
+    examplesRoot = join(root, 'examples')
+  await mkdir(join(sourceRoot, 'cursor'), { recursive: true })
+  await mkdir(join(examplesRoot, 'cursor'), { recursive: true })
+  await writeFile(join(sourceRoot, 'cursor', 'DESIGN.md'), '---\n: [broken\n---\n# Fixture source')
+  const info = {
+    title: 'Test studio',
+    description: 'Local fixture',
+    status: 'ready',
+    features: { tones: ['dark'] },
+    interactions: ['edit'],
+    viewports: ['desktop', 'mobile'],
+    notes: [],
+    references: [{ source: 'index.html', reason: 'A dark local fixture.' }],
+    assets: [],
+  }
+  await writeFile(join(examplesRoot, 'cursor', 'example.json'), JSON.stringify(info))
+  let rows = await buildCatalog(sourceRoot, examplesRoot)
+  assert.equal(rows[0].preview, 'pending')
+  assert.ok(rows[0].exampleError?.includes('index.html'))
+  await writeFile(join(examplesRoot, 'cursor', 'index.html'), '<!doctype html><h1>Fixture</h1>')
+  rows = await buildCatalog(sourceRoot, examplesRoot)
+  assert.equal(rows[0].preview, 'pending')
+  assert.ok(rows[0].exampleError?.includes('thumbnail.webp'))
+  await writeFile(
+    join(examplesRoot, 'cursor', 'thumbnail.webp'),
+    'unit fixture, not a screenshot acceptance record',
+  )
+  rows = await buildCatalog(sourceRoot, examplesRoot)
+  assert.equal(rows[0].preview, 'ready')
+  assert.equal(rows[0].metadata, 'invalid')
+  assert.deepEqual(rows[0].example?.features.tones, ['dark'])
+  assert.deepEqual(rows[0].referenceFeatures.tones, ['light'])
+  await writeFile(join(examplesRoot, 'cursor', 'example.json'), '{invalid json')
+  rows = await buildCatalog(sourceRoot, examplesRoot)
+  assert.equal(rows[0].preview, 'pending')
+  assert.ok(rows[0].exampleError)
+  assert.equal(rows.length, 1)
+})

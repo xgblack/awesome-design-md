@@ -1,0 +1,37 @@
+{
+  "title": "Tracewright / Agent engineering observability",
+  "description": "多Agent工程链路观测：回放固定开发工单调查，逐节点核对输入、日志与输出；缺来源停止、可取消，不调用Agent。",
+  "status": "ready",
+  "features": {
+    "moods": ["tech", "minimal"],
+    "tones": ["dark"],
+    "temperature": ["neutral"],
+    "chroma": ["mono"],
+    "accentHues": ["green"],
+    "backgrounds": ["solid"],
+    "layouts": ["timeline", "workspace"],
+    "density": ["balanced"],
+    "typography": ["sans", "mono"],
+    "headingScale": ["regular"],
+    "headingWeight": ["regular"],
+    "geometry": ["small-radius"],
+    "layering": ["lines"],
+    "visualMedia": ["ui", "code"],
+    "motion": ["feedback"],
+    "scenarios": ["tool", "product"]
+  },
+  "interactions": ["replay", "configure"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "保留连续近黑、绿行动、60px工程字、虚线分隔和真实节点参数，固定任务重构为开发工单调查。",
+    "回放时长为教学节奏，不是模型性能；不执行工具、shell或文件写入，失败节点保留已完成节点证据。",
+    "字体取舍：显示 \"Inter Variable\", sans-serif；正文 \"Inter Variable\", sans-serif。使用本地开放字体/系统字体替代品牌商业字体；标题筛选标签按实际桌面渲染归类。"
+  ],
+  "references": [
+    {
+      "source": "原规范 L281–295、320–355、369–400、417–470、509–521",
+      "reason": "60px常规工程标题/小启动片段 → 有入出参的节点链 → 可复制配方/失败说明，虚线分隔。`#101010`连续底、`#00d992`仅行动/状态、Inter400/宽距大写眉题、Mono代码数字、1px框/6px按钮/8px卡。"
+    }
+  ],
+  "assets": []
+}

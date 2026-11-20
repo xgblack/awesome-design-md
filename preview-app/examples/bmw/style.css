@@ -1,0 +1,404 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+}
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+button,
+a,
+input,
+select,
+textarea {
+  touch-action: manipulation;
+}
+button,
+a {
+  cursor: pointer;
+}
+button {
+  min-height: 44px;
+}
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+a {
+  color: inherit;
+}
+img,
+video,
+svg {
+  max-width: 100%;
+}
+img {
+  display: block;
+}
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+  outline: 3px solid var(--accent, #1673dc);
+  outline-offset: 4px;
+}
+button {
+  color: inherit;
+}
+fieldset {
+  min-width: 0;
+}
+dialog {
+  max-width: calc(100% - 32px);
+  max-height: 90dvh;
+  overflow: auto;
+}
+dialog::backdrop {
+  background: #000a;
+}
+[hidden] {
+  display: none !important;
+}
+.demo-note {
+  font-size: 12px;
+  line-height: 1.6;
+  opacity: 0.7;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+:root {
+  --accent: #1c69d4;
+  --ink: #242424;
+  --navy: #101f2d;
+  --paper: #f5f5f5;
+}
+body {
+  font:
+    15px Inter Variable,
+    sans-serif;
+  color: var(--ink);
+}
+header {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+  padding: 25px 5%;
+}
+header b {
+  font-size: 26px;
+  letter-spacing: 3px;
+}
+header b span {
+  color: var(--accent);
+}
+nav {
+  display: flex;
+  gap: 30px;
+  font-size: 13px;
+}
+nav a {
+  text-decoration: none;
+}
+header > span {
+  margin-left: auto;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+}
+.hero {
+  background: var(--navy);
+  color: white;
+  padding: 65px 5%;
+  display: grid;
+  grid-template-columns: 42% 58%;
+  align-items: center;
+  min-height: 620px;
+}
+.hero p:first-child,
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: 0.15em;
+}
+.hero h1 {
+  font-size: 52px;
+  line-height: 1.15;
+  margin: 30px 0;
+}
+.hero p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.8;
+}
+.hero a {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  padding: 16px 35px;
+  margin-top: 25px;
+  font-size: 13px;
+}
+.hero img {
+  width: 120%;
+  max-width: 120%;
+  margin-left: -10%;
+}
+main > section:not(.hero) {
+  padding: 75px 5%;
+}
+h2 {
+  font-size: 36px;
+  line-height: 1.25;
+  font-weight: 300;
+}
+.filters {
+  display: flex;
+  align-items: end;
+  gap: 25px;
+  margin: 40px 0;
+}
+.filters label {
+  font-size: 12px;
+  min-width: 180px;
+}
+select {
+  display: block;
+  min-height: 48px;
+  width: 100%;
+  margin-top: 12px;
+  padding: 12px;
+  border: 1px solid #888;
+  background: #fff;
+  border-radius: 0;
+}
+button {
+  border: 1px solid #777;
+  background: white;
+  padding: 12px 25px;
+  font-size: 12px;
+}
+.models {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+.models article {
+  border-top: 1px solid #ccc;
+  padding-top: 25px;
+}
+.models h3 {
+  font-size: 24px;
+  font-weight: 300;
+}
+.models p {
+  font-size: 12px;
+  color: #666;
+}
+.models a {
+  display: inline-block;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  margin-top: 20px;
+}
+#model-status {
+  font-size: 12px;
+  margin-top: 35px;
+}
+.configure {
+  background: var(--paper);
+  display: grid;
+  grid-template-columns: 60% 40%;
+  align-items: center;
+  gap: 30px;
+}
+.configure > div > p {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+}
+.configure img {
+  width: 100%;
+  transition: filter 0.2s;
+}
+.configure form {
+  padding: 35px;
+  background: white;
+  margin-right: 30px;
+  min-width: 0;
+}
+.configure label {
+  display: block;
+  margin-bottom: 26px;
+  font-size: 13px;
+}
+#configuration {
+  font-size: 14px;
+  line-height: 1.8;
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+}
+.design {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.design img {
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+}
+.design p {
+  font-size: 15px;
+  line-height: 1.8;
+  max-width: 400px;
+}
+footer {
+  padding: 40px 5%;
+  font-size: 11px;
+  background: #eee;
+  line-height: 2;
+}
+@media (max-width: 650px) {
+  header {
+    padding: 20px;
+    gap: 20px;
+  }
+  header b {
+    font-size: 22px;
+  }
+  header nav {
+    display: none;
+  }
+  header > span {
+    font-size: 8px;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 45px 24px 20px;
+    min-height: 650px;
+  }
+  .hero h1 {
+    font-size: 39px;
+  }
+  .hero img {
+    width: 110%;
+    max-width: 110%;
+    margin: 25px -5% 0;
+  }
+  main > section:not(.hero) {
+    padding: 50px 24px;
+  }
+  .filters {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .filters label {
+    min-width: 0;
+  }
+  .models,
+  .configure,
+  .design {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .models article {
+    padding-top: 10px;
+  }
+  .configure form {
+    margin: 0;
+    padding: 24px;
+  }
+  .design img {
+    height: 280px;
+  }
+  h2 {
+    font-size: 30px;
+  }
+}
+/* Content-sized layout correction */
+.hero img {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+}
+.configure {
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+}
+@media (max-width: 650px) {
+  .configure {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Native product context revision */
+.models .model-render {
+  width: 100%;
+  height: 230px;
+  object-fit: contain;
+  margin-bottom: 24px;
+}
+.models article {
+  border-top: 0;
+  padding-top: 5px;
+}
+.models h3 {
+  font-weight: 700;
+  font-size: 22px;
+  margin: 0 0 16px;
+}
+.configure form select {
+  font-size: 13px;
+}
+.hero h1 {
+  text-wrap: balance;
+}
+.configure img {
+  height: 400px;
+  object-fit: contain;
+  filter: none !important;
+}
+@media (max-width: 650px) {
+  .models .model-render {
+    height: 220px;
+    margin: 0 0 14px;
+  }
+  .models article {
+    border-bottom: 1px solid #ddd;
+    padding: 12px 0 28px;
+  }
+  .configure img {
+    height: 270px;
+  }
+  .hero img {
+    max-height: 290px;
+    object-fit: contain;
+  }
+  .hero {
+    min-height: 620px;
+  }
+}

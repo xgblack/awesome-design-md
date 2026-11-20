@@ -1,0 +1,37 @@
+{
+  "title": "Nacre · 企业数据平台",
+  "description": "企业数据平台的事务/分析工作负载与治理技术资料；切换架构说明、搜索并阅读本地材料。",
+  "status": "ready",
+  "features": {
+    "moods": ["editorial", "minimal"],
+    "tones": ["light"],
+    "layouts": ["chapters", "split", "directory"],
+    "density": ["balanced"],
+    "headingScale": ["regular"],
+    "headingWeight": ["regular"],
+    "geometry": ["square", "small-radius"],
+    "visualMedia": ["type", "geometry"],
+    "accentHues": ["neutral"],
+    "temperature": ["warm"],
+    "chroma": ["muted"],
+    "backgrounds": ["solid"],
+    "layering": ["solid"],
+    "scenarios": ["product", "docs"],
+    "typography": ["sans", "serif"],
+    "motion": ["feedback"]
+  },
+  "interactions": ["filter", "configure"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "Georgia 为系统衬线，不打包系统字；正文 Inter Variable 350/章节800替代 Oracle Sans。保留暖灰层级、唯一40×4金线与炭灰动作。",
+    "原创建模图示只解释本地演示流程，不代表真实云服务架构或数据流。",
+    "语境复核：保留暖中性色阶/Georgia产品标题，但从市政档案改为企业数据库与数据平台语境，接入流程和资料均重写。"
+  ],
+  "references": [
+    {
+      "source": "DESIGN.md L416–452、471–478、509–530、649–670",
+      "reason": "白企业抬头/深色粘性子导航 → 暖灰 Georgia 产品标题和唯一40×4px金线 → 白/暖白通栏案例资料 → 青色短带。暖中性六阶、炭灰4px按钮、正文Inter350/小标题800；通栏零圆角/无阴影。"
+    }
+  ],
+  "assets": []
+}

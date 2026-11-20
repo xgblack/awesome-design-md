@@ -1,0 +1,20 @@
+import { test, expect } from '@playwright/test'
+test('oura: 材质和尺寸联动', async ({ page }) => {
+  await page.goto('examples/oura/index.html')
+  await page.locator('[data-finish=gold]').click()
+  await expect(page.locator('#ring-image')).toHaveAttribute('alt', /Gold 智能指环/)
+  await page.locator('#ring-size').selectOption('10')
+  await expect(page.locator('#size-note')).toContainText('Size 10')
+})
+test('oura: 固定记录与空白日记边界', async ({ page }) => {
+  await page.goto('examples/oura/index.html')
+  await page.locator('[data-day="2"]').click()
+  await expect(page.locator('#sleep-window')).toHaveText('22:55 – 07:00')
+  await page.getByRole('button', { name: '保存当次自述' }).click()
+  await expect(page.locator('#note-status')).toContainText('请先写下')
+  await page.locator('#note').fill('今天留一点空白。')
+  await page.getByRole('button', { name: '保存当次自述' }).click()
+  await expect(page.locator('#entry')).toHaveText('今天留一点空白。')
+  await page.locator('[data-day="0"]').click()
+  await expect(page.locator('#entry')).toContainText('手机')
+})

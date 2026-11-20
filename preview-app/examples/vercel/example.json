@@ -1,0 +1,37 @@
+{
+  "title": "Commitlight / Frontend delivery platform",
+  "description": "前端构建与交付平台：切换演示分支查看真实DOM页面，回放准备/构建/预览，测试取消、失败与重试；不部署。",
+  "status": "ready",
+  "features": {
+    "moods": ["minimal", "tech"],
+    "tones": ["mixed"],
+    "temperature": ["neutral"],
+    "chroma": ["muted"],
+    "accentHues": ["neutral"],
+    "backgrounds": ["gradient", "solid"],
+    "layouts": ["centered", "timeline"],
+    "density": ["balanced"],
+    "typography": ["sans", "mono"],
+    "headingScale": ["regular"],
+    "headingWeight": ["bold"],
+    "geometry": ["pill", "small-radius"],
+    "layering": ["lines", "shadow"],
+    "visualMedia": ["geometry", "ui"],
+    "motion": ["feedback"],
+    "scenarios": ["product", "tool"]
+  },
+  "interactions": ["configure", "replay"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "保留灰白网格和完整mesh、紧字阶、黑胶囊、三步交付带与网页预览，日记仅是被交付的示例App，不是平台主题。",
+    "分支、构建日志与页面均为本地fixture；无仓库读取、真实编译时间、部署URL或云资源。",
+    "字体取舍：显示 \"Inter Variable\", sans-serif；正文 \"Inter Variable\", sans-serif。使用本地开放字体/系统字体替代品牌商业字体；标题筛选标签按实际桌面渲染归类。"
+  ],
+  "references": [
+    {
+      "source": "原规范 L393–447、451–487、498–577、657–681、718–736",
+      "reason": "居中句号标题/一片完整mesh → 版本流程带 → 浅模板条/深运行说明 → 真正可渲染的微型页面。Geist/Mono层级、48px/600/−2.4px、`#fafafa`/近黑、细内线/微小层影；营销圆钮与6px工具分工。"
+    }
+  ],
+  "assets": []
+}

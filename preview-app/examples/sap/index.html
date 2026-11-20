@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Forma Business · 让业务流程彼此连接 · 独立设计语言本地演示" />
+    <title>Forma Business · 让业务流程彼此连接</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#top" class="brand">Forma Business<span> /</span></a>
+      <nav><a href="#services">解决方案</a><a href="#checklist">实施准备</a></nav>
+      <span>Enterprise software / Demonstration</span>
+    </header>
+    <div class="breadcrumb">业务软件 / 解决方案 / 实施准备</div>
+    <main id="top">
+      <section class="service-tabs" id="services">
+        <button data-service="procurement" aria-pressed="true">采购管理</button
+        ><button data-service="inventory" aria-pressed="false">库存运营</button
+        ><button data-service="finance" aria-pressed="false">财务协同</button>
+      </section>
+      <section class="hero">
+        <div>
+          <span>企业管理软件 / 本地解决方案目录</span>
+          <h1 id="service-title"></h1>
+          <p id="service-copy"></p>
+          <a class="blue" href="#checklist">准备一份材料单 ↗</a>
+        </div>
+        <div class="service-visual" aria-label="企业业务实施步骤图示">
+          <div><b>01</b><span>梳理业务</span></div>
+          <i>↓</i>
+          <div><b>02</b><span>核对数据</span></div>
+          <i>↓</i>
+          <div><b>03</b><span>准备实施</span></div>
+        </div>
+      </section>
+      <section class="requirements">
+        <div>
+          <span>解决方案说明</span>
+          <h2>先把事情说清楚，<br />再让流程走顺。</h2>
+          <p>
+            业务模块、组织规模与数据要求，放在同一个页面。这个目录用于说明企业软件实施准备，不连接真实
+            ERP。
+          </p>
+        </div>
+        <div>
+          <h3>适用范围</h3>
+          <p id="scope"></p>
+          <h3>请提前了解</h3>
+          <ul>
+            <li>明确业务流程与责任人</li>
+            <li>核对数据是否齐全</li>
+            <li>业务数据仍需在正式系统中验证与授权</li>
+          </ul>
+        </div>
+      </section>
+      <section class="checklist" id="checklist">
+        <div>
+          <span>本地准备工具</span>
+          <h2>把必要的材料，<br />一项项确认。</h2>
+          <p>选择业务模块与组织规模后，核对相应的实施资料。<br />勾选齐全，才能下载本地准备单。</p>
+          <label
+            >企业规模<select id="scale">
+              <option value="team">单团队 / 单账套</option>
+              <option value="enterprise">多部门 / 多账套</option>
+            </select></label
+          >
+        </div>
+        <div class="materials">
+          <h3 id="list-title"></h3>
+          <div id="items"></div>
+          <p id="progress" role="status"></p>
+          <button id="download" class="blue" disabled>下载本地准备单 ↓</button
+          ><small>不会提交业务数据，不连接企业系统。</small>
+        </div>
+      </section>
+      <section class="legal">
+        <h2>清楚的边界，也是一种服务。</h2>
+        <p>
+          所有模块与资料要求均为虚构实施示例，不代表 SAP
+          产品承诺；这里只演示解决方案的信息层级，不冒充真实 Fiori 后台。
+        </p>
+        <a href="#services">返回解决方案 ↑</a>
+      </section>
+    </main>
+    <footer>
+      <strong>Forma Business /</strong
+      ><span>独立设计语言参考 · 非 SAP 官方产品 · 无真实业务数据</span>
+    </footer>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

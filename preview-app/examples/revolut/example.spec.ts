@@ -1,0 +1,26 @@
+import { test, expect } from '@playwright/test'
+test.beforeEach(async ({ page }) => {
+  await page.goto('examples/revolut/index.html')
+})
+test('使用金额驱动四档费用，拒绝空与负数', async ({ page }) => {
+  await page.locator('#spend').fill('1000')
+  await page.locator('#exchange').fill('500')
+  await page.locator('#recommend button').click()
+  await expect(page.locator('.tier').first()).toContainText('$5.00 / 月合计')
+  await page.locator('#exchange').fill('-1')
+  await page.locator('#recommend button').click()
+  await expect(page.locator('#recommendation')).toContainText('有限金额')
+  await expect(page.locator('.tier').first()).toContainText('— / 月合计')
+})
+test('两档比较保留真实费用口径与选择上限', async ({ page }) => {
+  await page.locator('[data-tier="standard"]').click()
+  await page.locator('[data-tier="plus"]').click()
+  await page.locator('[data-tier="metal"]').click()
+  await expect(page.locator('#selected')).toContainText('最多比较两档')
+  await page.locator('#compare').click()
+  await expect(page.locator('#comparison-body')).toContainText('Standard')
+  await expect(page.locator('#comparison-body')).toContainText('0.20%')
+  await expect(page.locator('#comparison-body')).toContainText('$4.60')
+  await page.keyboard.press('Escape')
+  await expect(page.locator('#compare')).toBeFocused()
+})

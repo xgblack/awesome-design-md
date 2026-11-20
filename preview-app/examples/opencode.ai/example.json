@@ -1,0 +1,37 @@
+{
+  "title": "Diffdeck / Terminal coding agent",
+  "description": "终端编码Agent与补丁讲解：选择固定编码任务，切换补丁并筛选新增/删除，格式错误停止阅读；不执行代码或应用补丁。",
+  "status": "ready",
+  "features": {
+    "moods": ["minimal", "retro", "tech"],
+    "tones": ["mixed"],
+    "temperature": ["warm"],
+    "chroma": ["mono"],
+    "accentHues": ["neutral"],
+    "backgrounds": ["solid"],
+    "layouts": ["directory"],
+    "density": ["balanced"],
+    "typography": ["mono"],
+    "headingScale": ["regular"],
+    "headingWeight": ["medium"],
+    "geometry": ["square", "small-radius"],
+    "layering": ["lines"],
+    "visualMedia": ["code", "ui", "type"],
+    "motion": ["feedback"],
+    "scenarios": ["product", "tool", "docs"]
+  },
+  "interactions": ["filter", "configure"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "保留全等宽、ASCII字标、manpage引言、全幅暗TUI和方正细线；终端语义色只出现在实际diff阅读器。",
+    "任务会话与补丁都是固定文本。所有输入显示为文本，不连接仓库、shell或模型。",
+    "字体取舍：显示 \"JetBrains Mono Variable\", monospace；正文 \"JetBrains Mono Variable\", monospace。使用本地开放字体/系统字体替代品牌商业字体；标题筛选标签按实际桌面渲染归类。"
+  ],
+  "references": [
+    {
+      "source": "原规范 L225–238、282–342、413–427、469–476",
+      "reason": "manpage 引言/ASCII字标 → 大幅暗终端 → `[+]`规则列表、Fig编号例子与问答。全等宽、`#fdfcfc`/`#201d1d`、4px按钮/1px线；语义色仅终端内，无摄影/普通图标。"
+    }
+  ],
+  "assets": []
+}

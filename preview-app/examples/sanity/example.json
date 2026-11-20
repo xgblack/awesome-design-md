@@ -1,0 +1,37 @@
+{
+  "title": "Fieldnote · 结构化内容实验室",
+  "description": "字段树、JSON与多端文章预览展示内容模型的复用，直接对应开发者内容平台。",
+  "status": "ready",
+  "features": {
+    "moods": ["tech", "editorial"],
+    "tones": ["dark"],
+    "layouts": ["centered", "workspace"],
+    "density": ["balanced"],
+    "headingScale": ["display"],
+    "headingWeight": ["medium"],
+    "geometry": ["small-radius", "pill"],
+    "visualMedia": ["ui", "code", "type"],
+    "accentHues": ["orange", "blue"],
+    "temperature": ["neutral"],
+    "chroma": ["mono"],
+    "backgrounds": ["solid"],
+    "layering": ["solid"],
+    "scenarios": ["tool", "docs"],
+    "typography": ["sans", "mono"],
+    "motion": ["feedback"]
+  },
+  "interactions": ["edit", "configure"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "专有字体以本地 Inter Variable 替代，保留字重、字阶、空间与组件规则；中文为系统字体回退。",
+    "交互为原创本地演示，不发出业务请求，不保存个人输入。",
+    "语境复核：保留已贴原产品类别的核心页面，复核理由：字段树、JSON与多端文章预览展示内容模型的复用，直接对应开发者内容平台。"
+  ],
+  "references": [
+    {
+      "source": "DESIGN.md L3–68、91–96、159–168、230–264、304–317",
+      "reason": "112px紧标题/无色黑底 → 字段树/JSON/文章三联 → 大留白关系、复用、校验章节。`#0b0b0b`/`#212121`/`#353535`、珊瑚主行动/电蓝激活、Mono大写标签、3px输入/6px框/胶囊动作。"
+    }
+  ],
+  "assets": []
+}

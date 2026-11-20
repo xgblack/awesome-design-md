@@ -1,0 +1,37 @@
+{
+  "title": "Ledger School · 数字资产学习账户",
+  "description": "用虚构美元配置 BTC/ETH/USDC，核对固定样本价格下的资产数量与资金边界。",
+  "status": "ready",
+  "features": {
+    "moods": ["minimal"],
+    "tones": ["mixed"],
+    "layouts": ["split"],
+    "density": ["airy"],
+    "headingScale": ["display"],
+    "headingWeight": ["regular"],
+    "geometry": ["pill", "rounded"],
+    "visualMedia": ["ui", "geometry"],
+    "accentHues": ["blue"],
+    "temperature": ["cool"],
+    "chroma": ["mono"],
+    "backgrounds": ["solid"],
+    "layering": ["solid"],
+    "scenarios": ["product", "calculator"],
+    "typography": ["sans"],
+    "motion": ["feedback"]
+  },
+  "interactions": ["configure", "form"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "专有字体以本地 Inter Variable 替代，保留字重、字阶、空间与组件规则；中文为系统字体回退。",
+    "交互为原创本地演示，不发出业务请求，不保存个人输入。",
+    "语境复核：从家庭预算改为数字资产账户/纸面配置，明确固定价格和非投资建议。"
+  ],
+  "references": [
+    {
+      "source": "DESIGN.md L310–316、353–388、465–475",
+      "reason": "暗首屏漂浮资产卡 → 白解释/资产说明 → 灰练习板/深产品故事。80px/400紧字、`#0052ff`蓝胶囊、24px卡角/圆资产符号、独立等宽数字。"
+    }
+  ],
+  "assets": []
+}

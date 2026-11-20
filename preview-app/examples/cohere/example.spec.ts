@@ -1,0 +1,20 @@
+import { test, expect } from '@playwright/test'
+test('domain filters and original evidence stay consistent', async ({ page }) => {
+  await page.goto('examples/cohere/index.html')
+  await page.fill('#query', '交接')
+  await page.locator('#search-form button').click()
+  await expect(page.locator('.result')).toHaveCount(2)
+  await page.selectOption('#domain', 'people')
+  await expect(page.locator('.result')).toHaveCount(1)
+  await page.locator('.result button').click()
+  await expect(page.locator('.evidence')).toContainText('HR-02 / 第 3 节')
+})
+test('no matches preserve query and collection', async ({ page }) => {
+  await page.goto('examples/cohere/index.html')
+  await page.selectOption('#domain', 'engineering')
+  await page.fill('#query', '休假')
+  await page.locator('#search-form button').click()
+  await expect(page.locator('#result-count')).toContainText('没有匹配资料')
+  await expect(page.locator('#query')).toHaveValue('休假')
+  await expect(page.locator('#domain')).toHaveValue('engineering')
+})

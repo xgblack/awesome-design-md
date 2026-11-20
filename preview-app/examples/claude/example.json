@@ -1,0 +1,37 @@
+{
+  "title": "Margin AI / Knowledge work assistant",
+  "description": "有出处的知识工作助手：阅读工程RFC与团队政策的固定摘要和追问，通过引用定位原文；没有材料不输出。",
+  "status": "ready",
+  "features": {
+    "moods": ["editorial", "warm"],
+    "tones": ["light"],
+    "temperature": ["warm"],
+    "chroma": ["muted"],
+    "accentHues": ["orange"],
+    "backgrounds": ["paper", "solid"],
+    "layouts": ["split"],
+    "density": ["airy"],
+    "typography": ["serif", "sans"],
+    "headingScale": ["display"],
+    "headingWeight": ["regular"],
+    "geometry": ["small-radius"],
+    "layering": ["solid", "lines"],
+    "visualMedia": ["illustration", "type", "ui"],
+    "motion": ["feedback"],
+    "scenarios": ["product", "tool", "content"]
+  },
+  "interactions": ["configure", "edit"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "保留人文暖奶油/常规衬线/珊瑚原创线稿与并排材料板；内容重构为工程知识工作，不套深色科技聊天界面。",
+    "两份原创企业文档与响应均为预置，不调用模型、不上传文件；引用高亮来自对应原文段落。",
+    "字体取舍：显示 \"Cormorant Garamond Variable\", Georgia, serif；正文 \"Source Sans 3 Variable\", \"Inter Variable\", sans-serif。使用本地开放字体/系统字体替代品牌商业字体；标题筛选标签按实际桌面渲染归类。"
+  ],
+  "references": [
+    {
+      "source": "原规范 L315–322、361–394、477–495",
+      "reason": "奶油衬线首屏/珊瑚线稿 → 浅奶油材料板/暖黑摘录 → 留白正文/珊瑚结尾/暖黑页脚。`#faf9f5`/`#cc785c`/`#efe9de`、64px常规衬线/人文正文、8px按钮/12px卡。"
+    }
+  ],
+  "assets": []
+}

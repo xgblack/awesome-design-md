@@ -1,0 +1,32 @@
+import { test, expect } from '@playwright/test'
+test('airbnb: 非法日期与人数筛选', async ({ page }) => {
+  await page.goto('examples/airbnb/index.html')
+  await page.locator('#checkout').fill('2026-12-03')
+  await page.getByRole('button', { name: '搜索驻留' }).click()
+  await expect(page.locator('#search-status')).toContainText('必须晚于')
+  await page.locator('#checkout').fill('2026-12-06')
+  await page.locator('#guests').selectOption('6')
+  await page.getByRole('button', { name: '搜索驻留' }).click()
+  await expect(page.locator('#search-status')).toContainText('1 处')
+})
+test('airbnb: 关注范围与详情', async ({ page }) => {
+  await page.goto('examples/airbnb/index.html')
+  await page.getByRole('button', { name: '关注松间小屋' }).click()
+  await page.locator('#saved').click()
+  await expect(page.locator('[data-stay]:visible')).toHaveCount(1)
+  await page.locator('[data-open="0"]').click()
+  await expect(page.locator('#detail-title')).toHaveText('松间小屋')
+  await page.keyboard.press('Escape')
+  await expect(page.locator('#stay-detail')).toBeHidden()
+})
+
+test('airbnb: 房源详情内容分别对应', async ({ page }) => {
+  await page.goto('examples/airbnb/index.html')
+  await page.locator('[data-open="0"]').click()
+  await expect(page.locator('#stay-description')).toContainText('森林边缘')
+  await expect(page.locator('#stay-facilities')).toContainText('双人阅读角')
+  await page.keyboard.press('Escape')
+  await page.locator('[data-open="1"]').click()
+  await expect(page.locator('#stay-description')).toContainText('四人驻留')
+  await expect(page.locator('#stay-facilities')).toContainText('两处休息区')
+})

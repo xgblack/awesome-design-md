@@ -1,0 +1,42 @@
+{
+  "title": "Crosstown",
+  "description": "在原创虚构街区比较步行与接驳，交换起终点并切换无障碍路线；仅固定情境，无真实导航或班次。",
+  "status": "ready",
+  "features": {
+    "moods": ["minimal"],
+    "tones": ["mixed"],
+    "temperature": ["neutral"],
+    "chroma": ["muted"],
+    "accentHues": ["neutral"],
+    "backgrounds": ["solid"],
+    "layouts": ["split", "chapters"],
+    "density": ["balanced"],
+    "typography": ["sans"],
+    "headingScale": ["regular"],
+    "headingWeight": ["bold"],
+    "geometry": ["pill", "rounded"],
+    "layering": ["shadow", "lines"],
+    "visualMedia": ["illustration", "ui"],
+    "motion": ["feedback"],
+    "scenarios": ["tool", "calculator"]
+  },
+  "interactions": ["form", "configure"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "白色任务页、黑色粗标题与反转章节；本地 Inter 替代 UberMove，地图与表单16px圆角，不改为黑科技界面。",
+    "地图、步行者与接驳车辆均原创。每对起终点具有独立固定路径与时长，无障碍偏好改变示意路径；地点未接入与同点错误分开，不连接定位/叫车。"
+  ],
+  "references": [
+    {
+      "source": "L324–338、364–445、448–480、499–558、619–636",
+      "reason": "不改成黑科技页，路线必须标示意，不能暗示真实班次。"
+    }
+  ],
+  "assets": [
+    {
+      "file": "assets/neighborhood.svg",
+      "source": "本项目原创社区接驳车辆与街区场景",
+      "license": "本项目原创，可随示例分发"
+    }
+  ]
+}

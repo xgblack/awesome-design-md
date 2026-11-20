@@ -1,0 +1,67 @@
+{
+  "title": "RIFT / Beyond the line",
+  "description": "原创楔形超级跑车发布与涂装探索；真实本地无声短片，无驾驶、订单或性能实测。",
+  "status": "ready",
+  "features": {
+    "moods": ["luxury", "cinematic"],
+    "tones": ["dark"],
+    "temperature": ["cool"],
+    "chroma": ["muted"],
+    "accentHues": ["yellow"],
+    "backgrounds": ["solid"],
+    "layouts": ["chapters"],
+    "density": ["airy"],
+    "typography": ["sans", "condensed"],
+    "headingScale": ["display"],
+    "headingWeight": ["bold"],
+    "geometry": ["cut", "square"],
+    "layering": ["lines"],
+    "visualMedia": ["render"],
+    "motion": ["feedback", "transition"],
+    "scenarios": ["product"]
+  },
+  "interactions": ["media", "configure"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "原创虚构品牌与概念产品，非官方页面；操作仅在当前页面内存生效，不提交真实业务。",
+    "Saira Condensed 700 / Inter为本地替代。",
+    "6秒无声短片由本页原创新汽车渲染生成有限镜头运动，不是真实车辆或行驶录像；媒体状态由真实video事件驱动。"
+  ],
+  "references": [
+    {
+      "source": "DESIGN.md L5–20、64–67",
+      "reason": "超级跑车发布、真黑舞台、巨大窄体大写、金色方CTA与六边形播放控件。"
+    },
+    {
+      "source": "DESIGN.md L138–155、174–202",
+      "reason": "汽车首章短片/锐利折面/章间黑场，原创车身而非竞速艇改名。"
+    }
+  ],
+  "assets": [
+    {
+      "file": "assets/rift-titan.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/rift-obsidian.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/rift-white.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/rift-aero.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/rift-reveal.mp4",
+      "source": "原创 RIFT 车身SVG渲染的6秒镜头运动",
+      "license": "本项目原创，可随示例分发"
+    }
+  ]
+}

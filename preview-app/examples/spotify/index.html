@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Night Signal / 独立声音收听台 · 独立风格示例</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <aside class="library">
+      <a href="#">night signal<span aria-hidden="true">●</span></a>
+      <nav aria-label="收听台导航">
+        <a href="#albums">发现</a><a href="#tracks">曲目</a><a href="#queue">收听队列</a>
+      </nav>
+      <h2>你的资料库</h2>
+      <div class="library-collection">
+        <span class="collection-icon" aria-hidden="true">N / S</span>
+        <div><b>晚间微型作品</b><small>原创合成 / 3 段</small></div>
+      </div>
+      <p>给没有安排的夜晚，<br />留一点声音。</p>
+      <small>全部本地播放<br />刷新后不保留队列</small>
+    </aside>
+    <main>
+      <header>
+        <div>
+          <p>GOOD EVENING.</p>
+          <h1>让夜晚，慢慢展开。</h1>
+        </div>
+        <label
+          ><span class="sr-only">搜索声音</span
+          ><input id="track-search" type="search" placeholder="搜索曲名、类型或创作说明"
+        /></label>
+      </header>
+      <div class="genre-filters" aria-label="作品类型">
+        <button data-kind="all" aria-pressed="true">全部作品</button
+        ><button data-kind="ambient" aria-pressed="false">环境氛围</button
+        ><button data-kind="synth" aria-pressed="false">合成短章</button
+        ><button data-kind="sequence" aria-pressed="false">节奏序列</button>
+      </div>
+      <section id="albums" class="albums" aria-label="原创作品封面">
+        <button data-track="0" aria-label="播放 Window Seat">
+          <img
+            class="art"
+            src="./assets/window-cover.svg"
+            alt="Window Seat 原创窗框与光线封面"
+          /><span class="album-play" aria-hidden="true">▶</span>
+          <h2>Window Seat</h2>
+          <p>Night Signal Studio · 环境氛围</p></button
+        ><button data-track="1" aria-label="播放 Tidal Notes">
+          <img class="art" src="./assets/tidal-cover.svg" alt="Tidal Notes 原创潮线封面" /><span
+            class="album-play"
+            aria-hidden="true"
+            >▶</span
+          >
+          <h2>Tidal Notes</h2>
+          <p>Night Signal Studio · 合成短章</p></button
+        ><button data-track="2" aria-label="播放 Afterglow">
+          <img
+            class="art"
+            src="./assets/afterglow-cover.svg"
+            alt="Afterglow 原创落日与余光封面"
+          /><span class="album-play" aria-hidden="true">▶</span>
+          <h2>Afterglow</h2>
+          <p>Night Signal Studio · 节奏序列</p>
+        </button>
+      </section>
+      <p id="search-status" role="status">3 段原创作品</p>
+      <div id="search-empty" hidden>
+        <p>没有找到匹配作品。搜索与类型条件已保留。</p>
+        <button id="reset-search">查看全部作品</button>
+      </div>
+      <section id="tracks">
+        <div class="section-head">
+          <h2>为这一刻准备的声音</h2>
+          <span>12 秒原创片段 / 非商业歌曲</span>
+        </div>
+        <div class="track-table">
+          <div class="table-label" aria-hidden="true">
+            <span>#</span><span>作品 / 创作说明</span><span>时长</span><span>队列</span>
+          </div>
+          <div class="track-row">
+            <span>01</span
+            ><button data-play-track="0">
+              Window Seat<small>环境氛围 / 窗边缓慢铺开的和声</small></button
+            ><span>0:12</span><button data-enqueue="0" aria-label="加入队列 Window Seat">＋</button>
+          </div>
+          <div class="track-row">
+            <span>02</span
+            ><button data-play-track="1">
+              Tidal Notes<small>合成短章 / 起伏音色与潮汐意象</small></button
+            ><span>0:12</span><button data-enqueue="1" aria-label="加入队列 Tidal Notes">＋</button>
+          </div>
+          <div class="track-row">
+            <span>03</span
+            ><button data-play-track="2">
+              Afterglow<small>节奏序列 / 重复乐句与余晖的想象</small></button
+            ><span>0:12</span><button data-enqueue="2" aria-label="加入队列 Afterglow">＋</button>
+          </div>
+        </div>
+      </section>
+      <section class="composition-info" aria-labelledby="composition-title">
+        <div>
+          <p>ABOUT THIS RECORDING</p>
+          <h2 id="composition-title">Window Seat</h2>
+          <span id="composition-type">环境氛围 / Ambient study</span>
+        </div>
+        <p id="composition-note">
+          柔和持续音与短乐句，构成一个窗边停留的意象。原创合成片段，不是实地环境录音。
+        </p>
+        <small
+          >演示署名：Night Signal Studio / 原创虚构工作室<br />全部声音为本项目合成，单声道
+          PCM，固定 12 秒。</small
+        >
+      </section>
+      <section id="queue" tabindex="-1">
+        <div class="section-head">
+          <h2>接下来播放</h2>
+          <button id="clear-queue">清空队列</button>
+        </div>
+        <div id="queue-items"></div>
+        <p id="queue-status" role="status">队列只在当前页面内存中保存。</p>
+      </section>
+      <footer>原创封面与声音合成 / 无账户、订阅或远程音乐服务</footer>
+    </main>
+    <div class="player" aria-label="持续音频播放器">
+      <div class="playing-art">
+        <img id="now-cover" src="./assets/window-cover.svg" alt="当前作品封面" />
+      </div>
+      <div class="now">
+        <strong id="now-title">Window Seat</strong><small id="now-artist">Night Signal Studio</small
+        ><span id="now-kind">环境氛围 / 原创合成</span>
+      </div>
+      <div class="transport">
+        <div>
+          <button id="previous" aria-label="上一首">|◀</button><button id="play">播放</button
+          ><button id="next" aria-label="下一首">▶|</button>
+        </div>
+        <div class="progress">
+          <span id="elapsed">0:00</span
+          ><label
+            ><span class="sr-only">播放进度</span
+            ><input id="seek" type="range" min="0" max="12" step="0.1" value="0" disabled /></label
+          ><span id="duration">0:12</span>
+        </div>
+      </div>
+      <label class="volume"
+        >音量<input id="volume" type="range" min="0" max="100" value="60" aria-label="播放音量"
+      /></label>
+      <p id="audio-status" class="sr-only" role="status">尚未播放。</p>
+      <div id="audio-error" hidden>
+        <p id="audio-error-message" role="alert"></p>
+        <button id="retry-audio">重试本地音频</button>
+      </div>
+      <audio id="audio" preload="metadata"></audio>
+    </div>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

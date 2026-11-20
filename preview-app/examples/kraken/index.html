@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Aster Market · 数字资产研究目录 · 独立设计语言本地演示" />
+    <title>Aster Market · 数字资产研究目录</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="#top">aster / MARKET</a>
+      <nav><a href="#collections">观察资产</a><a href="#guide">如何阅读</a></nav>
+      <a class="primary" href="#collections">建立观察清单 ↗</a>
+    </header>
+    <main id="top">
+      <section class="hero">
+        <span>DISCOVER THE DETAILS, NOT THE HYPE.</span>
+        <h1>认识资产的不同。<br />不只看价格的高低。</h1>
+        <p>
+          从用途、价格口径与供给模型，理解数字资产的不同。<br />这里只提供固定资料样本，不提供交易。
+        </p>
+        <div class="hero-art" aria-hidden="true">
+          <i></i><i></i><i></i><span>ASSET RESEARCH / FIXED SAMPLES</span>
+        </div>
+      </section>
+      <section class="collections" id="collections">
+        <div class="section-head">
+          <h2>市场资料 / 固定样本</h2>
+          <p>选择最多两项，比较它们的模型与边界。</p>
+        </div>
+        <div class="controls">
+          <label>搜索资产<input id="search" placeholder="例如 Bitcoin、ETH" /></label
+          ><label
+            >资产类别<select id="category">
+              <option value="all">全部资产</option>
+              <option value="network">网络资产</option>
+              <option value="stable">稳定币</option>
+            </select></label
+          >
+        </div>
+        <div id="rows" class="rows"></div>
+        <p id="empty" hidden>没有符合条件的资产。<button id="clear">清除条件</button></p>
+        <div class="compare">
+          <div>
+            <span>观察清单 / 最多 2 项</span>
+            <p id="selection" role="status">还没有选择资产</p>
+          </div>
+          <button id="compare" class="primary" disabled>比较所选资产</button>
+        </div>
+        <p id="notice" role="status"></p>
+      </section>
+      <section class="guide" id="guide">
+        <div>
+          <small>A SMALL FIELD GUIDE</small>
+          <h2>多看一点细节，<br />少一点噪音。</h2>
+        </div>
+        <ol>
+          <li>
+            <b>01</b>
+            <h3>先看用途</h3>
+            <p>支付、网络计算、稳定价值的目标并不相同，不能只凭单价比较。</p>
+          </li>
+          <li>
+            <b>02</b>
+            <h3>再看边界</h3>
+            <p>展示价格仅为固定计算样本；供给模型是概要，不代表价值或回报保证。</p>
+          </li>
+          <li>
+            <b>03</b>
+            <h3>保持独立判断</h3>
+            <p>本页不构成投资建议，不连接钱包或市场。</p>
+          </li>
+        </ol>
+      </section>
+    </main>
+    <footer>Aster / 独立设计语言示例 · 无交易、无钱包、无实时数据</footer>
+    <dialog id="comparison">
+      <h2>两种资产，放在一起理解。</h2>
+      <div id="comparison-body"></div>
+      <button id="close">返回观察站</button>
+    </dialog>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

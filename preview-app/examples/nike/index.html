@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PACE / City Running · 独立风格示例</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#">PACE /</a>
+      <nav><a href="#gear">装备</a><a href="#story">城市跑记</a></nav>
+      <button id="kit-open">训练包 <span id="kit-count">0</span></button>
+    </header>
+    <main>
+      <section class="hero">
+        <img src="../_shared/photos/running.webp" alt="跑者运动摄影，作为城市跑步主题参考" />
+        <div>
+          <p>DON'T WAIT FOR THE PERFECT DAY.</p>
+          <h1>MAKE<br />YOUR<br />MOVE.</h1>
+          <a href="#gear">找到你的装备</a>
+        </div>
+      </section>
+      <section id="gear">
+        <div class="gear-heading">
+          <h2>每一种路面，<br />都有出发的理由。</h2>
+          <div>
+            <button data-surface="all" aria-pressed="true">全部</button
+            ><button data-surface="road">城市道路</button
+            ><button data-surface="trail">轻越野</button>
+          </div>
+        </div>
+        <div class="products">
+          <article data-surface-product="road">
+            <button class="shoe-open" data-shoe="City Flow">
+              <img src="./assets/city-flow.svg" alt="City Flow 低帮网面与曲面缓震中底原创跑鞋" />
+            </button>
+            <h3>City Flow</h3>
+            <p>城市跑步 / 日常训练</p>
+            <button class="choose" data-shoe="City Flow">选择尺码</button>
+          </article>
+          <article data-surface-product="trail">
+            <button class="shoe-open trail" data-shoe="Trail Note">
+              <img
+                src="./assets/trail-note.svg"
+                alt="Trail Note 高护踝、多层保护片与深齿鞋底原创轻越野鞋"
+              />
+            </button>
+            <h3>Trail Note</h3>
+            <p>轻越野 / 自然路面</p>
+            <button class="choose" data-shoe="Trail Note">选择尺码</button>
+          </article>
+          <article data-surface-product="road">
+            <button class="shoe-open night" data-shoe="After Hours">
+              <img
+                src="./assets/after-hours.svg"
+                alt="After Hours 修长楦型、深色织面与橙色推进中底原创跑鞋"
+              />
+            </button>
+            <h3>After Hours</h3>
+            <p>城市道路 / 傍晚训练</p>
+            <button class="choose" data-shoe="After Hours">选择尺码</button>
+          </article>
+        </div>
+        <p id="surface-status" role="status">3 款原创概念装备</p>
+      </section>
+      <section id="story" class="story">
+        <div>
+          <p>THE CITY IS YOUR STARTING LINE.</p>
+          <h2>不为打卡。<br />为自己出发。</h2>
+          <p>
+            从熟悉的街角开始，听见脚步，留意呼吸。<br />这是跑步装备界面练习，不是运动或医疗建议。
+          </p>
+        </div>
+        <img src="../_shared/photos/city.webp" alt="城市街道摄影参考" />
+      </section>
+    </main>
+    <footer>
+      PACE / ORIGINAL RUNNING GEAR STUDY<br />原创鞋款SVG与许可运动摄影；非实际商品，无库存、支付或订单。
+    </footer>
+    <dialog id="shoe-detail">
+      <button id="shoe-close">关闭</button>
+      <h2 id="shoe-name"></h2>
+      <img id="shoe-image" src="./assets/city-flow.svg" alt="City Flow 原创跑鞋概念细节" />
+      <p id="shoe-description"></p>
+      <label
+        >尺码<select id="size">
+          <option value="">先选尺码</option>
+          <option>38</option>
+          <option>39</option>
+          <option>40</option>
+          <option>41</option>
+          <option>42</option>
+        </select></label
+      ><button id="add-kit">加入本次训练包</button>
+      <p id="shoe-status" role="status">尺码仅供本地演示，无库存承诺。</p></dialog
+    ><dialog id="kit">
+      <button id="kit-close">关闭训练包</button>
+      <h2>本次训练包</h2>
+      <div id="kit-items">训练包还是空的。</div>
+      <button id="clear-kit">清空训练包</button>
+    </dialog>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+{
+  "title": "PACE / City Running",
+  "description": "「PACE 城市跑步装备图录」——按路面和训练场景找装备并组合训练包。",
+  "status": "ready",
+  "features": {
+    "moods": ["cinematic"],
+    "tones": ["mixed"],
+    "temperature": ["neutral"],
+    "chroma": ["mono"],
+    "accentHues": ["neutral"],
+    "backgrounds": ["image"],
+    "layouts": ["chapters", "editorial"],
+    "density": ["airy"],
+    "typography": ["sans", "condensed"],
+    "headingScale": ["display"],
+    "headingWeight": ["bold"],
+    "geometry": ["pill", "square"],
+    "layering": ["solid"],
+    "visualMedia": ["photo", "render"],
+    "motion": ["feedback"],
+    "scenarios": ["commerce", "directory"]
+  },
+  "interactions": ["filter", "configure"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "本地Saira Condensed800替代Bebas/Anton型运动展示字，不使用品牌标识。",
+    "原创鞋款SVG概念渲染，跑者与城市摄影为许可参考；不提供真实商品与训练/医疗建议。",
+    "三款鞋为独立原创鞋楦/鞋面/鞋底结构，不再用同一鞋渲染CSS滤色；详情显示对应实物概念。",
+    "训练包支持逐项移除，所有选码/增删只在本页生效。"
+  ],
+  "references": [
+    {
+      "source": "L263–276、317–365、498–501、519–526、546–557",
+      "reason": "禁柔光、彩色行动和圆角商品卡。"
+    }
+  ],
+  "assets": [
+    {
+      "file": "assets/pace-shoe.svg",
+      "source": "本项目原创矢量产品/场景插画",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "../_shared/photos/running.webp",
+      "source": "共享photos/sources.json",
+      "license": "Unsplash License"
+    },
+    {
+      "file": "../_shared/photos/city.webp",
+      "source": "共享photos/sources.json",
+      "license": "Unsplash License"
+    },
+    {
+      "file": "assets/city-flow.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/trail-note.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/after-hours.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    }
+  ]
+}

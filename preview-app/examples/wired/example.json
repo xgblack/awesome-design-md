@@ -1,0 +1,58 @@
+{
+  "title": "Matter / 技术与日常",
+  "description": "浏览主作16:9、双次稿4:3和作者报道行，按议题过滤导读，打开完整原创长文并保留当次阅读位置。",
+  "status": "ready",
+  "features": {
+    "moods": ["editorial"],
+    "tones": ["mixed"],
+    "temperature": ["neutral"],
+    "chroma": ["muted"],
+    "accentHues": ["neutral"],
+    "backgrounds": ["solid"],
+    "layouts": ["editorial", "directory"],
+    "density": ["balanced"],
+    "typography": ["sans", "serif"],
+    "headingScale": ["display"],
+    "headingWeight": ["regular"],
+    "geometry": ["square"],
+    "layering": ["lines"],
+    "visualMedia": ["type", "photo"],
+    "motion": ["feedback"],
+    "scenarios": ["content"]
+  },
+  "interactions": ["filter"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "居中刊名、细线、64px/400显示衬线、16:9主作与4:3次稿；窄列Georgia/Songti正文，黑尾，不采用The Verge彩块时间流。",
+    "完整原创虚构维修长文、三份独立导读与虚构署名；钢笔、陶艺、城市和室内摄影如实标主题参考，不冒充真实采访或修理现场。",
+    "本地Cormorant Garamond/Georgia替代WiredDisplay/BreveText；文章位置和本期位置仅当次内存保留，刷新重置。"
+  ],
+  "references": [
+    {
+      "source": "L254–268、292–364、378–445、485–497",
+      "reason": "不与The Verge共用彩块时间流；按具体组件白刊头和正文衬线设计。"
+    }
+  ],
+  "assets": [
+    {
+      "file": "../_shared/photos/workshop.webp",
+      "source": "共享photos/sources.json",
+      "license": "Unsplash License"
+    },
+    {
+      "file": "../_shared/photos/interior.webp",
+      "source": "共享photos/sources.json",
+      "license": "Unsplash License"
+    },
+    {
+      "file": "../_shared/photos/craft.webp",
+      "source": "共享photos/sources.json",
+      "license": "Unsplash License"
+    },
+    {
+      "file": "../_shared/photos/city.webp",
+      "source": "共享photos/sources.json",
+      "license": "Unsplash License"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+import { test, expect } from '@playwright/test'
+test('tesla: 不同车型和车漆对应独立车身', async ({ page }) => {
+  await page.goto('examples/tesla/index.html')
+  await page.locator('#model-select').selectOption('x')
+  await page.locator('[data-paint=red]').click()
+  await expect(page.locator('#car-image')).toHaveAttribute('src', /x-red/)
+  await expect(page.locator('#model-name')).toHaveText('Still X')
+  await expect(page.locator('#seats')).toHaveText('5 SEATS')
+})
+test('tesla: 意向草稿的缺项与编辑', async ({ page }) => {
+  await page.goto('examples/tesla/index.html')
+  await page.getByRole('button', { name: '保存意向草稿' }).click()
+  await expect(page.locator('#visit-result')).toContainText('请选择今天')
+  await page.locator('#visit-date').fill('2099-12-20')
+  await page.locator('#visit-guests').selectOption('2')
+  await page.getByRole('button', { name: '保存意向草稿' }).click()
+  await expect(page.locator('#visit-result')).toContainText('2 人')
+  await expect(page.locator('#visit-result')).toContainText('未发送预约')
+  await page.locator('#edit-visit').click()
+  await expect(page.locator('#visit-date')).toBeFocused()
+})

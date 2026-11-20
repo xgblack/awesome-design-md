@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Support Desk · 每个客户问题都有上下文 · 独立设计语言本地演示"
+    />
+    <title>Support Desk · 每个客户问题都有上下文</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="#top">▤ support desk</a>
+      <nav><a href="#inbox">客户支持</a><a href="#care">认真回应</a></nav>
+      <a class="button" href="#inbox">体验本地收件箱 ↗</a>
+    </header>
+    <main id="top">
+      <section class="hero">
+        <p>Good support starts with listening.</p>
+        <h1>每个问题，<br />都值得好好回答。</h1>
+        <p>
+          把一次客户提问，变成有据可循的回应。<br />从产品问题、订单资料到帮助文章，一张服务台保留完整上下文。
+        </p>
+      </section>
+      <section class="inbox" id="inbox">
+        <div class="inbox-top">
+          <span>Support Desk</span><span class="local">本地收件箱 / 演示</span
+          ><button id="reset">重置会话</button>
+        </div>
+        <div class="inbox-grid">
+          <aside>
+            <h2>Inbox <span>3</span></h2>
+            <div id="questions"></div>
+          </aside>
+          <section class="conversation">
+            <div class="conversation-head"><span id="person"></span><span>仅在此页回复</span></div>
+            <div id="messages"></div>
+            <form id="reply-form">
+              <label for="reply">写一条回复</label
+              ><textarea
+                id="reply"
+                rows="3"
+                maxlength="300"
+                placeholder="先回应对方真正关心的事…"
+              ></textarea>
+              <p id="error" role="alert"></p>
+              <div>
+                <small>不会发送给真实用户</small
+                ><button type="submit" class="button">加入本次对话 ↑</button>
+              </div>
+            </form>
+          </section>
+          <aside class="knowledge">
+            <span class="assistant">助手资料 / 预置片段</span>
+            <h3>先了解，再回答。</h3>
+            <div id="context"></div>
+            <small>资料不是 AI 生成，点击不同问题可查看对应片段。</small>
+          </aside>
+        </div>
+      </section>
+      <section class="care" id="care">
+        <div>
+          <span>01 / CONTEXT MATTERS</span>
+          <h2>让每次回应，<br />多一点理解。</h2>
+          <p>问题不只是一个工单编号。保留上下文，才能说出真正有帮助的话。</p>
+        </div>
+        <div class="snippet">
+          <small>帮助中心 / 产品使用</small>
+          <h3>团队工作区权限说明</h3>
+          <p>
+            工作区管理员可以邀请成员并设置角色。访客仅可访问被分享的项目，不会自动获得整个工作区的权限。
+          </p>
+          <span>最近整理于 2026 年 11 月 · 固定示例</span>
+        </div>
+      </section>
+      <section class="closing">
+        <h2>Good neighbors.<br />Better conversations.</h2>
+        <a class="button" href="#inbox">回到服务台 ↑</a>
+      </section>
+    </main>
+    <footer>Support Desk / 独立设计语言示例 · 不保存输入 · 非真实客服服务</footer>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

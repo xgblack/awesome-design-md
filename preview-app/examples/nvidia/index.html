@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GridWorks / Edge Resources · 独立风格示例</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <b><i></i>GRIDWORKS</b>
+      <nav>
+        <a href="#resources">资源库</a><a href="#guide">开发指南</a
+        ><a href="#comparison">套件对比</a>
+      </nav>
+      <span>工程概念 / 非官方</span>
+    </header>
+    <main>
+      <section class="hero">
+        <div>
+          <p>EDGE COMPUTING / RESOURCE LAB</p>
+          <h1>把计算，<br />带到发生之处。</h1>
+          <p>为城市观察、装置艺术与开放实验准备的边缘计算概念套件。</p>
+          <a href="#resources" class="action">探索套件</a>
+        </div>
+        <img
+          src="./assets/edge-eight-v2.svg"
+          alt="原创边缘计算套件，PCB走线、散热鳍片、内存与Ethernet/USB接口"
+        />
+      </section>
+      <section id="resources">
+        <p class="eyebrow">RESOURCES / 01</p>
+        <h2>从一个具体问题开始。</h2>
+        <div class="filters">
+          <label
+            >用途<select id="use">
+              <option value="all">全部用途</option>
+              <option value="vision">视觉观察</option>
+              <option value="sensor">传感采集</option>
+            </select></label
+          ><label
+            >连接能力<select id="connection">
+              <option value="all">全部连接</option>
+              <option value="ethernet">Ethernet</option>
+              <option value="wifi">Wi-Fi</option>
+            </select></label
+          ><button id="reset">清除条件</button>
+        </div>
+        <div class="resources">
+          <article data-use="vision" data-connection="ethernet">
+            <img
+              class="kit-product"
+              src="./assets/edge-eight-v2.svg"
+              alt="Edge Eight PCB散热与接口渲染"
+            /><span>DEVELOPER KIT</span>
+            <h3>Edge Eight</h3>
+            <p>面向固定点位的视觉观察</p>
+            <dl>
+              <dt>内存（概念）</dt>
+              <dd>8 GB</dd>
+              <dt>接口</dt>
+              <dd>Ethernet / USB-C</dd>
+            </dl>
+            <button data-add="Edge Eight">加入对比</button>
+          </article>
+          <article data-use="sensor" data-connection="wifi">
+            <img
+              class="kit-product"
+              src="./assets/field-four-v2.svg"
+              alt="Field Four带天线采集机箱渲染"
+            /><span>EXPLORER KIT</span>
+            <h3>Field Four</h3>
+            <p>移动装置的传感采集</p>
+            <dl>
+              <dt>内存（概念）</dt>
+              <dd>4 GB</dd>
+              <dt>接口</dt>
+              <dd>Wi-Fi / USB-C</dd>
+            </dl>
+            <button data-add="Field Four">加入对比</button>
+          </article>
+          <article data-use="vision" data-connection="wifi">
+            <img
+              class="kit-product"
+              src="./assets/studio-twelve-v2.svg"
+              alt="Studio Twelve竖置散热机箱渲染"
+            /><span>STUDIO KIT</span>
+            <h3>Studio Twelve</h3>
+            <p>交互展览的现场计算</p>
+            <dl>
+              <dt>内存（概念）</dt>
+              <dd>12 GB</dd>
+              <dt>接口</dt>
+              <dd>Wi-Fi / HDMI</dd>
+            </dl>
+            <button data-add="Studio Twelve">加入对比</button>
+          </article>
+        </div>
+        <p id="filter-status" role="status">3 套概念套件</p>
+      </section>
+      <section id="comparison" class="comparison">
+        <h2>按问题，比较选择。</h2>
+        <p id="compare-status" role="status">最多选择两套；不代表真实跑分或兼容认证。</p>
+        <div id="compare-list">还没有选择套件。</div>
+        <button id="clear-comparison">清空对比</button>
+      </section>
+      <section class="interfaces">
+        <div>
+          <p class="eyebrow">DEPLOYMENT NOTES</p>
+          <h2>先看接口。<br />再决定放在哪里。</h2>
+          <p>不是每个任务都需要同样的设备。把连接、供电与部署边界放在选择前面。</p>
+        </div>
+        <div>
+          <article>
+            <h3>01 / 接入</h3>
+            <p>Ethernet适合固定点位；Wi-Fi用于移动装置。USB-C仅为概念接口，不暗示任意外设兼容。</p>
+          </article>
+          <article>
+            <h3>02 / 部署</h3>
+            <p>开放PCB需要绝缘与散热边界；机箱提供组织线缆的方式。实际部署仍需具体硬件文档。</p>
+          </article>
+          <article>
+            <h3>03 / 应用</h3>
+            <p>样例只讨论视觉观察、传感采集和展览装置，不提供跑分、识别率或认证承诺。</p>
+          </article>
+        </div>
+      </section>
+      <section id="guide" class="guide">
+        <div>
+          <p>START BUILDING</p>
+          <h2>技术的价值，<br />在问题的现场。</h2>
+        </div>
+        <ol>
+          <li>选择你的观察任务</li>
+          <li>比较连接与部署边界</li>
+          <li>阅读概念接口资料</li>
+        </ol>
+      </section>
+    </main>
+    <footer>
+      <b>GRIDWORKS</b>
+      <p>原创虚构套件 / 固定概念数据 / 无采购、下载或认证承诺</p>
+    </footer>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

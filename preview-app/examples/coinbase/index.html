@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Ledger School · 理解你的第一份数字资产配置 · 独立设计语言本地演示"
+    />
+    <title>Ledger School · 理解你的第一份数字资产配置</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="#top">ledger school</a>
+      <nav><a href="#practice">配置练习</a><a href="#method">我们的口径</a></nav>
+      <a class="pill" href="#practice">开始练习 ↗</a>
+    </header>
+    <main id="top">
+      <section class="hero">
+        <div>
+          <p>YOUR MONEY. A LITTLE MORE CLEAR.</p>
+          <h1>A plan for<br />every possibility.</h1>
+          <p>一份看得懂的纸面账户。<br />从配置金额，到资产数量，每一步都有依据。</p>
+          <a class="pill" href="#practice">试着分配一笔资金</a>
+        </div>
+        <div class="floating">
+          <div class="budget-card">
+            <span>PAPER PORTFOLIO / 固定样本</span>
+            <h2>$1,000<span>.00</span></h2>
+            <p>学习账户 · 不含真实资产</p>
+            <div><span>Bitcoin · BTC</span><b>$500</b></div>
+            <div><span>Ethereum · ETH</span><b>$250</b></div>
+            <small>理解数量，也理解边界。</small>
+          </div>
+          <div class="coin" aria-hidden="true">↗</div>
+          <div class="mini">
+            <span>配置练习 A</span><strong>先认识，再决定。</strong><i>01 — UNDERSTAND FIRST</i>
+          </div>
+        </div>
+      </section>
+      <section class="method" id="method">
+        <span>SMALL DECISIONS. A BIGGER PICTURE.</span>
+        <h2>一个金额。<br />三种不同的资产。</h2>
+        <p>
+          配置金额除以固定样本价格，得到资产数量。价格会变化，风险也各不相同；下面只练习计算，不连接交易所或钱包。
+        </p>
+      </section>
+      <section class="practice" id="practice">
+        <div class="practice-head">
+          <div>
+            <p>YOUR FIRST PAPER PORTFOLIO</p>
+            <h2>先理解数字，再理解选择。</h2>
+          </div>
+          <label
+            >练习样本<select id="preset">
+              <option value="a">练习 A / 1,000 美元</option>
+              <option value="b">练习 B / 2,000 美元</option>
+            </select></label
+          >
+        </div>
+        <div class="budget-layout">
+          <div class="fields">
+            <div class="income">
+              <span>虚构账户可用资金</span><strong id="income">$1,000.00</strong>
+            </div>
+            <label
+              >Bitcoin / 配置美元<input
+                id="btc"
+                type="number"
+                min="0"
+                step="10"
+                value="500" /></label
+            ><label
+              >Ethereum / 配置美元<input
+                id="eth"
+                type="number"
+                min="0"
+                step="10"
+                value="250" /></label
+            ><label
+              >USDC / 配置美元<input id="usdc" type="number" min="0" step="10" value="150"
+            /></label>
+            <div class="asset-quantities" id="quantities"></div>
+          </div>
+          <div class="balance">
+            <span>尚未配置的美元</span><output id="balance">$100.00</output>
+            <p id="message" role="status"></p>
+            <button class="pill" id="confirm">确认这份练习配置</button
+            ><small id="confirmed">只有纸面配置，不购买任何资产。</small>
+          </div>
+        </div>
+        <p class="sample-prices">
+          计算模型固定为 BTC $60,000 · ETH $3,000 · USDC
+          $1。仅演示除法与预算约束，不是实时行情、资产预测或投资建议。
+        </p>
+      </section>
+      <section class="story">
+        <div>
+          <span>PLAN FOR WHAT MATTERS</span>
+          <h2>清楚了解，<br />比快速决定更重要。</h2>
+        </div>
+        <p>
+          看懂每一份配置的计算过程。<br />不把样本价格当作未来的承诺。<br />也不把一页练习，当作投资建议。
+        </p>
+      </section>
+    </main>
+    <footer>
+      <strong>ledger school</strong><span>独立设计语言示例 · 固定数据 · 非金融服务</span>
+    </footer>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

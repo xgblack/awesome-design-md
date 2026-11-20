@@ -1,0 +1,37 @@
+{
+  "title": "Patchbay / Agent tool infrastructure",
+  "description": "Agent工具连接基础设施：对工单分流与知识库检索配方检查scope、工具参数、调用trace和结构化输出；仅本地固定配方。",
+  "status": "ready",
+  "features": {
+    "moods": ["tech"],
+    "tones": ["dark"],
+    "temperature": ["neutral"],
+    "chroma": ["mono"],
+    "accentHues": ["blue"],
+    "backgrounds": ["gradient", "solid"],
+    "layouts": ["centered", "workspace"],
+    "density": ["balanced"],
+    "typography": ["sans", "mono"],
+    "headingScale": ["display"],
+    "headingWeight": ["medium"],
+    "geometry": ["small-radius"],
+    "layering": ["solid"],
+    "visualMedia": ["ui", "code"],
+    "motion": ["feedback"],
+    "scenarios": ["tool", "docs"]
+  },
+  "interactions": ["replay", "configure"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "从活动/出行配方重构为Agent工具授权和调用语境；深蓝聚光与四窗是真实可操作DOM。",
+    "不连接真实工具或业务账户，不索取令牌；scope失败会停止后续输出。",
+    "字体取舍：显示 \"Inter Variable\", sans-serif；正文 \"Inter Variable\", sans-serif。使用本地开放字体/系统字体替代品牌商业字体；标题筛选标签按实际桌面渲染归类。"
+  ],
+  "references": [
+    {
+      "source": "原规范 L269–275、312–340、412–426",
+      "reason": "72px居中标题 → 2×2真实演示四窗/限定蓝聚光 → 连接器/运行说明/暗资源。`#0f0f0f`/`#181818`/`#222222`亮度层、`#0007cd`行动、500 sans/Mono、8px控件。"
+    }
+  ],
+  "assets": []
+}

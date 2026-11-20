@@ -1,0 +1,58 @@
+{
+  "title": "Papertrail / 社区印制工坊",
+  "description": "以具体打印机、纸张与装订器为主体，三问形成对应印制器材组合，分支帮助可以恢复。",
+  "status": "ready",
+  "features": {
+    "moods": ["minimal", "tech"],
+    "tones": ["mixed"],
+    "temperature": ["neutral"],
+    "chroma": ["mono"],
+    "accentHues": ["blue"],
+    "backgrounds": ["solid"],
+    "layouts": ["split", "chapters"],
+    "density": ["balanced"],
+    "typography": ["sans"],
+    "headingScale": ["display"],
+    "headingWeight": ["medium"],
+    "geometry": ["small-radius", "rounded"],
+    "layering": ["solid"],
+    "visualMedia": ["render", "photo"],
+    "motion": ["feedback"],
+    "scenarios": ["product", "tool"]
+  },
+  "interactions": ["configure", "form"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "本项目独立虚构演示，非品牌官方页面；业务操作仅在当前页面内存中生效。",
+    "Inter Variable 为本地可分发替代，不含品牌专有字体。",
+    "原创文档/照片打印机、纸张层叠/装订器/墨盒静物替代简单空壳；帮助信息不执行设备命令或冒充维修。"
+  ],
+  "references": [
+    {
+      "source": "L335–341、386–416、538–545、593–605",
+      "reason": "具体组件优先：桌面分栏/约60°斜纹/大写按钮；不能误作IBM全方角或斜纹每卡。"
+    }
+  ],
+  "assets": [
+    {
+      "file": "assets/document-printer.webp",
+      "source": "本项目原创 SVG 场景/产品形体；同名SVG为可编辑源，本地栅格为WebP",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/paper-binder-kit.webp",
+      "source": "本项目原创 SVG 场景/产品形体；同名SVG为可编辑源，本地栅格为WebP",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/photo-printer.webp",
+      "source": "本项目原创 SVG 场景/产品形体；同名SVG为可编辑源，本地栅格为WebP",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "../_shared/photos/workshop.webp",
+      "source": "共享photos/sources.json",
+      "license": "Unsplash License"
+    }
+  ]
+}

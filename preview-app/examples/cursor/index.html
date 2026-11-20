@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Loom Code / AI code editor replay</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a class="word" href="#top">⌘ loom<span>code</span></a>
+      <nav>
+        <a href="#replay">Workspace</a><a href="#notes">Notes</a
+        ><a class="nav-cta" href="#replay">Try a repair ↗</a>
+      </nav>
+    </header>
+    <main id="top">
+      <section class="intro">
+        <h1>A little more clarity.<br />A lot less friction.</h1>
+        <p>
+          把一次 AI 代码编辑器的修复拆开看清楚。文件、对话与结果，<br />都在同一个温暖的工作区里。
+        </p>
+        <a class="orange" href="#replay">Explore the replay ↗</a
+        ><span class="micro">本地预置修复 · 不读取或执行你的代码</span>
+      </section>
+      <section class="workspace" id="replay">
+        <div class="workspace-title">
+          <span>loom / repair room</span
+          ><label
+            >案例
+            <select id="case">
+              <option value="empty">空搜索结果</option>
+              <option value="price">价格格式化</option>
+            </select></label
+          ><span class="branch">◯ example / fix</span>
+        </div>
+        <ol class="agent-timeline" aria-label="Agent回放五阶段">
+          <li>Thinking</li>
+          <li>Grepping</li>
+          <li>Reading</li>
+          <li>Editing</li>
+          <li>Done</li>
+        </ol>
+        <div class="mobile-tabs">
+          <button data-pane="files">文件</button
+          ><button data-pane="code" aria-pressed="true">代码</button
+          ><button data-pane="chat">讲解</button>
+        </div>
+        <div class="editor-grid">
+          <aside id="files" class="pane">
+            <div class="pane-label">EXPLORER</div>
+            <button class="file selected" data-file="main">▧ search.ts</button
+            ><button class="file" data-file="test">▧ search.test.ts</button>
+            <div class="tree-note">FIXTURE FILES<br />只读示例，切换文件阅读变更。</div>
+          </aside>
+          <div id="code" class="pane">
+            <div class="code-title">
+              <span id="filename">search.ts</span>
+              <div>
+                <button id="before" aria-pressed="true">修复前</button
+                ><button id="after" aria-pressed="false">修复后</button>
+              </div>
+            </div>
+            <pre id="source"></pre>
+            <div class="terminal">
+              <span>TERMINAL / SIMULATED</span>
+              <p id="terminal">等待修复回放。没有运行宿主命令。</p>
+            </div>
+          </div>
+          <aside id="chat" class="pane">
+            <div class="pane-label">A CHANGE WITH CONTEXT</div>
+            <h3 id="chat-title">当结果为空时</h3>
+            <p id="context">
+              空集合仍然读取首项会造成未定义访问。先判断长度，让失败路径成为明确状态。
+            </p>
+            <div class="phase"><i></i><span id="phase">Ready to inspect</span></div>
+            <button id="start" class="orange">回放修复 ↗</button
+            ><button id="cancel" disabled>取消回放</button>
+            <p class="micro">教学回放，不是在线模型生成。</p>
+          </aside>
+        </div>
+      </section>
+      <section class="notes" id="notes">
+        <div>
+          <span>01 / THE REASONING</span>
+          <h2>不是多写一行。<br />是少留一个盲点。</h2>
+        </div>
+        <div>
+          <p>
+            一个好的修复，应该同时解释正常路径和失败路径。在这里，“空结果”不再是意外，而是界面能理解的一种状态。
+          </p>
+          <p>
+            选择测试文件，看看断言如何覆盖边界。切换前后版本，变化被保留在同一位置，方便逐行理解。
+          </p>
+          <a href="#replay">Review the change ↗</a>
+        </div>
+      </section>
+      <section class="last">
+        <h2>Small changes.<br />Thoughtfully made.</h2>
+        <p>两个固定样例。没有账户，没有文件写入。<br />刷新即可重新开始。</p>
+      </section>
+    </main>
+    <footer>loom code / <span>独立风格示例 · Cursor DESIGN.md</span></footer>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

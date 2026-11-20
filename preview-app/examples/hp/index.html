@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Papertrail / 社区印制工坊 · 独立风格示例</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="utility">纸张，让想法落地。 / 原创工坊演示</div>
+    <header>
+      <b>papertrail</b>
+      <nav>
+        <a href="#choose">选设备</a><a href="#help">找帮助</a><a href="#workshop">工坊日常</a>
+      </nav>
+      <span>PRINT WITH PURPOSE.</span>
+    </header>
+    <main>
+      <section class="hero">
+        <div>
+          <p>COMMUNITY PRINT STUDIO</p>
+          <h1>把你的想法，<br />印成看得见的日常。</h1>
+          <a href="#choose">找到合适的组合 →</a>
+        </div>
+        <div class="device">
+          <img
+            src="./assets/document-printer.webp"
+            alt="Papertrail Everyday 24 原创文档打印机，扫描盖板、控制屏、纸路与出纸托盘清晰可见"
+          />
+        </div>
+        <span class="stripe"></span>
+      </section>
+      <section id="choose">
+        <p class="eyebrow">FIND YOUR SETUP</p>
+        <h2>从三件小事，<br />找到一套组合。</h2>
+        <form id="wizard">
+          <label
+            >主要印什么？<select id="print-kind">
+              <option value="">请选择</option>
+              <option value="text">文字资料</option>
+              <option value="photo">摄影与图文</option>
+            </select></label
+          ><label
+            >每次大约几页？<select id="volume">
+              <option value="">请选择</option>
+              <option value="small">20 页以内</option>
+              <option value="large">20 页以上</option>
+            </select></label
+          ><label
+            >需要装订吗？<select id="binding">
+              <option value="">请选择</option>
+              <option value="yes">需要</option>
+              <option value="no">不需要</option>
+            </select></label
+          ><button>查看推荐组合</button>
+        </form>
+        <div id="recommendation" role="status">回答完整后，再给出概念组合。不会创建采购单。</div>
+        <div class="equipment-strip" aria-label="原创印制器材">
+          <article>
+            <img
+              src="./assets/photo-printer.webp"
+              alt="Colorway 48 深灰照片印制机，正在输出一张原创山景相片"
+            />
+            <h3>Colorway 48</h3>
+            <p>图文与摄影 / 虚构器材概念</p>
+          </article>
+          <article>
+            <img
+              src="./assets/paper-binder-kit.webp"
+              alt="纸张层叠、蓝色骑马钉装订器与墨盒组成的原创器材静物"
+            />
+            <h3>让一份作品，完整落地。</h3>
+            <p>纸张、耗材与装订 / 本地示例组合</p>
+          </article>
+        </div>
+      </section>
+      <section id="workshop" class="workshop">
+        <img src="../_shared/photos/workshop.webp" alt="手作工具静物参考摄影" />
+        <div>
+          <p>EVERYDAY MAKING</p>
+          <h2>不只是输出，<br />也是表达。</h2>
+          <p>讲义、社区公告、小型摄影册。把纸张、色彩与装订放在一起，选择就有了具体的意义。</p>
+        </div>
+      </section>
+      <section id="help" class="help">
+        <div>
+          <p>LET'S WORK IT OUT</p>
+          <h2>印得不太对？<br />从这里开始。</h2>
+        </div>
+        <div>
+          <label
+            >遇到了什么？<select id="problem">
+              <option value="">请选择问题</option>
+              <option value="pale">颜色偏淡</option>
+              <option value="jam">纸张卡住</option>
+            </select></label
+          >
+          <p id="diagnosis" role="status">选择一个问题，查看安全的演示检查顺序。</p>
+          <button id="back">重新选择</button>
+        </div>
+      </section>
+    </main>
+    <footer>
+      PAPERTRAIL / 原创虚构印制工坊<br />设备与建议均为演示，不替代具体设备说明书或售后支持。
+    </footer>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

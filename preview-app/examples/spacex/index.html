@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ASTER Launch / For a wider view · 独立风格示例</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">ASTER<span>LAUNCH</span></a>
+      <nav>
+        <a href="#vehicle">VEHICLE</a><a href="#ascent">MISSIONS</a><a href="#orbit">PURPOSE</a>
+      </nav>
+      <button id="index-open">MENU ☰</button>
+    </header>
+    <main>
+      <section class="mission launch" id="launch">
+        <img
+          src="../_shared/photos/artemis-launch.webp"
+          alt="NASA Artemis I SLS 火箭于2022年11月16日发射资料图，非ASTER型号实拍"
+        />
+        <div class="mission-copy">
+          <p>ÉTUDE 07 / A FICTIONAL MISSION</p>
+          <h1>FOR A<br />WIDER VIEW.</h1>
+          <button class="outline" data-brief="mission">EXPLORE THE MISSION</button>
+        </div>
+        <p class="photo-credit">NASA / Bill Ingalls · Artemis I 发射资料图，非 ASTER 型号实拍。</p>
+        <a class="down" href="#ascent" aria-label="前往升空章节">⌄</a>
+      </section>
+      <section class="mission ascent" id="ascent">
+        <img
+          src="../_shared/photos/artemis-liftoff.webp"
+          alt="NASA Joel Kowsky 摄 Artemis I 升空资料图，非虚构ASTER发射"
+        />
+        <div class="mission-copy">
+          <p>DESIGNING FOR RETURN</p>
+          <h2>UPWARD.<br />AND BACK.</h2>
+          <button class="outline" data-brief="vehicle">MEET THE VEHICLE</button>
+        </div>
+        <p class="photo-credit">
+          NASA / Joel Kowsky · 2022年 Artemis I 资料图；本页为原创航天设计研究。
+        </p>
+        <a class="down" href="#vehicle" aria-label="前往运载器章节">⌄</a>
+      </section>
+      <section class="vehicle" id="vehicle">
+        <div>
+          <p>ASTER 02 / VEHICLE STUDY</p>
+          <h2>BUILT AROUND<br />THE JOURNEY.</h2>
+          <p class="body-copy">
+            两级构型与可返回的一级组成一个关于重复使用的概念。载荷整流罩、级间连接和返回结构，在同一条轴线上各司其职。
+          </p>
+        </div>
+        <img
+          src="./assets/aster-vehicle.svg"
+          alt="原创ASTER两级运载器横向工程渲染，载荷整流罩、第二级和返回级分段标注"
+        />
+        <div class="vehicle-specs">
+          <div><span>STAGES</span><b>02</b><small>概念构型</small></div>
+          <div><span>PURPOSE</span><b>EARTH</b><small>地球观测载荷</small></div>
+          <div><span>DESIGN SERIES</span><b>07</b><small>固定研究案例</small></div>
+        </div>
+      </section>
+      <section class="mission orbit" id="orbit">
+        <img src="../_shared/photos/space.webp" alt="地球轨道环境参考摄影，非ASTER任务拍摄" />
+        <div class="mission-copy">
+          <p>ONE PLANET. MORE PERSPECTIVE.</p>
+          <h2>LOOK OUT.<br />LOOK AFTER.</h2>
+          <button class="outline" data-brief="payload">READ THE PAYLOAD BRIEF</button>
+        </div>
+        <p class="photo-credit">许可地球环境参考影像 · 不是本页虚构任务的实际回传。</p>
+      </section>
+    </main>
+    <footer>
+      <span>ASTER LAUNCH © ORIGINAL DESIGN STUDY</span>
+      <p>
+        NASA资料图仅用于航天主题视觉参考，不代表NASA参与、背书或虚构任务真实发生。任务/运载器为固定概念，无实时发射或遥测。
+      </p>
+    </footer>
+    <dialog id="brief">
+      <button id="brief-close">CLOSE ×</button>
+      <p class="micro">ASTER / RESEARCH ARCHIVE</p>
+      <div class="brief-tabs" role="group" aria-label="任务简报类型">
+        <button data-tab="mission" aria-pressed="true">MISSION</button
+        ><button data-tab="vehicle" aria-pressed="false">VEHICLE</button
+        ><button data-tab="payload" aria-pressed="false">PAYLOAD</button>
+      </div>
+      <h2 id="brief-title">ÉTUDE 07</h2>
+      <p id="brief-text"></p>
+      <dl id="brief-data"></dl>
+      <p class="demo-note">
+        全部简报为原创固定设计样例，不是发射计划、遥测或航天安全说明。
+      </p></dialog
+    ><dialog id="index">
+      <button id="index-close">CLOSE ×</button>
+      <h2>THE INDEX</h2>
+      <a href="#launch">01 / LAUNCH</a><a href="#vehicle">02 / VEHICLE</a
+      ><a href="#orbit">03 / EARTH</a>
+    </dialog>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Common Room · 想法，放到一起 · 独立设计语言本地演示" />
+    <title>Common Room · Product design, together</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="#top">common room<span>↗</span></a>
+      <nav><a href="#board">设计文件</a><a href="#practice">如何开始</a></nav>
+      <a href="#board" class="pill">一起想想</a>
+    </header>
+    <main id="top">
+      <section class="hero">
+        <span class="tape">GOOD THINGS HAPPEN BETWEEN PEOPLE.</span>
+        <h1>Somewhere<br />between your<br />idea and mine.</h1>
+        <div>
+          <p>一个可以一起打磨产品的空间。<br />从组件到界面，让设计、产品与研发看到同一件事。</p>
+          <a class="pill" href="#board">打开设计空间 ↗</a>
+        </div>
+      </section>
+      <section class="intro">
+        <p>不止是一张好看的画面。<br />是把不同角色的理解，变成一致的产品体验。</p>
+        <span>01 — MAKE SPACE FOR POSSIBILITY</span>
+      </section>
+      <section class="board-band" id="board">
+        <div class="board-head">
+          <div>
+            <small>THE SHARED DESIGN SPACE</small>
+            <h2>从一个组件，<br />到完整的产品体验。</h2>
+          </div>
+          <label
+            >设计文件<select id="template">
+              <option value="workspace">产品工作台</option>
+              <option value="portal">客户门户</option>
+            </select></label
+          >
+        </div>
+        <div class="design-editor">
+          <div class="design-toolbar">
+            <span id="file-name">Atlas / Workspace exploration</span
+            ><span>Design prototype · 本地演示</span>
+          </div>
+          <div class="design-layout">
+            <aside class="components">
+              <small>COMPONENTS</small
+              ><button data-component="card" aria-pressed="true">◈ Project card</button
+              ><button data-component="button" aria-pressed="false">▰ Primary button</button
+              ><span id="component-path">Workspace / Project card</span
+              ><label
+                >组件文字<input
+                  id="component-text"
+                  maxlength="40"
+                  value="Design system refresh" /></label
+              ><label
+                >视觉变体<select id="variant">
+                  <option value="default">Default / 默认</option>
+                  <option value="active">Active / 进行中</option>
+                  <option value="complete">Complete / 已完成</option>
+                </select></label
+              >
+              <p id="error" role="alert"></p>
+              <button id="reset-design">恢复组件</button>
+            </aside>
+            <div class="design-canvas">
+              <div class="artboard desktop-frame">
+                <div class="app-nav">
+                  <b>◈ Atlas</b><span>Projects　Team　Library</span><i>LS</i>
+                </div>
+                <div class="app-content">
+                  <small>DESIGNED TO WORK TOGETHER</small>
+                  <h3 id="frame-heading">Your work, connected.</h3>
+                  <p id="frame-description">把设计规范、项目进展与团队知识，放在同一处。</p>
+                  <div class="product-card" id="product-card">
+                    <span>PRODUCT DESIGN / 08</span>
+                    <h4 data-card-label>Design system refresh</h4>
+                    <p>建立一致的组件语言，让下一次协作从共识开始。</p>
+                    <div><b data-state-label>准备开始</b><small>林夏 · 周五</small></div>
+                  </div>
+                  <span class="canvas-action" data-button-label>Open project ↗</span>
+                  <div class="mini-row">
+                    <span>◐ Research synthesis</span><span>● Ready for review</span>
+                  </div>
+                </div>
+              </div>
+              <div class="artboard phone-frame">
+                <div class="phone-top">Atlas <span>○</span></div>
+                <small>YOUR NEXT GOOD THING</small>
+                <h3 id="phone-heading">Keep work<br />moving.</h3>
+                <div class="product-card phone-card">
+                  <span>PROJECT</span>
+                  <h4 data-card-label>Design system refresh</h4>
+                  <b data-state-label>准备开始</b>
+                </div>
+                <span class="canvas-action" data-button-label>Open project ↗</span>
+                <div class="phone-items">
+                  ○　Review feedback<br />○　Explore typography<br />○　Share the next version
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="review">
+            <div>
+              <small>DESIGN REVIEW / 本地评论</small>
+              <div id="comments">
+                <p><b>林夏</b>　桌面与手机应该共享同一个组件状态。</p>
+              </div>
+            </div>
+            <form id="comment-form">
+              <label for="comment">给这个设计留个反馈</label>
+              <div>
+                <input
+                  id="comment"
+                  maxlength="180"
+                  placeholder="针对组件、层级或任务表达…"
+                /><button type="submit">添加评论 ＋</button>
+              </div>
+              <p id="comment-error" role="alert"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="practice" id="practice">
+        <h2>先给每一个细节，<br />一个可以协作的位置。</h2>
+        <p>
+          选择项目卡片或主按钮，编辑组件文字与状态。桌面和手机画板共享组件数据，评论留在当前本地设计文件里。
+        </p>
+      </section>
+      <section class="lime">
+        <div class="shape" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+        <div>
+          <small>NOT PERFECT. TOGETHER.</small>
+          <h2>好的组件，<br />让下一次更从容。</h2>
+          <p>让间距、状态与语义都能复用。这里是原创产品设计演示，不连接远程画布，也不保存输入。</p>
+        </div>
+      </section>
+      <section class="closing">
+        <small>ROOM FOR WHAT'S NEXT</small>
+        <h2>Leave with<br />more than notes.</h2>
+        <a href="#board" class="pill white">回到设计空间 ↑</a>
+      </section>
+    </main>
+    <footer>
+      <strong>common room /</strong><span>原创产品设计演示 · Figma 设计语言参考</span>
+    </footer>
+
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

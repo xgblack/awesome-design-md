@@ -1,0 +1,37 @@
+{
+  "title": "Launchpaper / Website prototype builder",
+  "description": "网站与应用原型构建器：选择作品集、产品页或工作台模板，编辑真实网页预览、调整章节并导出独立HTML；不调用AI或发布网站。",
+  "status": "ready",
+  "features": {
+    "moods": ["minimal", "warm"],
+    "tones": ["light"],
+    "temperature": ["warm"],
+    "chroma": ["muted"],
+    "accentHues": ["neutral"],
+    "backgrounds": ["paper"],
+    "layouts": ["centered", "editorial"],
+    "density": ["airy"],
+    "typography": ["sans"],
+    "headingScale": ["regular"],
+    "headingWeight": ["medium"],
+    "geometry": ["small-radius", "pill"],
+    "layering": ["lines", "solid"],
+    "visualMedia": ["ui", "type"],
+    "motion": ["feedback"],
+    "scenarios": ["product", "tool", "portfolio"]
+  },
+  "interactions": ["form", "edit", "configure"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "从周末计划重构为网站/应用构建器：羊皮纸中央prompt、建议胶囊与网页模板画廊，输出是真实可编辑DOM。",
+    "三个模板由人预置，不运行在线生成；标题使用textContent写入，导出不包含脚本、不上传、不持久保存。",
+    "字体取舍：显示 \"Manrope Variable\", \"Inter Variable\", sans-serif；正文 \"Manrope Variable\", \"Inter Variable\", sans-serif。使用本地开放字体/系统字体替代品牌商业字体；标题筛选标签按实际桌面渲染归类。"
+  ],
+  "references": [
+    {
+      "source": "原规范 L5–19、119–165、187–215",
+      "reason": "羊皮纸底的中央输入/建议胶囊 → 原位展开纸感行程 → 自然长度活动模板画廊。`#f7f4ed`、单色透明度层级、人文负字距标题、暖边框、黑按钮细高光；渐变只极淡地出现于首尾。"
+    }
+  ],
+  "assets": []
+}

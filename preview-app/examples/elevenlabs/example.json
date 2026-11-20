@@ -1,0 +1,69 @@
+{
+  "title": "Vocalform / Voice project studio",
+  "description": "语音项目工作室：试听两段公共领域真人朗读和两段原创音景，真实播放/暂停/定位/变速，并编辑独立项目草稿；非在线生成或音色克隆。",
+  "status": "ready",
+  "features": {
+    "moods": ["warm", "editorial"],
+    "tones": ["light"],
+    "temperature": ["neutral"],
+    "chroma": ["muted"],
+    "accentHues": ["neutral"],
+    "backgrounds": ["gradient", "solid"],
+    "layouts": ["centered", "split"],
+    "density": ["airy"],
+    "typography": ["serif", "sans"],
+    "headingScale": ["display"],
+    "headingWeight": ["light"],
+    "geometry": ["pill", "rounded"],
+    "layering": ["lines", "solid"],
+    "visualMedia": ["ui", "type", "geometry"],
+    "motion": ["feedback"],
+    "scenarios": ["product", "media", "tool"]
+  },
+  "interactions": ["media", "configure", "edit"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "从声音随笔转为语音项目工作室。淡灰64px轻衬线、色雾、大真实波形播放器和样本卡来自原规范。",
+    "LibriVox预录真人朗读：Lewis Carroll / Kristen McQuillin、H. G. Wells / Aaron Elliott，各取60–78秒；美国公共领域声明见共享audio/LICENSE.md。",
+    "波形来自实际解码峰值，进度来自audio事件。没有逐字稿，不把独立草稿当作录音内容；音景为本项目原创数学合成。",
+    "字体取舍：显示 \"Cormorant Garamond Variable\", Georgia, serif；正文 \"Inter Variable\", sans-serif。使用本地开放字体/系统字体替代品牌商业字体；标题筛选标签按实际桌面渲染归类。"
+  ],
+  "references": [
+    {
+      "source": "原规范 L264–270、317–345、412–424",
+      "reason": "淡灰64px轻衬线/色雾 → 大播放器/声音卡 → 讲述者说明/浅收尾。`#f5f5f5`、黑胶囊、300衬线/400微正字距正文、薄边圆卡、薄荷/桃/薰衣草氛围。"
+    }
+  ],
+  "assets": [
+    {
+      "file": "assets/river.wav",
+      "source": "本项目原创数学合成 PCM，8秒",
+      "license": "本项目原创"
+    },
+    {
+      "file": "assets/bells.wav",
+      "source": "本项目原创数学合成 PCM，8秒",
+      "license": "本项目原创"
+    },
+    {
+      "file": "assets/river-peaks.json",
+      "source": "实际 river.wav 振幅峰值",
+      "license": "本项目原创"
+    },
+    {
+      "file": "assets/bells-peaks.json",
+      "source": "实际 bells.wav 振幅峰值",
+      "license": "本项目原创"
+    },
+    {
+      "file": "../_shared/audio/alice-reading.mp3",
+      "source": "LibriVox / Alice’s Adventures in Wonderland, Chapter 1; Lewis Carroll; reader Kristen McQuillin; source clip 60–78 s. Details: ../_shared/audio/sources.json",
+      "license": "LibriVox public-domain dedication (United States); pre-recorded human reading, not generated or cloned."
+    },
+    {
+      "file": "../_shared/audio/time-machine-reading.mp3",
+      "source": "LibriVox / The Time Machine, Chapter 1; H. G. Wells; reader Aaron Elliott; source clip 60–78 s. Details: ../_shared/audio/sources.json",
+      "license": "LibriVox public-domain dedication (United States); pre-recorded human reading, not generated or cloned."
+    }
+  ]
+}

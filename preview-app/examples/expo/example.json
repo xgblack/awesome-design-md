@@ -1,0 +1,37 @@
+{
+  "title": "Pocket Studio / React Native app platform",
+  "description": "React Native开发平台：编辑便笺App文案，查看双端DOM预览、对应组件结构与Expo CLI命令；不编译、不发布。",
+  "status": "ready",
+  "features": {
+    "moods": ["minimal", "tech"],
+    "tones": ["light"],
+    "temperature": ["cool"],
+    "chroma": ["muted"],
+    "accentHues": ["neutral"],
+    "backgrounds": ["gradient", "solid"],
+    "layouts": ["centered", "split"],
+    "density": ["airy"],
+    "typography": ["sans", "mono"],
+    "headingScale": ["display"],
+    "headingWeight": ["bold"],
+    "geometry": ["small-radius", "rounded"],
+    "layering": ["shadow", "lines"],
+    "visualMedia": ["ui", "code"],
+    "motion": ["feedback"],
+    "scenarios": ["product", "tool"]
+  },
+  "interactions": ["edit", "configure", "form"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "保留原规范的黑白产品平台、大字中心hero与真实设备界面；便笺作为被构建的示例App，不是整站生活方式题材。",
+    "两个设备与App.tsx为DOM/代码阅读演示，不运行React Native或连接真机。Expo CLI命令仅展示。",
+    "字体取舍：显示 \"Inter Variable\", sans-serif；正文 \"Inter Variable\", sans-serif。使用本地开放字体/系统字体替代品牌商业字体；标题筛选标签按实际桌面渲染归类。"
+  ],
+  "references": [
+    {
+      "source": "原规范 L275–283、335–356、426–456",
+      "reason": "白底天空气氛首屏/居中紧标题 → 笔电+手机重叠 → 三步流程/代码/生态板。Inter600/JetBrains Mono、黑8px CTA、蓝仅文本链接，设备合成是主角。"
+    }
+  ],
+  "assets": []
+}

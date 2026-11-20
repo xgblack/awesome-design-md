@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Fieldnote · Content, connected · 独立设计语言本地演示" />
+    <title>Fieldnote · Content, connected</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="#top">fieldnote<span> /</span></a>
+      <nav><a href="#lab">结构实验室</a><a href="#principle">内容与关系</a></nav>
+      <a class="pill" href="#lab">Open the lab ↗</a>
+    </header>
+    <main id="top">
+      <section class="hero">
+        <span>STRUCTURE IS A CREATIVE TOOL.</span>
+        <h1>Content.<br />Not containers.</h1>
+        <p>
+          把一次展览的内容，组织成可以复用的结构。<br />改一个字段，同时看见它在不同地方的表达。
+        </p>
+      </section>
+      <section class="lab" id="lab">
+        <div class="lab-head">
+          <span>EXHIBITION / LOCAL CONTENT MODEL</span><button id="reset">恢复示例</button>
+        </div>
+        <div class="mobile-tabs">
+          <button data-tab="fields" aria-pressed="true">字段</button
+          ><button data-tab="json" aria-pressed="false">JSON</button
+          ><button data-tab="preview" aria-pressed="false">文章</button>
+        </div>
+        <div class="lab-grid">
+          <form id="fields" class="panel">
+            <p>01 / DEFINE</p>
+            <label
+              ><button type="button" data-field="title">title <span>string *</span></button
+              ><input id="title" value="风经过的地方" maxlength="60" /></label
+            ><label
+              ><button type="button" data-field="date">date <span>date *</span></button
+              ><input id="date" type="date" value="2026-11-28" /></label
+            ><label
+              ><button type="button" data-field="author">author <span>reference</span></button
+              ><input id="author" value="林夏" maxlength="30"
+            /></label>
+            <p id="error" role="alert"></p>
+            <span class="path" id="path">exhibition.title</span>
+          </form>
+          <section id="json" class="panel">
+            <p>02 / STRUCTURE</p>
+            <pre id="json-output" tabindex="0" aria-label="实时JSON结构"></pre>
+          </section>
+          <article id="preview" class="panel">
+            <p>03 / PRESENT</p>
+            <div class="exhibition-art" aria-label="原创展览几何图形"><i></i><i></i><i></i></div>
+            <span id="preview-date"></span>
+            <h2 id="preview-title"></h2>
+            <p>一场关于风、声音与日常观察的虚构展览。把容易忽略的片刻，放在新的关系里重新看见。</p>
+            <small id="preview-author"></small>
+          </article>
+        </div>
+        <div class="lab-foot">
+          <span>点击字段名可定位结构路径。</span><span>本地数据模型 / 没有 CMS 或 AI 连接</span>
+        </div>
+      </section>
+      <section class="principle" id="principle">
+        <div>
+          <span>ONE SOURCE. MANY EXPRESSIONS.</span>
+          <h2>内容有结构，<br />表达才有自由。</h2>
+        </div>
+        <div>
+          <article>
+            <h3>关系，不只是链接。</h3>
+            <p>日期、作者、标题各司其职，才能在文章、目录和日历里保持一致。</p>
+          </article>
+          <article>
+            <h3>修改，不必从头开始。</h3>
+            <p>这个实验室展示字段如何流向 JSON 与文章。页面内容只在本次打开时保留。</p>
+          </article>
+        </div>
+      </section>
+      <section class="closing">
+        <h2>Shape the content.<br />Free the idea.</h2>
+        <a href="#lab" class="pill">Back to the lab ↑</a>
+      </section>
+    </main>
+    <footer>Fieldnote / 独立设计语言示例 · 无远程内容或持久保存</footer>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

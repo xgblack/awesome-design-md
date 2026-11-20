@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tracewright / Agent engineering observability</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#">ϟ tracewright</a>
+      <nav>
+        <a href="#trace">Trace room</a><a href="#recipe">Recipe</a><span>LOCAL FIXTURES ONLY</span>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <span class="eyebrow">ENGINEER THE UNDERSTANDING.</span>
+        <h1>A task is more than<br />its final answer.</h1>
+        <p>
+          输入从哪里来，角色做了什么，错误停在哪里。<br />沿开发工单的工具链路，看见 Agent
+          协作的每一步。
+        </p>
+        <a href="#trace" class="green">Inspect the trace ↗</a>
+        <div class="install">
+          <code>tracewright replay --fixture ticket-investigation</code
+          ><span>示意命令，不执行</span>
+        </div>
+      </section>
+      <section id="trace" class="trace">
+        <div class="toolbar">
+          <div>
+            <span class="eyebrow">01 / A BOUNDED REHEARSAL</span>
+            <h2>Follow the work.</h2>
+          </div>
+          <label
+            >固定脚本
+            <select id="scenario">
+              <option value="normal">完整输入</option>
+              <option value="missing">缺少材料</option>
+            </select></label
+          ><button id="run" class="green">开始回放</button
+          ><button id="cancel" disabled>取消</button>
+        </div>
+        <p id="status" role="status">等待开始。本页不调用任何 Agent。</p>
+        <div class="nodes">
+          <button data-node="0" aria-pressed="true">
+            <span>01 / COLLECT</span><b>Gather the context.</b
+            ><small id="node-state-0">WAITING</small></button
+          ><i aria-hidden="true">→</i
+          ><button data-node="1">
+            <span>02 / VERIFY</span><b>Check the source.</b
+            ><small id="node-state-1">WAITING</small></button
+          ><i aria-hidden="true">→</i
+          ><button data-node="2">
+            <span>03 / SUMMARIZE</span><b>Keep what matters.</b
+            ><small id="node-state-2">WAITING</small>
+          </button>
+        </div>
+        <div class="detail-grid">
+          <div>
+            <div class="pane-label">NODE DETAILS <span id="node-name">COLLECT</span></div>
+            <pre id="parameters"></pre>
+          </div>
+          <div>
+            <div class="pane-label">LOCAL REPLAY LOG <span>NOT RUNTIME TELEMETRY</span></div>
+            <pre id="log">No steps have run.</pre>
+          </div>
+        </div>
+      </section>
+      <section class="recipe" id="recipe">
+        <div>
+          <span class="eyebrow">02 / REPRODUCIBLE BY DESIGN</span>
+          <h2>Small roles.<br />Clear responsibilities.</h2>
+          <p>
+            收集者整理工单日志，核对者检查工单号、来源与权限范围，摘要者只在证据齐备后形成调查结论。链路不是为了看起来复杂，而是让失败有明确去向。
+          </p>
+        </div>
+        <div class="recipe-code">
+          <div><span>RECIPE / TEXT ONLY</span><button id="copy">复制配方 ↗</button></div>
+          <pre id="recipe-text">
+collect → verify → summarize
+
+input: ticket_investigation.fixture
+required: ticket_id, source, evidence_items
+on_missing: stop_and_explain
+output: a_ticket_summary_with_sources</pre>
+          <p id="copied" role="status"></p>
+        </div>
+      </section>
+      <section class="end">
+        <h2>No mystery in the middle.</h2>
+        <p>
+          回放耗时是教学节奏，不是模型或工具的性能数据。<br />没有外部调用、文件写入或持久化任务。
+        </p>
+        <a href="#trace">Replay with missing input ↑</a>
+      </section>
+    </main>
+    <footer>ϟ tracewright <span>Voltagent DESIGN.md · 独立协作过程演练</span></footer>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

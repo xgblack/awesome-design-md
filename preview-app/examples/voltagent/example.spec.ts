@@ -1,0 +1,20 @@
+import { test, expect } from '@playwright/test'
+test('fixed roles produce inspectable output', async ({ page }) => {
+  await page.goto('examples/voltagent/index.html')
+  await page.click('#run')
+  await expect(page.locator('#status')).toContainText('回放完成')
+  await page.locator('[data-node]').nth(0).click()
+  await expect(page.locator('#parameters')).toContainText('3 ticket evidence items collected')
+})
+test('missing source stops summary and cancel works', async ({ page }) => {
+  await page.goto('examples/voltagent/index.html')
+  await page.selectOption('#scenario', 'missing')
+  await page.click('#run')
+  await expect(page.locator('#status')).toContainText('核对节点停止')
+  await page.locator('[data-node]').nth(2).click()
+  await expect(page.locator('#parameters')).toContainText('No output yet')
+  await page.selectOption('#scenario', 'normal')
+  await page.click('#run')
+  await page.click('#cancel')
+  await expect(page.locator('#status')).toContainText('回放已取消')
+})

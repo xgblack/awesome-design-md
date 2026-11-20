@@ -1,0 +1,31 @@
+import { test, expect } from '@playwright/test'
+test('nvidia: 多维筛选与空态', async ({ page }) => {
+  await page.goto('examples/nvidia/index.html')
+  await page.locator('#use').selectOption('sensor')
+  await page.locator('#connection').selectOption('ethernet')
+  await expect(page.locator('#filter-status')).toContainText('没有适配')
+  await page.locator('#reset').click()
+  await expect(page.locator('#filter-status')).toHaveText('3 套概念套件')
+})
+test('nvidia: 两套对比上限与去重', async ({ page }) => {
+  await page.goto('examples/nvidia/index.html')
+  await page.locator('[data-add="Edge Eight"]').click()
+  await page.locator('[data-add="Edge Eight"]').click()
+  await expect(page.locator('#compare-status')).toContainText('不重复')
+  await page.locator('[data-add="Field Four"]').click()
+  await page.locator('[data-add="Studio Twelve"]').click()
+  await expect(page.locator('#compare-status')).toContainText('最多比较两套')
+  await expect(page.locator('#compare-list > div')).toHaveCount(2)
+})
+
+test('nvidia: 按字段对照和移除释放名额', async ({ page }) => {
+  await page.goto('examples/nvidia/index.html')
+  await page.locator('[data-add="Edge Eight"]').click()
+  await page.locator('[data-add="Field Four"]').click()
+  await expect(page.locator('#compare-list')).toContainText('开放PCB + 散热器')
+  await page.locator('#compare-list button').first().click()
+  await page.locator('[data-add="Studio Twelve"]').click()
+  await expect(page.locator('#compare-list>div')).toHaveCount(2)
+  await expect(page.locator('#compare-list')).toContainText('竖置散热机箱')
+  await expect(page.locator('#compare-list')).not.toContainText('Edge Eight')
+})

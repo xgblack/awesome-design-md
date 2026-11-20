@@ -1,0 +1,25 @@
+import { test, expect } from '@playwright/test'
+test.beforeEach(async ({ page }) => {
+  await page.goto('examples/apple/index.html')
+})
+test('色款更新具体产品图与文字，不仅滤镜换色', async ({ page }) => {
+  await page.getByRole('button', { name: '潮汐蓝', exact: true }).click()
+  await expect(page.locator('#speaker')).toHaveAttribute('src', /speaker-tide[^/]*\.webp/)
+  await expect(page.locator('#speaker')).toHaveAttribute('alt', /潮汐蓝/)
+  await expect(page.locator('#accessories article img')).toHaveCount(2)
+})
+test('比较有独立机型图、上限与空态，关闭归焦', async ({ page }) => {
+  await page.locator('#compare-open').click()
+  await page.locator('input[value=Studio]').click()
+  await expect(page.locator('#compare-msg')).toContainText('请先取消')
+  await expect(page.locator('input[value=Studio]')).not.toBeChecked()
+  await page.locator('input[value=Mini]').uncheck()
+  await page.locator('input[value=Studio]').check()
+  await expect(page.locator('#comparison-rows')).toContainText('28 cm')
+  await expect(page.locator('#comparison-rows img').last()).toHaveAttribute('src', /speaker-studio/)
+  await page.locator('input[value=One]').uncheck()
+  await page.locator('input[value=Studio]').uncheck()
+  await expect(page.locator('#comparison-rows')).toContainText('尚未选择')
+  await page.keyboard.press('Escape')
+  await expect(page.locator('#compare-open')).toBeFocused()
+})

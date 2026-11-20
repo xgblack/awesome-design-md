@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RIFT / Beyond the line · 独立风格示例</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <button id="menu-open">☰ &nbsp; MENU</button
+      ><a href="#" class="sigil" aria-label="RIFT 首页">R /</a><a href="#finish">CONFIGURE ↗</a>
+    </header>
+    <main>
+      <section class="reveal">
+        <img
+          id="rift-image"
+          src="./assets/rift-titan.svg"
+          alt="原创低车身楔形超级跑车 Titan 冷银涂装"
+        /><video
+          id="reveal-film"
+          muted
+          playsinline
+          preload="metadata"
+          hidden
+          poster="./assets/rift-titan.svg"
+        >
+          <source src="./assets/rift-reveal.mp4" type="video/mp4" />
+        </video>
+        <div class="hero-copy">
+          <span>THE RIFT 01</span>
+          <h1>BEYOND<br />THE LINE.</h1>
+          <a class="gold" href="#form">DISCOVER RIFT 01 <b>↗</b></a>
+        </div>
+        <div class="film-controls">
+          <button id="film-toggle" aria-pressed="false" aria-label="播放原创汽车短片">▷</button>
+          <div>
+            <span>01 / THE REVEAL</span
+            ><progress id="film-progress" max="1" value="0" aria-label="短片播放进度"></progress>
+            <p id="film-status" role="status">6 秒原创无声镜头 · 非实车驾驶影像</p>
+          </div>
+        </div>
+        <span class="chapter-side">DESIGNED TO DISRUPT.</span>
+      </section>
+      <section id="form" class="form">
+        <p class="overline">01 / FORM</p>
+        <h2>THE LOWEST<br />POINT OF VIEW.</h2>
+        <div class="form-copy">
+          <p>
+            棱线不是装饰。它是光线与空气在车身上留下的共同轨迹。极低的车顶、前移的座舱与收紧的腰线，构成
+            RIFT 的楔形比例。
+          </p>
+          <dl>
+            <div>
+              <dt>BODY STUDY</dt>
+              <dd>WEDGE COUPÉ</dd>
+            </div>
+            <div>
+              <dt>COCKPIT</dt>
+              <dd>2 SEATS</dd>
+            </div>
+            <div>
+              <dt>DESIGN SERIES</dt>
+              <dd>01 / 2026</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+      <section class="aero">
+        <img src="./assets/rift-aero.svg" alt="原创空气动力尾翼折面近景渲染" />
+        <div>
+          <p class="overline">02 / AERODYNAMICS</p>
+          <h2>AIR HAS<br />A DIRECTION.</h2>
+          <p>
+            从前部导流口到独立尾翼，观察气流如何参与造型。这是视觉概念，不包含风洞验证或下压力数值。
+          </p>
+        </div>
+      </section>
+      <section id="finish" class="finish">
+        <div>
+          <p class="overline">03 / YOUR EXPRESSION</p>
+          <h2>CHOOSE<br />YOUR EDGE.</h2>
+          <p>三种表面，一副不会退让的轮廓。</p>
+        </div>
+        <img id="finish-image" src="./assets/rift-titan.svg" alt="Titan 冷银超级跑车渲染" />
+        <div class="finishes" aria-label="选择涂装">
+          <button data-finish="titan" aria-pressed="true"><i></i>TITAN</button
+          ><button data-finish="obsidian" aria-pressed="false"><i></i>OBSIDIAN</button
+          ><button data-finish="white" aria-pressed="false"><i></i>POLAR</button>
+        </div>
+        <p id="finish-note" role="status">TITAN / 冷银金属，让折面接住夜间的光。</p>
+      </section>
+    </main>
+    <footer>
+      <span>RIFT / THE ORIGINAL STUDY</span>
+      <p class="demo-note">
+        虚构超级跑车 · 原创渲染及其镜头运动短片，非官方车型、实拍驾驶或空气动力实测。
+      </p>
+    </footer>
+    <dialog id="menu">
+      <button id="menu-close">CLOSE ×</button><a href="#form">01 / FORM</a
+      ><a href="#finish">02 / EXPRESSION</a>
+      <p>为设计语言而制作的独立汽车展厅。</p>
+    </dialog>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

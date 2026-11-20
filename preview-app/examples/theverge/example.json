@@ -1,0 +1,52 @@
+{
+  "title": "Signal / Noise / The city, synthesized.",
+  "description": "原创桌面合成器与城市声音现场固定报道；筛选资料、展开完整笔记，不伪造实时新闻或实际发布。",
+  "status": "ready",
+  "features": {
+    "moods": ["editorial", "experimental"],
+    "tones": ["mixed"],
+    "temperature": ["contrast"],
+    "chroma": ["vivid"],
+    "accentHues": ["green", "purple"],
+    "backgrounds": ["solid"],
+    "layouts": ["editorial", "timeline"],
+    "density": ["dense"],
+    "typography": ["sans", "mono", "condensed"],
+    "headingScale": ["display"],
+    "headingWeight": ["bold"],
+    "geometry": ["square"],
+    "layering": ["lines", "solid"],
+    "visualMedia": ["render", "photo"],
+    "motion": ["feedback"],
+    "scenarios": ["content"]
+  },
+  "interactions": ["filter", "edit"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "原创虚构品牌与概念产品，非官方页面；操作仅在当前页面内存生效，不提交真实业务。",
+    "本地Saira Condensed 800 / Inter / JetBrains Mono为三角色字形替代。",
+    "合成器独立原创渲染；许可concert照片仅为现场氛围，无真实发布会/人物关联。"
+  ],
+  "references": [
+    {
+      "source": "DESIGN.md L3–18、55–97",
+      "reason": "tech tabloid / synthesizer / rave-flyer；巨大窄体刊名、酸薄荷/紫色块、原创合成器主体与音乐文化题材。"
+    },
+    {
+      "source": "DESIGN.md L148–199、211–310",
+      "reason": "StoryStream等宽时间轨、编辑大字与完整展开报道，明确固定虚构档案，不与Wired维修长文重复。"
+    }
+  ],
+  "assets": [
+    {
+      "file": "assets/synthesizer.svg",
+      "source": "本项目原创产品/环境矢量渲染",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "../_shared/photos/concert.webp",
+      "source": "共享photos/sources.json；演出环境参考",
+      "license": "Unsplash License"
+    }
+  ]
+}

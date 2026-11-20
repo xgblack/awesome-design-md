@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>VELOCE / Driven by feeling · 独立风格示例</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a class="logo" href="#">V /</a>
+      <nav>
+        <a href="#design">SPORTSCARS</a><a href="#archive">THE COLLECTION</a
+        ><a href="#track">RACING NOTES</a>
+      </nav>
+      <span>ORIGINAL STUDY</span>
+    </header>
+    <main>
+      <section class="hero">
+        <p class="eyebrow">THE NEW VELOCE 296</p>
+        <img
+          id="hero-car"
+          src="./assets/veloce-rosso.svg"
+          alt="原创 Rosso 红色中置动力双门性能跑车渲染"
+        />
+        <div class="hero-title">
+          <h1>Driven by<br />feeling.</h1>
+          <a class="red" href="#design">DISCOVER THE 296 <b>↗</b></a>
+        </div>
+        <span class="hero-caption">FORM. SOUND. EMOTION.</span>
+      </section>
+      <section id="design" class="design">
+        <div>
+          <span class="eyebrow">01 / DESIGN</span>
+          <h2>Every surface.<br />A reason.</h2>
+          <p>
+            短促的车头、收紧的腰线与宽阔后肩，构成一台轻盈而有张力的双门跑车。空气流过的路径，也是形体产生的理由。
+          </p>
+        </div>
+        <div class="paint-visual">
+          <img id="paint-car" src="./assets/veloce-rosso.svg" alt="Rosso 红色车型渲染" />
+          <div class="paint-row" aria-label="选择车漆">
+            <button data-paint="rosso" aria-pressed="true">Rosso</button
+            ><button data-paint="bianco" aria-pressed="false">Bianco</button
+            ><button data-paint="graphite" aria-pressed="false">Graphite</button>
+          </div>
+          <p id="paint-note" role="status">Rosso / 在暖黑舞台上，保留最直接的力量。</p>
+        </div>
+      </section>
+      <section class="engineering">
+        <img src="./assets/engine.svg" alt="原创双列动力结构与金属散热纹理细节渲染" />
+        <div>
+          <span class="eyebrow">02 / ENGINEERING</span>
+          <h2>Power, with<br />purpose.</h2>
+          <p>
+            车身的每一处开口，都对应散热或导流的角色。这里是结构概念研究，不是动力测试或赛车调校说明。
+          </p>
+          <dl>
+            <div>
+              <dt>LAYOUT</dt>
+              <dd>Mid-engine</dd>
+            </div>
+            <div>
+              <dt>ARCHITECTURE</dt>
+              <dd>Hybrid study</dd>
+            </div>
+            <div>
+              <dt>DESIGN YEAR</dt>
+              <dd>2026</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+      <section id="archive" class="archive">
+        <div class="archive-heading">
+          <div>
+            <span class="eyebrow">THE CURATED COLLECTION</span>
+            <h2>Great stories.<br />Still unfolding.</h2>
+          </div>
+          <p>从轻量双门到长途 GT，<br />选择你想读的设计档案。</p>
+        </div>
+        <form id="filter-form">
+          <label
+            >系列<select id="series">
+              <option value="all">全部系列</option>
+              <option value="sport">Sport / 双门</option>
+              <option value="gt">Grand Touring</option>
+            </select></label
+          ><label
+            >设计年份<select id="year">
+              <option value="all">全部年份</option>
+              <option value="2026">2026</option>
+              <option value="2024">2024</option>
+              <option value="2022">2022</option>
+            </select></label
+          ><button type="button" id="reset">清除筛选</button>
+        </form>
+        <p id="result-count" role="status">3 份概念车款档案</p>
+        <div id="cars" class="cars"></div>
+        <p id="empty" hidden>没有符合这组条件的档案。保留当前条件，或清除筛选重新浏览。</p>
+      </section>
+      <section id="track" class="track">
+        <span class="eyebrow">RACING NOTES / CLOSED CIRCUIT ONLY</span>
+        <h2>Precision is<br />a practice.</h2>
+        <p>从静态比例到封闭场地的驾驶文化，性能的意义在于准确，而不是道路竞速。</p>
+        <span>VELOCE JOURNAL — No. 03</span>
+      </section>
+    </main>
+    <footer>
+      <a class="logo" href="#">VELOCE</a>
+      <p class="demo-note">
+        原创虚构汽车研究 · 所有车型与动力均为设计概念，非实际出售、认证或品牌实拍。
+      </p>
+    </footer>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

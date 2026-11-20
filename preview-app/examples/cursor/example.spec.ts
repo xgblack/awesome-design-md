@@ -1,0 +1,30 @@
+import { test, expect } from '@playwright/test'
+test('versions and file selection change readable code', async ({ page }) => {
+  await page.goto('examples/cursor/index.html')
+  await page.click('#after')
+  await expect(page.locator('#source')).toContainText('items.length === 0')
+  if (await page.locator('[data-pane=files]').isVisible()) await page.click('[data-pane=files]')
+  await page.click('[data-file=test]')
+  if (await page.locator('[data-pane=code]').isVisible()) await page.click('[data-pane=code]')
+  await expect(page.locator('#source')).toContainText('handles an empty result')
+})
+test('replay can be cancelled and another case selected', async ({ page }) => {
+  await page.goto('examples/cursor/index.html')
+  if (await page.locator('[data-pane=chat]').isVisible()) await page.click('[data-pane=chat]')
+  await page.click('#start')
+  await page.click('#cancel')
+  await expect(page.locator('#phase')).toHaveText('Replay cancelled')
+  await page.selectOption('#case', 'price')
+  if (await page.locator('[data-pane=code]').isVisible()) await page.click('[data-pane=code]')
+  await expect(page.locator('#filename')).toHaveText('price.ts')
+})
+
+test('five signature stages reflect the actual local replay state', async ({ page }) => {
+  await page.goto('examples/cursor/index.html')
+  if (await page.locator('[data-pane=chat]').isVisible())
+    await page.locator('[data-pane=chat]').click()
+  await page.click('#start')
+  await expect(page.locator('#phase')).toHaveText('Replay complete')
+  await expect(page.locator('.agent-timeline li.reached')).toHaveCount(5)
+  await expect(page.locator('.agent-timeline [aria-current]')).toHaveText('Done')
+})

@@ -1,0 +1,37 @@
+{
+  "title": "Commonroom · 产品团队频道",
+  "description": "围绕工程交付、设计评审与发布准备的团队频道，切换讨论、编写本地回复并撤回。",
+  "status": "ready",
+  "features": {
+    "moods": ["warm", "playful"],
+    "tones": ["mixed"],
+    "layouts": ["split"],
+    "density": ["balanced"],
+    "headingScale": ["regular"],
+    "headingWeight": ["bold"],
+    "geometry": ["pill", "small-radius"],
+    "visualMedia": ["ui"],
+    "accentHues": ["purple"],
+    "temperature": ["warm"],
+    "chroma": ["muted"],
+    "backgrounds": ["gradient", "solid"],
+    "layering": ["solid"],
+    "scenarios": ["product", "tool"],
+    "typography": ["sans"],
+    "motion": ["feedback"]
+  },
+  "interactions": ["form"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "专有字体以本地 Inter Variable 替代，保留字重、字阶、空间与组件规则；中文为系统字体回退。",
+    "交互为原创本地演示，不发出业务请求，不保存个人输入。",
+    "语境复核：工作场所消息品牌：将社区活动语境整体替换为产品团队频道与项目上下文，保留暖mesh与实际聊天面板。"
+  ],
+  "references": [
+    {
+      "source": "DESIGN.md L236–251、284–318、328–419、464–482",
+      "reason": "奶油薰衣草首屏/64px密字/柔网格中的话题板 → 集合、准备、回顾情景 → 茄紫收尾。`#4a154b`、柔桃/灰绿气氛、90px半径舒适按钮、蓝仅正文链接，局部4:3面板可读。"
+    }
+  ],
+  "assets": []
+}

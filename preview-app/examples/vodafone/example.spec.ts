@@ -1,0 +1,23 @@
+import { test, expect } from '@playwright/test'
+test('vodafone: 通信需求联动方案不是静态卡', async ({ page }) => {
+  await page.goto('examples/vodafone/index.html')
+  await page.locator('[data-plan=family]').click()
+  await expect(page.locator('#plan-title')).toHaveText('Together at Home')
+  await expect(page.locator('#plan-specs')).toContainText('家庭Wi-Fi概念')
+  await page.locator('[data-plan=voice]').click()
+  await expect(page.locator('#plan-specs')).toContainText('300 分钟')
+  await expect(page.locator('#plan-description')).toContainText('手机入门')
+})
+test('vodafone: 通信资料空态与家庭网络故事', async ({ page }) => {
+  await page.goto('examples/vodafone/index.html')
+  await page.locator('#neighbourhood').selectOption('hill')
+  await expect(page.locator('#point-result')).toContainText('不表示该地区无网络')
+  await page.locator('#neighbourhood').selectOption('north')
+  await expect(page.locator('#point-result')).toContainText('家庭网络资料角')
+  await page.locator('[data-need=share]').click()
+  await expect(page.locator('[data-story-need]:visible')).toHaveCount(1)
+  await page.locator('[data-person=share]').click()
+  await expect(page.locator('#person-text')).toContainText('解释清楚每一步')
+  await page.keyboard.press('Escape')
+  await expect(page.locator('[data-person=share]')).toBeFocused()
+})

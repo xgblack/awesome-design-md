@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Meteor / Product analytics database</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a class="logo" href="#top"><span>▥</span> meteor<span class="thin"> / QueryBench</span></a>
+      <nav><a href="#lab">实验台</a><a href="#method">数据方法</a><span>LOCAL DATA · V1</span></nav>
+    </header>
+    <main id="top">
+      <section class="hero">
+        <div>
+          <div class="eyebrow">ANALYTICS FOR THE EVENTS THAT MATTER.</div>
+          <h1>Every event<br />has a <em>story.</em></h1>
+          <p>让产品事件成为可以查询的答案。选择一个分析问题，看清请求、错误与页面之间的关系。</p>
+          <a class="primary" href="#lab">打开实验台 ↗</a
+          ><span class="disclaimer">六条事件 fixture · 非实时数据库</span>
+        </div>
+        <div class="hero-code">
+          <div class="window-bar"><span>产品分析数据库</span><span>SQL / READ ONLY</span></div>
+          <pre><span>SELECT</span> page, count()
+<span>FROM</span> product_events
+<span>GROUP BY</span> page;</pre>
+          <div class="sample">
+            <b>6</b><span>条事件记录<br />三个页面，两次会话</span>
+          </div>
+          <div class="signal-bars" aria-hidden="true">
+            <i style="height: 38%"></i><i style="height: 52%"></i><i style="height: 81%"></i
+            ><i style="height: 44%"></i><i style="height: 73%"></i><i style="height: 61%"></i
+            ><i style="height: 95%"></i><i style="height: 64%"></i>
+          </div>
+          <small>装饰性信号形状，不代表测量值</small>
+        </div>
+      </section>
+      <section id="lab">
+        <div class="section-title">
+          <div class="eyebrow">01 / QUERY YOUR CURIOSITY</div>
+          <h2>Query the product. Understand the pattern.</h2>
+        </div>
+        <div class="query-workspace">
+          <div class="editor">
+            <label for="template">查询模板</label
+            ><select id="template">
+              <option value="all">全部产品事件</option>
+              <option value="avg">按页面统计事件</option>
+              <option value="hot">仅错误事件</option></select
+            ><label for="query">受限 SQL 演示</label
+            ><textarea id="query" spellcheck="false">SELECT * FROM events;</textarea
+            ><button id="run" class="primary">运行查询 ↗</button>
+            <p id="error" role="alert"></p>
+            <p class="muted">只识别上方三种预设语句，不执行任意 SQL。</p>
+          </div>
+          <div class="results">
+            <div class="window-bar"><span>RESULT</span><output id="count">6 条记录</output></div>
+            <div class="table-scroll">
+              <table>
+                <thead id="head">
+                  <tr>
+                    <th>页面</th>
+                    <th>事件类型</th>
+                    <th>耗时 ms</th>
+                  </tr>
+                </thead>
+                <tbody id="rows"></tbody>
+              </table>
+            </div>
+            <p id="explain">每个页面包含两条固定事件，所有数字来自页面内 fixture。</p>
+          </div>
+        </div>
+      </section>
+      <section id="method" class="method">
+        <span class="eyebrow">02 / UNDER THE NUMBERS</span>
+        <h2>Analytics without the guesswork.</h2>
+        <div>
+          <p>
+            从产品埋点到分析查询：/docs、/dashboard 与 /api
+            三个页面产生的固定事件可按页面分组，或单独查看错误。此处不接收真实用户行为。
+          </p>
+          <p>
+            SQL编辑器与结果表共同展示分析数据库的工作方式。不执行任意SQL、不连接数据库，也不伪造“实时”性能跑分。
+          </p>
+        </div>
+      </section>
+      <section class="yellow">
+        <span>TAKE THE QUESTION WITH YOU.</span>
+        <h2>Build insight into your product.</h2>
+        <a href="#lab">回到实验台 ↑</a>
+      </section>
+    </main>
+    <footer>
+      meteor / Product analytics, made readable
+      <span>Inspired by ClickHouse DESIGN.md · 非官方示例</span>
+    </footer>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

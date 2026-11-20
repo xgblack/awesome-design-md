@@ -1,0 +1,37 @@
+{
+  "title": "Leafline Academy / Document database learning",
+  "description": "文档数据库课程与学习路径：按数据建模、查询或运维筛课，在先修约束下组织本地学习路径；不提供真实学分。",
+  "status": "ready",
+  "features": {
+    "moods": ["tech"],
+    "tones": ["mixed"],
+    "temperature": ["cool"],
+    "chroma": ["muted"],
+    "accentHues": ["green"],
+    "backgrounds": ["solid"],
+    "layouts": ["split", "editorial"],
+    "density": ["balanced"],
+    "typography": ["sans", "mono"],
+    "headingScale": ["display"],
+    "headingWeight": ["bold"],
+    "geometry": ["pill", "rounded"],
+    "layering": ["lines", "solid"],
+    "visualMedia": ["code", "ui"],
+    "motion": ["feedback"],
+    "scenarios": ["product", "directory", "content"]
+  },
+  "interactions": ["filter", "configure"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "保留MongoDB University原文明确允许的课程目录题材：深海青首屏、绿胶囊、白色课程表和12px卡。",
+    "课程与先修关系为本项目原创fixture；添加表示加入学习路径，不表示已完成课程，不提供官方证书。",
+    "字体取舍：显示 \"Manrope Variable\", \"Inter Variable\", sans-serif；正文 \"Manrope Variable\", \"Inter Variable\", sans-serif。使用本地开放字体/系统字体替代品牌商业字体；标题筛选标签按实际桌面渲染归类。"
+  ],
+  "references": [
+    {
+      "source": "原规范 L407–417、465–509、683–695、712–718、737–749",
+      "reason": "深海青首屏/终端/亮绿行动 → 白色密集课程目录 → 深青练习入口。几何 sans、12px课程卡/胶囊按钮；橙/紫/绿/青是分类标签，不是随意装饰。"
+    }
+  ],
+  "assets": []
+}

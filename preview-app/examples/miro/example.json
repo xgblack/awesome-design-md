@@ -1,0 +1,37 @@
+{
+  "title": "Sprintboard · 产品发现共创白板",
+  "description": "产品团队整理用户观察、验证假设并为下一次实验投票；可拖动/键盘移动与限额投票。",
+  "status": "ready",
+  "features": {
+    "moods": ["playful", "warm"],
+    "tones": ["mixed"],
+    "layouts": ["workspace"],
+    "density": ["balanced"],
+    "headingScale": ["display"],
+    "headingWeight": ["medium"],
+    "geometry": ["pill", "small-radius"],
+    "visualMedia": ["ui", "illustration"],
+    "accentHues": ["neutral"],
+    "temperature": ["warm"],
+    "chroma": ["muted"],
+    "backgrounds": ["solid", "grid"],
+    "layering": ["solid"],
+    "scenarios": ["tool"],
+    "typography": ["sans"],
+    "motion": ["feedback"]
+  },
+  "interactions": ["edit", "form"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "专有字体以本地 Inter Variable 替代，保留字重、字阶、空间与组件规则；中文为系统字体回退。",
+    "交互为原创本地演示，不发出业务请求，不保存个人输入。",
+    "语境复核：白板和投票本身已符合Miro；重设为产品发现/敏捷语境，内容区分观察、假设与实验，而非统一邻里活动。"
+  ],
+  "references": [
+    {
+      "source": "DESIGN.md L441–452、503–550、744–749、770–776、795–807",
+      "reason": "白底短引导/黑主胶囊 → 可操作便签工作板 → 粉/青/珊瑚案例章节 → 黑色收尾。少量金丝雀黄、圆润几何字、白板图形主导、轻卡与黑胶囊并存。"
+    }
+  ],
+  "assets": []
+}

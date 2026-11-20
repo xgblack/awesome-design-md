@@ -1,0 +1,531 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+button,
+a,
+input,
+select,
+textarea {
+  touch-action: manipulation;
+}
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+button {
+  cursor: pointer;
+}
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+a {
+  color: inherit;
+  text-underline-offset: 4px;
+}
+img,
+svg {
+  max-width: 100%;
+  display: block;
+}
+button,
+input,
+select,
+textarea {
+  min-height: 44px;
+}
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #527dff;
+  outline-offset: 4px;
+}
+p {
+  line-height: 1.6;
+}
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+h1,
+h2,
+h3 {
+  overflow-wrap: anywhere;
+}
+[hidden] {
+  display: none !important;
+}
+dialog {
+  max-width: min(600px, calc(100% - 32px));
+  border: 0;
+  padding: 32px;
+  border-radius: 12px;
+}
+dialog::backdrop {
+  background: #0009;
+}
+dialog h2 {
+  font-size: 28px;
+}
+dialog button {
+  margin: 8px 8px 0 0;
+}
+label {
+  display: block;
+}
+input,
+select,
+textarea {
+  max-width: 100%;
+}
+textarea {
+  resize: vertical;
+}
+small {
+  line-height: 1.5;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+body {
+  font:
+    16px 'Inter Variable',
+    sans-serif;
+  background: #fff;
+  color: #1c1e21;
+}
+a {
+  text-decoration: none;
+}
+header {
+  padding: 25px 5%;
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+.brand {
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: -1px;
+}
+nav {
+  display: flex;
+  gap: 28px;
+  margin-left: auto;
+  font-size: 12px;
+}
+.black-pill {
+  display: inline-block;
+  background: #111;
+  color: white;
+  border-radius: 100px;
+  padding: 13px 23px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.product {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 6%;
+  padding: 25px 5% 75px;
+}
+.gallery {
+  min-width: 0;
+}
+.main-image {
+  background: #f1f0ec;
+  border-radius: 35px;
+  overflow: hidden;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+}
+.main-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.thumbnails {
+  display: flex;
+  gap: 12px;
+  margin: 18px 0;
+}
+.thumbnails button {
+  background: #f3f3f2;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  padding: 11px 23px;
+  font-size: 12px;
+}
+.thumbnails button[aria-pressed='true'] {
+  border-color: #1c1e21;
+  background: #fff;
+}
+.gallery > span {
+  font-size: 10px;
+  color: #73767b;
+}
+.config {
+  padding: 25px 0;
+}
+.eyebrow {
+  font-size: 9px;
+  letter-spacing: 1px;
+  color: #606770;
+}
+.config h1 {
+  font-size: 54px;
+  font-weight: 500;
+  line-height: 1.06;
+  letter-spacing: -1px;
+  margin: 25px 0;
+}
+.config > p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #606770;
+}
+.config-block {
+  border-top: 1px solid #e2e4e7;
+  padding: 22px 0;
+}
+.config-block h2 {
+  font-size: 11px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.swatches {
+  display: flex;
+  gap: 14px;
+}
+.swatches button {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  border: 1px solid #d8dade;
+  border-radius: 8px;
+  background: white;
+  color: #333;
+  padding: 9px 13px;
+  font-size: 12px;
+}
+.swatches button[aria-pressed='true'] {
+  border-color: #005bd3;
+  background: #f1f6fe;
+}
+.swatches i {
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  border: 1px solid #aaa;
+}
+.ivory {
+  background: #e2dfcf;
+}
+.forest {
+  background: #53654e;
+}
+.config-block label {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  font-size: 13px;
+}
+.config-block input {
+  min-height: 34px;
+}
+.config-block select {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #c8cbd0;
+  border-radius: 8px;
+  background: white;
+  color: #1c1e21;
+}
+.config-block p {
+  font-size: 11px;
+  color: #606770;
+  margin: 12px 0 0;
+}
+.blue-button {
+  background: #005bd3;
+  color: white;
+  border: 0;
+  border-radius: 100px;
+  padding: 15px 22px;
+  font-size: 13px;
+  font-weight: 600;
+  width: 100%;
+}
+.config > small {
+  display: block;
+  color: #73767b;
+  font-size: 10px;
+  line-height: 1.7;
+  margin-top: 16px;
+}
+.field {
+  margin: 0 3%;
+  height: 570px;
+  position: relative;
+  border-radius: 40px;
+  overflow: hidden;
+  color: white;
+}
+.field img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+.field > div {
+  position: absolute;
+  left: 7%;
+  bottom: 60px;
+}
+.field span {
+  font-size: 10px;
+  letter-spacing: 0.8px;
+}
+.field h2 {
+  font-size: 60px;
+  font-weight: 300;
+  line-height: 1.05;
+  letter-spacing: -1px;
+  margin: 25px 0;
+}
+.field p {
+  font-size: 17px;
+}
+.details {
+  padding: 90px 8%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12%;
+}
+.details small {
+  font-size: 9px;
+  color: #606770;
+  letter-spacing: 0.7px;
+}
+.details h2 {
+  font-size: 42px;
+  font-weight: 300;
+  line-height: 1.15;
+  margin: 25px 0;
+}
+.details p {
+  font-size: 16px;
+  color: #606770;
+}
+.details dl {
+  margin: 0;
+}
+.details dl > div {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  border-bottom: 1px solid #d7dbe0;
+  padding: 22px 0;
+  font-size: 12px;
+  gap: 20px;
+}
+.details dd {
+  margin: 0;
+  color: #606770;
+}
+.faq {
+  padding: 0 8% 80px;
+  max-width: 1050px;
+  margin: auto;
+}
+.faq h2 {
+  font-size: 30px;
+  font-weight: 500;
+}
+.faq details {
+  border-top: 1px solid #d7dbe0;
+  padding: 22px 0;
+}
+.faq summary {
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.faq p {
+  font-size: 14px;
+  color: #606770;
+}
+.faq details:last-child {
+  border-bottom: 1px solid #d7dbe0;
+}
+footer {
+  background: #f7f7f7;
+  padding: 40px 7%;
+  font-size: 11px;
+  color: #73767b;
+}
+dialog {
+  border-radius: 24px;
+}
+dialog button {
+  display: block;
+  background: #005bd3;
+  color: white;
+  border: 0;
+  border-radius: 100px;
+  padding: 13px 22px;
+  margin-top: 25px;
+}
+dialog small {
+  font-size: 11px;
+  color: #73767b;
+}
+@media (max-width: 700px) {
+  header {
+    padding: 20px;
+    gap: 15px;
+  }
+  .brand {
+    font-size: 25px;
+  }
+  nav {
+    display: none;
+  }
+  header .black-pill {
+    margin-left: auto;
+    font-size: 10px;
+    padding: 12px;
+  }
+  .product {
+    display: block;
+    padding: 15px 20px 50px;
+  }
+  .main-image {
+    border-radius: 25px;
+  }
+  .thumbnails button {
+    flex: 1;
+    padding: 10px;
+    font-size: 11px;
+  }
+  .config {
+    padding: 35px 3px 0;
+  }
+  .config h1 {
+    font-size: 45px;
+  }
+  .config > p {
+    font-size: 15px;
+  }
+  .config-block {
+    padding: 22px 0;
+  }
+  .field {
+    height: 470px;
+    margin: 0 13px;
+    border-radius: 28px;
+  }
+  .field > div {
+    left: 8%;
+    bottom: 35px;
+  }
+  .field span {
+    font-size: 8px;
+  }
+  .field h2 {
+    font-size: 44px;
+  }
+  .field p {
+    font-size: 14px;
+  }
+  .details {
+    display: block;
+    padding: 55px 24px;
+  }
+  .details h2 {
+    font-size: 33px;
+  }
+  .details dl {
+    margin-top: 30px;
+  }
+  .faq {
+    padding: 0 24px 50px;
+  }
+  .faq h2 {
+    font-size: 26px;
+  }
+}
+
+/* Native product context revision */
+.graphite {
+  background: #10191c;
+}
+.sand {
+  background: #b7a993;
+}
+.main-image {
+  background: #edf2f4;
+}
+.config h1 {
+  font-size: 58px;
+}
+.config-block #compatibility {
+  min-height: 36px;
+  font-size: 12px;
+}
+.config-block label {
+  min-height: 44px;
+}
+.field > div {
+  right: 7%;
+}
+.field h2 {
+  font-size: 48px;
+}
+@media (max-width: 700px) {
+  .config h1 {
+    font-size: 44px;
+  }
+  .thumbnails {
+    gap: 8px;
+  }
+  .thumbnails button {
+    padding: 11px 12px;
+    font-size: 11px;
+  }
+  .field h2 {
+    font-size: 38px;
+  }
+}

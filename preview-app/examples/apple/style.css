@@ -1,0 +1,429 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+}
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+button,
+a,
+input,
+select,
+textarea {
+  touch-action: manipulation;
+}
+button,
+a {
+  cursor: pointer;
+}
+button {
+  min-height: 44px;
+}
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+a {
+  color: inherit;
+}
+img,
+video,
+svg {
+  max-width: 100%;
+}
+img {
+  display: block;
+}
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+  outline: 3px solid var(--accent, #1673dc);
+  outline-offset: 4px;
+}
+button {
+  color: inherit;
+}
+fieldset {
+  min-width: 0;
+}
+dialog {
+  max-width: calc(100% - 32px);
+  max-height: 90dvh;
+  overflow: auto;
+}
+dialog::backdrop {
+  background: #000a;
+}
+[hidden] {
+  display: none !important;
+}
+.demo-note {
+  font-size: 12px;
+  line-height: 1.6;
+  opacity: 0.7;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+:root {
+  --accent: #0066cc;
+  --ink: #1d1d1f;
+  --paper: #f5f5f7;
+}
+body {
+  color: var(--ink);
+  font-family:
+    Inter Variable,
+    -apple-system,
+    sans-serif;
+}
+button {
+  border: 0;
+  background: none;
+}
+.global {
+  height: 44px;
+  background: #000;
+  color: #ddd;
+  display: flex;
+  gap: 45px;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+.global a {
+  text-decoration: none;
+}
+.global b {
+  font-size: 20px;
+}
+.subnav {
+  height: 56px;
+  background: #f5f5f7dd;
+  backdrop-filter: blur(14px);
+  padding: 0 max(6%, 24px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+.subnav strong {
+  font-size: 21px;
+}
+.subnav button,
+.pill {
+  color: white;
+  background: var(--accent);
+  border-radius: 99px;
+  padding: 12px 24px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.subnav button {
+  font-size: 12px;
+  padding: 8px 16px;
+}
+.hero {
+  text-align: center;
+  padding: 70px 24px 48px;
+}
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+}
+h1 {
+  font-size: 56px;
+  font-weight: 600;
+  letter-spacing: -2px;
+  margin: 20px 0 16px;
+}
+.lead {
+  font-size: 25px;
+  margin-bottom: 30px;
+}
+.product {
+  max-width: 900px;
+  height: 435px;
+  margin: 10px auto 12px;
+}
+.product img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.swatches {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+.swatches button {
+  border-radius: 99px;
+  border: 1px solid #ddd;
+  padding: 8px 14px;
+  font-size: 13px;
+}
+.swatches [aria-pressed='true'] {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+.hero #color-name {
+  font-size: 13px;
+  margin-top: 20px;
+}
+.sound {
+  background: #272729;
+  color: white;
+  padding: 90px 8%;
+  text-align: center;
+}
+.sound > span {
+  font-size: 20px;
+}
+h2 {
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+.sound-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 980px;
+  margin: 60px auto;
+  align-items: center;
+  gap: 90px;
+  text-align: left;
+}
+.sound p {
+  font-size: 21px;
+  line-height: 1.7;
+  color: #ccc;
+}
+.cutaway {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cutaway i {
+  width: 270px;
+  height: 28px;
+  border: 1px solid #b1b1b4;
+  border-radius: 50%;
+  margin: 10px;
+  transform: rotate(-12deg);
+  box-shadow: inset 0 8px 14px #000;
+}
+.cutaway i:nth-child(2) {
+  width: 210px;
+}
+.cutaway i:nth-child(3) {
+  width: 150px;
+  height: 90px;
+}
+.accessories {
+  text-align: center;
+  padding: 80px 24px;
+}
+.accessories > div {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 48px;
+}
+.accessories article {
+  background: var(--paper);
+  border-radius: 18px;
+  padding: 30px;
+  width: 350px;
+}
+.accessories article > span {
+  display: block;
+  height: 160px;
+  font-size: 140px;
+  color: #888;
+}
+.accessories h3 {
+  font-size: 21px;
+}
+.end {
+  background: var(--paper);
+  padding: 80px 24px;
+  text-align: center;
+}
+.end p {
+  line-height: 1.7;
+}
+.end .demo-note {
+  margin-top: 40px;
+}
+dialog {
+  border: 0;
+  border-radius: 18px;
+  padding: 32px;
+  width: 720px;
+}
+dialog > button {
+  float: right;
+  color: var(--accent);
+}
+dialog h2 {
+  clear: both;
+  font-size: 30px;
+  text-wrap: balance;
+}
+.choice {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.choice label {
+  padding: 12px 0;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: left;
+}
+td,
+th {
+  padding: 14px 8px;
+  border-bottom: 1px solid #ddd;
+}
+caption {
+  text-align: left;
+  font-size: 12px;
+  padding: 16px 8px;
+}
+@media (max-width: 600px) {
+  .global {
+    gap: 28px;
+  }
+  .global a:last-child {
+    display: none;
+  }
+  .hero {
+    padding-top: 48px;
+  }
+  h1 {
+    font-size: 38px;
+    letter-spacing: -1px;
+  }
+  .lead {
+    font-size: 21px;
+  }
+  .product {
+    height: 320px;
+    margin: 12px -12px;
+  }
+  .sound {
+    padding: 64px 24px;
+  }
+  .sound-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin: 40px 0 0;
+  }
+  .sound p {
+    font-size: 18px;
+  }
+  .accessories > div {
+    flex-direction: column;
+  }
+  .accessories article {
+    width: 100%;
+  }
+  h2 {
+    font-size: 32px;
+  }
+  .choice {
+    gap: 12px;
+  }
+  dialog {
+    padding: 20px;
+  }
+  .end {
+    padding: 64px 24px;
+  }
+}
+
+/* Native product context revision */
+.cutaway img {
+  width: 100%;
+  height: 430px;
+  object-fit: contain;
+}
+.accessories article > img {
+  width: 100%;
+  height: 230px;
+  object-fit: contain;
+  margin: 0 auto 20px;
+}
+.comparison-product {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.comparison-product img {
+  width: 88px;
+  height: 84px;
+  object-fit: contain;
+}
+.comparison-product span {
+  font-weight: 600;
+}
+.accessories h2,
+h1 {
+  text-wrap: balance;
+}
+@media (max-width: 600px) {
+  .cutaway img {
+    height: 350px;
+  }
+  .accessories article > img {
+    height: 210px;
+  }
+  .comparison-product {
+    display: block;
+  }
+  .comparison-product img {
+    width: 70px;
+    height: 70px;
+  }
+  .choice label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  td,
+  th {
+    font-size: 12px;
+    padding: 12px 6px;
+  }
+}

@@ -3,7 +3,8 @@ import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import catalog from 'virtual:style-catalog'
 import Icon from './components/Icon.vue'
 import FilterPanel from './components/FilterPanel.vue'
-import SpecCover from './components/SpecCover.vue'
+import ExampleCover from './components/ExampleCover.vue'
+import ExamplePreview from './components/ExamplePreview.vue'
 import StyleCard from './components/StyleCard.vue'
 import StyleDetail from './components/StyleDetail.vue'
 import {
@@ -11,6 +12,7 @@ import {
   cloneFilters,
   emptyFilters,
   filterCatalog,
+  facetCounts,
   removeFilter,
 } from './lib/catalog.ts'
 import { copyText } from './lib/documents.ts'
@@ -45,6 +47,17 @@ const draftFilters = ref(emptyFilters())
 const candidateQuery = ref('')
 const activeCandidate = ref('')
 let galleryScroll = 0
+const narrowScreen = ref(window.matchMedia('(max-width: 760px)').matches)
+const mediaQuery = window.matchMedia('(max-width: 760px)')
+const onMedia = () => {
+  narrowScreen.value = mediaQuery.matches
+}
+const favoriteScope = computed(() =>
+  route.value.page === 'favorites' ? favorites.value : undefined,
+)
+const statusCounts = computed(() =>
+  facetCounts(catalog, route.value.filters, 'status', favoriteScope.value),
+)
 
 const currentStyle = computed(() => byId.get(route.value.id))
 const isGallery = computed(
@@ -66,9 +79,15 @@ const draftCount = computed(
     ).length,
 )
 const chips = computed(() => activeFilters(route.value.filters))
+const filterCount = computed(
+  () =>
+    chips.value.filter((chip) => chip.key !== 'basis').length +
+    (route.value.filters.basis === 'example' ? 1 : 0),
+)
 const candidates = computed(() => route.value.compare.map((id) => byId.get(id)!).filter(Boolean))
-const scopeCount = computed(() =>
-  route.value.page === 'favorites' ? favorites.value.length : catalog.length,
+const scopeCount = computed(
+  () =>
+    filterCatalog(catalog, { ...route.value.filters, status: 'all' }, favoriteScope.value).length,
 )
 const candidateOptions = computed(() =>
   filterCatalog(catalog, { ...emptyFilters(), q: candidateQuery.value }),
@@ -124,7 +143,7 @@ function toggleCompare(id: string) {
   let compare = route.value.compare
   if (compare.includes(id)) compare = compare.filter((value) => value !== id)
   else if (compare.length >= 3) {
-    notify('最多对照 3 份规范，请先移除一个候选。', true)
+    notify('最多对照 3 种风格，请先移除一个候选。', true)
     return
   } else compare = [...compare, id]
   navigate({ compare })
@@ -192,17 +211,19 @@ watch(
 watch(
   () => `${route.value.page}/${route.value.id}`,
   () => {
-    document.title = `${route.value.page === 'style' ? (currentStyle.value?.name ?? '规范未找到') : route.value.page === 'compare' ? '规范对照' : route.value.page === 'favorites' ? '我的收藏' : '发现风格'} — Design Atlas`
+    document.title = `${route.value.page === 'style' ? (currentStyle.value?.name ?? '规范未找到') : route.value.page === 'compare' ? '风格对照' : route.value.page === 'favorites' ? '我的收藏' : '发现风格'} — Design Atlas`
   },
   { immediate: true },
 )
 onMounted(() => {
+  mediaQuery.addEventListener('change', onMedia)
   window.addEventListener('hashchange', syncRoute)
   window.addEventListener('popstate', syncRoute)
   window.addEventListener('storage', onStorage)
   window.addEventListener('keydown', onKeydown)
 })
 onBeforeUnmount(() => {
+  mediaQuery.removeEventListener('change', onMedia)
   window.removeEventListener('hashchange', syncRoute)
   window.removeEventListener('popstate', syncRoute)
   window.removeEventListener('storage', onStorage)
@@ -284,7 +305,12 @@ onBeforeUnmount(() => {
         <h2>筛选风格</h2>
         <button class="text-button muted" @click="updateFilters(emptyFilters())">重置</button>
       </div>
-      <FilterPanel :filters="route.filters" @change="updateFilters" />
+      <FilterPanel
+        :filters="route.filters"
+        :catalog="catalog"
+        :favorites="favoriteScope"
+        @change="updateFilters"
+      />
     </aside>
     <main id="main" class="gallery-main" tabindex="-1">
       <div class="page-heading gallery-heading">
@@ -328,10 +354,10 @@ onBeforeUnmount(() => {
             "
           /><kbd>/</kbd></label
         ><a class="button compare-entry" :href="href({ page: 'compare' })"
-          ><Icon name="compare" :size="17" /><span>规范对照</span
+          ><Icon name="compare" :size="17" /><span>风格对照</span
           ><span v-if="candidates.length" class="button-count">{{ candidates.length }}</span></a
         ><button class="button mobile-filter-trigger" @click="openFilters">
-          <Icon name="sliders" :size="18" />筛选<span v-if="chips.length">{{ chips.length }}</span>
+          <Icon name="sliders" :size="18" />筛选<span v-if="filterCount">{{ filterCount }}</span>
         </button>
       </div>
       <div class="gallery-controls">
@@ -345,9 +371,10 @@ onBeforeUnmount(() => {
             :key="value"
             :class="{ active: route.filters.status === value }"
             :aria-pressed="route.filters.status === value"
+            :disabled="value !== 'all' && !statusCounts[value] && route.filters.status !== value"
             @click="updateFilters({ ...route.filters, status: value })"
           >
-            {{ label }}<span>{{ value === 'ready' ? 0 : scopeCount }}</span>
+            {{ label }}<span>{{ value === 'all' ? scopeCount : statusCounts[value] }}</span>
           </button>
         </div>
         <label class="sort-control"
@@ -370,23 +397,35 @@ onBeforeUnmount(() => {
       </div>
       <div class="gallery-intro">
         <div>
-          <Icon name="info" :size="16" /><span
-            >当前展示规范封面，真实页面示例将在后续逐步制作。</span
-          >
+          <Icon name="info" :size="16" /><span>{{
+            route.filters.basis === 'example'
+              ? '按实际示例特征筛选；仅已有示例，未知不补值。'
+              : '按原规范的本地归纳筛选；不是上游官方标签。'
+          }}</span>
         </div>
         <span class="result-count" role="status" aria-live="polite"
           >{{ filtered.length }} 个结果</span
         >
       </div>
       <div v-if="chips.length" class="active-filters" aria-label="已选筛选条件">
+        <span class="basis-chip">{{
+          route.filters.basis === 'example' ? '按示例页面 · 仅已有示例' : '按规范特点'
+        }}</span>
         <button
-          v-for="chip in chips"
+          v-for="chip in chips.filter((chip) => chip.key !== 'basis')"
           :key="`${chip.key}-${chip.value}`"
           @click="updateFilters(removeFilter(route.filters, chip.key, chip.value))"
           :aria-label="`移除筛选 ${chip.label}`"
         >
-          {{ chip.label }}<Icon name="close" :size="13" /></button
-        ><button class="clear-filters" @click="updateFilters(emptyFilters())">清空条件</button>
+          {{ chip.label }}<Icon name="close" :size="13" />
+        </button>
+        <button
+          v-if="chips.length > 1 || route.filters.basis === 'example'"
+          class="clear-filters"
+          @click="updateFilters(emptyFilters())"
+        >
+          清空条件
+        </button>
       </div>
       <div v-if="filtered.length" class="gallery-grid">
         <StyleCard
@@ -396,6 +435,7 @@ onBeforeUnmount(() => {
           :number="styleNumber(style.id)"
           :href="detailHref(style.id)"
           :source-href="detailHref(style.id, 'spec')"
+          :basis="route.filters.basis"
           :favorite="favorites.includes(style.id)"
           :selected="route.compare.includes(style.id)"
           @favorite="toggleFavorite"
@@ -425,7 +465,7 @@ onBeforeUnmount(() => {
         <h2>
           {{
             route.filters.status === 'ready'
-              ? '真实页面，还在路上。'
+              ? '没有符合条件的已完成示例。'
               : route.page === 'favorites' && !favorites.length
                 ? '你的灵感收藏夹，从这里开始。'
                 : '暂时没有匹配的风格'
@@ -434,7 +474,7 @@ onBeforeUnmount(() => {
         <p>
           {{
             route.filters.status === 'ready'
-              ? '所有规范都已收录，示例页面尚未制作。\n你可以先阅读原始规范，或收藏喜欢的方向。'
+              ? '当前筛选没有匹配到已有示例。条件仍保留，可逐项移除或切回全部风格。'
               : route.page === 'favorites' && !favorites.length
                 ? '在风格卡片上点击收藏，把喜欢的设计方向留在手边。'
                 : '试着少选一个条件，或换个关键词。\n当前筛选已保留，不会自动放宽。'
@@ -470,6 +510,7 @@ onBeforeUnmount(() => {
     :style="currentStyle"
     :tab="route.tab"
     :mode="route.mode"
+    :viewport="route.viewport"
     :favorite="favorites.includes(currentStyle.id)"
     :selected="route.compare.includes(currentStyle.id)"
     :back-href="backHref"
@@ -477,6 +518,7 @@ onBeforeUnmount(() => {
     @compare="toggleCompare"
     @tab="navigate({ tab: $event })"
     @mode="navigate({ mode: $event })"
+    @viewport="navigate({ viewport: $event })"
   />
 
   <main
@@ -489,8 +531,8 @@ onBeforeUnmount(() => {
     <div class="page-heading">
       <div>
         <div class="eyebrow">SIDE BY SIDE / DESIGN NOTES</div>
-        <h1 tabindex="-1">同样的内容，不同的表达。</h1>
-        <p>先并排梳理设计线索，找到更合适的方向。</p>
+        <h1 tabindex="-1">不同的场景，同屏看设计语言。</h1>
+        <p>统一视口比较真实布局与交互，也可切换规范线索。</p>
       </div>
       <div class="heading-actions">
         <button class="button" @click="share"><Icon name="copy" :size="16" />复制对照链接</button
@@ -502,12 +544,45 @@ onBeforeUnmount(() => {
     <div class="compare-notice">
       <Icon name="info" :size="19" />
       <div>
-        <strong>目前是规范对照，不是页面视觉对比。</strong>
+        <strong>各自最佳场景，统一视口。</strong>
         <p>
-          示例页面尚未制作。这里比较的是原文线索与人工整理的标签，不能代替真实布局、字体和交互的比较。
+          不同示例的内容与题材不同，因此是视觉语言参考，不是同内容 A/B
+          测试。手机端一次只载入当前候选。
         </p>
       </div>
       <span class="tag">{{ candidates.length }} / 3 份</span>
+    </div>
+    <div v-if="candidates.length" class="comparison-toolbar">
+      <div class="segmented" aria-label="对照方式">
+        <button
+          :class="{ active: route.compareMode === 'pages' }"
+          :aria-pressed="route.compareMode === 'pages'"
+          @click="navigate({ compareMode: 'pages' })"
+        >
+          页面视觉对比</button
+        ><button
+          :class="{ active: route.compareMode === 'notes' }"
+          :aria-pressed="route.compareMode === 'notes'"
+          @click="navigate({ compareMode: 'notes' })"
+        >
+          规范信息对照
+        </button>
+      </div>
+      <div class="segmented" aria-label="对照视口">
+        <button
+          :class="{ active: route.viewport === 'desktop' }"
+          :aria-pressed="route.viewport === 'desktop'"
+          @click="navigate({ viewport: 'desktop' })"
+        >
+          桌面 1440</button
+        ><button
+          :class="{ active: route.viewport === 'mobile' }"
+          :aria-pressed="route.viewport === 'mobile'"
+          @click="navigate({ viewport: 'mobile' })"
+        >
+          手机 390
+        </button>
+      </div>
     </div>
     <div v-if="candidates.length" class="comparison-mobile-tabs" aria-label="切换对照候选">
       <button
@@ -535,14 +610,20 @@ onBeforeUnmount(() => {
           <a :href="detailHref(style.id)">{{ style.name }}<Icon name="external" :size="15" /></a
           ><button
             class="icon-button"
-            :aria-label="`从规范对照移除 ${style.name}`"
+            :aria-label="`从风格对照移除 ${style.name}`"
             @click="toggleCompare(style.id)"
           >
             <Icon name="close" :size="18" />
           </button>
         </div>
-        <SpecCover :style="style" :number="styleNumber(style.id)" compact />
-        <div class="comparison-content">
+        <template v-if="route.compareMode === 'pages'"
+          ><ExamplePreview
+            v-if="!narrowScreen || activeCandidate === style.id"
+            :style="style"
+            :viewport="route.viewport"
+            compact /></template
+        ><ExampleCover v-else :style="style" :number="styleNumber(style.id)" compact />
+        <div v-if="route.compareMode === 'notes'" class="comparison-content">
           <section>
             <h2>风格印象</h2>
             <p>{{ style.summary }}</p>
@@ -578,7 +659,7 @@ onBeforeUnmount(() => {
               /><small>非完整色板</small>
             </div>
           </section>
-          <div class="comparison-pending">
+          <div v-if="style.preview !== 'ready'" class="comparison-pending">
             <Icon name="doc" :size="18" /><span>真实页面预览待制作</span>
           </div>
           <a class="button" :href="detailHref(style.id, 'spec')"
@@ -594,9 +675,9 @@ onBeforeUnmount(() => {
     <div v-else class="empty-state comparison-empty">
       <div class="empty-symbol"><Icon name="compare" :size="32" /></div>
       <h2>把几个方向，放在一起想。</h2>
-      <p>从图库卡片加入候选，或在这里直接选择。<br />一次可以对照 2–3 份规范。</p>
+      <p>从图库卡片加入候选，或在这里直接选择。<br />一次最多对照 3 种风格。</p>
       <button class="button primary" @click="openCandidates">
-        选择设计规范<Icon name="plus" :size="17" />
+        选择设计风格<Icon name="plus" :size="17" />
       </button>
     </div>
   </main>
@@ -617,12 +698,15 @@ onBeforeUnmount(() => {
     <div>
       <span class="footer-brand">design atlas /</span><span>从一份规范，到一个新方向。</span>
     </div>
-    <p>基于 awesome-design-md · {{ catalog.length }} 份规范 · 非品牌官方页面</p>
+    <p>
+      基于 awesome-design-md · {{ catalog.length }} 份规范 · 非品牌官方页面 ·
+      <a href="licenses/README.md" target="_blank" rel="noopener">素材与字体来源</a>
+    </p>
   </footer>
 
-  <div v-if="candidates.length && isGallery" class="comparison-tray" aria-label="规范对照候选">
+  <div v-if="candidates.length && isGallery" class="comparison-tray" aria-label="风格对照候选">
     <div class="tray-heading">
-      <Icon name="compare" :size="20" /><strong>规范对照</strong
+      <Icon name="compare" :size="20" /><strong>风格对照</strong
       ><span>{{ candidates.length }} / 3</span>
     </div>
     <div class="tray-candidates">
@@ -639,7 +723,7 @@ onBeforeUnmount(() => {
     </div>
     <button class="text-button tray-clear" @click="navigate({ compare: [] })">清空</button
     ><a class="button primary" :href="href({ page: 'compare' })"
-      >比较规范<Icon name="arrow" :size="16"
+      >比较风格<Icon name="arrow" :size="16"
     /></a>
   </div>
   <div
@@ -671,7 +755,13 @@ onBeforeUnmount(() => {
         </button>
       </div>
       <div class="dialog-scroll">
-        <FilterPanel :filters="draftFilters" mobile @change="draftFilters = $event" />
+        <FilterPanel
+          :filters="draftFilters"
+          :catalog="catalog"
+          :favorites="favoriteScope"
+          mobile
+          @change="draftFilters = $event"
+        />
       </div>
       <div class="dialog-footer">
         <button class="button" @click="draftFilters = emptyFilters()">重置条件</button
@@ -725,7 +815,7 @@ onBeforeUnmount(() => {
         </p>
       </div>
       <div class="dialog-footer">
-        <span>仅比较规范信息，示例页面待制作。</span
+        <span>最多 3 项；页面与规范两种对照方式。</span
         ><button class="button primary" @click="candidateDialog?.close()">
           完成选择<Icon name="check" :size="16" />
         </button>

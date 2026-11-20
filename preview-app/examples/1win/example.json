@@ -1,0 +1,68 @@
+{
+  "title": "电竞夜航 / Night Circuit",
+  "description": "原创竞速与机器人/战术电竞大厅：双游戏主视觉、四张独立游戏封面、赛程过滤与观赛清单时间重叠检测。",
+  "status": "ready",
+  "features": {
+    "moods": ["playful", "tech"],
+    "tones": ["dark"],
+    "temperature": ["neutral"],
+    "chroma": ["vivid"],
+    "accentHues": ["green", "blue"],
+    "backgrounds": ["solid", "image"],
+    "layouts": ["workspace", "directory"],
+    "density": ["dense"],
+    "typography": ["sans"],
+    "headingScale": ["regular"],
+    "headingWeight": ["bold"],
+    "geometry": ["rounded", "small-radius"],
+    "layering": ["solid"],
+    "visualMedia": ["illustration", "ui"],
+    "motion": ["feedback"],
+    "scenarios": ["tool", "directory"]
+  },
+  "interactions": ["filter", "schedule"],
+  "viewports": ["desktop", "mobile"],
+  "notes": [
+    "本项目独立虚构演示，非品牌官方页面；业务操作仅在当前页面内存中生效。",
+    "Inter Variable 为本地可分发替代，不含品牌专有字体。",
+    "双推广板与横轨使用可辨识赛车、机器人和战术棋盘，不以斜线占位；原规范涉及博彩，本示例只借用密集大厅/内容色彩/行动层级，不实现下注、余额或真实竞猜。"
+  ],
+  "references": [
+    {
+      "source": "L230–242、286–316、379–408",
+      "reason": "颜色主要来自内容，不能把紫海报扩成第三种全站强调色；不做长篇宣传 hero。"
+    }
+  ],
+  "assets": [
+    {
+      "file": "assets/arena-card.webp",
+      "source": "本项目原创 SVG 场景/产品形体；同名SVG为可编辑源，本地栅格为WebP",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/arena-keyart.webp",
+      "source": "本项目原创 SVG 场景/产品形体；同名SVG为可编辑源，本地栅格为WebP",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/rally-card.webp",
+      "source": "本项目原创 SVG 场景/产品形体；同名SVG为可编辑源，本地栅格为WebP",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/rally-keyart.webp",
+      "source": "本项目原创 SVG 场景/产品形体；同名SVG为可编辑源，本地栅格为WebP",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/sprint-card.webp",
+      "source": "本项目原创 SVG 场景/产品形体；同名SVG为可编辑源，本地栅格为WebP",
+      "license": "本项目原创，可随示例分发"
+    },
+    {
+      "file": "assets/tactics-card.webp",
+      "source": "本项目原创 SVG 场景/产品形体；同名SVG为可编辑源，本地栅格为WebP",
+      "license": "本项目原创，可随示例分发"
+    }
+  ]
+}

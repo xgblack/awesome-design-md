@@ -1,0 +1,21 @@
+import { test, expect } from '@playwright/test'
+test('capability and model selection update the request recipe', async ({ page }) => {
+  await page.goto('examples/mistral.ai/index.html')
+  await page.selectOption('#terrain', 'code')
+  await expect(page.locator('.record')).toHaveCount(1)
+  await page.locator('[data-model=code]').click()
+  await expect(page.locator('#model')).toHaveValue('code')
+  await expect(page.locator('#code')).toContainText('frontier-code')
+  await page.locator('[data-lang=js]').click()
+  await expect(page.locator('#code')).toContainText('curl https://api.frontier.example')
+  await expect(page.locator('#response')).toContainText('去重')
+})
+test('unsupported capability does not invent model entries', async ({ page }) => {
+  await page.goto('examples/mistral.ai/index.html')
+  await page.selectOption('#terrain', 'vision')
+  await expect(page.locator('.record')).toHaveCount(0)
+  await expect(page.locator('#empty')).toBeVisible()
+  await expect(page.locator('#terrain')).toHaveValue('vision')
+  await page.selectOption('#terrain', 'all')
+  await expect(page.locator('.record')).toHaveCount(3)
+})
